@@ -1,0 +1,103 @@
+#!/bin/sh -l 
+# FILENAME:  phosim_lsst2.sub 
+cd /home/dutta26/apps/phosim-phosim_release-2479c7396c0c/  
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10070/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/70.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10070/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10071/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/71.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10071/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10072/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/72.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10072/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10073/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/73.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10073/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10074/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/74.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10074/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10075/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/75.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10075/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10076/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/76.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10076/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10077/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/77.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10077/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10078/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/78.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10078/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10079/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/79.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10079/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10080/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/80.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10080/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10081/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/81.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10081/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10082/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/82.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10082/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10083/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/83.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10083/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10084/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/84.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10084/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10085/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/85.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10085/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10086/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/86.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10086/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10087/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/87.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10087/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10088/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/88.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10088/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10089/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/89.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10089/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10090/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/90.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10090/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10091/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/91.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10091/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10092/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/92.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10092/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10093/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/93.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10093/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10094/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/94.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10094/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10095/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/95.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10095/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10096/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/96.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10096/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10097/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/97.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10097/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10098/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/98.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10098/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/10099/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/99.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/10099/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100100/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/100.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100100/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100101/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/101.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100101/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100102/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/102.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100102/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100103/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/103.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100103/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100104/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/104.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100104/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100105/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/105.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100105/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100106/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/106.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100106/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100107/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/107.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100107/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100108/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/108.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100108/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100109/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/109.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100109/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100110/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/110.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100110/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100111/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/111.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100111/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100112/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/112.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100112/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100113/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/113.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100113/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100114/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/114.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100114/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100115/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/115.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100115/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100116/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/116.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100116/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100117/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/117.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100117/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100118/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/118.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100118/ -w /scratch/halstead/d/dutta26/lsst/work1 
+mkdir /scratch/halstead/d/dutta26/lsst/several_img_f2/100119/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog1/119.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/several_img_f2/100119/ -w /scratch/halstead/d/dutta26/lsst/work1 

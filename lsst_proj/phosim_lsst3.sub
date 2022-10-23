@@ -1,0 +1,63 @@
+#!/bin/sh -l 
+# FILENAME:  phosim_lsst3.sub 
+cd /home/dutta26/Downloads/phosim_core/  
+mkdir /scratch/halstead/d/dutta26/lsst/3/1000_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/0.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/1000_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/1001_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/1.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/1001_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/1002_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/2.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/1002_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/1003_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/3.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/1003_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/1004_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/4.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/1004_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/1005_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/5.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/1005_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/1006_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/6.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/1006_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/1007_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/7.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/1007_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/1008_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/8.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/1008_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/1009_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/9.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/1009_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10010_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/10.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10010_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10011_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/11.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10011_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10012_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/12.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10012_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10013_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/13.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10013_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10014_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/14.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10014_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10015_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/15.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10015_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10016_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/16.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10016_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10017_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/17.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10017_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10018_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/18.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10018_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10019_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/19.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10019_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10020_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/20.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10020_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10021_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/21.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10021_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10022_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/22.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10022_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10023_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/23.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10023_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10024_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/24.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10024_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10025_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/25.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10025_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10026_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/26.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10026_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10027_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/27.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10027_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10028_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/28.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10028_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 
+mkdir /scratch/halstead/d/dutta26/lsst/3/10029_flat/  
+./phosim /scratch/halstead/d/dutta26/lsst/wiyn_cat1/29.txt3_flat -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/lsst/3/10029_flat/ -w /scratch/halstead/d/dutta26/lsst/work3 

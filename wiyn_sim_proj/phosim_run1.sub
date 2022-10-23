@@ -1,0 +1,83 @@
+#!/bin/sh -l 
+# FILENAME:  phosim.sub 
+cd /home/dutta26/Downloads/phosim_core/ 
+#mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1001/  
+#./phosim examples/odi_catalog/1.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1001/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+#mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1002/  
+#./phosim examples/odi_catalog/2.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1002/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+#mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1003/  
+#./phosim examples/odi_catalog/3.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1003/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+#mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1004/  
+#./phosim examples/odi_catalog/4.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1004/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+#mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1005/  
+#./phosim examples/odi_catalog/5.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1005/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1006/  
+./phosim examples/odi_catalog/6.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1006/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1007/  
+./phosim examples/odi_catalog/7.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1007/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1008/  
+./phosim examples/odi_catalog/8.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1008/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1009/  
+./phosim examples/odi_catalog/9.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/1009/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10010/  
+./phosim examples/odi_catalog/10.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10010/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10011/  
+./phosim examples/odi_catalog/11.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10011/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10012/  
+./phosim examples/odi_catalog/12.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10012/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10013/  
+./phosim examples/odi_catalog/13.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10013/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10014/  
+./phosim examples/odi_catalog/14.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10014/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10015/  
+./phosim examples/odi_catalog/15.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10015/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10016/  
+./phosim examples/odi_catalog/16.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10016/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10017/  
+./phosim examples/odi_catalog/17.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10017/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10018/  
+./phosim examples/odi_catalog/18.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10018/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10019/  
+./phosim examples/odi_catalog/19.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10019/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10020/  
+./phosim examples/odi_catalog/20.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10020/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10021/  
+./phosim examples/odi_catalog/21.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10021/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10022/  
+./phosim examples/odi_catalog/22.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10022/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10023/  
+./phosim examples/odi_catalog/23.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10023/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10024/  
+./phosim examples/odi_catalog/24.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10024/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10025/  
+./phosim examples/odi_catalog/25.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10025/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10026/  
+./phosim examples/odi_catalog/26.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10026/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10027/  
+./phosim examples/odi_catalog/27.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10027/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10028/  
+./phosim examples/odi_catalog/28.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10028/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10029/  
+./phosim examples/odi_catalog/29.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10029/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10030/  
+./phosim examples/odi_catalog/30.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10030/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10031/  
+./phosim examples/odi_catalog/31.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10031/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10032/  
+./phosim examples/odi_catalog/32.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10032/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10033/  
+./phosim examples/odi_catalog/33.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10033/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10034/  
+./phosim examples/odi_catalog/34.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10034/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10035/  
+./phosim examples/odi_catalog/35.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10035/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10036/  
+./phosim examples/odi_catalog/36.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10036/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10037/  
+./phosim examples/odi_catalog/37.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10037/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10038/  
+./phosim examples/odi_catalog/38.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10038/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10039/  
+./phosim examples/odi_catalog/39.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10039/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10040/  
+./phosim examples/odi_catalog/40.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/10040/ -w /scratch/halstead/d/dutta26/abell_2390/work  

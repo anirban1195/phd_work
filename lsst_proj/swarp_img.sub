@@ -1,0 +1,15 @@
+#!/bin/sh -l 
+# FILENAME:  swarp_img.sub
+
+cd /home/dutta26/apps/bin/bin
+
+./swarp @/home/dutta26/fileList_wiyn.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/abell_2390/
+
+
+./swarp @/home/dutta26/fileList_wiyn_star.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample_star.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample_star.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/ 
+
+
+./swarp @/home/dutta26/fileList_wiyn_long.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample_long.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample_long.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/ 
+
+
+

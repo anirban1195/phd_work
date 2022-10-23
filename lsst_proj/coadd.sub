@@ -1,0 +1,7 @@
+#!/bin/sh -l 
+# FILENAME:  coadd.sub 
+cd /home/dutta26/apps/bin/bin
+#./swarp @/home/dutta26/fileList_wiyn.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample_goodsee.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/#sample_goodsee.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/abell_2390/
+
+
+./swarp @/home/dutta26/fileList_lsst.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/lsst/filter5/coadd.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/lsst/filter5/coadd.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/lsst/

@@ -1,0 +1,9 @@
+#!/bin/sh -l
+# FILENAME:  makeWtg.sub
+
+module load anaconda
+source activate /home/dutta26/.conda/envs/cent7/5.1.0-py27/test
+module load anaconda
+source activate test
+cd /home/dutta26/codes/makeWeights/
+python makeWeights.py /scratch/halstead/d/dutta26/abell_2390/g/

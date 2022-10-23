@@ -1,0 +1,23 @@
+#!/bin/sh -l 
+# FILENAME:  phosim_run_star2.sub 
+cd /home/dutta26/apps/phosim-phosim_release-2479c7396c0c/  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10020/  
+./phosim examples/odi_catalog/20_star.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10020/ -w /scratch/halstead/d/dutta26/abell_2390/work_star -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10021/  
+./phosim examples/odi_catalog/21_star.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10021/ -w /scratch/halstead/d/dutta26/abell_2390/work_star -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10022/  
+./phosim examples/odi_catalog/22_star.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10022/ -w /scratch/halstead/d/dutta26/abell_2390/work_star -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10023/  
+./phosim examples/odi_catalog/23_star.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10023/ -w /scratch/halstead/d/dutta26/abell_2390/work_star -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10024/  
+./phosim examples/odi_catalog/24_star.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10024/ -w /scratch/halstead/d/dutta26/abell_2390/work_star -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10025/  
+./phosim examples/odi_catalog/25_star.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10025/ -w /scratch/halstead/d/dutta26/abell_2390/work_star -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10026/  
+./phosim examples/odi_catalog/26_star.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10026/ -w /scratch/halstead/d/dutta26/abell_2390/work_star -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10027/  
+./phosim examples/odi_catalog/27_star.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10027/ -w /scratch/halstead/d/dutta26/abell_2390/work_star -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10028/  
+./phosim examples/odi_catalog/28_star.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10028/ -w /scratch/halstead/d/dutta26/abell_2390/work_star -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10029/  
+./phosim examples/odi_catalog/29_star.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_star/10029/ -w /scratch/halstead/d/dutta26/abell_2390/work_star -t 4 

@@ -1,0 +1,7 @@
+#!/bin/sh -l 
+# FILENAME:  wiyn_run_temp.sub 
+cd /home/dutta26/codes/wiyn_sim_proj/
+module load anaconda/2020.11-py38
+conda activate /home/dutta26/.conda/envs/cent7/5.1.0-py27/test
+#python make_coadds_WIYN.py
+python single_frame_detect_WIYN.py

@@ -1,0 +1,19 @@
+#!/bin/sh -l
+# FILENAME:  myjob_swarp_g.sub
+
+
+cd /home/dutta26/apps/bin/bin/
+./swarp @/home/dutta26/temp_fileList.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/ -SUBTRACT_BACK Y
+
+
+cd /home/dutta26/apps/bin/bin/
+./swarp @/home/dutta26/temp_fileList.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample_b.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample_b.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/ -SUBTRACT_BACK N
+
+
+
+cd /home/dutta26/apps/bin/bin/
+./swarp @/home/dutta26/temp_fileList_rot.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample_rot.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample_rot.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/ -SUBTRACT_BACK Y
+
+
+cd /home/dutta26/apps/bin/bin/
+./swarp @/home/dutta26/temp_fileList_rot.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample_rot_b.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/sample_rot_b.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/ -SUBTRACT_BACK N

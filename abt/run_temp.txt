@@ -1,0 +1,10 @@
+rightascension 193.85939532632162
+declination 52.26518933842321
+rotskypos 0.0 
+rottelpos 0.0 
+vistime 300.0 
+nsnap 1 
+moonalt -90.0 
+obshistid 1001 
+object 0 193.85918 52.2645 13.00 ../sky/sed_flat.txt 0 0 0 0 0 0 temp.fits 1.0 0.0 none none 
+object 1 193.859 52.2654 16.8 ../sky/sed_flat.txt 0 0 0 0 0 0 star none none 

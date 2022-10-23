@@ -1,0 +1,13 @@
+#!/bin/sh -l 
+# FILENAME:  phosim_runlong3.sub 
+cd /home/dutta26/Downloads/phosim_core/ 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_long/10010/  
+./phosim examples/odi_catalog/10_long.txt -i wiyn_odi -c examples/nobackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_long/10010/ -w /scratch/halstead/d/dutta26/abell_2390/work_long  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_long/10011/  
+./phosim examples/odi_catalog/11_long.txt -i wiyn_odi -c examples/nobackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_long/10011/ -w /scratch/halstead/d/dutta26/abell_2390/work_long  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_long/10012/  
+./phosim examples/odi_catalog/12_long.txt -i wiyn_odi -c examples/nobackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_long/10012/ -w /scratch/halstead/d/dutta26/abell_2390/work_long  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_long/10013/  
+./phosim examples/odi_catalog/13_long.txt -i wiyn_odi -c examples/nobackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_long/10013/ -w /scratch/halstead/d/dutta26/abell_2390/work_long  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_long/10014/  
+./phosim examples/odi_catalog/14_long.txt -i wiyn_odi -c examples/nobackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_long/10014/ -w /scratch/halstead/d/dutta26/abell_2390/work_long  

@@ -1,0 +1,36 @@
+WARNING: FITSFixedWarning: 'datfix' made the change 'Set DATE-OBS to '2017-11-10T02:23:50.563' from MJD-OBS'. [astropy.wcs.wcs]
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:213: RuntimeWarning: invalid value encountered in double_scalars
+  mux_calc = t3/t2
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:214: RuntimeWarning: invalid value encountered in double_scalars
+  muy_calc = t4/t2
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:218: RuntimeWarning: invalid value encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:219: RuntimeWarning: invalid value encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:220: RuntimeWarning: invalid value encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:229: RuntimeWarning: invalid value encountered in double_scalars
+  e1 = (sigxx_calc - sigyy_calc)/(sigxx_calc + sigyy_calc)
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:230: RuntimeWarning: invalid value encountered in double_scalars
+  e2 = 2*sigxy_calc/(sigxx_calc + sigyy_calc)
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:401: RuntimeWarning: invalid value encountered in sqrt
+  return flux_calc, mux_calc, muy_calc, e1, e2, back_calc, np.sqrt(sigxx_calc + sigyy_calc), sigxx_calc, sigyy_calc, sigxy_calc
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:351: RuntimeWarning: invalid value encountered in double_scalars
+  mux_calc = t3/t2
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:352: RuntimeWarning: invalid value encountered in double_scalars
+  muy_calc = t4/t2
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:356: RuntimeWarning: invalid value encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:357: RuntimeWarning: invalid value encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/wiyn_sim_proj/measure_pythonV.py:358: RuntimeWarning: invalid value encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+10036
+(6.232458, 6.234701, 0.075898044)
+(6.232458, 6.234701, 0.075898044)
+(231, 50)
+10000 6.234701
+Traceback (most recent call last):
+  File "single_frame_detect_WIYN.py", line 177, in <module>
+    store[j,41] = np.std(temp[0:nStars, 0])
+IndexError: index 100 is out of bounds for axis 0 with size 100

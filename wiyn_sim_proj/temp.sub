@@ -1,0 +1,8 @@
+#!/bin/sh -l 
+# FILENAME:  phosim.sub 
+cd /home/dutta26/Downloads/phosim_core/ 
+#mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_idealsee/1001/  
+#./phosim examples/odi_catalog/1.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_idealsee/1001/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img_idealsee/1002/  
+./phosim examples/odi_catalog/2.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img_idealsee/1002/ -w /scratch/halstead/d/dutta26/abell_2390/work  
+

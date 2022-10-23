@@ -1,0 +1,23 @@
+#!/bin/sh -l 
+# FILENAME:  phosim_run5.sub 
+cd /home/dutta26/apps/phosim-phosim_release-2479c7396c0c/  
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img/10050/  
+./phosim examples/odi_catalog/50.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img/10050/ -w /scratch/halstead/d/dutta26/abell_2390/work -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img/10051/  
+./phosim examples/odi_catalog/51.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img/10051/ -w /scratch/halstead/d/dutta26/abell_2390/work -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img/10052/  
+./phosim examples/odi_catalog/52.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img/10052/ -w /scratch/halstead/d/dutta26/abell_2390/work -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img/10053/  
+./phosim examples/odi_catalog/53.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img/10053/ -w /scratch/halstead/d/dutta26/abell_2390/work -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img/10054/  
+./phosim examples/odi_catalog/54.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img/10054/ -w /scratch/halstead/d/dutta26/abell_2390/work -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img/10055/  
+./phosim examples/odi_catalog/55.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img/10055/ -w /scratch/halstead/d/dutta26/abell_2390/work -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img/10056/  
+./phosim examples/odi_catalog/56.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img/10056/ -w /scratch/halstead/d/dutta26/abell_2390/work -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img/10057/  
+./phosim examples/odi_catalog/57.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img/10057/ -w /scratch/halstead/d/dutta26/abell_2390/work -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img/10058/  
+./phosim examples/odi_catalog/58.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img/10058/ -w /scratch/halstead/d/dutta26/abell_2390/work -t 4 
+mkdir /scratch/halstead/d/dutta26/abell_2390/odi_img/10059/  
+./phosim examples/odi_catalog/59.txt -i wiyn_odi -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/odi_img/10059/ -w /scratch/halstead/d/dutta26/abell_2390/work -t 4 

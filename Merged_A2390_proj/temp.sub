@@ -1,0 +1,35 @@
+#!/bin/sh -l
+# FILENAME:  myjob_swarp_g.sub
+
+module load anaconda/2020.11-py38
+source activate /home/dutta26/.conda/envs/cent7/5.1.0-py27/test
+
+cd /home/dutta26/codes/makeWeights/
+python makeFileList.py /scratch/halstead/d/dutta26/abell_2390/r/ /home/dutta26/codes/makeWeights/fileList_swarp_r.ascii
+
+
+cd /home/dutta26/apps/bin/bin/
+./swarp @/home/dutta26/codes/makeWeights/fileList_swarp_r.ascii -c /home/dutta26/default.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/abell_r_coadd_wted.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/abell_r_coadd_wted.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/abell_2390/
+
+
+
+cd /home/dutta26/codes/makeWeights/
+python makeFileList.py /scratch/halstead/d/dutta26/abell_2390/i/ /home/dutta26/codes/makeWeights/fileList_swarp_i.ascii
+
+
+cd /home/dutta26/apps/bin/bin/
+./swarp @/home/dutta26/codes/makeWeights/fileList_swarp_i.ascii -c /home/dutta26/default.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/abell_i_coadd_wted.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/abell_i_coadd_wted.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/abell_2390/
+
+
+
+cd /home/dutta26/apps/bin/bin/
+./swarp @/home/dutta26/file_list.ascii -c /home/dutta26/default.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_wted1.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_wted1.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/abell_2390/
+
+#Crop the coadded file 
+cd /home/dutta26/codes/makeWeights/
+python makeFinalCuts.py /scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_wted1.fits /scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_wted.fits 
+python makeFinalCuts.py /scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_wted1.weight.fits /scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_wted.weight.fits
+
+
+
+

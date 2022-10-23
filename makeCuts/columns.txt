@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb 17 10:29:56 2022
+
+@author: dutta26
+"""
+
+
+['ra', 
+'dec', 
+'star_flag',
+'flux', 
+'mux', 
+'muy', 
+'bkg', 
+'xx', 
+'yy', 
+'xy',
+'x', 
+'y',
+'force_flag', 
+ 'vert_flag', 
+ 'bad_flag', 
+ 'back_sky', 
+ 'seeing', 
+ 'zp', 
+ 'fwhm', 
+ 'mjd' , 
+ 'airmass', 
+ 'mphase', 
+ 'mAngle' ,
+ 'expTime' ,
+ 'focus' ,
+ 'zp_n' ,
+ 'skymag' ,
+ 'depth' ,
+ 'mRa' ,
+ 'mDec',
+ 'scale_fact',
+ 'flux_sf',
+ 'mux_sf',
+ 'muy_sf',
+ 'bkg_sf',
+ 'xx_sf',
+ 'yy_sf',
+ 'xy_sf',
+ 'interp_xx',
+ 'interp_yy',
+ 'interp_xy',
+ 'Empty',
+ 'Empty',
+ 'Empty',
+ 'Empty',
+ 'Empty',
+ 'Empty',
+ 'Empty',
+ 'Empty', 
+ 'Empty']
+
+
+
+
+['ra', 'dec', 'star_flag','flux', 'mux', 'muy', 'bkg', 'xx', 'yy', 'xy','x', 'y','force_flag',  'vert_flag', 
+ 'bad_flag',  'back_sky',  'seeing',  'zp',  'fwhm',  'mjd' ,  'airmass',  'mphase',  'mAngle' , 'expTime' ,
+ 'focus' , 'zp_n' , 'skymag' , 'depth' , 'mRa' , 'mDec', 'scale_fact', 'flux_sf', 'mux_sf', 'muy_sf',
+ 'bkg_sf', 'xx_sf', 'yy_sf', 'xy_sf', 'interp_xx', 'interp_yy', 'interp_xy', 'Empty', 'Empty', 'Empty',
+ 'Empty', 'Empty', 'Empty', 'Empty', 'Empty',  'Empty']

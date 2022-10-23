@@ -1,0 +1,21 @@
+#!/bin/sh -l 
+# FILENAME:  phosim_lsst_sheared1.sub 
+cd /home/dutta26/apps/phosim-phosim_release-2479c7396c0c/  
+mkdir /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1001/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog/1.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1001/ -w /scratch/halstead/d/dutta26/abell_2390/work_lsst 
+mkdir /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1002/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog/2.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1002/ -w /scratch/halstead/d/dutta26/abell_2390/work_lsst 
+mkdir /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1003/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog/3.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1003/ -w /scratch/halstead/d/dutta26/abell_2390/work_lsst 
+mkdir /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1004/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog/4.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1004/ -w /scratch/halstead/d/dutta26/abell_2390/work_lsst 
+mkdir /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1005/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog/5.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1005/ -w /scratch/halstead/d/dutta26/abell_2390/work_lsst 
+mkdir /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1006/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog/6.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1006/ -w /scratch/halstead/d/dutta26/abell_2390/work_lsst 
+mkdir /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1007/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog/7.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1007/ -w /scratch/halstead/d/dutta26/abell_2390/work_lsst 
+mkdir /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1008/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog/8.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1008/ -w /scratch/halstead/d/dutta26/abell_2390/work_lsst 
+mkdir /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1009/  
+./phosim /scratch/halstead/d/dutta26/lsst/lsst_catalog/9.txt_sheared -i lsst -c examples/quickbackground -o /scratch/halstead/d/dutta26/abell_2390/lsst_sheared/1009/ -w /scratch/halstead/d/dutta26/abell_2390/work_lsst 

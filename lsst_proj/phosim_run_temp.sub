@@ -1,0 +1,13 @@
+#!/bin/sh -l 
+# FILENAME:  phosim_run_temp.sub 
+cd /home/dutta26/apps/bin/bin
+./swarp @/home/dutta26/fileList_wiyn.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/odi_sim_long.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/odi_sim_long.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/lsst/
+
+#./swarp @/home/dutta26/fileList_wiyn_star.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/odi_sim_star.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/#odi_sim_star.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/lsst/
+
+#./swarp @/home/dutta26/fileList_wiyn_star.ascii -c /home/dutta26/default1.swarp -IMAGEOUT_NAME /scratch/halstead/d/dutta26/abell_2390/odi_sim_star.fits -WEIGHTOUT_NAME /scratch/halstead/d/dutta26/abell_2390/#odi_sim_star.weight.fits -RESAMPLE_DIR /scratch/halstead/d/dutta26/lsst/
+
+#cd /home/dutta26/codes/lsst_proj/
+#module load anaconda/2020.11-py38
+#python makeCoadd_LSST.py
+
