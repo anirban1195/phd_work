@@ -1,0 +1,37 @@
+make_plots1.py:103: RuntimeWarning: divide by zero encountered in double_scalars
+  temp_sigxyArr.append( (sigxy_measure - randxy/2) / (randxy/2))
+/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/core/_methods.py:212: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:112: RuntimeWarning: overflow encountered in square
+  t7 = np.sum(k**2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:119: RuntimeWarning: overflow encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:119: RuntimeWarning: invalid value encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:120: RuntimeWarning: overflow encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:120: RuntimeWarning: invalid value encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:121: RuntimeWarning: overflow encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:121: RuntimeWarning: invalid value encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/core/_methods.py:179: RuntimeWarning: invalid value encountered in reduce
+  ret = umr_sum(arr, axis, dtype, out, keepdims, where=where)
+2784
+2
+3
+4
+5
+2
+3
+4
+5
+2
+3
+4
+5
+2
+3
+4
+5

@@ -1,0 +1,19 @@
+/home/dutta26/codes/calib/measure_pythonV_dist.py:413: RuntimeWarning: overflow encountered in exp
+  temp1 = img - back_calc + 1.41421* sqrtImg*(0.477/ np.exp(0.928*q +0.247*q2 + 0.04*q3))
+2784
+2
+3
+4
+5
+2
+3
+4
+5
+2
+3
+4
+5
+2
+3
+4
+5

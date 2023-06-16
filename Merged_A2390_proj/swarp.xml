@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///home/dutta26/apps/bin/share/swarp/swarp.xsl"?>
+<VOTABLE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.ivoa.net/xml/VOTable/v1.1">
+<DESCRIPTION>produced by SWarp</DESCRIPTION>
+<!-- VOTable description at http://www.ivoa.net/Documents/latest/VOT.html -->
+<RESOURCE ID="SWarp" name="temp_20201206T204440.1_Abell_2390_odi_g.9044.fits">
+ <DESCRIPTION>Data related to SWarp</DESCRIPTION>
+ <INFO name="QUERY_STATUS" value="OK" />
+ <COOSYS ID="J2000" equinox="J2000" epoch="J2000" system="ICRS"/>
+ <RESOURCE ID="MetaData" name="MetaData">
+  <DESCRIPTION>SWarp meta-data</DESCRIPTION>
+  <INFO name="QUERY_STATUS" value="OK" />
+  <PARAM name="Software" datatype="char" arraysize="*" ucd="meta.title;meta.software" value="SWarp"/>
+  <PARAM name="Version" datatype="char" arraysize="*" ucd="meta.version;meta.software" value="2.38.0"/>
+  <PARAM name="Soft_URL" datatype="char" arraysize="*" ucd="meta.ref.url;meta.software" value="http://astromatic.net/software/swarp/"/>
+  <PARAM name="Soft_Auth" datatype="char" arraysize="*" ucd="meta.bib.author;meta.software" value="Emmanuel Bertin"/>
+  <PARAM name="Soft_Ref" datatype="char" arraysize="*" ucd="meta.bib.bibcode;meta.software" value="2002ASPC..281..228B"/>
+  <PARAM name="NThreads" datatype="int" ucd="meta.number;meta.software" value="10"/>
+  <PARAM name="Date" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="2022-11-06"/>
+  <PARAM name="Time" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="04:30:58"/>
+  <PARAM name="Duration" datatype="float" ucd="time.event;meta.software" value="74.80" unit="s"/>
+  <PARAM name="User" datatype="char" arraysize="*" ucd="meta.curation" value="dutta26"/>
+  <PARAM name="Host" datatype="char" arraysize="*" ucd="meta.curation" value="bell-a008.rcac.purdue.edu"/>
+  <PARAM name="Path" datatype="char" arraysize="*" ucd="meta.dataset" value="/home/dutta26/codes/Merged_A2390_proj"/>
+  <PARAM name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="/scratch/bell/dutta26/abell_2390/g/temp/temp_20201206T204440.1_Abell_2390_odi_g.9044.fits"/>
+  <PARAM name="Weight_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="/scratch/bell/dutta26/abell_2390/abell_ir_coadd.weight.fits"/>
+  <PARAM name="NOverlap_Max" datatype="int" ucd="meta.number;stat.max;obs.image" value="1"/>
+  <PARAM name="ExpTime_Max" datatype="float" ucd="time.expo;stat.max;obs.image" value="0" unit="s"/>
+  <PARAM name="Gain_Max" datatype="float" ucd="instr.calib;stat.max;obs.image" value="1.23086" unit="photon/ADU"/>
+  <TABLE ID="Input_Image_Data" name="Input_Image_Data">
+   <DESCRIPTION>Data gathered by SWarp for every FITS input image</DESCRIPTION>
+   <!-- NFrames may be 0 if an error occurred early in the processing -->
+   <PARAM name="NFrames" datatype="int" ucd="meta.number;meta.dataset" value="30"/>
+   <!-- CurrFrame may differ from NFrames if an error occurred -->
+   <PARAM name="CurrFrame" datatype="int" ucd="meta.number;meta.dataset" value="30"/>
+   <FIELD name="Frame_Index" datatype="int" ucd="meta.record"/>
+   <FIELD name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits"/>
+   <FIELD name="Weight_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits"/>
+   <FIELD name="External_Header" datatype="boolean" ucd="meta.code;obs.param"/>
+   <FIELD name="Image_Ident" datatype="char" arraysize="*" ucd="meta.id;obs"/>
+   <FIELD name="Extension" datatype="int" ucd="meta.record"/>
+   <FIELD name="Date" datatype="char" arraysize="*" ucd="meta.record;time.event.end"/>
+   <FIELD name="Time" datatype="char" arraysize="*" ucd="meta.record;time.event.end"/>
+   <FIELD name="Duration" datatype="float" ucd="meta.record;time.event.end" unit="s"/>
+   <FIELD name="Background_Mean" datatype="float" ucd="instr.skyLevel;obs.image;stat.median" unit="adu"/>
+   <FIELD name="Background_StDev" datatype="float" ucd="stat.stdev;obs.image;stat.median" unit="adu"/>
+   <FIELD name="Subtract_Back" datatype="boolean" ucd="meta.code;obs.param"/>
+   <FIELD name="Back_Type" datatype="char" arraysize="*" ucd="meta.code;obs.param"/>
+   <FIELD name="Back_Size" datatype="int" ucd="obs.param" unit="pix"/>
+   <FIELD name="Back_FilterSize" datatype="int" ucd="obs.param" unit="pix"/>
+   <FIELD name="Back_Default" datatype="float" ucd="obs.param" unit="adu"/>
+   <FIELD name="Weight_Type" datatype="boolean" arraysize="*" ucd="stat.weight;meta.code"/>
+   <FIELD name="Rescale_Weights" datatype="char" arraysize="*" ucd="stat.weight;meta.code"/>
+   <FIELD name="Weight_Thresh" datatype="float" ucd="instr.sensitivity;obs.param" unit="adu"/>
+   <FIELD name="Weight_Scaling" datatype="float" ucd="arith.factor;obs.image;stat.median"/>
+   <FIELD name="Interpolate" datatype="boolean" ucd="meta.code;obs.param"/>
+   <FIELD name="Gain" datatype="float" ucd="instr.calib;obs.image" unit="photon/adu"/>
+   <FIELD name="Saturation" datatype="float" ucd="instr.calib;obs.image" unit="adu"/>
+   <FIELD name="ExpTime" datatype="float" ucd="time.expo;obs.image" unit="s"/>
+   <FIELD name="Photometric_Flux_Scaling" datatype="float" ucd="phot.calib;obs.image"/>
+   <FIELD name="Astrometric_Flux_Scaling" datatype="float" ucd="phot.calib;obs.image"/>
+   <FIELD name="Field_Coordinates" datatype="double" arraysize="2" ucd="pos.eq;obs.image" unit="pix"/>
+   <FIELD name="Pixel_Scale" datatype="float" ucd="instr.pixel;obs.image;stat.mean" unit="arcsec"/>
+   <FIELD name="ObsDate" datatype="double" ucd="time.start;obs" unit="yr"/>
+   <FIELD name="Equinox" datatype="double" ucd="time.equinox;obs" unit="yr"/>
+   <FIELD name="Epoch" datatype="double" ucd="time.epoch;obs" unit="yr"/>
+   <FIELD name="COOSYS" datatype="char" arraysize="*" ucd="meta.code;pos"/>
+   <DATA><TABLEDATA>
+    <TR>
+     <TD>1</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:45</TD><TD>1.00</TD>
+     <TD>53.2005</TD><TD>11.5474</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.989355</TD><TD>328.3337167 17.60956741</TD><TD>0.111777</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>2</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:46</TD><TD>0.00</TD>
+     <TD>52.4961</TD><TD>11.4401</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.988049</TD><TD>328.3335368 17.74475592</TD><TD>0.111777</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>3</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:47</TD><TD>0.00</TD>
+     <TD>53.8449</TD><TD>10.0674</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.988308</TD><TD>328.4718544 17.61007885</TD><TD>0.111777</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>4</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:48</TD><TD>1.00</TD>
+     <TD>53.7149</TD><TD>10.7056</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.988427</TD><TD>328.4719735 17.74464599</TD><TD>0.111777</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>5</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:49</TD><TD>1.00</TD>
+     <TD>52.709</TD><TD>9.88268</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.993476</TD><TD>328.3339615 17.47565265</TD><TD>0.111776</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>6</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:50</TD><TD>0.00</TD>
+     <TD>51.6238</TD><TD>10.0159</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.995303</TD><TD>328.1958232 17.61031074</TD><TD>0.111777</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>7</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:51</TD><TD>0.00</TD>
+     <TD>52.6559</TD><TD>9.64866</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.994267</TD><TD>328.1957356 17.74487789</TD><TD>0.111777</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>8</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:51</TD><TD>0.00</TD>
+     <TD>52.7877</TD><TD>10.1172</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.993215</TD><TD>328.4715727 17.47548152</TD><TD>0.111776</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>9</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:52</TD><TD>0.00</TD>
+     <TD>53.2401</TD><TD>9.53781</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.994257</TD><TD>328.3337644 17.87944691</TD><TD>0.111776</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>10</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:53</TD><TD>0.00</TD>
+     <TD>52.043</TD><TD>9.8983</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.993335</TD><TD>328.6097132 17.60968737</TD><TD>0.111776</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>11</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:55</TD><TD>1.00</TD>
+     <TD>51.0782</TD><TD>10.1593</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.994355</TD><TD>328.472011 17.87893299</TD><TD>0.111776</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>12</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:56</TD><TD>0.00</TD>
+     <TD>53.6323</TD><TD>11.5696</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.994099</TD><TD>328.6094314 17.74503025</TD><TD>0.111776</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>13</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:56</TD><TD>0.00</TD>
+     <TD>52.1951</TD><TD>9.79268</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.998682</TD><TD>328.1962851 17.47555829</TD><TD>0.111776</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>14</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:57</TD><TD>0.00</TD>
+     <TD>50.689</TD><TD>9.9293</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.998986</TD><TD>328.1961216 17.8786684</TD><TD>0.111776</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>15</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:58</TD><TD>0.00</TD>
+     <TD>52.0038</TD><TD>10.065</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.999538</TD><TD>328.6091181 17.47597651</TD><TD>0.111775</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>16</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:58</TD><TD>0.00</TD>
+     <TD>50.9151</TD><TD>9.28252</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.00036</TD><TD>328.6098968 17.87853947</TD><TD>0.111775</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>17</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:29:59</TD><TD>0.00</TD>
+     <TD>52.0241</TD><TD>12.7342</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.00478</TD><TD>328.3333439 17.3420661</TD><TD>0.111775</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>18</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:00</TD><TD>0.00</TD>
+     <TD>50.2655</TD><TD>10.0834</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.00382</TD><TD>328.0592348 17.60985794</TD><TD>0.111776</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>19</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:01</TD><TD>0.00</TD>
+     <TD>51.7301</TD><TD>13.4643</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.00494</TD><TD>328.4715683 17.34152271</TD><TD>0.111774</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>20</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:01</TD><TD>0.00</TD>
+     <TD>50.3999</TD><TD>10.1127</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.00459</TD><TD>328.058719 17.74437691</TD><TD>0.111776</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>21</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:02</TD><TD>0.00</TD>
+     <TD>50.3529</TD><TD>10.9578</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.00505</TD><TD>328.3340903 18.0129403</TD><TD>0.111775</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>22</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:03</TD><TD>0.00</TD>
+     <TD>51.228</TD><TD>10.6359</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.00548</TD><TD>328.4722118 18.01312452</TD><TD>0.111774</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>23</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:03</TD><TD>0.00</TD>
+     <TD>27129.1</TD><TD>2442.15</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>517.948</TD><TD>328.2247975 17.34650713</TD><TD>0.111774</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>24</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:04</TD><TD>0.00</TD>
+     <TD>50.559</TD><TD>10.1171</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.00969</TD><TD>328.0595535 17.47597592</TD><TD>0.111775</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>25</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:05</TD><TD>1.00</TD>
+     <TD>49.7815</TD><TD>9.80621</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.00999</TD><TD>328.059558 17.87784138</TD><TD>0.111775</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>26</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:06</TD><TD>0.00</TD>
+     <TD>51.573</TD><TD>10.6431</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.01029</TD><TD>328.6087351 17.34203467</TD><TD>0.111773</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>27</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:07</TD><TD>0.00</TD>
+     <TD>50.5351</TD><TD>10.5419</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.01007</TD><TD>328.1961814 18.0127825</TD><TD>0.111774</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>28</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:07</TD><TD>0.00</TD>
+     <TD>52.3528</TD><TD>12.6287</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.0124</TD><TD>328.6098244 18.01223354</TD><TD>0.111773</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>29</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:08</TD><TD>0.00</TD>
+     <TD>52.952</TD><TD>10.0647</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.02036</TD><TD>328.0607327 17.34276481</TD><TD>0.111773</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>30</TD><TD>/scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2022-11-06</TD><TD>04:30:09</TD><TD>0.00</TD>
+     <TD>51.4094</TD><TD>11.4107</TD><TD>F</TD><TD>AUTO</TD><TD>256</TD><TD>2</TD><TD>0</TD>
+     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>1.23086</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>1.02175</TD><TD>328.0601698 18.01121023</TD><TD>0.111773</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+   </TABLEDATA></DATA>
+  </TABLE>
+  <TABLE ID="Warnings" name="Warnings">
+   <DESCRIPTION>SWarp warnings (limited to the last 1000)</DESCRIPTION>
+   <FIELD name="Date" datatype="char" arraysize="*" ucd="meta;time.event.end"/>
+   <FIELD name="Time" datatype="char" arraysize="*" ucd="meta;time.event.end"/>
+   <FIELD name="Msg" datatype="char" arraysize="*" ucd="meta"/>
+   <DATA><TABLEDATA>
+    <TR><TD>2022-11-06</TD><TD>04:29:44</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:29:44</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+    <TR><TD>2022-11-06</TD><TD>04:30:03</TD><TD>Significant inaccuracy likely to occur in projection</TD></TR>
+   </TABLEDATA></DATA>
+  </TABLE>
+  <RESOURCE ID="Config" name="Config">
+   <DESCRIPTION>SWarp configuration</DESCRIPTION>
+   <PARAM name="Command_Line" datatype="char" arraysize="*" ucd="obs.param" value="swarp /scratch/bell/dutta26/abell_2390/g/20201206T204440.1_Abell_2390_odi_g.9044.fits -c /home/dutta26/default_1.swarp -IMAGEOUT_NAME /scratch/bell/dutta26/abell_2390/g/temp/temp_20201206T204440.1_Abell_2390_odi_g.9044.fits"/>
+   <PARAM name="Prefs_Name" datatype="char" arraysize="*" ucd="obs.param;meta.file" value="/home/dutta26/default_1.swarp"/>
+   <PARAM name="ImageOut_Name" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value="/scratch/bell/dutta26/abell_2390/g/temp/temp_20201206T204440.1_Abell_2390_odi_g.9044.fits"/>
+   <PARAM name="WeightOut_Name" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value="/scratch/bell/dutta26/abell_2390/abell_ir_coadd.weight.fits"/>
+   <PARAM name="Header_Only" datatype="boolean" ucd="meta.code;obs.param" value="F"/>
+   <PARAM name="Header_Suffix" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value=".head"/>
+   <PARAM name="Weight_Suffix" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value=".weight.fits"/>
+   <PARAM name="Combine" datatype="boolean" ucd="meta.code" value="T"/>
+   <PARAM name="Combine_Type" datatype="char" arraysize="*" ucd="meta.code;obs.param" value="WEIGHTED"/>
+   <PARAM name="Blank_BadPixels" datatype="boolean" ucd="meta.code;obs.param" value="F"/>
+   <PARAM name="Celestial_Type" datatype="char" arraysize="*" ucd="meta;pos;obs.param" value="NATIVE"/>
+   <PARAM name="Projection_Type" datatype="char" arraysize="*" ucd="meta;pos;obs.param" value="TAN"/>
+   <PARAM name="Projection_Err" datatype="float" arraysize="2" ucd="pos.angDistance;stat.max;obs.param" value="0.001 0" unit="pix"/>
+   <PARAM name="Center_Type" datatype="char" arraysize="*" ucd="meta.code;pos;obs.param" value="ALL"/>
+   <PARAM name="Center" datatype="double" arraysize="2" ucd="pos;obs.param" value="    328.3345474     17.67719272" unit="pix"/>
+   <PARAM name="PixelScale_Type" datatype="char" arraysize="*" ucd="meta.code;pos;obs.param" value="MEDIAN"/>
+   <PARAM name="Pixel_Scale" datatype="float" arraysize="1" ucd="instr.scale;instr.pixel;obs.param" value="0.11"/>
+   <PARAM name="Image_Size" datatype="int" arraysize="1" ucd="instr.scale;instr.pixel;obs.param" value="0"/>
+   <PARAM name="Resample" datatype="boolean" ucd="meta.code" value="T"/>
+   <PARAM name="Resample_Dir" datatype="char" arraysize="*" ucd="meta.dataset" value="/scratch/bell/dutta26/"/>
+   <PARAM name="Resample_Suffix" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value=".resamp.fits"/>
+   <PARAM name="Resampling_Type" datatype="char" arraysize="*" ucd="meta.code;pos;obs.param" value="LANCZOS3"/>
+   <PARAM name="Oversampling" datatype="int" arraysize="1" ucd="arith.factor;instr.pixel;obs.param" value="1"/>
+   <PARAM name="FScalAstro_Type" datatype="char" arraysize="*" ucd="phot.calib;obs.param" value="FIXED"/>
+   <PARAM name="FScale_Keyword" datatype="char" arraysize="*" ucd="meta.code;phot.calib;obs.param" value="FLXSCALE1"/>
+   <PARAM name="FScale_Default" datatype="float" ucd="phot.calib;obs.param" value="1"/>
+   <PARAM name="Gain_Keyword" datatype="char" arraysize="*" ucd="meta.code;phot.calib;obs.param" value="GAIN"/>
+   <PARAM name="Gain_Default" datatype="float" ucd="phot.calib;obs.param" value="0"/>
+   <PARAM name="SatLev_Keyword" datatype="char" arraysize="*" ucd="meta.code;instr.saturation;obs.param" value="SATURATE"/>
+   <PARAM name="SatLev_Default" datatype="float" ucd="instr.saturation;obs.param" value="50000"/>
+   <PARAM name="Subtract_Back" datatype="boolean" ucd="meta.code" value="F"/>
+   <PARAM name="Back_Type" datatype="char" arraysize="*" ucd="meta.code;obs.param" value="NONE"/>
+   <PARAM name="Back_Size" datatype="int" ucd="obs.param" value="256"/>
+   <PARAM name="Back_FilterSize" datatype="int" ucd="obs.param" value="2"/>
+   <PARAM name="Back_Default" datatype="float" ucd="obs.param" value="0" unit="adu"/>
+   <PARAM name="Back_FiltThresh" datatype="float" ucd="phot.count;arith.ratio;obs.param" value="0"/>
+   <PARAM name="VMem_Dir" datatype="char" arraysize="*" ucd="meta" value="."/>
+   <PARAM name="VMem_Max" datatype="int" ucd="meta.number;stat.max" value="1024" unit="Mbyte"/>
+   <PARAM name="Mem_Max" datatype="int" ucd="meta.number;stat.max" value="1024" unit="Mbyte"/>
+   <PARAM name="Combine_BufSize" datatype="int" ucd="meta.number;stat.max" value="1024" unit="Mbyte"/>
+   <PARAM name="Delete_TmpFiles" datatype="boolean" ucd="meta.code" value="T"/>
+   <PARAM name="Copy_Keywords" datatype="char" arraysize="*" ucd="meta;meta.fits" value="OBJECT  "/>
+   <PARAM name="Write_FileInfo" datatype="boolean" ucd="meta.code" value="T"/>
+   <PARAM name="Verbose_Type" datatype="char" arraysize="*" ucd="meta.code" value="LOG"/>
+  </RESOURCE>
+ </RESOURCE>
+</RESOURCE>
+</VOTABLE>

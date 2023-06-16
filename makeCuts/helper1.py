@@ -16,13 +16,13 @@ def vert_stripe(img):
     midx = int(round(sizex/2))
     midy = int(round(sizey/2))
     #Check 2 pix above centre 
-    avg = np.mean(img[midy+2 , midx-1:midx+2 ])
+    avg = np.mean(img[midy+2 , midx-1:midx+1 ])
     edge = (img[midy+2 , midx-6 ]+img[midy+2 , midx+6 ])/2
     #print (avg,edge, img[midy+2 , midx-1:midx+2 ] , img[midy+2 , midx-4 ], img[midy+2 , midx+4 ])
     if(avg < edge):
         flag = 1
     #Check 3 pix above center 
-    avg = np.mean(img[midy+3 , midx-1:midx+2 ])
+    avg = np.mean(img[midy+3 , midx-1:midx+1 ])
     edge = (img[midy+3 , midx-7 ] + img[midy+3 , midx+7 ])/2
     #print (avg,edge)
     
@@ -44,15 +44,17 @@ def vert_stripe(img):
 #The do ellipticity measurements 
 
 def detectBad(cutout):
-    
+    cutout = np.array(cutout, dtype = np.float32)
     sizey, sizex = np.shape(cutout)
     cutout[np.isnan(cutout)] = 0
     flag = flagC = flagE = flagTot = 0
     
     #First check if any central 20x20 region is 
-    a= np.where(cutout[int(sizey/2)-10:int(sizey/2)+10 , int(sizex/2)-10:int(sizex/2)+10] <= 0)
+    a= np.where(cutout[int(sizey/2)-5:int(sizey/2)+5 , int(sizex/2)-5:int(sizex/2)+5] <= 0)
     if(len(a[0]) > 0):
         flagC = 1
+        
+    
         
     #Next check how many total zero in cutout
     b= np.where(cutout <= 0)
@@ -75,6 +77,11 @@ def detectBad(cutout):
         flag = 1
     #del data        
     return flag 
+
+
+
+
+
 
 #This function checks each cutout and returns a list of good indices
 #filename ,  xposition, yposition, and sizeList are inputs

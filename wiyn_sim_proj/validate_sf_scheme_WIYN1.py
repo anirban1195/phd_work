@@ -20,10 +20,13 @@ import math,sys
 import subprocess
 from scipy.special import erf
 
-sf_df = np.load('/scratch/halstead/d/dutta26/abell_2390/test_10star_1.npy')
+sf_df = np.load('/scratch/halstead/d/dutta26/abell_2390/test_10star_1_20file.npy')
 coadd_df = np.load('/scratch/halstead/d/dutta26/abell_2390/wiyn_data.npy')
 
-loc = np.where((coadd_df[:,3]>1000) & (coadd_df[:,3]<1100) & (coadd_df[:,2] == 0 ) )[0]
+loc = np.where((coadd_df[:,3]>300) & (coadd_df[:,3]<400) & (coadd_df[:,2] == 0 ) )[0]
+
+coadd_df = np.load('/scratch/halstead/d/dutta26/abell_2390/wiyn_data_long.npy')
+
 e1Arr=[]
 e2Arr=[]
 e1_devArr=[]
@@ -53,7 +56,7 @@ for j in loc:
     temp2 =[]
     tempwt =[]
     indexArr=[]
-    for k in range(80):
+    for k in range(20):
         #Makre sure they have been measured
         if(sf_df[k,j,12]!= 99 and sf_df[k,j,12]!= 1 ):
             continue
@@ -150,7 +153,7 @@ for j in loc:
                 if(sf_df[k,j,12]== 99):
                     tempwt.append(snr)
                 else:
-                    tempwt.append(snr/5)
+                    tempwt.append(snr)
                 
         else:
             if(sf_df[k,j,12]== 99):
@@ -166,17 +169,21 @@ for j in loc:
             if(sf_df[k,j,12]== 99):
                 tempwt.append(snr)
             else:
-                tempwt.append(snr/5)
+                tempwt.append(snr)
         
     temp1 = np.array(temp1)    
     temp2 = np.array(temp2)
     tempwt = np.array(tempwt)
     mean_e1= np.sum(temp1*tempwt)/np.sum(tempwt)
     mean_e2= np.sum(temp2*tempwt)/np.sum(tempwt)
+    if(np.isnan(mean_e1)):
+        break
     e1_devArr.append(e1-mean_e1)
     e2_devArr.append(e2-mean_e2)
-    if(abs(e1-mean_e1)> 0.2):
-        break
+    #if(abs(e1-mean_e1)> 0.2):
+    #    break
+    #if(j == 201):
+    #    break
 
 
     

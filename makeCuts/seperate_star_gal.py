@@ -28,9 +28,9 @@ Gaia.MAIN_GAIA_TABLE = "gaiaedr3.gaia_source" # Select early Data Release 3
 # outFile = str(sys.argv[2])
 # imgFile = str(sys.argv[3])
 # =============================================================================
-catalog = '/home/dutta26/Downloads/sextractor-2.19.5/share/sextractor/test.cat'
+catalog = '/home/dutta26/Downloads/sextractor-2.19.5/share/sextractor/abell_2390_sextract.cat'
 outFile = '/home/dutta26/codes/source_list.pk1'
-imgFile = '/scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_wted.fits'
+imgFile = '/scratch/bell/dutta26/abell_2390/abell_ir_coadd_crop.fits'
 
 f=fits.open(imgFile)
 img = np.array(f[0].data)

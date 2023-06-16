@@ -21,6 +21,27 @@ import math,sys
 import subprocess
 
 
+arr_20file = ['10017',
+ '10027',
+ '10072',
+ '10012',
+ '10025',
+ '1004',
+ '1006',
+ '10015',
+ '10071',
+ '1005',
+ '10013',
+ '1003',
+ '10034',
+ '10036',
+ '1008',
+ '10010',
+ '10035',
+ '1009',
+ '10019',
+ '10033']
+
 folderLoc = "/scratch/halstead/d/dutta26/abell_2390/odi_img_realsee/"
 swarpLoc = '/home/dutta26/apps/bin/bin/'
 
@@ -44,6 +65,14 @@ coadd_df = np.load('/scratch/halstead/d/dutta26/abell_2390/wiyn_data.npy')
 store = np.zeros((100,len(raList), 50), dtype = np.float32)
 fileCount = -1
 for files in os.listdir(folderLoc):
+    
+    
+    if(files not in arr_20file):
+        continue
+    
+    
+    
+    
     print (files)
     fileCount += 1
     imgFile = folderLoc +files+'/final_coadd.fits'
@@ -250,5 +279,5 @@ for files in os.listdir(folderLoc):
         
     print (fileCount)
         
-np.save('/scratch/halstead/d/dutta26/abell_2390/test_10star_1.npy', store)          
+np.save('/scratch/halstead/d/dutta26/abell_2390/test_10star_1_20file.npy', store)          
     

@@ -1,0 +1,5 @@
+Success
+Traceback (most recent call last):
+  File "phosim_test.py", line 81, in <module>
+    e1 =  ((sigxx_img- sigxx_psf) -((sigyy_img- sigyy_psf)))/((sigxx_img- sigxx_psf) +((sigyy_img- sigyy_psf)))
+TypeError: unsupported operand type(s) for -: 'float' and 'NoneType'

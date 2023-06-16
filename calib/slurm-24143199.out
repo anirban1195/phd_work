@@ -1,0 +1,31 @@
+/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/core/fromnumeric.py:3441: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/core/_methods.py:263: RuntimeWarning: Degrees of freedom <= 0 for slice
+  keepdims=keepdims, where=where)
+/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/core/_methods.py:223: RuntimeWarning: invalid value encountered in true_divide
+  subok=False)
+/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/core/_methods.py:254: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:413: RuntimeWarning: overflow encountered in exp
+  temp1 = img - back_calc + 1.41421* sqrtImg*(0.477/ np.exp(0.928*q +0.247*q2 + 0.04*q3))
+/home/dutta26/codes/calib/measure_pythonV_dist.py:414: RuntimeWarning: overflow encountered in exp
+  temp2 = 1.41421* sqrtImg*(0.477/ np.exp(0.551*q - 0.06*q2 + 0.003*q3))
+2784
+2
+3
+4
+5
+2
+3
+4
+5
+2
+3
+4
+5
+2
+3
+4
+5

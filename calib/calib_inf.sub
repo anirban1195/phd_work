@@ -1,0 +1,10 @@
+#!/bin/sh -l
+# FILENAME:  calib.sub
+
+module load anaconda
+source activate /home/dutta26/.conda/envs/cent7/2020.11-py38/test
+
+cd /home/dutta26/codes/calib/
+#python calib_flux_inf.py 1004
+python make_plots1.py 
+#python make_plots2.py 

@@ -1,0 +1,15 @@
+#!/bin/sh -l
+# FILENAME:  i_coadd.sub
+
+module load anaconda/2020.11-py38
+source activate /home/dutta26/.conda/envs/cent7/2020.11-py38/test
+
+cd /home/dutta26/codes/makeWeights/
+python makeWeights.py /scratch/bell/dutta26/abell_2390/i/
+python makeFileList.py /scratch/bell/dutta26/abell_2390/i/ /home/dutta26/codes/makeWeights/fileList_swarp_i.ascii
+
+
+
+swarp @/home/dutta26/codes/makeWeights/fileList_swarp_i.ascii -c /home/dutta26/default.swarp -IMAGEOUT_NAME /scratch/bell/dutta26/abell_2390/abell_i_coadd.fits -WEIGHTOUT_NAME /scratch/bell/dutta26/abell_2390/abell_i_coadd.weight.fits -RESAMPLE_DIR /scratch/bell/dutta26/abell_2390/ -RESCALE_WEIGHTS N
+
+#swarp @/home/dutta26/codes/makeWeights/fileList_swarp_i.ascii -c /home/dutta26/default.swarp -IMAGEOUT_NAME /scratch/bell/dutta26/abell_2390/abell_i_coadd_med.fits -WEIGHTOUT_NAME /scratch/bell/dutta26/#abell_2390/abell_i_coadd_med.weight.fits -RESAMPLE_DIR /scratch/bell/dutta26/abell_2390/ -COMBINE_TYPE MEDIAN

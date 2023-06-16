@@ -65,6 +65,18 @@ for files in os.listdir(folder):
                                   
                  seg_id =int( "%02d" % j+str(y) +str(x))
                  index = np.where(segment_stat[:,0] == seg_id)[0][0]
+                 
+                 #Special cases
+                 if (j ==16 and x== 1 and y == 6):
+                     f[j].data[yStart:yEnd, xStart:xEnd] = 0.0
+                     continue
+                 if (j ==16 and x== 6 and y == 6):
+                     f[j].data[yStart:yEnd, xStart:xEnd] = 0.0
+                     continue
+                 if (j ==16 and x== 6 and y == 7):
+                     f[j].data[yStart:yEnd, xStart:xEnd] = 0.0
+                     continue
+                 
                  #If half the data is bad or half of total (80) data is accounted for make wt 0
                  if(segment_stat[index,2] > 0.5*(segment_stat[index,1]+segment_stat[index,2]) or (segment_stat[index,2]+segment_stat[index,1])< 100 ):
                      f[j].data[yStart:yEnd, xStart:xEnd] = 0.0

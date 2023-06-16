@@ -1,0 +1,8 @@
+#!/bin/sh -l
+# FILENAME:phosim_run_wl.sub
+
+module load anaconda
+source activate /home/dutta26/.conda/envs/cent7/2020.11-py38/test
+
+cd /home/dutta26/codes/sersic_test/
+python phosim_test.py

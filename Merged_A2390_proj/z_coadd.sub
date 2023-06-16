@@ -1,0 +1,13 @@
+#!/bin/sh -l
+# FILENAME:  z_coadd.sub
+
+module load anaconda/2020.11-py38
+source activate /home/dutta26/.conda/envs/cent7/2020.11-py38/test
+
+cd /home/dutta26/codes/makeWeights/
+python makeWeights.py /scratch/bell/dutta26/abell_2390/z/
+python makeFileList.py /scratch/bell/dutta26/abell_2390/z/ /home/dutta26/codes/makeWeights/fileList_swarp_z.ascii
+
+
+
+swarp @/home/dutta26/codes/makeWeights/fileList_swarp_z.ascii -c /home/dutta26/default.swarp -IMAGEOUT_NAME /scratch/bell/dutta26/abell_2390/abell_z_coadd.fits -WEIGHTOUT_NAME /scratch/bell/dutta26/abell_2390/abell_z_coadd.weight.fits -RESAMPLE_DIR /scratch/bell/dutta26/abell_2390/ -RESCALE_WEIGHTS N

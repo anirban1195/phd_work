@@ -1,9 +1,8 @@
 #!/bin/sh -l
 # FILENAME:  makeWtu.sub
 
-module load anaconda
-source activate /home/dutta26/.conda/envs/cent7/5.1.0-py27/test
-module load anaconda
-source activate test
+module load anaconda/2020.11-py38
+source activate /home/dutta26/.conda/envs/cent7/2020.11-py38/test
+
 cd /home/dutta26/codes/makeWeights/
-python makeWeights.py /scratch/halstead/d/dutta26/abell_2390/u/
+python makeWeights.py /scratch/bell/dutta26/abell_2390/u/

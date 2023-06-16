@@ -1,0 +1,47 @@
+/home/dutta26/codes/calib/measure_pythonV_dist.py:427: RuntimeWarning: overflow encountered in square
+  t7 = np.sum(k**2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:434: RuntimeWarning: overflow encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:434: RuntimeWarning: invalid value encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:435: RuntimeWarning: overflow encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:435: RuntimeWarning: invalid value encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:436: RuntimeWarning: overflow encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:436: RuntimeWarning: invalid value encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:444: RuntimeWarning: invalid value encountered in double_scalars
+  e1 = (sigxx_calc - sigyy_calc)/(sigxx_calc + sigyy_calc)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:445: RuntimeWarning: divide by zero encountered in double_scalars
+  e2 = 2*sigxy_calc/(sigxx_calc + sigyy_calc)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:445: RuntimeWarning: invalid value encountered in double_scalars
+  e2 = 2*sigxy_calc/(sigxx_calc + sigyy_calc)
+/home/dutta26/codes/calib/measure_pythonV_dist.py:405: RuntimeWarning: overflow encountered in exp
+  k=(A * np.exp(-((x-mux_calc)**2/(arbConst*alphax**2)+ (y-muy_calc)**2/(arbConst*alphay**2) - 2*alphaxy*(y-muy_calc)*(x-mux_calc)/(arbConst* alphax**2 * alphay**2 ) )))
+/home/dutta26/codes/calib/measure_pythonV_dist.py:429: RuntimeWarning: invalid value encountered in double_scalars
+  mux_calc = t3/t2
+/home/dutta26/codes/calib/measure_pythonV_dist.py:430: RuntimeWarning: invalid value encountered in double_scalars
+  muy_calc = t4/t2
+/home/dutta26/codes/calib/measure_pythonV_dist.py:431: RuntimeWarning: invalid value encountered in double_scalars
+  flux_calc = t2/t7
+/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+2784
+2
+3
+4
+5
+2
+3
+4
+5
+2
+3
+4
+5
+2
+3
+4
+5

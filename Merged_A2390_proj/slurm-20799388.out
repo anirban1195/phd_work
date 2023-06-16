@@ -1,0 +1,3 @@
+Not a conda environment: /home/dutta26/.conda/envs/cent7/5.1.0-py27/test
+/var/spool/slurm/job20799388/slurm_script: line 8: 117955 Killed                  python makeWeights.py /scratch/bell/dutta26/abell_2390/g/
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=20799388.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

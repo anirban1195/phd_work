@@ -71,11 +71,11 @@ python makeFinalCuts.py /scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_wt
 
 #Sextract the images 
 cd /home/dutta26/Downloads/sextractor-2.19.5/share/sextractor/
-./sex /scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_wted.fits 
+./sex /scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_crop.fits 
 
 #Create starlist for GAIA EDR 3 
 cd /home/dutta26/codes/makeCuts/
-python seperate_star_gal.py /home/dutta26/Downloads/sextractor-2.19.5/share/sextractor/test.cat /home/dutta26/codes/source_list.pk1 /scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_wted.fits
+python seperate_star_gal.py /home/dutta26/Downloads/sextractor-2.19.5/share/sextractor/test.cat /home/dutta26/codes/source_list.pk1 /scratch/halstead/d/dutta26/abell_2390/abell_ir_coadd_crop.fits
 
 python coadd_detect.py ir /home/dutta26/codes/source_list.pk1
 python coadd_detect.py u /home/dutta26/codes/source_list.pk1

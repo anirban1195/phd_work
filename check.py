@@ -9,7 +9,7 @@ Created on Tue Mar 24 23:42:29 2020
 import os
 from astropy.io import fits
 import numpy as np
-path ='/scratch/halstead/d/dutta26/'
+path ='/scratch/bell/dutta26/'
 
 txtPath =[]
 fitsPath =[]
@@ -30,7 +30,7 @@ print (len(fitsPath))
 print (len(txtPath))
 for files in fitsPath:
     f=fits.open(files)
-    data= np.array(f[0].data)
+    data= f[0].data
     #mean=np.nanmean(data)
     f.close()
 
