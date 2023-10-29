@@ -9,7 +9,7 @@ Created on Tue Mar 24 23:42:29 2020
 import os
 from astropy.io import fits
 import numpy as np
-path ='/scratch/bell/dutta26/'
+path ='/scratch/bell/dutta26/backup/'
 
 txtPath =[]
 fitsPath =[]

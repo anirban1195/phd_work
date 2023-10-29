@@ -305,6 +305,37 @@ ellip = np.sqrt(e1**2 + e2**2)
 # =============================================================================
 
 
+# =============================================================================
+# colors = area
+# ellip = np.sqrt(e1**2+e2**2)
+# plt.scatter(store[:,0], store[:,11], c=colors, cmap = 'viridis', marker = '.', s= 0)
+# plt.clim(20,160)
+# 
+# # =============================================================================
+# # plt.scatter(np.log10(store[:,0]),  np.log10(ef_cent_bkg((store[:,0],  area, store[:,1], e1, e2, 1/elong), 0.9)), c=colors, cmap = 'viridis', marker = '+', s= (100+ellip))
+# # plt.clim(30,70)
+# # 
+# # plt.scatter(np.log10(1.1*store[:,0]),  np.log10(ef_cent_bkg((store[:,0],  area, store[:,1], e1, e2, 1/elong), 1)), c=colors, cmap = 'viridis', marker = 'v', s= (100+ellip))
+# # plt.clim(30,70)
+# # 
+# # =============================================================================
+# 
+# cmap =plt.cm.viridis
+# norm= Normalize(vmin=20,vmax = 160)
+# for j in range(int(len(store)/5)):
+#     plt.errorbar(store[j*5: (j+1)*5,0], store[j*5: (j+1)*5,11], yerr= store[j*5: (j+1)*5,20], fmt='k.',  color = matplotlib.colors.rgb2hex(cmap(norm(area[j*5]))), markersize=10)
+#     plt.plot(store[j*5: (j+1)*5,0],  ef_cent_bkg((store[j*5: (j+1)*5,0],  area[j*5: (j+1)*5], store[j*5: (j+1)*5,1], e1[j*5: (j+1)*5], e2[j*5: (j+1)*5], 1/elong[j*5: (j+1)*5]), 0.9), '--', color = matplotlib.colors.rgb2hex(cmap(norm(area[j*5]))))
+#     plt.plot(store[j*5: (j+1)*5,0],  ef_cent_bkg((store[j*5: (j+1)*5,0],  area[j*5: (j+1)*5], store[j*5: (j+1)*5,1], e1[j*5: (j+1)*5], e2[j*5: (j+1)*5], 1/elong[j*5: (j+1)*5]), 1), '-', color = matplotlib.colors.rgb2hex(cmap(norm(area[j*5]))))
+# 
+# plt.yscale('log')  
+# plt.xscale('log')       
+# plt.title (' Background Centroid error when e=0.0 and B=400  \n Coefficients: Dashed=0.9. Solid = 1')
+# plt.colorbar(orientation='vertical', label= 'Area')
+# plt.xlabel('Flux')
+# plt.ylabel('Uncertainty')
+# =============================================================================
+
+#For xx, yy and xy
 colors = area
 ellip = np.sqrt(e1**2+e2**2)
 plt.scatter(store[:,0], store[:,11], c=colors, cmap = 'viridis', marker = '.', s= 0)
@@ -324,7 +355,6 @@ norm= Normalize(vmin=20,vmax = 160)
 for j in range(int(len(store)/5)):
     plt.errorbar(store[j*5: (j+1)*5,0], store[j*5: (j+1)*5,11], yerr= store[j*5: (j+1)*5,20], fmt='k.',  color = matplotlib.colors.rgb2hex(cmap(norm(area[j*5]))), markersize=10)
     plt.plot(store[j*5: (j+1)*5,0],  ef_cent_bkg((store[j*5: (j+1)*5,0],  area[j*5: (j+1)*5], store[j*5: (j+1)*5,1], e1[j*5: (j+1)*5], e2[j*5: (j+1)*5], 1/elong[j*5: (j+1)*5]), 0.9), '--', color = matplotlib.colors.rgb2hex(cmap(norm(area[j*5]))))
-    plt.plot(store[j*5: (j+1)*5,0],  ef_cent_bkg((store[j*5: (j+1)*5,0],  area[j*5: (j+1)*5], store[j*5: (j+1)*5,1], e1[j*5: (j+1)*5], e2[j*5: (j+1)*5], 1/elong[j*5: (j+1)*5]), 1), '-', color = matplotlib.colors.rgb2hex(cmap(norm(area[j*5]))))
 
 plt.yscale('log')  
 plt.xscale('log')       

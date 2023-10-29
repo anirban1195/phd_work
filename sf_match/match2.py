@@ -26,7 +26,7 @@ eArr= []
 yArr =[]
 bArr=[]
 fArr=[]
-for slice_no in np.arange(0, 100, 1):
+for slice_no in np.arange(1, 100, 1):
 #for slice_no in [32]:
     #slice_no = 8
     
@@ -80,7 +80,8 @@ for slice_no in np.arange(0, 100, 1):
     if(len(loc)< 100):
         #print ('bb')
         continue
-    data = r_sf_df[slice_no,loc,9]
+    #data = r_sf_df[slice_no,loc,9]
+    data = np.sqrt(r_sf_df[slice_no,loc,7] +r_sf_df[slice_no,loc,8])
     
     counts,bin_edges = np.histogram(data, bins=40)
     bin_centres = (bin_edges[:-1] + bin_edges[1:])/2.0
@@ -118,8 +119,8 @@ for slice_no in np.arange(0, 100, 1):
     bkg = np.median(star_arr[:,15])
     
     err_size = np.sqrt( (area/(np.pi*fluxArr) + (4* area**2 * bkg)/(np.pi * fluxArr**2) ) )
-    err_xx = err_yy = np.sqrt(( mean_psf_size* err_size*1.414)**2)
-    err_xy = 0.0
+    err_xx = err_yy = np.sqrt(( mean_psf_size* err_size)**2)
+    err_xy = err_xx * 0.707
     k_guess_xx = np.median(star_arr[:,41])
     k_guess_yy = np.median(star_arr[:,42])
     k_guess_xy = np.median(star_arr[:,43])
@@ -128,8 +129,8 @@ for slice_no in np.arange(0, 100, 1):
     xVal =[]
     yVal =[]
     tot = 0
-    start = mean_xy - 10*np.sqrt(k_guess_xy**2 + err_xy**2)
-    cutoff = mean_xy + 10*np.sqrt(k_guess_xy**2 + err_xy**2)
+    start = mean_psf_size - 10*np.sqrt(k_guess_size**2 + err_size**2)
+    cutoff = mean_psf_size + 10*np.sqrt(k_guess_size**2 + err_size**2)
     #center = 13.6
     for j in range(len(bin_centres)):
         if(bin_centres[j]> cutoff or bin_centres[j]< start):
@@ -138,12 +139,12 @@ for slice_no in np.arange(0, 100, 1):
         yVal.append(counts[j])
     
     
-    parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_xy,np.sqrt(k_guess_xy**2 + err_xy**2) , 80])    
+    parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_psf_size, np.sqrt(k_guess_size**2 + err_size**2) , 80])    
     
-    x_values = np.linspace(mean_xy - 10*np.sqrt(k_guess_xy**2 + err_xy**2),mean_xy + 10*np.sqrt(k_guess_xy**2 + err_xy**2), 25000)
+    x_values = np.linspace(mean_psf_size - 10*np.sqrt(k_guess_size**2 + err_size**2),mean_psf_size + 10*np.sqrt(k_guess_size**2 + err_size**2), 25000)
     #plt.plot(x_values, gaussian(x_values,parameters[0], parameters[1], parameters[2]), 'r-',linewidth = 2)
     #print (parameters)
-    kArr.append(np.sqrt(parameters[1]**2 - err_xy**2))
+    kArr.append(np.sqrt(parameters[1]**2 - err_size**2))
     #if(np.sqrt(parameters[1]**2 - err_xx**2) > (0.2 *mean_psf_size )):
     #    print (slice_no)
     
@@ -172,10 +173,10 @@ sArr = np.array(sArr)
 yArr = np.array(yArr)
 bArr =np.array(bArr)
 fArr=np.array(fArr)
-plt.plot(np.arange(1,20), np.arange(1,20)**2 *1.414*0.7/30, 'b-')
+plt.plot(np.arange(1,20), np.arange(1,20)/30, 'b-')
 plt.plot(pArr, kArr, 'r.')
 plt.xlabel('Mean PSF')
-plt.ylabel('Best Fit k (Sigmaxy)')
+plt.ylabel('Best Fit k (Size)')
 # =============================================================================
 # for j in range(len(eArr)):
 #     if(yArr[j] == 2017):

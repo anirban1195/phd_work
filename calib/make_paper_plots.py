@@ -8,7 +8,7 @@ Created on Sun Mar 12 19:05:35 2023
 
 import numpy as np
 import matplotlib.pyplot as plt
-data = np.load('/scratch/bell/dutta26/abell_2390/paper_plot_data_sf_vs_combined_15pert.npy')
+data = np.load('/scratch/bell/dutta26/abell_2390/paper_plot_data_sf_vs_combined_15pert_test2.npy')
 
 snr = np.log10(data[:,7]/np.sqrt(4*data[:,8]*data[:,11]))
 
@@ -16,13 +16,13 @@ fig, axs = plt.subplots(2, 2, sharex = True )
 axs[0, 0].plot(snr, data[:,6], 'b.', markersize = 1)
 axs[0, 0].set( ylabel = '% Failure')
 axs[0, 1].plot(snr, data[:,0]*100, 'b.', markersize = 1)
-#axs[0, 1].plot(snr, data[:,3]*100, 'r.', markersize = 1)
+axs[0, 1].plot(snr, data[:,3]*100, 'r.', markersize = 1)
 axs[0, 1].set( ylabel = '% Error in Flux')
 axs[1, 0].plot(snr, data[:,1]*100, 'b.', markersize = 1)
-#axs[1, 0].plot(snr, data[:,4]*100, 'r.', markersize = 1)
+axs[1, 0].plot(snr, data[:,4]*100, 'r.', markersize = 1)
 axs[1, 0].set( xlabel = r'Log( SNR )', ylabel = r' % Error in $\sigma_{xx}$')
 axs[1, 1].plot(snr, data[:,2]*100, 'b.', markersize = 1)
-#axs[1, 1].plot(snr, data[:,5]*100, 'r.', markersize = 1)
+axs[1, 1].plot(snr, data[:,5]*100, 'r.', markersize = 1)
 axs[1, 1].set( xlabel = r'Log( SNR )', ylabel = r'% Error in $\sigma_{xy}$')
 
 # =============================================================================
