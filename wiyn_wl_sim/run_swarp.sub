@@ -1,0 +1,9 @@
+#!/bin/sh -l
+# FILENAME:  run_swarp.sub
+source ~/.bashrc
+module load anaconda/2020.11-py38
+source activate /home/dutta26/.conda/envs/cent7/2020.11-py38/test
+
+
+
+swarp @/home/dutta26/codes/wiyn_wl_sim/swarp_temp.ascii -c /home/dutta26/codes/wiyn_wl_sim/default.swarp -IMAGEOUT_NAME /scratch/bell/dutta26/wiyn_sim/r_coadd.fits -WEIGHTOUT_NAME /scratch/bell/dutta26/wiyn_sim/r_coadd.weight.fits -RESAMPLE_DIR /scratch/bell/dutta26/wiyn_sim/ -RESCALE_WEIGHTS N

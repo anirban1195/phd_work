@@ -1,0 +1,6 @@
+#!/bin/sh -l 
+# FILENAME:  run_sf.sub 
+module load anaconda/2020.11-py38
+source activate /home/dutta26/.conda/envs/cent7/2020.11-py38/test
+
+python single_frame_detect1.py

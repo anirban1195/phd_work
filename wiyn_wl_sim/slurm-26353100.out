@@ -1,0 +1,67 @@
+/bin/sh: line 1: 118591 Segmentation fault      /home/dutta26/Downloads/phosim_release/bin/instrument < obsExtra_1000.pars
+----- SWarp 2.38.0 started on 2023-07-10 at 13:20:04 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Error: signal 11:
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x40ac37]
+/lib64/libc.so.6(+0x36400)[0x2ba9eac85400]
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x44ba55]
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x44d531]
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x4519f8]
+/lib64/libpthread.so.0(+0x7ea5)[0x2ba9eaa3aea5]
+/lib64/libc.so.6(clone+0x6d)[0x2ba9ead4db0d]
+----- SWarp 2.38.0 started on 2023-07-10 at 13:22:57 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+/bin/sh: line 1: 74648 Segmentation fault      /home/dutta26/Downloads/phosim_release/bin/instrument < obsExtra_1001.pars
+----- SWarp 2.38.0 started on 2023-07-10 at 13:23:34 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Error: signal 11:
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x40ac37]
+/lib64/libc.so.6(+0x36400)[0x2b75479b8400]
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x44ba55]
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x44d531]
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x4519f8]
+/lib64/libpthread.so.0(+0x7ea5)[0x2b754776dea5]
+/lib64/libc.so.6(clone+0x6d)[0x2b7547a80b0d]
+----- SWarp 2.38.0 started on 2023-07-10 at 13:26:58 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Error: signal 11:
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x40ac37]
+/lib64/libc.so.6(+0x36400)[0x2abbc1aa4400]
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x44ba55]
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x44d531]
+/home/dutta26/Downloads/phosim_release/bin/raytrace[0x4519f8]
+/lib64/libpthread.so.0(+0x7ea5)[0x2abbc1859ea5]
+/lib64/libc.so.6(clone+0x6d)[0x2abbc1b6cb0d]
+slurmstepd: error: *** JOB 26353100 ON bell-a204 CANCELLED AT 2023-07-10T13:32:03 ***

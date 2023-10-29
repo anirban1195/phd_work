@@ -1,0 +1,1540 @@
+----- SWarp 2.38.0 started on 2023-10-29 at 14:15:07 with 10 threads
+
+------- Output File u_coadd_wt.fits:
+    "no ident"  WEIGHTED  no ext. header  20397x20392  32 bits (floats)
+    Center: 21:53:33.70 +17:40:23.5   37.4'x37.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17686x17694  32 bits (floats)
+    Center: 21:53:36.78 +17:41:05.0   32.4'x32.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1.272 X
+    Background: 34.06334   RMS: 5.209806   Weight scale: 1.82117
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17257x17268  32 bits (floats)
+    Center: 21:53:29.00 +17:41:02.6   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.9498 X
+    Background: 11.65073   RMS: 3.020842   Weight scale: 1.741949
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17262x17272  32 bits (floats)
+    Center: 21:53:28.99 +17:39:05.3   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 2.524 X
+    Background: 24.63567   RMS: 4.377527   Weight scale: 0.9161417
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17419x17429  32 bits (floats)
+    Center: 21:53:39.09 +17:39:39.0   32'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 5.98 X
+    Background: 1.729332   RMS: 1.191208   Weight scale: 0.964146
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17807x17800  32 bits (floats)
+    Center: 21:53:38.24 +17:41:37.0   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.8056 X
+    Background: 11.64871   RMS: 3.018848   Weight scale: 4.125784
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17260x17270  32 bits (floats)
+    Center: 21:53:28.99 +17:41:02.7   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.9196 X
+    Background: 8.315111   RMS: 2.561649   Weight scale: 1.334095
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17810x17816  32 bits (floats)
+    Center: 21:53:31.09 +17:39:39.5   32.7'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.7714 X
+    Background: 8.087602   RMS: 2.527055   Weight scale: 1.774642
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17668x17675  32 bits (floats)
+    Center: 21:53:38.99 +17:39:39.3   32.4'x32.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.6873 X
+    Background: 10.63983   RMS: 2.887828   Weight scale: 1.869907
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17435x17444  32 bits (floats)
+    Center: 21:53:31.25 +17:41:36.5   32'x32'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 2.143 X
+    Background: 31.86072   RMS: 4.97298   Weight scale: 0.9990154
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17286x17296  32 bits (floats)
+    Center: 21:53:28.99 +17:39:05.4   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.7913 X
+    Background: 30.47321   RMS: 4.861633   Weight scale: 2.104927
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17373x17383  32 bits (floats)
+    Center: 21:53:39.10 +17:39:38.8   31.9'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1.174 X
+    Background: 32.27194   RMS: 5.001864   Weight scale: 1.850835
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18082x18084  32 bits (floats)
+    Center: 21:53:38.73 +17:41:37.4   33.2'x33.2'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1.233 X
+    Background: 6.565212   RMS: 2.27425   Weight scale: 2.28853
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17812x17805  32 bits (floats)
+    Center: 21:53:30.41 +17:41:37.0   32.6'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.7096 X
+    Background: 12.70523   RMS: 3.153476   Weight scale: 4.170332
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17262x17272  32 bits (floats)
+    Center: 21:53:31.32 +17:39:38.8   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1.134 X
+    Background: 22.60666   RMS: 4.208676   Weight scale: 1.206535
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17532x17541  32 bits (floats)
+    Center: 21:53:39.05 +17:39:39.1   32.2'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.6843 X
+    Background: 28.36618   RMS: 4.69662   Weight scale: 1.761744
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  15802x15785  32 bits (floats)
+    Center: 21:53:37.70 +17:41:33.9   28.9'x29'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.5564 X
+    Background: 25.70369   RMS: 4.471571   Weight scale: 2.145573
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17839x17845  32 bits (floats)
+    Center: 21:53:31.08 +17:41:37.0   32.7'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.6583 X
+    Background: 26.64746   RMS: 4.551213   Weight scale: 2.157086
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17261x17271  32 bits (floats)
+    Center: 21:53:28.99 +17:39:05.3   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.8577 X
+    Background: 16.38987   RMS: 3.578489   Weight scale: 1.226972
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17782x17788  32 bits (floats)
+    Center: 21:53:38.94 +17:39:39.5   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 2.219 X
+    Background: 3.929412   RMS: 1.774339   Weight scale: 1.042398
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17515x17523  32 bits (floats)
+    Center: 21:53:36.79 +17:41:03.9   32.1'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.8758 X
+    Background: 29.72015   RMS: 5.022767   Weight scale: 2.952806
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17325x17335  32 bits (floats)
+    Center: 21:53:28.99 +17:41:03.0   31.8'x31.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.8262 X
+    Background: 20.20487   RMS: 3.970548   Weight scale: 2.206633
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18144x18143  32 bits (floats)
+    Center: 21:53:28.89 +17:39:13.7   33.3'x33.3'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.8248 X
+    Background: 53.8423   RMS: 6.498153   Weight scale: 2.117883
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  13872x13849  32 bits (floats)
+    Center: 21:53:37.43 +17:39:33.4   25.4'x25.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1.324 X
+    Background: 6.172059   RMS: 2.212374   Weight scale: 2.589215
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17276x17286  32 bits (floats)
+    Center: 21:53:39.15 +17:41:36.3   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 9.998 X
+    Background: 1.348343   RMS: 1.071818   Weight scale: 0.5360422
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17414x17423  32 bits (floats)
+    Center: 21:53:28.98 +17:41:03.4   31.9'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.8905 X
+    Background: 13.27267   RMS: 3.225604   Weight scale: 1.629465
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17279x17289  32 bits (floats)
+    Center: 21:53:31.32 +17:39:38.9   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.7845 X
+    Background: 29.97603   RMS: 4.831227   Weight scale: 1.43836
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18116x18114  32 bits (floats)
+    Center: 21:53:38.48 +17:39:40.0   33.2'x33.2'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.903 X
+    Background: 8.576243   RMS: 2.598506   Weight scale: 1.683237
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17880x17886  32 bits (floats)
+    Center: 21:53:36.75 +17:41:06.3   32.8'x32.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1.224 X
+    Background: 7.337914   RMS: 2.406337   Weight scale: 1.475371
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17865x17858  32 bits (floats)
+    Center: 21:53:30.44 +17:41:37.1   32.7'x32.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.6105 X
+    Background: 16.37367   RMS: 3.578051   Weight scale: 2.049377
+
+-------------- Co-adding frames            
+Maximum overlap density: 29 frames
+> All done (in 947.5 s)
+----- SWarp 2.38.0 started on 2023-10-29 at 14:30:55 with 10 threads
+
+------- Output File g_coadd_wt.fits:
+    "no ident"  WEIGHTED  no ext. header  20398x20394  32 bits (floats)
+    Center: 21:53:33.70 +17:40:23.5   37.4'x37.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17686x17694  32 bits (floats)
+    Center: 21:53:36.78 +17:41:05.0   32.4'x32.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09078 X
+    Background: 585.9445   RMS: 21.98702   Weight scale: 9.799152
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17257x17268  32 bits (floats)
+    Center: 21:53:28.97 +17:41:02.7   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.08992 X
+    Background: 160.7964   RMS: 11.28168   Weight scale: 6.137181
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17262x17272  32 bits (floats)
+    Center: 21:53:28.98 +17:39:05.3   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09212 X
+    Background: 311.8098   RMS: 15.94886   Weight scale: 5.11742
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17419x17429  32 bits (floats)
+    Center: 21:53:39.09 +17:39:38.9   32'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09758 X
+    Background: 135.6143   RMS: 10.33776   Weight scale: 8.30394
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17807x17800  32 bits (floats)
+    Center: 21:53:38.25 +17:41:37.0   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07957 X
+    Background: 137.1058   RMS: 10.39513   Weight scale: 14.15985
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17260x17270  32 bits (floats)
+    Center: 21:53:28.98 +17:41:02.7   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.08665 X
+    Background: 124.3266   RMS: 9.948394   Weight scale: 4.561724
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17810x17816  32 bits (floats)
+    Center: 21:53:31.10 +17:39:39.6   32.7'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.08198 X
+    Background: 116.4007   RMS: 9.599094   Weight scale: 6.368127
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17668x17675  32 bits (floats)
+    Center: 21:53:39.00 +17:39:39.3   32.4'x32.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07591 X
+    Background: 127.8102   RMS: 10.08306   Weight scale: 6.297193
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17260x17270  32 bits (floats)
+    Center: 21:53:39.16 +17:41:36.2   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1818 X
+    Background: 556.3308   RMS: 21.00854   Weight scale: 2.88432
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17435x17444  32 bits (floats)
+    Center: 21:53:31.25 +17:41:36.5   32'x32'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.08565 X
+    Background: 363.2693   RMS: 17.51049   Weight scale: 5.767135
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17286x17296  32 bits (floats)
+    Center: 21:53:28.98 +17:39:05.4   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0817 X
+    Background: 370.4294   RMS: 17.72995   Weight scale: 6.997265
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17373x17383  32 bits (floats)
+    Center: 21:53:39.11 +17:39:38.9   31.9'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.08546 X
+    Background: 377.3279   RMS: 17.30374   Weight scale: 7.624462
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18082x18084  32 bits (floats)
+    Center: 21:53:38.74 +17:41:37.4   33.2'x33.2'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09149 X
+    Background: 116.2402   RMS: 9.569525   Weight scale: 9.850459
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17812x17805  32 bits (floats)
+    Center: 21:53:30.41 +17:41:37.0   32.6'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.08103 X
+    Background: 135.0771   RMS: 10.30699   Weight scale: 13.96061
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17262x17272  32 bits (floats)
+    Center: 21:53:31.34 +17:39:38.9   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1886 X
+    Background: 476.5534   RMS: 20.02172   Weight scale: 4.545243
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17532x17541  32 bits (floats)
+    Center: 21:53:39.05 +17:39:39.1   32.2'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.08408 X
+    Background: 413.886   RMS: 18.1923   Weight scale: 5.544818
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  15802x15785  32 bits (floats)
+    Center: 21:53:37.71 +17:41:33.9   28.9'x29'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0697 X
+    Background: 301.9245   RMS: 16.05562   Weight scale: 7.07812
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17839x17845  32 bits (floats)
+    Center: 21:53:31.08 +17:41:37.1   32.7'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07807 X
+    Background: 307.0369   RMS: 15.60971   Weight scale: 7.099119
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17261x17271  32 bits (floats)
+    Center: 21:53:28.98 +17:39:05.2   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.08423 X
+    Background: 201.9226   RMS: 12.6913   Weight scale: 4.352949
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17782x17788  32 bits (floats)
+    Center: 21:53:38.95 +17:39:39.4   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1058 X
+    Background: 117.9277   RMS: 9.661464   Weight scale: 5.767504
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17515x17523  32 bits (floats)
+    Center: 21:53:36.79 +17:41:04.0   32.1'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.08946 X
+    Background: 462.1697   RMS: 19.80332   Weight scale: 9.836834
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17325x17335  32 bits (floats)
+    Center: 21:53:28.97 +17:41:03.0   31.8'x31.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0841 X
+    Background: 222.2824   RMS: 13.25788   Weight scale: 7.537146
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18144x18143  32 bits (floats)
+    Center: 21:53:28.88 +17:39:13.7   33.3'x33.3'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.104 X
+    Background: 795.197   RMS: 29.02494   Weight scale: 7.614897
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  13872x13849  32 bits (floats)
+    Center: 21:53:37.43 +17:39:33.4   25.4'x25.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1142 X
+    Background: 98.27944   RMS: 8.804616   Weight scale: 10.41363
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17276x17286  32 bits (floats)
+    Center: 21:53:39.15 +17:41:36.3   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1161 X
+    Background: 163.0938   RMS: 11.35741   Weight scale: 5.397774
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17414x17423  32 bits (floats)
+    Center: 21:53:28.96 +17:41:03.4   31.9'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07345 X
+    Background: 180.511   RMS: 11.97827   Weight scale: 6.122629
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17279x17289  32 bits (floats)
+    Center: 21:53:31.32 +17:39:38.8   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09146 X
+    Background: 445.645   RMS: 19.09289   Weight scale: 4.600368
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18116x18114  32 bits (floats)
+    Center: 21:53:38.49 +17:39:39.9   33.2'x33.2'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0721 X
+    Background: 133.1724   RMS: 10.30005   Weight scale: 6.920571
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17880x17886  32 bits (floats)
+    Center: 21:53:36.75 +17:41:06.4   32.8'x32.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07766 X
+    Background: 127.8385   RMS: 10.06718   Weight scale: 6.412648
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17865x17858  32 bits (floats)
+    Center: 21:53:30.44 +17:41:37.1   32.7'x32.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07527 X
+    Background: 160.9061   RMS: 11.29318   Weight scale: 6.426156
+
+-------------- Co-adding frames            
+Maximum overlap density: 30 frames
+> All done (in 2142.0 s)
+----- SWarp 2.38.0 started on 2023-10-29 at 15:06:37 with 10 threads
+
+------- Output File r_coadd_wt.fits:
+    "no ident"  WEIGHTED  no ext. header  20398x20392  32 bits (floats)
+    Center: 21:53:33.70 +17:40:23.4   37.4'x37.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17686x17694  32 bits (floats)
+    Center: 21:53:36.78 +17:41:04.9   32.4'x32.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06859 X
+    Background: 517.7806   RMS: 21.53931   Weight scale: 13.23995
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17257x17268  32 bits (floats)
+    Center: 21:53:28.99 +17:41:02.6   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06271 X
+    Background: 225.0777   RMS: 13.38846   Weight scale: 9.18154
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17262x17272  32 bits (floats)
+    Center: 21:53:28.99 +17:39:05.1   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06933 X
+    Background: 305.7107   RMS: 15.925   Weight scale: 7.504959
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17419x17429  32 bits (floats)
+    Center: 21:53:39.08 +17:39:38.9   32'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06942 X
+    Background: 196.1624   RMS: 12.46993   Weight scale: 11.47973
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17807x17800  32 bits (floats)
+    Center: 21:53:38.24 +17:41:37.0   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06568 X
+    Background: 166.5544   RMS: 11.46935   Weight scale: 17.58359
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17260x17270  32 bits (floats)
+    Center: 21:53:28.99 +17:41:02.6   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06235 X
+    Background: 172.3489   RMS: 11.74881   Weight scale: 6.346622
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17810x17816  32 bits (floats)
+    Center: 21:53:31.09 +17:39:39.5   32.7'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06055 X
+    Background: 165.0245   RMS: 11.47121   Weight scale: 8.025576
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17668x17675  32 bits (floats)
+    Center: 21:53:38.99 +17:39:39.2   32.4'x32.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06894 X
+    Background: 148.2783   RMS: 10.89858   Weight scale: 7.573867
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17260x17270  32 bits (floats)
+    Center: 21:53:39.14 +17:41:36.2   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09441 X
+    Background: 587.5912   RMS: 21.90149   Weight scale: 4.141256
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17435x17444  32 bits (floats)
+    Center: 21:53:31.24 +17:41:36.4   32'x32'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0626 X
+    Background: 253.7438   RMS: 14.28295   Weight scale: 7.415143
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17286x17296  32 bits (floats)
+    Center: 21:53:28.99 +17:39:05.2   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06399 X
+    Background: 379.2898   RMS: 18.64178   Weight scale: 9.977893
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17373x17383  32 bits (floats)
+    Center: 21:53:39.10 +17:39:38.8   31.9'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06102 X
+    Background: 347.3216   RMS: 16.63801   Weight scale: 10.9731
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18082x18084  32 bits (floats)
+    Center: 21:53:38.74 +17:41:37.4   33.2'x33.2'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06607 X
+    Background: 152.9174   RMS: 11.02063   Weight scale: 12.90454
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17812x17805  32 bits (floats)
+    Center: 21:53:30.41 +17:41:37.0   32.6'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06345 X
+    Background: 170.6589   RMS: 11.61042   Weight scale: 17.34318
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17262x17272  32 bits (floats)
+    Center: 21:53:31.31 +17:39:38.7   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09662 X
+    Background: 680.0889   RMS: 24.85554   Weight scale: 7.406612
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17532x17541  32 bits (floats)
+    Center: 21:53:39.04 +17:39:39.0   32.2'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07076 X
+    Background: 461.2218   RMS: 19.41563   Weight scale: 6.514602
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  15802x15785  32 bits (floats)
+    Center: 21:53:37.71 +17:41:33.9   28.9'x29'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06236 X
+    Background: 340.476   RMS: 17.35881   Weight scale: 8.223098
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17839x17845  32 bits (floats)
+    Center: 21:53:31.07 +17:41:37.0   32.7'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06062 X
+    Background: 282.8616   RMS: 15.0229   Weight scale: 8.89039
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17261x17271  32 bits (floats)
+    Center: 21:53:28.99 +17:39:05.1   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06982 X
+    Background: 254.1467   RMS: 14.28452   Weight scale: 5.334745
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17782x17788  32 bits (floats)
+    Center: 21:53:38.94 +17:39:39.3   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06379 X
+    Background: 176.7848   RMS: 11.86626   Weight scale: 7.752151
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17515x17523  32 bits (floats)
+    Center: 21:53:36.80 +17:41:03.9   32.1'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0845 X
+    Background: 593.0242   RMS: 23.46715   Weight scale: 12.92729
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17325x17335  32 bits (floats)
+    Center: 21:53:28.99 +17:41:03.0   31.8'x31.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0598 X
+    Background: 295.9357   RMS: 15.33692   Weight scale: 10.7186
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18144x18143  32 bits (floats)
+    Center: 21:53:28.88 +17:39:13.6   33.3'x33.3'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.08053 X
+    Background: 777.6446   RMS: 33.65388   Weight scale: 10.24867
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  13872x13849  32 bits (floats)
+    Center: 21:53:37.43 +17:39:33.4   25.4'x25.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1128 X
+    Background: 102.9883   RMS: 9.022389   Weight scale: 10.97986
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17276x17286  32 bits (floats)
+    Center: 21:53:39.13 +17:41:36.2   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07611 X
+    Background: 221.9768   RMS: 13.29188   Weight scale: 7.673934
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17414x17423  32 bits (floats)
+    Center: 21:53:28.98 +17:41:03.3   31.9'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06052 X
+    Background: 226.9895   RMS: 13.49324   Weight scale: 8.079503
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17279x17289  32 bits (floats)
+    Center: 21:53:31.30 +17:39:38.7   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07333 X
+    Background: 531.307   RMS: 21.21446   Weight scale: 6.193078
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18116x18114  32 bits (floats)
+    Center: 21:53:38.49 +17:39:39.9   33.2'x33.2'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06211 X
+    Background: 163.5528   RMS: 11.44461   Weight scale: 8.23081
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17880x17886  32 bits (floats)
+    Center: 21:53:36.76 +17:41:06.3   32.8'x32.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06195 X
+    Background: 165.1867   RMS: 11.45847   Weight scale: 8.150139
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17865x17858  32 bits (floats)
+    Center: 21:53:30.44 +17:41:37.0   32.7'x32.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0655 X
+    Background: 186.2455   RMS: 12.18696   Weight scale: 7.48654
+
+-------------- Co-adding frames            
+Maximum overlap density: 30 frames
+> All done (in 1330.9 s)
+----- SWarp 2.38.0 started on 2023-10-29 at 15:28:49 with 10 threads
+
+------- Output File i_coadd_wt.fits:
+    "no ident"  WEIGHTED  no ext. header  20398x20392  32 bits (floats)
+    Center: 21:53:33.70 +17:40:23.4   37.4'x37.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17686x17694  32 bits (floats)
+    Center: 21:53:36.79 +17:41:04.9   32.4'x32.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07336 X
+    Background: 445.9099   RMS: 19.21102   Weight scale: 12.65273
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17257x17268  32 bits (floats)
+    Center: 21:53:29.01 +17:41:02.5   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06556 X
+    Background: 219.9232   RMS: 13.23941   Weight scale: 9.687534
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17262x17272  32 bits (floats)
+    Center: 21:53:29.01 +17:39:05.0   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07329 X
+    Background: 279.8813   RMS: 15.07803   Weight scale: 7.456888
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17419x17429  32 bits (floats)
+    Center: 21:53:39.08 +17:39:38.8   32'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07395 X
+    Background: 187.0831   RMS: 12.17491   Weight scale: 11.52501
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17807x17800  32 bits (floats)
+    Center: 21:53:38.24 +17:41:36.9   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07007 X
+    Background: 157.2256   RMS: 11.13627   Weight scale: 16.93955
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17260x17270  32 bits (floats)
+    Center: 21:53:29.01 +17:41:02.5   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.065 X
+    Background: 165.1616   RMS: 11.51393   Weight scale: 6.447129
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17810x17816  32 bits (floats)
+    Center: 21:53:31.08 +17:39:39.4   32.7'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0638 X
+    Background: 156.6348   RMS: 11.2069   Weight scale: 8.134721
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17668x17675  32 bits (floats)
+    Center: 21:53:38.98 +17:39:39.1   32.4'x32.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07568 X
+    Background: 136.5242   RMS: 10.45169   Weight scale: 7.119278
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17260x17270  32 bits (floats)
+    Center: 21:53:39.13 +17:41:36.1   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09399 X
+    Background: 551.2125   RMS: 21.14358   Weight scale: 4.429644
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17435x17444  32 bits (floats)
+    Center: 21:53:31.23 +17:41:36.3   32'x32'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06645 X
+    Background: 220.004   RMS: 13.26548   Weight scale: 7.285835
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17286x17296  32 bits (floats)
+    Center: 21:53:29.00 +17:39:05.2   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06862 X
+    Background: 335.5596   RMS: 17.15165   Weight scale: 10.15516
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17373x17383  32 bits (floats)
+    Center: 21:53:39.09 +17:39:38.7   31.9'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06437 X
+    Background: 299.8688   RMS: 15.42687   Weight scale: 10.95326
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18082x18084  32 bits (floats)
+    Center: 21:53:38.73 +17:41:37.3   33.2'x33.2'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07226 X
+    Background: 137.5423   RMS: 10.45423   Weight scale: 12.618
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17812x17805  32 bits (floats)
+    Center: 21:53:30.41 +17:41:36.9   32.6'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06849 X
+    Background: 161.0068   RMS: 11.29075   Weight scale: 16.70186
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17262x17272  32 bits (floats)
+    Center: 21:53:31.30 +17:39:38.6   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09892 X
+    Background: 587.7385   RMS: 23.23952   Weight scale: 7.959655
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17532x17541  32 bits (floats)
+    Center: 21:53:39.04 +17:39:39.0   32.2'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0764 X
+    Background: 423.6621   RMS: 18.5452   Weight scale: 6.509257
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  15802x15785  32 bits (floats)
+    Center: 21:53:37.71 +17:41:33.8   28.9'x29'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06739 X
+    Background: 301.7632   RMS: 15.93311   Weight scale: 8.119576
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17839x17845  32 bits (floats)
+    Center: 21:53:31.07 +17:41:36.9   32.7'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06619 X
+    Background: 252.3265   RMS: 14.21476   Weight scale: 8.916298
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17261x17271  32 bits (floats)
+    Center: 21:53:29.01 +17:39:05.0   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07543 X
+    Background: 245.2822   RMS: 14.02129   Weight scale: 5.336237
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17782x17788  32 bits (floats)
+    Center: 21:53:38.94 +17:39:39.3   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06689 X
+    Background: 169.2112   RMS: 11.61333   Weight scale: 7.815498
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17515x17523  32 bits (floats)
+    Center: 21:53:36.81 +17:41:03.9   32.1'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09511 X
+    Background: 550.5518   RMS: 21.88596   Weight scale: 12.88081
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17325x17335  32 bits (floats)
+    Center: 21:53:29.00 +17:41:02.9   31.8'x31.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06317 X
+    Background: 292.963   RMS: 15.28029   Weight scale: 10.82355
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18144x18143  32 bits (floats)
+    Center: 21:53:28.88 +17:39:13.6   33.3'x33.3'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.08628 X
+    Background: 716.8826   RMS: 28.58117   Weight scale: 9.534353
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  13872x13849  32 bits (floats)
+    Center: 21:53:37.43 +17:39:33.3   25.4'x25.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1514 X
+    Background: 78.14068   RMS: 7.858582   Weight scale: 9.748257
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17276x17286  32 bits (floats)
+    Center: 21:53:39.12 +17:41:36.1   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07991 X
+    Background: 217.292   RMS: 13.15516   Weight scale: 7.844373
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17414x17423  32 bits (floats)
+    Center: 21:53:28.99 +17:41:03.3   31.9'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06444 X
+    Background: 220.41   RMS: 13.28766   Weight scale: 7.937346
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17279x17289  32 bits (floats)
+    Center: 21:53:31.29 +17:39:38.6   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07717 X
+    Background: 503.7958   RMS: 20.60181   Weight scale: 6.315118
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18116x18114  32 bits (floats)
+    Center: 21:53:38.48 +17:39:39.8   33.2'x33.2'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.06746 X
+    Background: 153.6735   RMS: 11.09703   Weight scale: 8.035884
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17880x17886  32 bits (floats)
+    Center: 21:53:36.76 +17:41:06.3   32.8'x32.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0665 X
+    Background: 156.0047   RMS: 11.17453   Weight scale: 7.977689
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17865x17858  32 bits (floats)
+    Center: 21:53:30.43 +17:41:37.0   32.7'x32.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.07043 X
+    Background: 177.5768   RMS: 11.90657   Weight scale: 7.449118
+
+-------------- Co-adding frames            
+Maximum overlap density: 30 frames
+> All done (in 931.8 s)
+----- SWarp 2.38.0 started on 2023-10-29 at 15:44:21 with 10 threads
+
+------- Output File z_coadd_wt.fits:
+    "no ident"  WEIGHTED  no ext. header  20398x20391  32 bits (floats)
+    Center: 21:53:33.70 +17:40:23.4   37.4'x37.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17686x17694  32 bits (floats)
+    Center: 21:53:36.79 +17:41:04.9   32.4'x32.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1186 X
+    Background: 241.2415   RMS: 13.96548   Weight scale: 9.064607
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17257x17268  32 bits (floats)
+    Center: 21:53:29.01 +17:41:02.5   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09931 X
+    Background: 190.0483   RMS: 12.26422   Weight scale: 8.133389
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17262x17272  32 bits (floats)
+    Center: 21:53:29.01 +17:39:05.0   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1152 X
+    Background: 197.3532   RMS: 12.67774   Weight scale: 6.417181
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17419x17429  32 bits (floats)
+    Center: 21:53:39.08 +17:39:38.7   32'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1168 X
+    Background: 154.6532   RMS: 11.04998   Weight scale: 9.737066
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17807x17800  32 bits (floats)
+    Center: 21:53:38.24 +17:41:36.9   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1121 X
+    Background: 122.4682   RMS: 9.82515   Weight scale: 13.82142
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17260x17270  32 bits (floats)
+    Center: 21:53:29.01 +17:41:02.5   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09448 X
+    Background: 147.2274   RMS: 10.84195   Weight scale: 5.551998
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17810x17816  32 bits (floats)
+    Center: 21:53:31.08 +17:39:39.4   32.7'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1011 X
+    Background: 123.7837   RMS: 9.923069   Weight scale: 6.403346
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17668x17675  32 bits (floats)
+    Center: 21:53:38.98 +17:39:39.1   32.4'x32.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1283 X
+    Background: 96.36622   RMS: 8.750974   Weight scale: 5.619788
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17260x17270  32 bits (floats)
+    Center: 21:53:39.12 +17:41:36.0   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1379 X
+    Background: 339.7546   RMS: 16.43993   Weight scale: 4.017875
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17435x17444  32 bits (floats)
+    Center: 21:53:31.24 +17:41:36.4   32'x32'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1094 X
+    Background: 148.088   RMS: 10.86287   Weight scale: 5.703071
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17286x17296  32 bits (floats)
+    Center: 21:53:29.00 +17:39:05.1   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1088 X
+    Background: 224.4596   RMS: 13.57508   Weight scale: 8.670972
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17373x17383  32 bits (floats)
+    Center: 21:53:39.09 +17:39:38.6   31.9'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1001 X
+    Background: 201.3531   RMS: 12.65339   Weight scale: 9.308216
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18082x18084  32 bits (floats)
+    Center: 21:53:38.73 +17:41:37.3   33.2'x33.2'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1234 X
+    Background: 95.79549   RMS: 8.697482   Weight scale: 9.775398
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17812x17805  32 bits (floats)
+    Center: 21:53:30.41 +17:41:36.9   32.6'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1095 X
+    Background: 127.8177   RMS: 10.04311   Weight scale: 13.89662
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17262x17272  32 bits (floats)
+    Center: 21:53:31.29 +17:39:38.5   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1429 X
+    Background: 309.4707   RMS: 17.2192   Weight scale: 8.481523
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17532x17541  32 bits (floats)
+    Center: 21:53:39.04 +17:39:38.9   32.2'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1209 X
+    Background: 261.6074   RMS: 14.49039   Weight scale: 5.243188
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  15802x15785  32 bits (floats)
+    Center: 21:53:37.71 +17:41:33.8   28.9'x29'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1083 X
+    Background: 187.6402   RMS: 12.41668   Weight scale: 6.909629
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17839x17845  32 bits (floats)
+    Center: 21:53:31.07 +17:41:36.9   32.7'x32.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1094 X
+    Background: 165.3247   RMS: 11.49263   Weight scale: 7.110171
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17261x17271  32 bits (floats)
+    Center: 21:53:29.01 +17:39:05.0   31.7'x31.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1253 X
+    Background: 192.0835   RMS: 12.36758   Weight scale: 4.206589
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17782x17788  32 bits (floats)
+    Center: 21:53:38.93 +17:39:39.3   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1023 X
+    Background: 137.0414   RMS: 10.43524   Weight scale: 6.401247
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17515x17523  32 bits (floats)
+    Center: 21:53:36.81 +17:41:03.8   32.1'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1564 X
+    Background: 286.2118   RMS: 15.80657   Weight scale: 12.34197
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17325x17335  32 bits (floats)
+    Center: 21:53:29.00 +17:41:02.8   31.8'x31.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.09795 X
+    Background: 251.992   RMS: 14.11174   Weight scale: 8.985632
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18144x18143  32 bits (floats)
+    Center: 21:53:28.89 +17:39:13.6   33.3'x33.3'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1384 X
+    Background: 387.321   RMS: 23.33041   Weight scale: 8.985408
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  13872x13849  32 bits (floats)
+    Center: 21:53:37.43 +17:39:33.3   25.4'x25.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.3391 X
+    Background: 44.16195   RMS: 5.898195   Weight scale: 6.539335
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17276x17286  32 bits (floats)
+    Center: 21:53:39.12 +17:41:36.1   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1245 X
+    Background: 172.4797   RMS: 11.68464   Weight scale: 6.333745
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17414x17423  32 bits (floats)
+    Center: 21:53:28.99 +17:41:03.3   31.9'x31.9'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.0996 X
+    Background: 184.4391   RMS: 12.11034   Weight scale: 6.674047
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17279x17289  32 bits (floats)
+    Center: 21:53:31.28 +17:39:38.6   31.7'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1191 X
+    Background: 332.2135   RMS: 16.39721   Weight scale: 5.183302
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  18116x18114  32 bits (floats)
+    Center: 21:53:38.48 +17:39:39.8   33.2'x33.2'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1105 X
+    Background: 114.0789   RMS: 9.53872   Weight scale: 6.467001
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17880x17886  32 bits (floats)
+    Center: 21:53:36.77 +17:41:06.3   32.8'x32.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.105 X
+    Background: 122.5062   RMS: 9.859687   Weight scale: 6.464616
+
+-------------- File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17865x17858  32 bits (floats)
+    Center: 21:53:30.43 +17:41:37.0   32.7'x32.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 0.1101 X
+    Background: 141.5683   RMS: 10.60202   Weight scale: 6.148153
+
+-------------- Co-adding frames            
+Maximum overlap density: 30 frames
+> All done (in 741.1 s)
+*********************************************
+scratch/bell/dutta26/backup/u/1000/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1001/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1002/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1003/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1004/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1005/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1006/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1007/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1009/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1010/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1011/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1012/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1013/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1014/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1015/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1016/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1017/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1018/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1019/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1020/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1021/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1022/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1023/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1024/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1025/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1026/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1027/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1028/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/u/1029/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1000/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1001/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1002/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1003/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1004/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1005/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1006/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1007/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1008/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1009/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1010/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1011/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1012/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1013/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1014/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1015/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1016/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1017/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1018/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1019/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1020/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1021/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1022/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1023/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1024/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1025/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1026/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1027/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1028/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/g/1029/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1000/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1001/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1002/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1003/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1004/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1005/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1006/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1007/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1008/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1009/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1010/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1011/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1012/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1013/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1014/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1015/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1016/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1017/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1018/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1019/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1020/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1021/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1022/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1023/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1024/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1025/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1026/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1027/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1028/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/r/1029/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1000/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1001/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1002/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1003/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1004/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1005/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1006/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1007/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1008/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1009/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1010/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1011/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1012/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1013/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1014/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1015/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1016/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1017/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1018/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1019/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1020/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1021/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1022/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1023/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1024/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1025/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1026/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1027/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1028/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/i/1029/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1000/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1001/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1002/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1003/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1004/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1005/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1006/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1007/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1008/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1009/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1010/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1011/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1012/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1013/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1014/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1015/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1016/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1017/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1018/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1019/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1020/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1021/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1022/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1023/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1024/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1025/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1026/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1027/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1028/output.fits 
+
+********************************************started*
+*********************************************
+scratch/bell/dutta26/backup/z/1029/output.fits 
+
+********************************************started*
