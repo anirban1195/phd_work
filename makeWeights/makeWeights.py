@@ -49,7 +49,7 @@ for files in os.listdir(folder):
         
     for j in range(1,31):
          img = np.array(f[j].data)
-         mean_global, median_global, stddev_global = sigma_clipped_stats(img, cenfunc=np.mean)
+         mean_global, median_global, stddev_global = sigma_clipped_stats(img, cenfunc=np.median)
 
          a = []
          d=[]
@@ -61,7 +61,7 @@ for files in os.listdir(folder):
                  yStart = 5+ (y*505)
                  yEnd = yStart + 484
                  data = img[yStart:yEnd, xStart:xEnd]
-                 mean, median, stddev = sigma_clipped_stats(data, cenfunc=np.mean)
+                 mean, median, stddev = sigma_clipped_stats(data, cenfunc=np.median)
                                   
                  seg_id =int( "%02d" % j+str(y) +str(x))
                  index = np.where(segment_stat[:,0] == seg_id)[0][0]

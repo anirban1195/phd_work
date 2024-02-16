@@ -1,0 +1,16 @@
+----- SWarp 2.38.0 started on 2023-07-10 at 13:07:51 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5827x5834  32 bits (floats)
+    Center: 21:53:36.76 +17:41:05.0   10.7'x10.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1000_f0_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:36.76 +17:41:05.0   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 0   RMS: 0.01353041
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.1 s)

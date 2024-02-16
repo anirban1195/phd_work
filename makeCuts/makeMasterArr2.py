@@ -467,103 +467,101 @@ sys.exit()
 
 
 
-# =============================================================================
-# master_frame = np.load('/scratch/bell/dutta26/abell_2390/master_arr_sf.npy')
-# #Make the make wrt to ir coadd 
-# coadd_file = '/scratch/bell/dutta26/abell_2390/abell_ir_coadd.fits'
-# f=fits.open(coadd_file)
-# data = f[0].data
-# hdr =f[0].header
-# ySize,xSize = np.shape(data)
-# f.close()  
-# del data 
-# 
-# 
-# 
-#     
-# chopSize = 50
-# alphax = 1000
-# 
-# 
-# 
-# #Find the correct wcs
-# w = wcs.WCS(naxis=2)
-# w.wcs.crpix = [hdr['CRPIX1']/chopSize, hdr['CRPIX2']/chopSize]
-# w.wcs.cd = np.array([[hdr['CD1_1']*chopSize,hdr['CD1_2']], [hdr['CD2_1'], hdr['CD2_2']*chopSize]])
-# w.wcs.crval = [hdr['CRVAL1'], hdr['CRVAL2']]
-# w.wcs.ctype = ["RA---TAN", "DEC--TAN"]
-# w.wcs.cunit = [hdr['CUNIT1'], hdr['CUNIT2']]
-# #w.wcs.set_pv([(2, 1, 45.0)])
-# header = w.to_header()
-# 
-# mod_ySize = int(round(ySize/chopSize)) + 1
-# mod_xSize = int(round(xSize/chopSize)) + 1
-# imgE = np.zeros((mod_ySize, mod_xSize), dtype = np.float32)
-# imgB = np.zeros((mod_ySize, mod_xSize), dtype = np.float32)
-# count_img = np.zeros((mod_ySize, mod_xSize), dtype = np.float32)
-# 
-# for j in range(mod_ySize):
-#     print (int(j*chopSize + chopSize/2))
-#     for k in range(mod_xSize):
-#         
-#         x_mid = int(k*chopSize + chopSize/2)
-#         y_mid = int(j*chopSize + chopSize/2)
-#         cond = np.where((master_frame[:,0] > x_mid-3000) & (master_frame[:,0] < x_mid+3000) & 
-#                         (master_frame[:,1] > y_mid-3000) & (master_frame[:,1] < y_mid+3000) 
-#                         & (redShiftArr>z_min )& (redShiftArr<z_max) & (master_frame[:,2] !=0)  ) 
-#         
-# 
-#         temp = np.copy(master_frame[cond])
-#         dx = temp[:,0] -x_mid
-#         dy = temp[:,1] -y_mid
-#         r2 = dx**2 + dy**2
-#         cos2phi = (dx**2-dy**2)/r2
-#         sin2phi = 2.0*dx*dy/r2
-#         
-#         e1 = temp[:,2]
-#         e2 = temp[:,3]
-#         tot_ellip = np.sqrt(e1**2 + e2**2)
-#         epar= - (e1*cos2phi+e2*sin2phi)
-#         eper= (e2*cos2phi-e1*sin2phi)
-#         #goodEllipIndices = np.where((np.abs(e1)<0.8) & (np.abs(e2)<0.8) & (r2<(3*alphax)**2) & (r2>100))
-#         goodEllipIndices = np.where((tot_ellip < 0.9)  & (r2<(3*alphax)**2) & (r2>100) & (tot_ellip > 0.0) )
-#         wt = np.exp(-(r2/(2*alphax**2) ))
-#         
-#         mean,median,std = sigma_clipped_stats(e1[goodEllipIndices[0]]**2+e2[goodEllipIndices[0]]**2)
-#         e1sum = np.sum(epar[goodEllipIndices[0]]*wt[goodEllipIndices[0]])
-#         e2sum = np.sum(eper[goodEllipIndices[0]]*wt[goodEllipIndices[0]])
-#         count = np.sum(wt[goodEllipIndices[0]]**2 *(e1[goodEllipIndices[0]]**2+e2[goodEllipIndices[0]]**2) )
-#         
-#         if(count == 0):
-#             e1sum = 0
-#             e2sum = 0
-#             #sys.exit()
-#             #continue
-#         count = np.sqrt(0.5*count)
-#         e1sum = e1sum/count
-#         e2sum = e2sum/count
-#         #print (count, e1sum, e2sum)
-#         
-#         
-#         imgE[j, k] = e1sum
-#         imgB[j ,k] = e2sum
-#         count_img[j ,k] = len(epar[goodEllipIndices[0]])
-#         del temp
-#         
-# hdu = fits.PrimaryHDU(imgE,header=header)  
-# hdu.writeto('/scratch/bell/dutta26/abell_2390/EMode_sf.fits', overwrite=True)
-# 
-# hdu = fits.PrimaryHDU(imgB,header=header)  
-# hdu.writeto('/scratch/bell/dutta26/abell_2390/BMode_sf.fits', overwrite=True)
-# 
-# hdu = fits.PrimaryHDU(count_img, header=header)  
-# hdu.writeto('/scratch/bell/dutta26/abell_2390/count_img_sf.fits', overwrite=True)
-#             
-# 
-#             
-# 
-# 
-# 
-# 
-# 
-# =============================================================================
+master_frame = np.load('/scratch/bell/dutta26/abell_2390/master_arr_sf.npy')
+#Make the make wrt to ir coadd 
+coadd_file = '/scratch/bell/dutta26/abell_2390/abell_ir_coadd.fits'
+f=fits.open(coadd_file)
+data = f[0].data
+hdr =f[0].header
+ySize,xSize = np.shape(data)
+f.close()  
+del data 
+
+
+
+    
+chopSize = 50
+alphax = 1000
+
+
+
+#Find the correct wcs
+w = wcs.WCS(naxis=2)
+w.wcs.crpix = [hdr['CRPIX1']/chopSize, hdr['CRPIX2']/chopSize]
+w.wcs.cd = np.array([[hdr['CD1_1']*chopSize,hdr['CD1_2']], [hdr['CD2_1'], hdr['CD2_2']*chopSize]])
+w.wcs.crval = [hdr['CRVAL1'], hdr['CRVAL2']]
+w.wcs.ctype = ["RA---TAN", "DEC--TAN"]
+w.wcs.cunit = [hdr['CUNIT1'], hdr['CUNIT2']]
+#w.wcs.set_pv([(2, 1, 45.0)])
+header = w.to_header()
+
+mod_ySize = int(round(ySize/chopSize)) + 1
+mod_xSize = int(round(xSize/chopSize)) + 1
+imgE = np.zeros((mod_ySize, mod_xSize), dtype = np.float32)
+imgB = np.zeros((mod_ySize, mod_xSize), dtype = np.float32)
+count_img = np.zeros((mod_ySize, mod_xSize), dtype = np.float32)
+
+for j in range(mod_ySize):
+    print (int(j*chopSize + chopSize/2))
+    for k in range(mod_xSize):
+        
+        x_mid = int(k*chopSize + chopSize/2)
+        y_mid = int(j*chopSize + chopSize/2)
+        cond = np.where((master_frame[:,0] > x_mid-3000) & (master_frame[:,0] < x_mid+3000) & 
+                        (master_frame[:,1] > y_mid-3000) & (master_frame[:,1] < y_mid+3000) 
+                        & (redShiftArr>z_min )& (redShiftArr<z_max) & (master_frame[:,2] !=0)  ) 
+        
+
+        temp = np.copy(master_frame[cond])
+        dx = temp[:,0] -x_mid
+        dy = temp[:,1] -y_mid
+        r2 = dx**2 + dy**2
+        cos2phi = (dx**2-dy**2)/r2
+        sin2phi = 2.0*dx*dy/r2
+        
+        e1 = temp[:,2]
+        e2 = temp[:,3]
+        tot_ellip = np.sqrt(e1**2 + e2**2)
+        epar= - (e1*cos2phi+e2*sin2phi)
+        eper= (e2*cos2phi-e1*sin2phi)
+        #goodEllipIndices = np.where((np.abs(e1)<0.8) & (np.abs(e2)<0.8) & (r2<(3*alphax)**2) & (r2>100))
+        goodEllipIndices = np.where((tot_ellip < 0.9)  & (r2<(3*alphax)**2) & (r2>100) & (tot_ellip > 0.0) )
+        wt = np.exp(-(r2/(2*alphax**2) ))
+        
+        mean,median,std = sigma_clipped_stats(e1[goodEllipIndices[0]]**2+e2[goodEllipIndices[0]]**2)
+        e1sum = np.sum(epar[goodEllipIndices[0]]*wt[goodEllipIndices[0]])
+        e2sum = np.sum(eper[goodEllipIndices[0]]*wt[goodEllipIndices[0]])
+        count = np.sum(wt[goodEllipIndices[0]]**2 *(e1[goodEllipIndices[0]]**2+e2[goodEllipIndices[0]]**2) )
+        
+        if(count == 0):
+            e1sum = 0
+            e2sum = 0
+            #sys.exit()
+            #continue
+        count = np.sqrt(0.5*count)
+        e1sum = e1sum/count
+        e2sum = e2sum/count
+        #print (count, e1sum, e2sum)
+        
+        
+        imgE[j, k] = e1sum
+        imgB[j ,k] = e2sum
+        count_img[j ,k] = len(epar[goodEllipIndices[0]])
+        del temp
+        
+hdu = fits.PrimaryHDU(imgE,header=header)  
+hdu.writeto('/scratch/bell/dutta26/abell_2390/EMode_sf.fits', overwrite=True)
+
+hdu = fits.PrimaryHDU(imgB,header=header)  
+hdu.writeto('/scratch/bell/dutta26/abell_2390/BMode_sf.fits', overwrite=True)
+
+hdu = fits.PrimaryHDU(count_img, header=header)  
+hdu.writeto('/scratch/bell/dutta26/abell_2390/count_img_sf.fits', overwrite=True)
+            
+
+            
+
+
+
+
+

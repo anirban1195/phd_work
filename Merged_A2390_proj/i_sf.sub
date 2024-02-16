@@ -5,5 +5,5 @@ module load anaconda
 source activate /home/dutta26/.conda/envs/cent7/2020.11-py38/test
 
 cd /home/dutta26/codes/makeCuts/
-python single_frame_detect1.py i /home/dutta26/codes/source_list.pk1
-#python secondaryCoadd1.py i
+python single_frame_detect2.py i /home/dutta26/codes/source_list.pk1
+

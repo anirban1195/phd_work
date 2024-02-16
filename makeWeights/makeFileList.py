@@ -45,7 +45,7 @@ for files in os.listdir(loc):
         if('/z/' in loc and ('1318.6' in files or '2722.2' in files or '3256.8' in files )):
             continue
         
-        if('/u/' in loc and ('2044.9' in files  )):
+        if('/u/' in loc and ('2044.9' in files )):
             continue
         
         f.write(loc+files+'\n')

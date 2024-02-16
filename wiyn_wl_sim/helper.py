@@ -308,13 +308,14 @@ def correct(sigmaxx_m , sigmayy_m, sigmaxy_m, sigmaxx_p, sigmayy_p, sigmaxy_p, e
     sigmaxx_c_arr = sigmaxx_m + exx_m * g1 - sigmaxx_p - exx_p*g2
     sigmayy_c_arr = sigmayy_m + eyy_m * g3 - sigmayy_p - eyy_p*g4
     sigmaxy_c_arr = sigmaxy_m + exy_m * g5 - sigmaxy_p - exy_p*g6
-    
+    size_arr = sigmaxx_c_arr+sigmayy_c_arr
     temp_arr = sigmaxx_c_arr + sigmayy_c_arr - 2*np.abs(sigmaxy_c_arr)
     
-    loc = np.where((sigmaxx_c_arr >0) & (sigmayy_c_arr >0) )[0]
+    #loc = np.where((sigmaxx_c_arr >0) & (sigmayy_c_arr >0) & (temp_arr>0))[0]
+    loc = np.where((size_arr >0)  )[0]
     #print (len(loc))
     if(len(loc) == 0):
-        return 0,0,0,0  
+        return None,None,None,0  
     sigmaxx_c = np.median(sigmaxx_c_arr[loc])
     sigmayy_c = np.median(sigmayy_c_arr[loc])
     sigmaxy_c = np.median(sigmaxy_c_arr[loc])
@@ -647,10 +648,10 @@ def findBoundRadius(store):
 
 
 
-def bkgFlagCalculate(img, store):
+def bkgFlagCalculate(img, store, arr_min=6000, arr_max=15000):
     flagArr=[]
     angleArr= np.arange(0, 3.14+0.01, 3.14/4)
-    gmean, gmedian, gstd = sigma_clipped_stats(img[6000:15000, 6000:15000])
+    gmean, gmedian, gstd = sigma_clipped_stats(img[arr_min:arr_max, arr_min:arr_max])
     for j in range(len(store)):
         #print (j, 'aa')
         flag =0

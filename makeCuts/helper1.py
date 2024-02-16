@@ -6,6 +6,8 @@ Created on Sat Nov 20 08:17:44 2021
 @author: dutta26
 """
 import numpy as np
+from astropy.io import fits
+
 
 def vert_stripe(img):
     sizey, sizex = np.shape(img)
@@ -43,30 +45,49 @@ def vert_stripe(img):
 #Throw away any object that has lot of nans or zeros 
 #The do ellipticity measurements 
 
-def detectBad(cutout):
+def detectBad(cutout, size=3):
     cutout = np.array(cutout, dtype = np.float32)
     sizey, sizex = np.shape(cutout)
-    cutout[np.isnan(cutout)] = 0
-    flag = flagC = flagE = flagTot = 0
+    flag = flagC = flagE = flagSize = flagTot = 0
+# =============================================================================
+#     cutout[np.isnan(cutout)] = 0
+#     flag = flagC = flagE = flagSize = flagTot = 0
+#     
+#     #First check if any central 20x20 region is 
+#     a= np.where(cutout[int(sizey/2)-5:int(sizey/2)+5 , int(sizex/2)-5:int(sizex/2)+5] <= 0)
+#     if(len(a[0]) > 0):
+#         flagC = 1
+#         
+#     
+#         
+#     #Next check how many total zero in cutout
+#     b= np.where(cutout <= 0)
+#     if(len(b[0]) > (0.2*sizex*sizey)):
+#         flagTot = 1
+#     
+#     #Check the edges    
+#     subCut = cutout[4:sizey-4, 4:sizex-4]
+#     c= np.where(subCut <= 0)
+#     if(len(c[0]) > 0):
+#         flagE = 1
+# =============================================================================
     
-    #First check if any central 20x20 region is 
-    a= np.where(cutout[int(sizey/2)-5:int(sizey/2)+5 , int(sizex/2)-5:int(sizex/2)+5] <= 0)
-    if(len(a[0]) > 0):
-        flagC = 1
-        
-    
-        
-    #Next check how many total zero in cutout
-    b= np.where(cutout <= 0)
-    if(len(b[0]) > (0.2*sizex*sizey)):
-        flagTot = 1
-    
-    #Check the edges    
-    subCut = cutout[4:sizey-4, 4:sizex-4]
-    c= np.where(subCut <= 0)
-    if(len(c[0]) > 0):
-        flagE = 1
-    
+    #Check if zeros within 3 sigma of size 
+    if(sizex> (6*size) and sizey>(6*size)):
+        #print ('aa')
+        centerx = int(round(sizex/2))
+        centery = int(round(sizey/2))
+        half = int(round(3*size))
+        subCut = cutout[centery-half:centery+half, centerx-half:centerx+half]
+        c= np.where(subCut <= 0)
+        #print(len(c[0]))
+        if(len(c[0]) > 0):
+            flagC= 1
+    else:
+        #print ('bb')
+        c= np.where(cutout <= 0)
+        if(len(c[0]) > 0):
+            flagC= 1
     
     #FlagC says there are 0s in central areas 
     #Flag tot sas there are too many zeros in the image to be useful

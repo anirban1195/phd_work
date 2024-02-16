@@ -50,12 +50,12 @@ def getGamma(centra, centdec, zLens, ra, dec, zs, rs):
     dl = 4285.71* integrate(zLens)
     ds = 4285.71* integrate(zs)
     dls = (ds - dl)
-    #print (dl, ds, dls)
+    print (dl, ds, dls)
     ks = 9.65e-4 * (dl*dls)/ds
     thetas = (rs/dl)*(180/np.pi) #In degrees
     R = np.sqrt(deldec**2 + delra**2) #In degrees
     x = R/thetas
-    #print (x)
+    print (x)
     #Limit to weak lensing regime
     if(x<1.25):
         x=1.25

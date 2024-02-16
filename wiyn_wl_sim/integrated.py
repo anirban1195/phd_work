@@ -15,7 +15,7 @@ med_img = '/scratch/bell/dutta26/wiyn_sim/median_coadds/ir_coadd_med_crop.fits'
 sextractorFile = '/scratch/bell/dutta26/wiyn_sim/coadd_sim.cat'
 starGal_out_file = '/home/dutta26/codes/wiyn_wl_sim/source_list.pk1'
 coadd_detect_file = '/home/dutta26/codes/wiyn_wl_sim/coaddSc_' + str(band)+'.npy'
-ebModeFile = '/scratch/bell/dutta26/wiyn_sim/master_arr_coaddNoMC_sfNoMC.npy'
+ebModeFile = '/scratch/bell/dutta26/wiyn_sim/master_arr_coaddMC_sfMC.npy'
 plotLoc = '/scratch/bell/dutta26/wiyn_sim/plot/phosim/'
 bandLoc = '/scratch/bell/dutta26/wiyn_sim/'
 ir_band_data = '/home/dutta26/codes/wiyn_wl_sim/coaddSc_ir.npy'
@@ -39,16 +39,16 @@ fluxMax_2 = 1e6
 # output, error = process.communicate()
 # 
 # =============================================================================
-import seperate_star_gal
-seperate_star_gal.seperate(sextractorFile, img, starGal_out_file, plotLoc, psfMin, psfMax, fluxMin, fluxMax, psfMin_2, psfMax_2, fluxMin_2, fluxMax_2)
-
-import coadd_detect
-coadd_detect.detect(starGal_out_file, img, ir_band_data, band, coadd_detect_file, plotLoc, bandLoc)
-
 # =============================================================================
-# import makeEandBmodes
-# makeEandBmodes.EandB( '/home/dutta26/codes/wiyn_wl_sim/coaddSc_ir.npy',  '/home/dutta26/codes/wiyn_wl_sim/coaddSc_r.npy', '/home/dutta26/codes/wiyn_wl_sim/coaddSc_i.npy', None, ebModeFile, img, '/scratch/bell/dutta26/wiyn_sim/r_withoutMC.npy', '/scratch/bell/dutta26/wiyn_sim/i_withoutMC.npy')
+# import seperate_star_gal
+# seperate_star_gal.seperate(sextractorFile, img, starGal_out_file, plotLoc, psfMin, psfMax, fluxMin, fluxMax, psfMin_2, psfMax_2, fluxMin_2, fluxMax_2)
+# 
+# import coadd_detect
+# coadd_detect.detect(starGal_out_file, img, ir_band_data, band, coadd_detect_file, plotLoc, bandLoc)
 # =============================================================================
+
+import makeEandBmodes
+makeEandBmodes.EandB( '/home/dutta26/codes/wiyn_wl_sim/coaddSc_ir.npy',  '/home/dutta26/codes/wiyn_wl_sim/coaddSc_r.npy', '/home/dutta26/codes/wiyn_wl_sim/coaddSc_i.npy', None, ebModeFile, img, '/scratch/bell/dutta26/wiyn_sim/r_withMC.npy', '/scratch/bell/dutta26/wiyn_sim/i_withMC.npy')
 
 
 
@@ -84,8 +84,8 @@ coadd_detect.detect(starGal_out_file, img, ir_band_data, band, coadd_detect_file
 # import coadd_detect
 # coadd_detect.detect(starGal_out_file, img, ir_band_data, band, coadd_detect_file, plotLoc, bandLoc)
 # 
+# 
 # =============================================================================
-
 
 
 

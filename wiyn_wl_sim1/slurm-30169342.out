@@ -1,0 +1,881 @@
+----- SWarp 2.38.0 started on 2024-01-03 at 00:30:21 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17774x17780  32 bits (floats)
+    Center: 21:53:36.78 +16:41:05.5   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1000_f2_OTA53_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:27.87 +16:51:29.8   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 388.8623   RMS: 19.70298
+
+-------------- File wiyn_odi_e_1000_f2_OTA43_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:54.06 +16:47:21.5   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 541.0946   RMS: 23.50047
+
+-------------- File wiyn_odi_e_1000_f2_OTA34_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:02.92 +16:36:57.1   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 570.3472   RMS: 24.24546
+
+-------------- File wiyn_odi_e_1000_f2_OTA55_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:52:53.32 +16:38:57.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 661.7166   RMS: 25.5508
+
+-------------- File wiyn_odi_e_1000_f2_OTA54_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:10.59 +16:45:13.8   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 494.2068   RMS: 23.05909
+
+-------------- File wiyn_odi_e_1000_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:36.76 +16:41:05.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 665.835   RMS: 25.67227
+
+-------------- File wiyn_odi_e_1000_f2_OTA35_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:45.64 +16:30:41.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 487.3138   RMS: 21.92526
+
+-------------- File wiyn_odi_e_1000_f2_OTA45_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:19.49 +16:34:49.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 596.0901   RMS: 24.396
+
+-------------- File wiyn_odi_e_1000_f2_OTA33_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:20.22 +16:43:12.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 663.7913   RMS: 25.6015
+
+-------------- Co-adding frames            
+Maximum overlap density: 2 frames
+> All done (in 17.3 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 00:40:18 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5856x5862  32 bits (floats)
+    Center: 21:53:36.77 +16:41:05.6   10.7'x10.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1000_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:36.76 +16:41:05.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 665.0387   RMS: 25.44227
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.2 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 02:17:21 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17318x17328  32 bits (floats)
+    Center: 21:53:28.84 +16:41:02.9   31.8'x31.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1001_f2_OTA33_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:11.16 +16:44:12.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 228.4173   RMS: 15.10989
+
+-------------- File wiyn_odi_e_1001_f2_OTA43_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:43.39 +16:47:41.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 228.1711   RMS: 15.10782
+
+-------------- File wiyn_odi_e_1001_f2_OTA54_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:01.04 +16:44:32.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 228.9357   RMS: 15.11747
+
+-------------- File wiyn_odi_e_1001_f2_OTA34_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:56.57 +16:37:33.5   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 229.5281   RMS: 15.13252
+
+-------------- File wiyn_odi_e_1001_f2_OTA45_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:14.24 +16:34:24.0   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 229.9375   RMS: 15.14721
+
+-------------- File wiyn_odi_e_1001_f2_OTA55_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:52:46.48 +16:37:53.2   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 229.0851   RMS: 15.13729
+
+-------------- File wiyn_odi_e_1001_f2_OTA53_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:15.61 +16:51:11.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 227.6801   RMS: 15.08903
+
+-------------- File wiyn_odi_e_1001_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:28.81 +16:41:03.0   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 229.7911   RMS: 15.13567
+
+-------------- File wiyn_odi_e_1001_f2_OTA35_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:41.99 +16:30:54.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 229.1251   RMS: 15.10834
+
+-------------- Co-adding frames            
+Maximum overlap density: 2 frames
+> All done (in 21.0 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 02:25:15 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5704x5714  32 bits (floats)
+    Center: 21:53:28.81 +16:41:03.0   10.5'x10.5'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1001_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:28.81 +16:41:03.0   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 228.781   RMS: 14.90265
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.5 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 04:05:13 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17326x17336  32 bits (floats)
+    Center: 21:53:28.83 +16:39:03.0   31.8'x31.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1002_f2_OTA53_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:15.67 +16:49:11.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 306.9094   RMS: 17.48157
+
+-------------- File wiyn_odi_e_1002_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:28.81 +16:39:03.0   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 308.9736   RMS: 17.55184
+
+-------------- File wiyn_odi_e_1002_f2_OTA33_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:11.17 +16:42:11.4   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 295.8817   RMS: 17.24719
+
+-------------- File wiyn_odi_e_1002_f2_OTA55_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:52:46.47 +16:35:54.1   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 403.8834   RMS: 20.01017
+
+-------------- File wiyn_odi_e_1002_f2_OTA34_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:56.54 +16:35:32.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 297.0796   RMS: 17.27572
+
+-------------- File wiyn_odi_e_1002_f2_OTA35_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:41.93 +16:28:54.4   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 308.843   RMS: 17.5421
+
+-------------- File wiyn_odi_e_1002_f2_OTA45_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:14.21 +16:32:24.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 309.9495   RMS: 17.76968
+
+-------------- File wiyn_odi_e_1002_f2_OTA54_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:01.06 +16:42:32.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 380.1502   RMS: 19.82438
+
+-------------- File wiyn_odi_e_1002_f2_OTA43_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:43.43 +16:45:41.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 307.167   RMS: 17.46721
+
+-------------- Co-adding frames            
+Maximum overlap density: 2 frames
+> All done (in 17.0 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 04:13:45 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5707x5717  32 bits (floats)
+    Center: 21:53:28.81 +16:39:03.0   10.5'x10.5'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1002_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:28.81 +16:39:03.0   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 308.7367   RMS: 17.33948
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.7 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 05:50:20 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17506x17514  32 bits (floats)
+    Center: 21:53:39.05 +16:39:36.6   32.1'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1003_f2_OTA55_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:50.70 +16:49:51.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 198.183   RMS: 14.04373
+
+-------------- File wiyn_odi_e_1003_f2_OTA33_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:27.46 +16:29:21.8   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 198.9745   RMS: 14.08514
+
+-------------- File wiyn_odi_e_1003_f2_OTA54_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:06.29 +16:43:20.5   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 199.6099   RMS: 14.08891
+
+-------------- File wiyn_odi_e_1003_f2_OTA45_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:23.48 +16:46:07.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 198.8947   RMS: 14.05875
+
+-------------- File wiyn_odi_e_1003_f2_OTA43_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:54.65 +16:33:05.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 199.7298   RMS: 14.07866
+
+-------------- File wiyn_odi_e_1003_f2_OTA34_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:11.87 +16:35:52.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 198.8452   RMS: 14.07435
+
+-------------- File wiyn_odi_e_1003_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:39.07 +16:39:36.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 199.7629   RMS: 14.0876
+
+-------------- File wiyn_odi_e_1003_f2_OTA35_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:52:56.27 +16:42:23.4   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 198.6116   RMS: 14.0478
+
+-------------- File wiyn_odi_e_1003_f2_OTA53_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:21.85 +16:36:49.4   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 198.8683   RMS: 14.07367
+
+-------------- Co-adding frames            
+Maximum overlap density: 2 frames
+> All done (in 16.7 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 05:58:18 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5767x5775  32 bits (floats)
+    Center: 21:53:39.07 +16:39:36.7   10.6'x10.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1003_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:39.07 +16:39:36.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 198.8129   RMS: 13.89616
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.4 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 07:29:40 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17698x17689  32 bits (floats)
+    Center: 21:53:38.19 +16:41:36.9   32.4'x32.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1004_f2_OTA34_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:21.47 +16:35:15.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 168.9756   RMS: 12.9376
+
+-------------- File wiyn_odi_e_1004_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:38.17 +16:41:37.0   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 169.8625   RMS: 12.94748
+
+-------------- File wiyn_odi_e_1004_f2_OTA53_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:21.43 +16:43:57.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 168.7769   RMS: 12.91814
+
+-------------- File wiyn_odi_e_1004_f2_OTA33_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:47.99 +16:31:15.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 168.9317   RMS: 12.93487
+
+-------------- File wiyn_odi_e_1004_f2_OTA35_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:52:54.94 +16:39:15.5   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 168.8154   RMS: 12.92553
+
+-------------- File wiyn_odi_e_1004_f2_OTA55_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:28.34 +16:51:58.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 168.54   RMS: 12.90904
+
+-------------- File wiyn_odi_e_1004_f2_OTA43_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:04.70 +16:37:36.8   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 168.9812   RMS: 12.92971
+
+-------------- File wiyn_odi_e_1004_f2_OTA45_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:11.63 +16:45:36.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 169.6521   RMS: 12.94479
+
+-------------- File wiyn_odi_e_1004_f2_OTA54_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:54.89 +16:47:58.2   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 169.0373   RMS: 12.93367
+
+-------------- Co-adding frames            
+Maximum overlap density: 2 frames
+> All done (in 16.6 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 07:37:25 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5836x5827  32 bits (floats)
+    Center: 21:53:38.17 +16:41:37.0   10.7'x10.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1004_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:38.17 +16:41:37.0   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 168.6641   RMS: 12.81267
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.3 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 09:09:31 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17323x17334  32 bits (floats)
+    Center: 21:53:28.83 +16:41:02.9   31.8'x31.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1005_f2_OTA54_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:01.05 +16:44:32.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 175.5541   RMS: 13.28838
+
+-------------- File wiyn_odi_e_1005_f2_OTA45_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:14.22 +16:34:24.2   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 175.6844   RMS: 13.28769
+
+-------------- File wiyn_odi_e_1005_f2_OTA34_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:56.55 +16:37:33.1   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 175.1976   RMS: 13.27201
+
+-------------- File wiyn_odi_e_1005_f2_OTA33_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:11.17 +16:44:11.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 175.1194   RMS: 13.26274
+
+-------------- File wiyn_odi_e_1005_f2_OTA43_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:43.42 +16:47:41.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 175.0259   RMS: 13.26694
+
+-------------- File wiyn_odi_e_1005_f2_OTA53_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:15.65 +16:51:11.5   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 174.7051   RMS: 13.26284
+
+-------------- File wiyn_odi_e_1005_f2_OTA35_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:41.95 +16:30:54.4   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 175.114   RMS: 13.25431
+
+-------------- File wiyn_odi_e_1005_f2_OTA55_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:52:46.47 +16:37:53.8   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 174.8237   RMS: 13.26067
+
+-------------- File wiyn_odi_e_1005_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:28.81 +16:41:03.0   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 175.7728   RMS: 13.2816
+
+-------------- Co-adding frames            
+Maximum overlap density: 2 frames
+> All done (in 17.1 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 09:17:14 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5706x5716  32 bits (floats)
+    Center: 21:53:28.81 +16:41:03.0   10.5'x10.5'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1005_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:28.81 +16:41:03.0   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 174.7388   RMS: 13.05265
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.0 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 10:48:52 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17890x17895  32 bits (floats)
+    Center: 21:53:30.88 +16:39:37.2   32.8'x32.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1006_f2_OTA35_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:52:47.16 +16:41:22.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 166.8401   RMS: 12.91123
+
+-------------- File wiyn_odi_e_1006_f2_OTA54_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:56.44 +16:43:58.5   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 167.9447   RMS: 13.00695
+
+-------------- File wiyn_odi_e_1006_f2_OTA55_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:38.26 +16:50:05.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 165.979   RMS: 12.88595
+
+-------------- File wiyn_odi_e_1006_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:30.89 +16:39:37.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 167.9502   RMS: 13.01434
+
+-------------- File wiyn_odi_e_1006_f2_OTA53_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:14.61 +16:37:51.2   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 167.6326   RMS: 12.94476
+
+-------------- File wiyn_odi_e_1006_f2_OTA34_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:05.36 +16:35:15.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 167.1038   RMS: 13.0079
+
+-------------- File wiyn_odi_e_1006_f2_OTA45_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:12.70 +16:45:44.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 167.0934   RMS: 12.93246
+
+-------------- File wiyn_odi_e_1006_f2_OTA43_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:49.07 +16:33:30.2   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 167.9288   RMS: 13.00943
+
+-------------- File wiyn_odi_e_1006_f2_OTA33_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:23.54 +16:29:08.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 167.9416   RMS: 13.02502
+
+-------------- Co-adding frames            
+Maximum overlap density: 2 frames
+> All done (in 17.8 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 10:56:34 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5894x5900  32 bits (floats)
+    Center: 21:53:30.89 +16:39:37.3   10.8'x10.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1006_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:30.89 +16:39:37.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 167.8119   RMS: 12.76058
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.2 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 12:28:06 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17756x17762  32 bits (floats)
+    Center: 21:53:38.95 +16:39:37.0   32.6'x32.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1007_f2_OTA34_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:12.73 +16:35:30.4   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 150.6974   RMS: 12.27986
+
+-------------- File wiyn_odi_e_1007_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:38.97 +16:39:37.1   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 150.9314   RMS: 12.32711
+
+-------------- File wiyn_odi_e_1007_f2_OTA53_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:22.36 +16:37:26.2   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 150.1388   RMS: 12.25707
+
+-------------- File wiyn_odi_e_1007_f2_OTA35_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:52:55.56 +16:41:47.4   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 149.9787   RMS: 12.23953
+
+-------------- File wiyn_odi_e_1007_f2_OTA43_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:56.11 +16:33:19.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 150.7907   RMS: 12.33288
+
+-------------- File wiyn_odi_e_1007_f2_OTA45_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:21.80 +16:45:54.1   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 150.0544   RMS: 12.23955
+
+-------------- File wiyn_odi_e_1007_f2_OTA33_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:29.88 +16:29:13.4   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 150.8436   RMS: 12.28481
+
+-------------- File wiyn_odi_e_1007_f2_OTA55_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:48.06 +16:50:00.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 149.82   RMS: 12.24568
+
+-------------- File wiyn_odi_e_1007_f2_OTA54_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:05.22 +16:43:43.5   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 150.7851   RMS: 12.27695
+
+-------------- Co-adding frames            
+Maximum overlap density: 2 frames
+> All done (in 17.4 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 12:35:34 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5850x5857  32 bits (floats)
+    Center: 21:53:38.96 +16:39:37.1   10.7'x10.7'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1007_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:38.97 +16:39:37.1   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 151.0397   RMS: 12.09887
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.3 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 14:48:00 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17324x17334  32 bits (floats)
+    Center: 21:53:39.11 +16:41:36.4   31.8'x31.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1008_f2_OTA53_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:21.48 +16:38:27.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 1161.665   RMS: 33.82254
+
+-------------- File wiyn_odi_e_1008_f2_OTA43_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:53.73 +16:34:57.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 1409.914   RMS: 37.86594
+
+-------------- File wiyn_odi_e_1008_f2_OTA33_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:26.00 +16:31:27.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 1473.941   RMS: 38.1755
+
+-------------- File wiyn_odi_e_1008_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:39.14 +16:41:36.4   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 1406.36   RMS: 37.35342
+
+-------------- File wiyn_odi_e_1008_f2_OTA55_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:52.29 +16:51:44.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 1160.816   RMS: 33.79364
+
+-------------- File wiyn_odi_e_1008_f2_OTA35_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:52:56.77 +16:44:45.1   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 1490.23   RMS: 38.35752
+
+-------------- File wiyn_odi_e_1008_f2_OTA45_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:24.52 +16:48:15.1   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 1226.89   RMS: 36.84415
+
+-------------- File wiyn_odi_e_1008_f2_OTA54_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:06.89 +16:45:06.1   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 1164.193   RMS: 33.8265
+
+-------------- File wiyn_odi_e_1008_f2_OTA34_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:11.39 +16:38:06.5   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 1491.415   RMS: 38.22688
+
+-------------- Co-adding frames            
+Maximum overlap density: 2 frames
+> All done (in 20.3 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 15:00:27 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5706x5716  32 bits (floats)
+    Center: 21:53:39.13 +16:41:36.4   10.5'x10.5'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1008_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:39.14 +16:41:36.4   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 1403.245   RMS: 37.06199
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.7 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 16:39:20 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17522x17531  32 bits (floats)
+    Center: 21:53:31.04 +16:41:36.7   32.1'x32.1'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1009_f2_OTA55_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:42.55 +16:51:52.2   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 280.2858   RMS: 16.74635
+
+-------------- File wiyn_odi_e_1009_f2_OTA43_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:46.74 +16:35:06.5   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 275.5391   RMS: 16.56332
+
+-------------- File wiyn_odi_e_1009_f2_OTA54_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:58.23 +16:45:21.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 276.7148   RMS: 16.69176
+
+-------------- File wiyn_odi_e_1009_f2_OTA53_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:13.89 +16:38:51.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 270.6671   RMS: 16.49498
+
+-------------- File wiyn_odi_e_1009_f2_OTA35_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:52:48.22 +16:44:21.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 259.6091   RMS: 16.10725
+
+-------------- File wiyn_odi_e_1009_f2_OTA33_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:19.60 +16:31:21.2   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 258.7532   RMS: 16.13
+
+-------------- File wiyn_odi_e_1009_f2_OTA34_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:03.92 +16:37:51.3   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 259.2275   RMS: 16.0925
+
+-------------- File wiyn_odi_e_1009_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:31.06 +16:41:36.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 270.169   RMS: 16.47523
+
+-------------- File wiyn_odi_e_1009_f2_OTA45_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:15.37 +16:48:06.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 265.4113   RMS: 16.34236
+
+-------------- Co-adding frames            
+Maximum overlap density: 2 frames
+> All done (in 20.7 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 16:47:46 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5772x5781  32 bits (floats)
+    Center: 21:53:31.06 +16:41:36.7   10.6'x10.6'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1009_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:31.06 +16:41:36.7   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 269.8915   RMS: 16.24758
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.5 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 18:30:56 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  17358x17368  32 bits (floats)
+    Center: 21:53:28.83 +16:39:03.1   31.8'x31.8'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1010_f2_OTA35_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:41.66 +16:28:53.4   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 323.4171   RMS: 18.01955
+
+-------------- File wiyn_odi_e_1010_f2_OTA33_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:54:11.25 +16:42:07.8   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 332.7162   RMS: 18.34622
+
+-------------- File wiyn_odi_e_1010_f2_OTA43_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:43.59 +16:45:40.5   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 323.0895   RMS: 18.02736
+
+-------------- File wiyn_odi_e_1010_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:28.81 +16:39:03.2   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 387.0852   RMS: 19.67423
+
+-------------- File wiyn_odi_e_1010_f2_OTA54_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:01.15 +16:42:35.5   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 485.2807   RMS: 22.05787
+
+-------------- File wiyn_odi_e_1010_f2_OTA34_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:56.45 +16:35:30.6   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 323.2586   RMS: 18.00531
+
+-------------- File wiyn_odi_e_1010_f2_OTA55_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:52:46.39 +16:35:58.0   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 444.0661   RMS: 21.0082
+
+-------------- File wiyn_odi_e_1010_f2_OTA53_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:15.93 +16:49:12.9   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 439.9959   RMS: 21.14749
+
+-------------- File wiyn_odi_e_1010_f2_OTA45_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:14.03 +16:32:25.8   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 442.257   RMS: 21.16449
+
+-------------- Co-adding frames            
+Maximum overlap density: 2 frames
+> All done (in 18.0 s)
+----- SWarp 2.38.0 started on 2024-01-03 at 18:39:42 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  5718x5728  32 bits (floats)
+    Center: 21:53:28.81 +16:39:03.2   10.5'x10.5'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- File wiyn_odi_e_1010_f2_OTA44_E000.fits:
+    "no ident"  unweighted  no ext. header  4039x4015  32 bits (floats)
+    Center: 21:53:28.81 +16:39:03.2   7.36'x7.4'  Scale: 0.11 ''/pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+    Background: 386.938   RMS: 19.4059
+
+-------------- Co-adding frames            
+Maximum overlap density: 1 frame
+> All done (in 2.3 s)
+slurmstepd: error: *** JOB 30169342 ON bell-a016 CANCELLED AT 2024-01-03T20:00:51 ***

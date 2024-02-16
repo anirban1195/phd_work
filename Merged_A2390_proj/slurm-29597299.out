@@ -1,0 +1,21 @@
+20171108T203553.2_abell_2390_odi_g.7190.fits
+Traceback (most recent call last):
+  File "single_frame_detect2.py", line 630, in <module>
+    star_arr=run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df_name, outLoc, plotLoc )
+  File "single_frame_detect2.py", line 101, in run_sf_detect
+    f=fits.open('/scratch/bell/dutta26/abell_2390/'+band+'/temp/temp_'+str(file))
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/astropy/io/fits/hdu/hdulist.py", line 174, in fitsopen
+    lazy_load_hdus, ignore_missing_simple, **kwargs)
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/astropy/io/fits/hdu/hdulist.py", line 411, in fromfile
+    lazy_load_hdus=lazy_load_hdus, **kwargs)
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/astropy/io/fits/hdu/hdulist.py", line 1064, in _readfrom
+    fileobj = _File(fileobj, mode=mode, memmap=memmap, cache=cache)
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/astropy/utils/decorators.py", line 536, in wrapper
+    return function(*args, **kwargs)
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/astropy/io/fits/file.py", line 170, in __init__
+    self._open_filename(fileobj, mode, overwrite)
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/astropy/io/fits/file.py", line 558, in _open_filename
+    self._file = fileobj_open(self.name, IO_FITS_MODES[mode])
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/astropy/io/fits/util.py", line 390, in fileobj_open
+    return open(filename, mode, buffering=0)
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/bell/dutta26/abell_2390/g/temp/temp_20171108T203553.2_abell_2390_odi_g.7190.fits'

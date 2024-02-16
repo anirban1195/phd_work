@@ -59,18 +59,18 @@ for sigx in sigxArr :
                     for j in range(200):
                         randx = randy = randxy = 0
                         while((randx*randy) <= randxy**2):
-                            randxy = sigxy+np.random.normal(0, abs(0.15*sigxy))
-                            randx = (sigx**2)+ np.random.normal(0, 0.15*sigx**2)
-                            randy = (sigy**2)+ np.random.normal(0, 0.15*sigy**2)
+                            randxy = sigxy+np.random.normal(0, abs(0*sigxy))
+                            randx = (sigx**2)+ np.random.normal(0, 0*sigx**2)
+                            randy = (sigy**2)+ np.random.normal(0, 0*sigy**2)
                          
                         guessx = guessy = guessxy = 0
                         while((guessx*guessy) <= abs(guessxy) ):
-                            guessx = np.sqrt((sigx**2)+ np.random.normal(0, 0.15*sigx**2))
-                            guessy = np.sqrt((sigy**2)+ np.random.normal(0, 0.15*sigy**2))
-                            guessxy = sigxy + np.random.normal(0, abs(0.15*sigxy))
+                            guessx = np.sqrt((sigx**2)+ np.random.normal(0, 0*sigx**2))
+                            guessy = np.sqrt((sigy**2)+ np.random.normal(0, 0*sigy**2))
+                            guessxy = sigxy + np.random.normal(0, abs(0*sigxy))
                         
                             
-                        muArr= [sizex/2.0-0.5 + np.random.normal(0, 1), sizey/2.0-0.5+ np.random.normal(0, 1)]
+                        muArr= [sizex/2.0-0.5 , sizey/2.0-0.5]
                         cov = [[randx,randxy], [randxy, randy]]
                         const = int(round(np.random.normal(flux, np.sqrt(flux)))) 
                         if(const<1):
@@ -86,7 +86,7 @@ for sigx in sigxArr :
                         tot = np.add(obj,noise)
                         finalImg = finalImg + tot 
                         
-                        flux_measure, mux_measure, muy_measure, e1_measure, e2, bkg_measure, psf_measure, sigxx_measure,sigyy_measure, sigxy_measure = measure_pythonV_dist.measure(tot, lut1, lut2, flux+np.random.normal(0, 0.15*flux), 0 ,0, guessx, guessy, guessxy, 1, 1)
+                        flux_measure, mux_measure, muy_measure, e1_measure, e2, bkg_measure, psf_measure, sigxx_measure,sigyy_measure, sigxy_measure = measure_pythonV_dist.measure(tot, lut1, lut2, flux+np.random.normal(0, 0*flux), 0 ,0, guessx, guessy, guessxy, 1, 1)
                         if(flux_measure == None or np.isnan(flux_measure) or psf_measure == None or np.isnan(psf_measure)):
                             count += 1
                             continue
@@ -125,7 +125,7 @@ for sigx in sigxArr :
                     
                     
 finalArr= np.array(finalArr)                    
-np.save('/scratch/bell/dutta26/abell_2390/paper_plot_data_sf_vs_combined_15pert.npy', finalArr)    
+np.save('/scratch/bell/dutta26/abell_2390/one_iter.npy', finalArr)    
                     
                     
                     

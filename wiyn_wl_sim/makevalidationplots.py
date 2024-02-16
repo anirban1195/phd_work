@@ -12,7 +12,7 @@ import helper
 import pandas as pd
 import getgamma 
 import matplotlib.pyplot as plt
-
+from astropy.stats import sigma_clipped_stats
 
 
 
@@ -38,15 +38,19 @@ def get_avg_obs(datafile, img_file, cent_ra, cent_dec, radius, zLens, ir_coadd_f
     size = np.sqrt(ir_coadd_data[:,7] + ir_coadd_data[:,8])
     loc = np.where( (distArr <= radius) & (master_frame[:,4]> 1) & (ir_coadd_data[:,2]==0) & (ir_coadd_data[:,3]>10)
                    & (ir_coadd_data[:,82]==0))[0]
-    print (len(loc), '***************')
+    print (len(loc), '***************', np.median(master_frame[loc, 15]))
+    med_err = np.median(master_frame[loc, 15])
     totShear =0
     ellipArr=[]
     wtArr=[]
     errArr=[]
     [x_mid], [y_mid] = helper.convertToXY(cent_dec, cent_ra, img_file)
-    print (x_mid, y_mid)
+    
     cnt =0
     arr=[]
+    th_arr =[]
+    z_arr=[]
+    signalArr =[]
     #print (ir_coadd_data[0,1],ir_coadd_data[0,1])
     for ind in loc:
         dx = ir_coadd_data[ind,10] -x_mid
@@ -67,46 +71,67 @@ def get_avg_obs(datafile, img_file, cent_ra, cent_dec, radius, zLens, ir_coadd_f
         ellip_err = master_frame[ind, 15]
         tot_ellip = np.sqrt(e1**2 + e2**2)
         
-       
-        wt=(size/ellip_err)
-        if(wt>100):
-            wt=100
+        
+        wt=(1/ellip_err)**2
+        if(wt>1/(med_err/3)**2):
+            wt=1/(med_err/3)**2
         #print (wt)
+        if(abs(e1)>5 or abs(e2)>5 or tot_ellip==0 or np.isnan(size) or size_coadd<0.2 or size_coadd>10 ):
+            wt = 0
+            
         
         epar= - (e1*cos2phi + e2*sin2phi)
-        if(abs(e1)>1 or abs(e2)>1 or tot_ellip==0 or np.isnan(size) or size<0.05 or size>8 or wt<=0):
+        if(abs(e1)>8 or abs(e2)>8 or tot_ellip==0 or np.isnan(size) or size<0.2 or size>10 or wt<=0 ):
             continue
         else:
             #print (master_frame[ind,6] , ir_coadd_data[ind,7], ir_coadd_data[ind,38])
             #print (e1)
             
-            totShear += epar*wt#(e1*wt)
+            totShear += e1*wt#(e1*wt)
             cnt += (1*wt)
+            signalArr.append(e1)
             wtArr.append(wt)
             errArr.append(master_frame[ind, 15])
             ellipArr.append(tot_ellip)
-    print (len(ellipArr), np.mean(ellipArr), cnt, totShear) 
+            
+            #gamma1, gamma2, kappa = getgamma.getGamma(328.3944, 17.6695, 0.3, ir_coadd_data[ind,0], ir_coadd_data[ind,1], master_frame[ind, 4], 0.25)
+            #th_arr.append(- (gamma1*cos2phi + gamma2*sin2phi))
+            #z_arr.append(master_frame[ind, 4])
+    ellipArr =np.array(ellipArr)
+    signalArr = np.array(signalArr)
     wtArr=np.array(wtArr)
     errArr=np.array(errArr)
     wtArr=wtArr/np.sum(wtArr)
     ellipArr =np.array(ellipArr)
+    mean,med,mode = sigma_clipped_stats(ellipArr**2, cenfunc= np.median)
+    print (len(ellipArr), np.median(ellipArr**2), cnt, totShear, np.sum(ellipArr**2 * wtArr**0.5)/np.sum(wtArr**0.5), np.sum(ellipArr* wtArr),np.sum(ellipArr**2 * wtArr)) 
     #n, bins, patches = plt.hist(x=ellipArr, bins='auto',histtype=u'step', density=True)
-    #plt.xlabel('Galaxy Corrected Size')
-    print (np.median(errArr))
-    shear = totShear /(2*cnt*(1-np.mean(ellipArr**2)))
+    #plt.xlabel('Galaxy Corrected Size')-np.median(ellipArr**2)
+    #print (np.median(errArr))
+    wt_tild = wtArr**0.5/np.sum(wtArr**0.5)
+    shear = totShear /(2*cnt*(1-np.sum(ellipArr**2 * wt_tild)/np.sum(wt_tild) ))
     error = shear / np.sqrt(len(ellipArr))
-    print( np.sqrt(1.414*np.sum(errArr**2))/len(errArr), np.sqrt(np.sum(wtArr**2 * errArr**2))/(2*(1-np.mean(ellipArr**2))))
-    print( np.sqrt(np.sum(2*errArr**2))/len(errArr), np.sqrt(np.sum(wtArr**2 * errArr**2))/(2*(1-np.mean(ellipArr**2))))
+    #print( np.sqrt(1.414*np.sum(errArr**2))/len(errArr), np.sqrt(np.sum(wtArr**2 * errArr**2))/(2*(1-np.mean(ellipArr**2))))
+    #print( np.sqrt(np.sum(2*errArr**2))/len(errArr), np.sqrt(np.sum(wtArr**2 * errArr**2))/(2*(1-np.mean(ellipArr**2))))
     #return shear, np.std(ellipArr)/np.sqrt(len(ellipArr))
-    return shear, np.sqrt(np.sum(wtArr**2 * errArr**2) + (np.sqrt(2*np.sum(errArr**2))/len(errArr))**2)
+    #print (np.median(th_arr))
+    #print (np.mean(th_arr), np.mean(z_arr), np.median(z_arr), np.sum(z_arr*wtArr))
+    print (np.sum(wtArr**2 * errArr**2)/np.sum(wtArr * signalArr)**2)
+    print (2*np.sum(wt_tild**2* errArr**2)/(1-np.sum(ellipArr**2 * wt_tild)/np.sum(wt_tild) )**2)
+    a = (np.sum(wtArr**2 * errArr**2)/np.sum(wtArr * signalArr)**2) +(2*np.sum(wt_tild**2* errArr**2)/(1-np.sum(ellipArr**2 * wt_tild)/np.sum(wt_tild) )**2)
+    print (np.sqrt(a)*shear, shear, np.sqrt(a))
+    #return shear, np.sqrt(np.sum(wtArr**2 * errArr**2) + (np.sqrt(2*np.sum(errArr**2))/len(errArr))**2) , np.median(th_arr)
+    return shear, np.sqrt(a)*shear , np.median(th_arr), ellipArr, wtArr
     
+
+
 def get_avg_th(cent_ra, cent_dec, radius, zLens):
     
     bins =np.arange(50/3600, radius, 1/3600)
     totGamma =0
     cnt =0
     for radius in bins:
-        gamma1, gamma2, kappa = getgamma.getGamma(cent_ra, cent_dec, 0.3, cent_ra+radius, cent_dec, 0.8, 0.25)
+        gamma1, gamma2, kappa = getgamma.getGamma(cent_ra, cent_dec, 0.3, cent_ra+radius, cent_dec, 0.7, 0.25)
         totGamma += (np.sqrt(gamma1**2 + gamma2**2) * radius * (1/3600))
         cnt += (radius * (1/3600))
     return totGamma/cnt
@@ -142,15 +167,15 @@ lut2 = np.load('/scratch/bell/dutta26/abell_2390/calib_final_inf.npy')
 # print (mux, muy,dec, ra)
 # 
 # =============================================================================
-finalDataSet_loc='/scratch/bell/dutta26/backup/master_arr_coaddMC_z.npy'
-imgLoc = '/scratch/bell/dutta26/backup/wted_coadds/ir_coadd_wt.fits'
-ir_coadd_file = '/scratch/bell/dutta26/backup/coaddSc_ir.npy'
+# =============================================================================
+# finalDataSet_loc='/scratch/bell/dutta26/backup/master_arr_coaddMC_sfMC_z.npy'
+# imgLoc = '/scratch/bell/dutta26/backup/wted_coadds/ir_coadd_wt.fits'
+# ir_coadd_file = '/scratch/bell/dutta26/backup/coaddSc_ir.npy'
+# =============================================================================
 
-# =============================================================================
-# finalDataSet_loc='/scratch/bell/dutta26/wiyn_sim/master_arr_coaddNoMC_sfNoMC.npy'
-# imgLoc = '/scratch/bell/dutta26/wiyn_sim/wted_coadds/ir_coadd_wt.fits'
-# ir_coadd_file = '/home/dutta26/codes/wiyn_wl_sim/coaddSc_ir.npy'
-# =============================================================================
+finalDataSet_loc='/scratch/bell/dutta26/wiyn_sim/master_arr_coaddMC_sfMC.npy'
+imgLoc = '/scratch/bell/dutta26/wiyn_sim/wted_coadds/ir_coadd_wt.fits'
+ir_coadd_file = '/home/dutta26/codes/wiyn_wl_sim/coaddSc_ir.npy'
 
 
 #Now go in radial bins and determine shear
@@ -159,23 +184,50 @@ th_avg_shear = []
 obs_avg_shear =[]
 obs_shear_err=[]
 for radius in bins:
-    th_avg_shear.append(get_avg_th(328.3941 , 17.6697, radius, 0.3))
-    #th_avg_shear.append(-0.1)
-    shear_obs, error = get_avg_obs(finalDataSet_loc, imgLoc, [328.3941], [17.6697], radius, 0.3, ir_coadd_file )
+    #th_avg_shear.append(get_avg_th(328.3941 , 17.6697, radius, 0.3))
+    th_avg_shear.append(-0.1)
+    shear_obs, error, th_med, ellipArr, wtArr = get_avg_obs(finalDataSet_loc, imgLoc, [328.3944], [17.6695], radius, 0.3, ir_coadd_file )
     obs_avg_shear.append(shear_obs)
     obs_shear_err.append(error)
-    
+    #break
+    #th_avg_shear.append(-th_med)
     
 #yerr = np.linspace(0.5, 1, 24).T
-plt.plot(bins*3600, th_avg_shear, 'r--')
-plt.errorbar(bins*3600, obs_avg_shear,  yerr= obs_shear_err, fmt='r.', label = 'Single Frame No MC')
+plt.plot(bins*3600, th_avg_shear, 'k--')
+plt.errorbar(bins*3600, obs_avg_shear,  yerr= obs_shear_err, fmt='b.', label = 'Single Frame',capsize=3)
+
+print (np.mean(obs_avg_shear[-10:]))
 
 
+
+
+finalDataSet_loc='/scratch/bell/dutta26/wiyn_sim/master_arr_coaddMC.npy'
+imgLoc = '/scratch/bell/dutta26/wiyn_sim/wted_coadds/ir_coadd_wt.fits'
+ir_coadd_file = '/home/dutta26/codes/wiyn_wl_sim/coaddSc_ir.npy'
+
+
+#Now go in radial bins and determine shear
+bins = np.arange(60/3600, 600/3600, 30/3600 ) 
+th_avg_shear = []
+obs_avg_shear =[]
+obs_shear_err=[]
+for radius in bins:
+    #th_avg_shear.append(get_avg_th(328.3941 , 17.6697, radius, 0.3))
+    th_avg_shear.append(-0.1)
+    shear_obs, error, th_med, ellipArr, wtArr = get_avg_obs(finalDataSet_loc, imgLoc, [328.3944], [17.6695], radius, 0.3, ir_coadd_file )
+    obs_avg_shear.append(shear_obs)
+    obs_shear_err.append(error)
+    #break
+    #th_avg_shear.append(-th_med)
+    
+#yerr = np.linspace(0.5, 1, 24).T
+plt.plot(bins*3600, th_avg_shear, 'k--')
+plt.errorbar(bins*3600, obs_avg_shear,  yerr= obs_shear_err, fmt='r.', label = 'Coadd', capsize=3)
+
+print (np.mean(obs_avg_shear[-10:]))
 plt.xlabel('In arcesconds.')
-plt.ylabel('Average shear')
-
-
-
+plt.ylabel(r'Average  $\gamma_2$')
+plt.legend()
 
 
 

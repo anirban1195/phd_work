@@ -1,0 +1,1260 @@
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:52 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:52 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:53 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:53 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:54 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:54 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:55 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:55 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:56 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:56 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:57 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:57 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:57 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:58 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:58 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:58 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:59 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:33:59 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:00 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:00 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:01 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:01 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:02 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:02 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:03 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:03 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:04 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:04 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:05 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:05 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:06 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:06 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:07 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:07 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:07 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:08 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:08 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:08 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:09 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:09 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:10 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:10 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:11 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:11 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:12 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:12 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:13 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:13 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:14 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:14 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:15 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:15 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:15 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:16 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:16 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:16 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:17 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:17 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:18 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault
+Traceback (most recent call last):
+  File "phosim.py", line 993, in <module>
+    main()
+  File "phosim.py", line 970, in main
+    checkPaths(opt, phosimDir)
+  File "phosim.py", line 144, in checkPaths
+    exec('opt.%s=assignPath(opt.%s,phosimDir)' % (x,x))
+  File "<string>", line 1, in <module>
+  File "phosim.py", line 139, in assignPath
+    raise RuntimeError('%s does not exist.' % path)
+RuntimeError: /scratch/bell/dutta26/wiyn_sim1/work1/ does not exist.
+----- SWarp 2.38.0 started on 2024-01-02 at 22:34:18 with 10 threads
+
+------- Output File output.fits:
+    "no ident"  WEIGHTED  no ext. header  0x1  32 bits (floats)
+    Center: 0   0  Scale: 0 /pixel
+    Gain: 0 e-/ADU   Flux scaling (astrom/photom): 1 X / 1 X
+
+-------------- Co-adding frames            
+Maximum overlap density: 0 frame
+segmentation fault

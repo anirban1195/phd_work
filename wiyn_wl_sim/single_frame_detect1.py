@@ -447,20 +447,22 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
             store[fileCount,j,73] = s_xy
             
             corr_xx = corr_yy = corr_xy = 0
-            if(store[fileCount,j,12] == 99):
-                corr_xx, corr_yy, corr_xy , success = helper.correct(sigxx, sigyy, sigxy, 
-                                                                     store[fileCount,j,38], store[fileCount,j,39], store[fileCount,j,40], 
-                                                                     s_xx,s_yy,s_xy, 
-                                                                     store[fileCount,j,41], 
-                                                                     store[fileCount,j,42], 
-                                                                     store[fileCount,j,43])
-            else:
-                corr_xx, corr_yy, corr_xy , success = helper.correct(sigxx, sigyy, sigxy, 
-                                                                     store[fileCount,j,38], store[fileCount,j,39], store[fileCount,j,40], 
-                                                                     0,0,0, 
-                                                                     0, 
-                                                                     0, 
-                                                                     0,100)
+            
+            corr_xx, corr_yy, corr_xy , success = helper.correct(sigxx, sigyy, sigxy, 
+                                                                 store[fileCount,j,38], store[fileCount,j,39], store[fileCount,j,40], 
+                                                                 s_xx,s_yy,s_xy, 
+                                                                 store[fileCount,j,41], 
+                                                                 store[fileCount,j,42], 
+                                                                 store[fileCount,j,43], 30000)
+            
+# =============================================================================
+#             corr_xx, corr_yy, corr_xy , success = helper.correct(sigxx, sigyy, sigxy, 
+#                                                                  store[fileCount,j,38], store[fileCount,j,39], store[fileCount,j,40], 
+#                                                                  0,0,0, 
+#                                                                  0, 
+#                                                                  0, 
+#                                                                  0,100)
+# =============================================================================
             
             if(success< 50 or np.isnan(corr_xx) or corr_xx<0 or corr_xx == None):
                 store[fileCount, j,66] = 1
@@ -554,8 +556,9 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         
         
     
-    outFile = '/scratch/bell/dutta26/wiyn_sim/' +str(band)+'_withCondMC.npy'
-    np.save(outFile, store)
+    outFile = '/home/dutta26/codes/wiyn_wl_sim/' +str(band)+'_withoutMC.npy'
+    #outFile = '/scratch/bell/dutta26/backup/' +str(band)+'_withMC.npy'
+    #np.save(outFile, store)
 
 
 band = 'i'
@@ -576,3 +579,25 @@ outLoc= '/home/dutta26/codes/wiyn_wl_sim/sf_' + str(band)+'.npy'
 source_df_name = '/home/dutta26/codes/wiyn_wl_sim/source_list.pk1'
 plotLoc = '/scratch/bell/dutta26/wiyn_sim/plot/phosim/'
 run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df_name, outLoc, plotLoc )
+
+# =============================================================================
+# band = 'i'
+# bandLoc= '/scratch/bell/dutta26/backup/'
+# band_coadd_df_name = '/scratch/bell/dutta26/backup/coaddSc_'+ str(band)+'.npy'
+# ir_coadd_df_name = '/scratch/bell/dutta26/backup/coaddSc_ir.npy'
+# outLoc= '/scratch/bell/dutta26/backup/sf_' + str(band)+'.npy'
+# source_df_name = '/scratch/bell/dutta26/backup/source_list.pk1'
+# plotLoc = '/scratch/bell/dutta26/backup/plot/phosim/'
+# run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df_name, outLoc, plotLoc )
+# 
+# 
+# band = 'r'
+# bandLoc= '/scratch/bell/dutta26/backup/'
+# band_coadd_df_name = '/scratch/bell/dutta26/backup/coaddSc_'+ str(band)+'.npy'
+# ir_coadd_df_name = '/scratch/bell/dutta26/backup/coaddSc_ir.npy'
+# outLoc= '/scratch/bell/dutta26/backup/sf_' + str(band)+'.npy'
+# source_df_name = '/scratch/bell/dutta26/backup/source_list.pk1'
+# plotLoc = '/scratch/bell/dutta26/backup/plot/phosim/'
+# run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df_name, outLoc, plotLoc )
+# 
+# =============================================================================

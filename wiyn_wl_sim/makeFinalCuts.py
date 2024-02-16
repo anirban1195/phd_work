@@ -15,8 +15,8 @@ from astropy.nddata import Cutout2D
 from astropy.utils.data import download_file
 from astropy.wcs import WCS
 
-file ='/scratch/bell/dutta26/wiyn_sim/median_coadds/ir_coadd_med.fits'
-new_file = '/scratch/bell/dutta26/wiyn_sim/median_coadds/ir_coadd_med_crop.fits'
+file ='/scratch/bell/dutta26/wiyn_sim/median_coadds/ir_coadd_med.weight.fits'
+new_file = '/scratch/bell/dutta26/wiyn_sim/median_coadds/ir_coadd_med_crop.weight.fits'
 #file = str(sys.argv[1])
 #new_file = str(sys.argv[2])
 #f=fits.open(file, mode='update')

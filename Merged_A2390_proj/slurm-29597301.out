@@ -1,0 +1,1466 @@
+/home/dutta26/codes/makeCuts/helper.py:466: RuntimeWarning: invalid value encountered in double_scalars
+  mux_calc = t3/t2
+/home/dutta26/codes/makeCuts/helper.py:467: RuntimeWarning: invalid value encountered in double_scalars
+  muy_calc = t4/t2
+/home/dutta26/codes/makeCuts/helper.py:471: RuntimeWarning: invalid value encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:472: RuntimeWarning: invalid value encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:473: RuntimeWarning: invalid value encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:519: RuntimeWarning: divide by zero encountered in double_scalars
+  fbysqrtba = np.log10(guessFlux/sqrtba)
+/home/dutta26/codes/makeCuts/helper.py:446: RuntimeWarning: invalid value encountered in sqrt
+  sqrtImg = np.sqrt(img)
+/home/dutta26/codes/makeCuts/helper.py:447: RuntimeWarning: divide by zero encountered in true_divide
+  q= np.abs(img-back_calc)/sqrtImg
+/home/dutta26/codes/makeCuts/helper.py:450: RuntimeWarning: overflow encountered in exp
+  temp1 = img - back_calc + 1.41421* sqrtImg*(0.477/ np.exp(0.928*q +0.247*q2 + 0.04*q3))
+/home/dutta26/codes/makeCuts/helper.py:451: RuntimeWarning: invalid value encountered in subtract
+  temp2 = 1.41421* sqrtImg*(0.477/ np.exp(0.551*q - 0.06*q2 + 0.003*q3))
+/home/dutta26/codes/makeCuts/helper.py:451: RuntimeWarning: overflow encountered in exp
+  temp2 = 1.41421* sqrtImg*(0.477/ np.exp(0.551*q - 0.06*q2 + 0.003*q3))
+/home/dutta26/codes/makeCuts/helper.py:519: RuntimeWarning: divide by zero encountered in double_scalars
+  fbysqrtba = np.log10(guessFlux/sqrtba)
+/home/dutta26/codes/makeCuts/helper.py:466: RuntimeWarning: invalid value encountered in double_scalars
+  mux_calc = t3/t2
+/home/dutta26/codes/makeCuts/helper.py:467: RuntimeWarning: invalid value encountered in double_scalars
+  muy_calc = t4/t2
+/home/dutta26/codes/makeCuts/helper.py:471: RuntimeWarning: invalid value encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:472: RuntimeWarning: invalid value encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:473: RuntimeWarning: invalid value encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:447: RuntimeWarning: invalid value encountered in true_divide
+  q= np.abs(img-back_calc)/sqrtImg
+single_frame_detect2.py:538: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,:,51] -store[fileCount,:,38] + store[fileCount,:,52] - store[fileCount,:,39])
+single_frame_detect2.py:553: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,loc,51] -store[fileCount,loc,38] + store[fileCount,loc,52]  -store[fileCount,loc,39])
+single_frame_detect2.py:564: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,loc,51] - store[fileCount,loc,38] + store[fileCount,loc,52] - store[fileCount,loc,39])
+single_frame_detect2.py:597: RuntimeWarning: invalid value encountered in true_divide
+  e1 = (xx-yy)/(xx+yy)
+single_frame_detect2.py:598: RuntimeWarning: invalid value encountered in true_divide
+  e2 = 2*xy/(xx+yy)
+/home/dutta26/codes/makeCuts/helper.py:518: RuntimeWarning: invalid value encountered in sqrt
+  sqrtba = np.sqrt(med)*3.14*np.sqrt(guessAlphax**2 *guessAlphay**2 - guessAlphaxy**2)
+/home/dutta26/codes/makeCuts/helper.py:466: RuntimeWarning: invalid value encountered in double_scalars
+  mux_calc = t3/t2
+/home/dutta26/codes/makeCuts/helper.py:467: RuntimeWarning: invalid value encountered in double_scalars
+  muy_calc = t4/t2
+/home/dutta26/codes/makeCuts/helper.py:471: RuntimeWarning: invalid value encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:472: RuntimeWarning: invalid value encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:473: RuntimeWarning: invalid value encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:519: RuntimeWarning: divide by zero encountered in double_scalars
+  fbysqrtba = np.log10(guessFlux/sqrtba)
+/home/dutta26/codes/makeCuts/helper.py:447: RuntimeWarning: invalid value encountered in true_divide
+  q= np.abs(img-back_calc)/sqrtImg
+/home/dutta26/codes/makeCuts/helper.py:446: RuntimeWarning: invalid value encountered in sqrt
+  sqrtImg = np.sqrt(img)
+/home/dutta26/codes/makeCuts/helper.py:450: RuntimeWarning: overflow encountered in exp
+  temp1 = img - back_calc + 1.41421* sqrtImg*(0.477/ np.exp(0.928*q +0.247*q2 + 0.04*q3))
+/home/dutta26/codes/makeCuts/helper.py:451: RuntimeWarning: overflow encountered in exp
+  temp2 = 1.41421* sqrtImg*(0.477/ np.exp(0.551*q - 0.06*q2 + 0.003*q3))
+/home/dutta26/codes/makeCuts/helper.py:447: RuntimeWarning: divide by zero encountered in true_divide
+  q= np.abs(img-back_calc)/sqrtImg
+/home/dutta26/codes/makeCuts/helper.py:451: RuntimeWarning: invalid value encountered in subtract
+  temp2 = 1.41421* sqrtImg*(0.477/ np.exp(0.551*q - 0.06*q2 + 0.003*q3))
+/home/dutta26/codes/makeCuts/helper.py:518: RuntimeWarning: invalid value encountered in sqrt
+  sqrtba = np.sqrt(med)*3.14*np.sqrt(guessAlphax**2 *guessAlphay**2 - guessAlphaxy**2)
+single_frame_detect2.py:538: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,:,51] -store[fileCount,:,38] + store[fileCount,:,52] - store[fileCount,:,39])
+single_frame_detect2.py:553: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,loc,51] -store[fileCount,loc,38] + store[fileCount,loc,52]  -store[fileCount,loc,39])
+single_frame_detect2.py:564: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,loc,51] - store[fileCount,loc,38] + store[fileCount,loc,52] - store[fileCount,loc,39])
+single_frame_detect2.py:597: RuntimeWarning: invalid value encountered in true_divide
+  e1 = (xx-yy)/(xx+yy)
+single_frame_detect2.py:598: RuntimeWarning: invalid value encountered in true_divide
+  e2 = 2*xy/(xx+yy)
+/home/dutta26/codes/makeCuts/helper.py:447: RuntimeWarning: invalid value encountered in true_divide
+  q= np.abs(img-back_calc)/sqrtImg
+/home/dutta26/codes/makeCuts/helper.py:519: RuntimeWarning: divide by zero encountered in double_scalars
+  fbysqrtba = np.log10(guessFlux/sqrtba)
+/home/dutta26/codes/makeCuts/helper.py:466: RuntimeWarning: invalid value encountered in double_scalars
+  mux_calc = t3/t2
+/home/dutta26/codes/makeCuts/helper.py:467: RuntimeWarning: invalid value encountered in double_scalars
+  muy_calc = t4/t2
+/home/dutta26/codes/makeCuts/helper.py:471: RuntimeWarning: invalid value encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:472: RuntimeWarning: invalid value encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:473: RuntimeWarning: invalid value encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:450: RuntimeWarning: overflow encountered in exp
+  temp1 = img - back_calc + 1.41421* sqrtImg*(0.477/ np.exp(0.928*q +0.247*q2 + 0.04*q3))
+/home/dutta26/codes/makeCuts/helper.py:446: RuntimeWarning: invalid value encountered in sqrt
+  sqrtImg = np.sqrt(img)
+/home/dutta26/codes/makeCuts/helper.py:447: RuntimeWarning: divide by zero encountered in true_divide
+  q= np.abs(img-back_calc)/sqrtImg
+/home/dutta26/codes/makeCuts/helper.py:451: RuntimeWarning: invalid value encountered in subtract
+  temp2 = 1.41421* sqrtImg*(0.477/ np.exp(0.551*q - 0.06*q2 + 0.003*q3))
+/home/dutta26/codes/makeCuts/helper.py:451: RuntimeWarning: overflow encountered in exp
+  temp2 = 1.41421* sqrtImg*(0.477/ np.exp(0.551*q - 0.06*q2 + 0.003*q3))
+/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/lib/nanfunctions.py:1117: RuntimeWarning: Mean of empty slice
+  return np.nanmean(a, axis, out=out, keepdims=keepdims)
+single_frame_detect2.py:538: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,:,51] -store[fileCount,:,38] + store[fileCount,:,52] - store[fileCount,:,39])
+single_frame_detect2.py:553: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,loc,51] -store[fileCount,loc,38] + store[fileCount,loc,52]  -store[fileCount,loc,39])
+single_frame_detect2.py:564: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,loc,51] - store[fileCount,loc,38] + store[fileCount,loc,52] - store[fileCount,loc,39])
+single_frame_detect2.py:597: RuntimeWarning: invalid value encountered in true_divide
+  e1 = (xx-yy)/(xx+yy)
+single_frame_detect2.py:598: RuntimeWarning: invalid value encountered in true_divide
+  e2 = 2*xy/(xx+yy)
+/home/dutta26/codes/makeCuts/helper.py:518: RuntimeWarning: invalid value encountered in sqrt
+  sqrtba = np.sqrt(med)*3.14*np.sqrt(guessAlphax**2 *guessAlphay**2 - guessAlphaxy**2)
+/home/dutta26/codes/makeCuts/helper.py:466: RuntimeWarning: invalid value encountered in double_scalars
+  mux_calc = t3/t2
+/home/dutta26/codes/makeCuts/helper.py:467: RuntimeWarning: invalid value encountered in double_scalars
+  muy_calc = t4/t2
+/home/dutta26/codes/makeCuts/helper.py:471: RuntimeWarning: invalid value encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:472: RuntimeWarning: invalid value encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:473: RuntimeWarning: invalid value encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:519: RuntimeWarning: divide by zero encountered in double_scalars
+  fbysqrtba = np.log10(guessFlux/sqrtba)
+/home/dutta26/codes/makeCuts/helper.py:447: RuntimeWarning: invalid value encountered in true_divide
+  q= np.abs(img-back_calc)/sqrtImg
+/home/dutta26/codes/makeCuts/helper.py:446: RuntimeWarning: invalid value encountered in sqrt
+  sqrtImg = np.sqrt(img)
+/home/dutta26/codes/makeCuts/helper.py:447: RuntimeWarning: divide by zero encountered in true_divide
+  q= np.abs(img-back_calc)/sqrtImg
+/home/dutta26/codes/makeCuts/helper.py:450: RuntimeWarning: overflow encountered in exp
+  temp1 = img - back_calc + 1.41421* sqrtImg*(0.477/ np.exp(0.928*q +0.247*q2 + 0.04*q3))
+/home/dutta26/codes/makeCuts/helper.py:451: RuntimeWarning: invalid value encountered in subtract
+  temp2 = 1.41421* sqrtImg*(0.477/ np.exp(0.551*q - 0.06*q2 + 0.003*q3))
+/home/dutta26/codes/makeCuts/helper.py:451: RuntimeWarning: overflow encountered in exp
+  temp2 = 1.41421* sqrtImg*(0.477/ np.exp(0.551*q - 0.06*q2 + 0.003*q3))
+/home/dutta26/codes/makeCuts/helper.py:518: RuntimeWarning: invalid value encountered in sqrt
+  sqrtba = np.sqrt(med)*3.14*np.sqrt(guessAlphax**2 *guessAlphay**2 - guessAlphaxy**2)
+/home/dutta26/codes/makeCuts/helper.py:563: RuntimeWarning: invalid value encountered in sqrt
+  return flux_calc, mux_calc, muy_calc, e1, e2, back_calc, np.sqrt(sigxx_calc + sigyy_calc), sigxx_calc, sigyy_calc, sigxy_calc
+single_frame_detect2.py:538: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,:,51] -store[fileCount,:,38] + store[fileCount,:,52] - store[fileCount,:,39])
+single_frame_detect2.py:553: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,loc,51] -store[fileCount,loc,38] + store[fileCount,loc,52]  -store[fileCount,loc,39])
+single_frame_detect2.py:564: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,loc,51] - store[fileCount,loc,38] + store[fileCount,loc,52] - store[fileCount,loc,39])
+single_frame_detect2.py:597: RuntimeWarning: invalid value encountered in true_divide
+  e1 = (xx-yy)/(xx+yy)
+single_frame_detect2.py:598: RuntimeWarning: invalid value encountered in true_divide
+  e2 = 2*xy/(xx+yy)
+/home/dutta26/codes/makeCuts/helper.py:466: RuntimeWarning: invalid value encountered in double_scalars
+  mux_calc = t3/t2
+/home/dutta26/codes/makeCuts/helper.py:467: RuntimeWarning: invalid value encountered in double_scalars
+  muy_calc = t4/t2
+/home/dutta26/codes/makeCuts/helper.py:471: RuntimeWarning: invalid value encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:472: RuntimeWarning: invalid value encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:473: RuntimeWarning: invalid value encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:519: RuntimeWarning: divide by zero encountered in double_scalars
+  fbysqrtba = np.log10(guessFlux/sqrtba)
+/home/dutta26/codes/makeCuts/helper.py:778: RuntimeWarning: invalid value encountered in sqrt
+  res_err_xx = np.sqrt(parameters[1]**2 - err_xx**2)
+/home/dutta26/codes/makeCuts/helper.py:450: RuntimeWarning: overflow encountered in exp
+  temp1 = img - back_calc + 1.41421* sqrtImg*(0.477/ np.exp(0.928*q +0.247*q2 + 0.04*q3))
+/home/dutta26/codes/makeCuts/helper.py:446: RuntimeWarning: invalid value encountered in sqrt
+  sqrtImg = np.sqrt(img)
+/home/dutta26/codes/makeCuts/helper.py:447: RuntimeWarning: divide by zero encountered in true_divide
+  q= np.abs(img-back_calc)/sqrtImg
+/home/dutta26/codes/makeCuts/helper.py:451: RuntimeWarning: invalid value encountered in subtract
+  temp2 = 1.41421* sqrtImg*(0.477/ np.exp(0.551*q - 0.06*q2 + 0.003*q3))
+/home/dutta26/codes/makeCuts/helper.py:451: RuntimeWarning: overflow encountered in exp
+  temp2 = 1.41421* sqrtImg*(0.477/ np.exp(0.551*q - 0.06*q2 + 0.003*q3))
+/home/dutta26/codes/makeCuts/helper.py:519: RuntimeWarning: divide by zero encountered in double_scalars
+  fbysqrtba = np.log10(guessFlux/sqrtba)
+/home/dutta26/codes/makeCuts/helper.py:447: RuntimeWarning: invalid value encountered in true_divide
+  q= np.abs(img-back_calc)/sqrtImg
+/home/dutta26/codes/makeCuts/helper.py:466: RuntimeWarning: invalid value encountered in double_scalars
+  mux_calc = t3/t2
+/home/dutta26/codes/makeCuts/helper.py:467: RuntimeWarning: invalid value encountered in double_scalars
+  muy_calc = t4/t2
+/home/dutta26/codes/makeCuts/helper.py:471: RuntimeWarning: invalid value encountered in double_scalars
+  sigxy_calc = (t1/t2) - (t3*t4)/(t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:472: RuntimeWarning: invalid value encountered in double_scalars
+  sigxx_calc = (t5/t2) - (t3*t3) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:473: RuntimeWarning: invalid value encountered in double_scalars
+  sigyy_calc = (t6/t2) - (t4*t4) / (t2*t2)
+/home/dutta26/codes/makeCuts/helper.py:518: RuntimeWarning: invalid value encountered in sqrt
+  sqrtba = np.sqrt(med)*3.14*np.sqrt(guessAlphax**2 *guessAlphay**2 - guessAlphaxy**2)
+/home/dutta26/codes/makeCuts/helper.py:563: RuntimeWarning: invalid value encountered in sqrt
+  return flux_calc, mux_calc, muy_calc, e1, e2, back_calc, np.sqrt(sigxx_calc + sigyy_calc), sigxx_calc, sigyy_calc, sigxy_calc
+single_frame_detect2.py:538: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,:,51] -store[fileCount,:,38] + store[fileCount,:,52] - store[fileCount,:,39])
+single_frame_detect2.py:553: RuntimeWarning: invalid value encountered in sqrt
+  size= np.sqrt(store[fileCount,loc,51] -store[fileCount,loc,38] + store[fileCount,loc,52]  -store[fileCount,loc,39])
+/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/matplotlib/axes/_axes.py:6613: RuntimeWarning: All-NaN slice encountered
+  xmin = min(xmin, np.nanmin(xi))
+/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/matplotlib/axes/_axes.py:6614: RuntimeWarning: All-NaN slice encountered
+  xmax = max(xmax, np.nanmax(xi))
+20171108T203553.2_abell_2390_odi_g.7190.fits
+(26994, 22054) *************
+(398, 77)
+*************************
+11.890043258666992 11.802753448486328 0.5674582719802856 Mean, Med Std of xx
+11.54294490814209 11.505163192749023 0.5015832185745239 Mean, Med Std of yy
+13735.922766879952
+[11.58495   13.162488  11.939706  12.499155  12.245444  10.566944
+ 20.668821  11.715454  11.994378  12.277817  11.893111  11.820897
+ 15.696599  13.152011  13.85037   11.784891  11.759677  11.506696
+ 11.948247  12.755031  14.053636  12.574794  12.587208  12.655142
+ 12.9203    12.978455  11.803614  12.700819  11.676899  12.221172
+ 12.649239  13.379728  12.441206  12.974941  11.513674  11.595046
+ 11.7891035 11.240273  11.313641  11.421111  11.517561  12.47103
+ 13.070614  11.549802  12.05721   11.532493  12.597458  11.9327135
+ 10.963554  11.861266  11.550289  12.786942  12.710243  12.495735
+ 11.64608   13.011982  11.251589  11.988467  12.703158  12.568838
+ 11.391868  11.34356   11.294469  13.008486  11.421406  11.123702
+ 13.08424   12.985995  12.129802  11.4214945 12.519861  13.659955
+ 11.503053  13.171129  11.00091   12.892717  12.70886   12.509901
+ 11.179735  11.85829   11.80077   11.199287  10.808224  11.339304
+ 11.474595  11.693531  11.595162  13.050212  12.2349205 11.260807
+ 11.361366  11.235248  12.869001  11.48807   12.825173  11.731471
+ 12.99947   12.353444  12.529001  77.317764  13.339101  12.100629
+ 11.458874  12.915036  13.401511  10.743331  12.073567  11.465087
+ 10.80134   13.039081  12.775418  13.580826  11.37735   12.28239
+ 11.711103  11.074081  11.63589   11.119004  11.542776  11.907778
+ 10.82127   11.670189  11.425557  11.736324  11.801023  11.679557
+ 11.958138  10.744625  11.425939  13.299567  11.499871  11.53744
+ 12.757279  17.492283  11.391052  11.111453  12.935598  13.201315
+ 11.827457  12.667343  12.450097  10.998301  12.696451  11.176015
+ 11.422437  11.078504  11.461987  12.102815  11.121474  11.429829
+ 11.99437   11.3208685 12.306835  11.56297   11.51698   12.108869
+ 12.269784  11.025006  11.217872  11.315107  12.447167  13.059915
+ 11.545423  11.44817   11.308406  11.862082  12.20606   11.27848
+ 12.159942  12.884971  11.762596  11.834072  12.216135  12.285119
+ 11.818484  11.03185   11.623053  12.2651615 12.461473  11.229794
+ 11.365158  12.245802  11.48057   11.214225  12.789195  12.190441
+ 12.361351  16.80884   11.640499  11.71283   11.211628  11.912312
+ 11.492601  12.831358  11.756268  12.265374  11.244886  11.639947
+ 11.707671  11.46801   12.299046  11.799896  11.707663  12.02037
+ 12.407722  12.297088  11.876535  12.645207  11.916552  12.224783
+ 10.881948  11.539403  13.111405  11.793653  30.814064  11.205502
+ 11.81796   10.76948   11.510543  12.250205  11.423949  12.216127
+ 12.1830225 11.64178   11.202848  11.122176  12.033125  11.556595
+ 12.567438  11.947138  12.424195  11.271453  11.35747   12.594422
+ 11.63297   12.033345  11.903703  11.637849  11.660937  11.046247
+ 11.6356945 11.957106  12.394164  11.845221  11.694272  11.264614
+ 12.19111   12.34274   11.349607  11.623491  11.47113   11.776021
+ 11.904571  11.703128  11.353253  12.406663  12.052674  11.730903
+ 11.981686  12.499936  11.578718  11.50578   11.976377  11.529154
+ 12.120767  11.329336  11.750468  11.522044  11.574713  11.789129
+ 11.66137   11.802679  11.25483   11.4977865 12.07625   12.21412
+ 11.69344   11.447321  13.154272  11.802159  12.384391  11.091576
+ 11.3248205 11.913815  11.990642  11.642345  11.894587  11.228156
+ 11.475259  12.772878  11.520746  11.636852  11.919623  12.023613
+ 12.440587  11.2704315 11.844495  11.786086  11.722388  12.042496
+ 11.845988  11.802827  11.730801  12.804725  12.404056  11.335119
+ 11.429655  12.222686  11.8332405 11.45033   12.106809  11.445304
+ 12.625675  11.610521  11.651726  11.362558  12.115196  12.21031
+ 11.934666  10.889636  11.728882  11.87873   11.396049  11.742024
+ 12.173989  11.843007  11.800534  12.3034935 11.861596  11.731662
+ 11.412248  11.782088  11.894914  11.988172  12.048807  11.868604
+ 11.5359535 11.836052  11.84823   11.983728  11.988949  11.970414
+ 12.408804  11.852174  12.214505  11.645021  11.782079  11.583387
+ 11.773319  12.047557  11.122555  11.952145  12.289362  12.9960785
+ 12.318198  11.569309  11.330795  11.252335  11.46905   11.000009
+ 11.658738  10.950114  11.450107  12.550726  11.595896  11.590002
+ 11.5805855 11.482162  12.063338  12.527676  11.219358  12.362887
+ 11.65696   11.981863  11.982627  20.640287  12.247687  12.072166
+ 11.361594  12.131814  12.311393  12.245964  11.500502  11.791112
+ 12.430245  11.865083  12.07203   11.731092  11.888588  12.528975
+ 10.274588  12.297001  11.879203  11.689543  12.237737  11.623219
+ 12.972796  13.724767 ]
+[ 11.501995   11.732479   10.471746   11.552949   11.67757    10.4215
+  23.345848   11.442371   12.190752   11.1693735  11.076182   11.09259
+  13.664683   11.62458    10.00772    11.911492   11.861837   11.86723
+  11.730724   12.333059   12.607794   11.362198   11.294113   11.186633
+  11.144757   11.1003475  11.63849    11.467015   11.69894    11.7041025
+  12.976186   11.723865   12.757414   11.474751   11.536923   11.802545
+  11.671245   12.097728   11.852518   11.815256   11.409606   11.869969
+  11.719865   11.783451   11.91995    11.955721   11.497952   11.821548
+  11.406131   11.598719   11.499492   11.231064   11.577732   11.864645
+  11.629532   11.4494295  11.160856   11.677111   10.412692   11.487181
+  11.493861   11.853734   11.390145   11.536327   11.476275   11.259276
+  12.635368   11.461557   11.607345   11.603294   11.574768   12.428821
+  11.472671   11.645254   13.78085    11.663508   11.500245   11.453979
+  11.432138   11.983867   11.221213   11.48326    11.370918   12.12053
+  11.096184   11.256853   12.371209   11.771178   12.361286   11.535605
+  10.973134   11.306058   11.74493    11.346182   11.59645    11.469511
+  11.815458   11.98206    11.535465  107.02083    11.365555   11.231569
+  11.272682   11.967165   11.399934   12.257559   11.61455    11.213769
+  12.768684   12.065106   11.458857   11.208751   11.557336   11.828551
+  11.610268   11.210932   11.611497   11.505163   11.633922   11.2489
+  11.641937   11.257056   12.276193   11.333192   11.606639   11.700607
+  11.548012   11.217322   12.733727   12.605482   11.412306   11.818244
+  10.716762   17.232943   11.443282   11.385112   11.843956   12.29319
+  11.4235     11.474519   11.583341   11.58732    11.751872   11.980809
+  11.868475   11.619065   11.347572   11.151033   10.674358   11.056532
+  11.239803   11.505368   11.466974   11.185399   11.195341   11.297364
+  11.087279   11.377653   10.95408    10.930573   11.942225   11.729126
+  10.797587   11.420642   10.597815   18.592678   10.873173   11.295932
+  11.081337   11.725604   11.202419   11.182212   11.113673   11.263173
+  11.312101   11.579997   11.108605   11.314254   11.003879   11.305892
+  10.76088    11.098619   11.173573   10.697324   10.704951   10.963823
+  11.213399   15.543325   11.105586   11.23003    11.487889   12.656881
+  10.829052   11.156237   10.7956     10.569481   10.842712   11.2503395
+  10.812028   10.547456   11.180818   11.087388   10.68196    11.095457
+  11.13404    11.382859   10.870108   11.784329   11.004154   11.001575
+  11.054337   10.826724   10.777027   11.525174   15.489349   10.607933
+  11.251637   10.550174   11.230662   10.906043   11.041444   11.448811
+  10.661409   11.409052   11.221884   11.074509   10.815701   11.106605
+  11.767829   11.892453   11.705365   11.004015   10.632795   12.053869
+  11.367977   10.829351   11.38718    11.2828045  11.4007635  11.201468
+  10.880212   11.208444   11.692035   11.619799   10.825279   10.854968
+  11.330079   11.957853   11.698629   11.167261   11.582187   11.085355
+  12.221248   11.162289   11.395953   12.525167   11.780358   11.565409
+  11.335527   11.679984   11.027574   11.120246   11.735134   11.608167
+  11.610168   11.775878   10.879815   12.17155    11.314576   11.904372
+  11.594371   11.302941   11.171107   11.581915   11.448918   11.05809
+  11.566712   11.595421   11.536041   12.00506    12.294471   11.611515
+  10.205876   11.094829   13.034108   11.35598    11.387968   11.620705
+  12.452738   12.236971   11.162485   11.263897   12.006461   11.610372
+  12.701652   11.411062   11.654977   11.183697   11.8813505  11.610403
+  11.368371   11.892434   11.63226    12.589272   12.723911   12.063695
+  11.930429   12.928295   11.793969   11.677009   11.711563   11.459488
+  12.486776   11.385859   11.335591   11.500447   11.806346   11.8209095
+  11.716789   11.29464    11.368109   11.58859    11.180308   12.413507
+  11.82584    11.6586685  12.004674   12.251365   11.50591    11.39437
+  11.750841   12.129638   11.401577   11.473409   11.566442   11.929746
+  11.305475   11.728757   12.0084     12.680427   11.349432   11.511668
+  12.104084   11.941681   12.277033   12.491921   12.160654   11.511307
+  11.792898   12.448772   10.279739   11.770518   12.177379   13.318961
+  12.085734   12.723951   12.0718565  12.828852   11.361261   12.737897
+  12.213217   12.278658   11.472662   10.968824   11.351639   11.2416115
+  11.052516   11.731184   11.424539   12.19308    11.844866   12.138138
+  11.629487   11.825267   11.611249   24.208157   11.340433   12.412403
+  11.733394   12.017248   12.624854   11.764269   11.408039   12.445634
+  11.939184   11.528688   12.2548685  11.314993   12.789361   12.521311
+  10.699162   11.758663   11.645241   11.606019   11.185725   10.930621
+  11.267126   11.715729 ]
+387
+[24.891727 26.53964  26.650694 26.051987 25.773262 23.700472 26.559647
+ 25.84799  25.224613 30.031256 27.847551 25.63474  30.03125  27.685509
+ 25.004093 25.502382 26.238317 28.226347 27.073195 27.815485 26.055338
+ 29.204845 25.400986 26.793213 28.001793 25.290457 26.84221  28.781647
+ 26.783354 27.179094 25.545425 25.770931 26.126148 24.890354 26.004673
+ 24.738295 25.562584 26.464657 26.082401 27.997444 25.756319 26.49036
+ 25.228699 26.9805   25.352955 25.111965 25.58082  25.626972 25.739824
+ 25.9844   26.478243 26.37457  27.168081 25.339802 28.876358 25.252764
+ 27.202377 25.74424  25.264418 24.370668 26.74514  25.268963 24.544712
+ 28.972721 25.478138 25.671051 25.761755 25.657282 25.960224 26.370604
+ 26.519793 26.670431 24.992128 26.369417 25.663078 24.563353 25.27538
+ 25.84267  25.45424  23.990713 26.079498 25.510973 25.548233 26.293163
+ 29.855629 25.815989 26.788624 25.214567 25.247782 25.728218 27.115683
+ 28.376324 25.225386 25.453762 24.751343 25.185343 25.867622 25.658567
+ 24.88943  24.790283 24.896366 25.633327 25.38622  27.014572 26.85109
+ 25.476074 24.684643 24.990349 25.268023 27.801634 25.285576 27.985956
+ 25.735462 27.166237 24.914984 25.991995 26.26553  25.550722 26.304964
+ 25.63228  24.290264 25.600042 26.607924 24.64657  25.11895  24.951797
+ 25.094757 24.350481 33.02471  26.929873 24.893118 26.694466 25.396202
+ 25.371973 26.02095  25.764769 26.70922  25.776754 26.428005 25.499338
+ 24.446226 24.956146 26.697544 26.02171  26.330687 25.404531 25.037075
+ 25.3375   26.393553 25.216867 25.409569 24.783081 24.045736 25.95209
+ 28.257727 24.868538 25.044136 23.990608 25.19395  26.303291 28.634594
+ 29.10422  25.379728 27.340832 26.93337  26.377415 25.968441 25.731615
+ 26.392391 25.519896 26.827059 25.088392 24.162624 27.036488 26.14169
+ 24.479227 25.221113 27.79536  30.248306 24.578299 25.30022  26.698832
+ 27.37774  24.47265  29.119694 24.23016  28.011822 25.000374 25.47829
+ 24.857159 23.80605  26.451038 26.129215 24.41578  25.300196 28.143589
+ 25.604727 25.231705 27.490788 25.18925  26.68294  25.518473 24.387577
+ 26.895523 24.467655 24.998573 25.970795 23.801065 25.230684 26.882591
+ 24.597233 25.124254 26.424244 25.310083 25.391224 24.722633 25.254791
+ 24.631945 26.755062 27.361275 25.776424 24.650232 24.226915 26.72412
+ 26.09035  24.821844 26.24369  26.392809 26.166904 25.001112 24.715405
+ 25.22934  25.953287 32.115685 24.8409   25.114353 25.558382 25.63838
+ 25.05594  24.994299 25.961363 27.285547 24.80777  26.245312 25.57717
+ 25.261805 26.01593  26.648045 25.939169 27.396936 24.967823 24.390442
+ 24.952463 24.523745 25.31828  25.389164 24.7862   25.466682 26.256393
+ 25.02237  25.158531 25.108494 24.99022  24.23192  25.49903  26.238796
+ 27.419844 25.36408  25.553288 26.673885 25.780535 26.13952  23.04553
+ 25.206524 25.144222 25.519867 24.742104 25.295212 25.301441 25.17595
+ 27.278162 25.332642 26.605186 25.2015   25.25935  27.197208 25.95341
+ 24.88016  24.97013  25.623468 25.08113  24.6923   25.829905 26.247227
+ 26.157967 25.391567 24.626926 25.50714  25.106052 25.323652 26.340118
+ 25.961    25.29972  26.438572 24.498129 25.37841  25.093983 24.741371
+ 25.972248 25.151234 24.169035 25.437859 25.974762 24.863419 25.616901
+ 26.018677 24.848558 25.551579 26.727335 29.606022 24.206284 28.465656
+ 24.733137 26.477703 26.402836 26.008175 25.19361  24.523182 24.298885
+ 25.290436 25.990301 27.958628 25.437685 26.311604 25.34196  26.02131
+ 25.615038 25.771767 25.685272 25.50553  25.928207 26.326658 25.089712
+ 26.299557 26.355953 29.239386 27.984463 25.294292 25.188902 28.521759
+ 25.969662 27.423485 26.634743 25.994434 24.771725 25.191607 24.845444
+ 25.888874 26.051937 25.380428 25.449215 25.876566 25.688229 25.766787
+ 25.605042 25.472702 25.816528 24.42815  26.50098  26.80517  25.689817
+ 26.46205  24.350008 25.75933  25.498909 25.501505 25.492664 24.957108
+ 25.537874 27.241306 23.997252 25.262077 27.029182 25.342987 25.625778
+ 24.686033 23.320168]
+(387, 77)
+0.5085015463675371 0.37540635466887656 0.2577916634763122 Global errors
+[0.7776308 1.1243131 0.7966745 ... 2.9396808 3.253608  9.221377 ]
+20191006T215457.6_Abell2390_odi_g.8488.fits
+(26996, 22051) *************
+(474, 77)
+*************************
+4.944973468780518 4.960992813110352 0.1918853521347046 Mean, Med Std of xx
+7.22786808013916 7.168252944946289 0.49666690826416016 Mean, Med Std of yy
+36938.41725514926
+[ 5.072564   4.658773   5.0233574  4.909192   5.097045   5.4467053
+  5.0274253  5.103464   4.955611   5.252103   4.9927025  5.0222287
+  4.9783273  4.8379245  5.134001   5.1517243  5.182129   4.9531913
+  4.976685   5.1110797  4.9953475  5.2000985  5.158589   5.0104046
+  4.869364   4.979935   4.88911    5.037644   4.9887586  5.063228
+  5.063877   4.9974318  5.097494   5.0302286  4.914882   4.930617
+  4.941696   5.011172   5.00519    4.994069   5.019965   4.9978037
+  4.895851   4.9441195  4.9960866  4.976913   5.623172   4.9833045
+  5.00051    4.9160333  4.9339705  4.8640804  5.026419   4.9849267
+  5.1050587  4.7339425  4.9319005  5.0035667  4.8008485  5.0151725
+  5.013751   5.0651846  5.032306   5.0520825  5.017433   4.972311
+  5.132919   4.8488765  5.058146   5.0652866  5.1867666  4.94052
+  5.0516877  4.846787   5.2072453  4.9399467  5.1864176  5.0098977
+  5.1011796  5.0298934  5.162832   5.131409   4.7127385  4.999125
+  4.875265   5.071556   4.791405   5.0612006  5.103563   4.819268
+  4.9701915  5.048225   5.218516   5.0150657  4.989561   4.948331
+  4.9657574  4.89059    4.9917164  5.3845468  4.9888463  4.926853
+  4.9844637  4.985157   5.0179553  5.1743765  5.0843077  5.101649
+  4.9934673  5.003913   4.809359   4.9881725  4.9956355  4.9285235
+  4.930019   5.1612864  5.070771   4.884789   5.2065988  4.8859773
+  4.948528   5.2640157  4.97813    5.2525425  4.979991  11.8042755
+  5.5808573  5.0893006  4.885639   5.146814   5.149324   5.102495
+  5.0972214  5.16985    4.999207   4.998323   5.282828   4.990166
+  5.211085   4.951406   5.1963153  5.964191   4.799187   4.9068327
+  4.9971833  5.022874   4.9792004  5.0067687  4.99458    4.870351
+  5.1672397  5.2117667  4.93041    4.9603806  4.9462013  4.9104652
+  5.196673   5.06256    5.092634   5.1162586  5.2859545  4.960874
+  5.062265   4.84655    5.2308383  5.0670075  5.1578355  5.04669
+  5.269588   5.2048874  4.927967   4.892335   5.1047587  5.1818
+  5.18792    5.0297875  5.0910068  5.1373086  5.0110793  5.2453814
+  5.0418706  5.150996   5.146398   5.0002437  5.2966084  4.9627805
+  5.5727324  6.3233166  5.3805714  4.835013   4.872962   4.866274
+  5.0172415  4.810813   5.2071185  5.2473392  5.142973   5.325848
+  5.2866344  5.181866   5.6273165  4.9833775  4.890819   4.6965575
+  5.2753024  4.9177217  5.196317   5.1636853  5.281852   5.228582
+  4.8636146  4.933278   5.3961563  4.8968067  5.13838    4.778792
+  4.959966   4.9611115  4.6692185  4.6303678  5.2471075  4.955626
+  4.852685   4.8930106  5.557579   4.6746087  5.057782   5.053672
+  5.2456026  4.9041123  4.97075    4.9885416  4.898716   5.0179057
+  5.423121   4.8291035  5.214324   5.014579   5.2928524  5.2149324
+  5.016319   5.2242017  4.7324934  4.8845277  4.9771223  4.8394575
+  6.9462304  5.198577   5.0380383  4.7820597  4.983911   5.118754
+  5.1203494  5.234461   4.9662642  5.1106577  4.993601   4.8318453
+  4.85991    5.051905   5.0019426  5.088045   5.11759    5.0915194
+  5.1028814  5.1502905  5.157573   5.237022   4.840442   5.21449
+  5.100702   4.8431125  4.7625823  4.788474   5.1505866  4.875095
+  4.672603   5.579942   5.2286544  4.904869   5.2091026  5.371629
+  4.745904   4.8903275  5.049135   5.005231   4.6982937  4.962326
+  4.860746   4.7886896  5.1154313  5.239904   5.0869856  4.910724
+  5.1917887  4.9295382  5.026947   4.830224   5.2278295  5.1949935
+  4.836548   4.6417203  5.1415367  5.153011   4.970136   4.7052603
+  5.078095   4.7094545  5.6892014  5.200539   4.8425617  5.2165623
+  4.6783285  5.101943   4.7029104  4.592742   5.183767   4.7604384
+  4.742448   4.751906   5.1302676  4.870865   5.1648393  5.173218
+  5.17883    4.900982   7.501045   4.7853713  5.0670934  4.7764144
+  4.956135   4.8307486  4.9000854  4.879913   4.8610706  4.9012613
+  5.0765095  4.880558   4.7445097  4.9450884  4.6987233  4.6892233
+  4.7957177  4.7985826  4.789544   5.0104427  4.83512    4.782655
+  4.958087   4.7937593  4.7675366  5.0905414  4.825502   4.916237
+  4.7056136  4.7214003  4.727121   4.7397714  4.7875957  4.660001
+  5.170912   4.6099725  4.7423673  4.7077413  4.6654277  4.790544
+  4.6307096  4.787664   4.660184   4.8045864  4.9737067  4.775815
+  4.975751   4.8169203  4.8430305  4.6846843  4.766716   4.7857084
+  4.547175   4.7111373  4.701167   4.814181   4.719755   4.8338633
+  4.6876264  5.0794544  4.6734195  4.8465667  5.0445676  4.6710443
+  5.1147895  4.6522717  5.196025   4.7914667  4.780809   4.7743807
+  4.547954   4.9089985  4.7292137  4.7467136  4.9197288  4.8256235
+  4.6902556  4.6675367  4.7806325  4.781001   4.7808414  5.0369473
+  5.066271   4.745511   4.5121017  4.5909705  4.63153   10.541452
+  4.591948   4.5451064  4.593289   6.369746   5.0454865  4.8811
+  4.557315   4.475378   4.8320694  4.602105   4.831263   4.5844355
+  4.87966    4.7745304  4.5491242  4.73094    5.082924   4.736214
+  4.612159   4.572148   4.846042   4.791021   4.938485   4.5830297
+  4.6909623  4.6337166  4.7078347  4.8190293  4.632976  12.950128
+  4.826667   4.976928   4.6669693  4.698498   4.522255   4.880152
+  4.7361236  4.7245493  4.8801146  4.73819    4.8502183  4.507079
+  4.8589034  4.9422264  4.5514245  5.075223   4.770728   4.588067
+  4.8448524  6.7860594  4.5137734  4.7245984  4.737064   4.610121
+  4.641098   4.668195   4.5675545  4.9535975  4.802329   4.8512917]
+[ 6.5098977  6.626208   6.554496   6.6439114  7.0008574  7.2119713
+  6.709335   6.774107   6.8254943  6.9428916  6.7065763  6.5266666
+  6.7106023  6.4949517  6.875977   6.908719   6.638124   6.7326865
+  6.859317   6.8460627  6.5413947  6.8328276  7.10664    6.774641
+  6.6503124  6.736897   6.6620927  6.839562   6.588025   6.833815
+  6.8139753  6.8079658  7.177625   6.7119718  6.7566     6.8753157
+  6.821698   6.9225073  6.9050007  6.521211   7.0111666  7.097864
+  7.12754    6.8401747  6.8680186  7.000798   7.6337447  6.672772
+  6.8819814  6.6877465  6.861544   6.8418913  6.890215   6.939618
+  6.982397   6.250565   6.6006637  6.925227   6.6619015  6.765889
+  6.756348   6.6717577  6.7483735  6.742165   6.939732   6.6273904
+  6.80665    6.6109     6.5999465  6.7389703  7.108343   6.4926724
+  6.726512   6.519169   6.639543   6.547601   6.499631   6.7359285
+  6.4817796  6.775539   6.504959   6.6189165  6.500816   6.5899234
+  6.8955417  6.7828054  6.97785    6.7905955  6.4957156  7.039572
+  6.4099274  6.5414405  6.6688128  6.4176726  6.8827066  6.965264
+  6.3705425  7.016219   6.494763   7.081268   6.653323   6.5602202
+  6.792684   6.781488   6.945461   6.6185293  6.6123457  7.1229033
+  6.345894   7.133739   6.602487   6.4932566  6.923068   6.672135
+  6.595718   6.553102   6.6799917  6.228575   6.899783   6.474503
+  6.618094   6.8161335  6.6942296  6.9925036  6.692884  16.03567
+  7.7334876  6.9812884  6.5890055  6.4905334  6.737924   6.5973744
+  6.6297398  6.538112   6.954592   6.623806   6.9982166  6.6774583
+  6.6037283  6.6824403  6.4285445  8.151725   6.9330454  7.25452
+  6.929548   6.654952   6.5623355  7.918367   6.998813   6.697132
+  6.509545   7.019812   6.378839   6.8091936  6.9163036  6.770438
+  6.8115697  6.814302   6.6368475  6.8725076  6.6457047  6.978488
+  6.869983   6.8179574  6.6101465  6.984568   6.544143   6.608166
+  6.7437744  7.0360928  6.5436997  6.978108   6.9293776  6.9260683
+  6.9436636  6.4613986  7.1334434  7.6206517  6.863422   6.9355636
+  7.233355   7.170397   7.0080934  7.000755   6.9562874  6.401583
+  6.9080486  9.479207   7.1966043  6.9023824  6.988296   6.907538
+  7.5818305  7.5774927  6.9736824  7.063039   6.7149315 10.785503
+  7.028987   7.3883343  7.471587   6.887826   7.230538   7.525172
+  6.714157   7.524376   7.2523828  6.9181986  6.6834016  7.384672
+  7.1919775  7.501638   6.7749777  7.343911   6.6794147  7.1909137
+  7.9988284  7.0261326  7.2070427  6.8033934  7.097322   7.8017426
+  7.226204   6.9013767  6.8157234  7.2366405  7.039907   6.8999753
+  8.281454   7.558257   7.397642   7.269797   7.050706   7.7333274
+  7.441085   7.668643   6.990925   7.2030187  7.1661086  7.07208
+  7.6393495  7.1639524  7.7660666  7.9122343  7.933631   7.7626348
+  9.910774   7.96113    7.16026    8.098932   7.7396064  7.124043
+  6.6651335  7.245593   7.840672   7.0576944  7.479106   7.677138
+  7.5469     7.722326   7.86335    7.503666   7.5857563  7.617798
+  6.958899   7.106365   7.2405043  7.2434053  7.5638466  7.1873174
+  7.832623   7.8019505  7.5301657  7.74388    8.051453   7.973997
+  7.687601   8.696858   7.1925025  7.78583    7.3716297  7.213511
+  7.8556457  7.8171544  6.4924626  7.4893785  7.4052973  8.050301
+  7.898552   7.767154   7.0046606  7.112406   6.7817135  7.703779
+  7.136216   7.7641816  7.2649584  7.553509   7.164798   6.821373
+  7.1170373  7.4275794  7.0218325  7.0775614  7.903417   7.6454396
+  6.9967203  7.129052   7.802856   7.4872866  7.982631   7.3338156
+  7.028302   7.4401293  7.5824194  7.496578   8.008344   7.6288347
+  7.8825245  7.8712974  7.100083   7.7928824  7.232191   7.350452
+  7.2831383  7.976968  12.244179   7.1575365  7.1519027  7.6421213
+  7.4155097  7.625188   7.0242352  7.785673   8.164766   7.409249
+  7.580402   7.650774   6.680495   7.927973   7.5443635  7.5802455
+  7.544139   7.9419794  7.4550037  6.904716   7.6012006  7.8043313
+  7.5895066  7.4713364  7.3075757  7.1270885  7.51137    7.95812
+  8.016197   7.935277   8.140235   8.118373   7.7571087  7.793894
+  7.3101416  7.3293233  7.3329363  7.55267    8.047401   7.651806
+  8.017345   7.473372   7.256999   8.359086   8.454631   7.5284767
+  7.339766   7.6045237  8.0373125  7.780165   7.859484   7.7624545
+  7.27045    7.337682   7.9650507  7.7752175  7.6499243  7.6500716
+  7.0713453  7.2934337  7.465337   7.6126394  7.588581   7.532879
+  7.4496555  7.779562   7.598739   7.382671   7.4057446  7.9919558
+  7.9427977  7.9169397  7.766171   7.6718035  7.8601823  7.599733
+  7.836684   7.347326   7.5602245  7.6599383  7.522277   7.4766927
+  7.795249   7.5732813  7.9816265  6.909359   7.3719654 13.774958
+  7.9898868  7.391081   7.5231047 10.60437    7.6570783  7.8125243
+  7.7199254  8.479597   7.7245216  7.290486   7.599043   7.519346
+  7.8558373  7.2397265  6.9292006  7.896115   7.5683527  8.027354
+  7.8094306  7.4894476  7.996829   7.9017153  8.456365   7.8636756
+  7.996314   7.9179196  8.500351   7.456275   7.916211  18.98559
+  7.862117   7.605849   7.3999224  7.9795313  7.3498487  8.027222
+  7.2737465  7.802545   7.9249625  7.7826223  8.139194   7.4929028
+  6.907413   7.40841    8.045998   7.4315743  8.068359   7.971555
+  7.37309    9.348133   7.8543158  8.204792   7.1306376  7.9164996
+  7.2130103  7.358189   8.08105    7.299338   7.387643   7.962842 ]
+510
+[169.23569 164.14279 166.26111 173.54524 163.31677 174.47545 165.2992
+ 158.92401 177.43718 164.46025 195.39066 162.4964  185.4375  159.91554
+ 168.1999  168.88785 187.50267 168.79855 162.92342 164.05403 164.37541
+ 177.14983 189.91718 180.64343 157.22531 162.7639  161.6596  160.89442
+ 162.92451 167.05675 171.81955 164.12157 166.53069 168.51726 182.14279
+ 160.25941 172.80551 184.61632 163.56529 164.31268 160.12889 163.53926
+ 175.45477 185.37921 160.46785 165.28899 164.20555 176.75906 163.90315
+ 169.15714 170.78429 169.0424  159.47678 162.38594 159.63644 162.69232
+ 175.92374 162.08765 160.6761  157.9728  170.15184 164.85089 170.57591
+ 165.14888 167.35654 160.59473 161.35872 170.6521  163.4282  168.22305
+ 168.41019 173.47186 194.60083 163.44148 189.12831 173.28584 174.2439
+ 170.30287 164.5583  161.98296 162.59262 162.07132 174.71835 185.08571
+ 168.38237 162.87207 169.88945 180.67897 175.6176  166.25117 162.54932
+ 170.97858 171.28352 161.30495 165.84634 158.04158 165.36043 159.65288
+ 161.94339 168.3828  158.3013  176.24934 164.90903 167.79243 167.79552
+ 175.88809 162.36995 169.57631 169.07059 166.39578 167.00272 185.46587
+ 179.83263 173.44943 160.10257 165.1466  170.30981 169.95311 161.98521
+ 165.53079 163.02861 165.8834  163.5134  167.36316 178.74509 171.26744
+ 161.21341 159.9511  167.47684 166.11281 165.61617 161.10904 175.8994
+ 175.59224 161.32103 163.45981 162.79259 161.89835 162.40926 159.20076
+ 174.87837 170.66106 161.73535 176.40395 166.59764 161.49826 163.24248
+ 165.18402 166.60704 162.0871  168.86566 177.43196 164.80136 170.4854
+ 161.09428 177.98352 166.04988 165.08844 174.2858  173.46921 165.76817
+ 168.29099 168.27873 166.43721 161.5408  164.38782 162.82787 159.18817
+ 168.73186 166.51431 166.67683 167.77856 167.04112 169.57645 163.2468
+ 161.7515  159.7001  157.63028 214.57468 158.98035 160.97983 170.24889
+ 160.34859 158.86147 167.68263 161.22829 165.19174 162.22142 166.61923
+ 163.97536 167.5342  165.68683 160.40854 157.41298 158.5868  153.80739
+ 169.86844 162.71863 170.16199 168.75636 166.97458 168.89128 162.32391
+ 166.30434 161.0707  162.75768 161.26054 162.08769 160.54819 178.62323
+ 173.59128 165.00604 164.40744 179.8122  158.79855 159.98178 157.79874
+ 170.84863 164.16    160.46846 183.09406 188.22084 155.53745 167.12898
+ 160.28914 163.19336 168.50467 162.4617  163.71921 162.11229 170.49245
+ 161.90776 161.8531  156.37889 160.75896 180.27567 176.4894  167.64198
+ 149.86377 166.01128 177.18059 166.65944 158.09349 164.86426 168.79958
+ 158.30698 157.35837 195.09032 170.67468 163.16852 163.20131 168.17818
+ 166.09238 166.40605 164.20268 162.25258 161.95848 158.78766 160.5832
+ 167.78833 161.7076  163.3751  182.07396 173.69363 162.96774 189.78102
+ 163.76628 174.3177  162.93262 160.45778 162.71364 164.23228 164.78352
+ 172.39867 174.85934 173.87291 164.3892  167.14641 164.94786 173.54813
+ 184.32072 161.66174 168.34462 174.17859 166.48428 159.18791 161.74278
+ 162.7459  168.55867 166.4078  164.89201 161.07239 170.93489 173.3851
+ 165.97086 171.9382  166.34259 172.5068  164.43126 167.72601 171.53458
+ 170.4996  168.43723 171.5004  166.7088  162.53802 164.4668  167.93446
+ 164.74867 176.52863 167.44225 204.56554 172.95042 161.98311 162.31429
+ 165.45293 167.46315 178.5942  158.7174  169.51372 165.60132 163.26361
+ 165.06645 163.99017 167.45367 164.8383  161.43565 169.93687 159.68936
+ 165.12138 163.5813  167.17299 163.51338 178.91235 163.5701  163.26018
+ 171.8926  160.02388 164.60786 169.80476 183.1487  165.9481  166.9829
+ 175.04855 168.44376 159.68477 163.69244 171.72916 165.19809 161.78023
+ 169.96553 164.56554 189.10783 166.37073 159.87997 163.10434 173.23083
+ 165.08444 165.42014 166.88216 175.56908 175.81696 163.00345 174.06825
+ 168.98167 167.80225 165.24744 162.6629  168.20856 163.38142 164.58412
+ 164.52307 163.00748 172.7378  172.92693 165.3823  163.76268 161.2878
+ 164.52072 164.7024  187.76428 169.05412 162.86424 164.15007 163.91396
+ 163.16765 167.60307 169.13722 167.32166 174.37204 168.37419 171.94466
+ 164.02875 169.24905 163.51617 164.81128 167.89398 162.3834  171.68832
+ 167.88141 165.90742 161.30263 171.75334 162.77736 175.85696 169.70872
+ 172.01154 162.18332 163.93759 158.54097 171.49797 196.68092 157.5286
+ 178.7448  167.87718 160.01817 178.0177  172.0758  168.33813 165.56244
+ 184.06609 173.9391  167.01534 163.3716  167.15468 167.89522 188.18336
+ 181.3388  165.09177 178.6511  163.22618 169.12088 185.49434 172.78227
+ 163.20787 162.44524 175.77211 167.60768 162.93767 170.0719  166.74356
+ 166.51302 168.96681 187.00436 181.49628 173.03912 170.65897 173.2083
+ 189.8884  164.7293  164.21243 177.62665 163.98376 191.46976 174.6507
+ 188.42336 165.13948 174.15884 163.12685 167.93333 185.6331  161.7279
+ 164.10233 163.49399 170.59906 164.5154  167.54077 172.29028 163.01521
+ 170.18428 164.70253 169.57454 173.43349 167.95862 165.59181 162.77235
+ 168.0405  176.25642 177.33363 164.59073 168.59506 165.09145 164.31934
+ 165.7456  175.32404 165.88062 167.57047 171.3199  169.82683 172.60603
+ 173.29114 168.3394  160.11484 164.11551 163.08546 167.00017 171.0322
+ 163.45952 167.16513 168.74796 169.5448  172.96016 183.2336  162.29903
+ 161.76184 175.50356 164.13185 166.39459 168.99074 171.73895]
+(510, 77)
+0.2055912912873711 0.6048897627916549 0.3360225987413804 Global errors
+[0.787335  1.0803212 0.8316205 ... 1.6290323 1.0586011 0.8474591]
+20171108T203553.3_abell_2390_odi_g.7190.fits
+(26998, 22056) *************
+(432, 77)
+*************************
+17.949617385864258 17.971548080444336 0.9842467308044434 Mean, Med Std of xx
+20.0164737701416 19.98052978515625 1.694571852684021 Mean, Med Std of yy
+13663.645598911115
+[17.753971  19.147781  19.607643  21.386427  19.353302  17.910421
+ 19.74453   18.571209  19.078543  19.019033  19.172176  18.678204
+ 18.135525  18.80153   18.471819  18.397299  19.349003  19.079271
+ 19.577374  18.824501  19.163593  19.06011   18.42235   19.124104
+ 19.432371  18.529121  18.252876  18.14002   19.221176  18.24043
+ 18.508806  19.627384  19.57732   18.80724   18.923986  17.793074
+ 19.709553  19.104254  18.361338  19.238028  18.189022  20.044575
+ 19.390762  19.158949  18.838377  18.771278  18.391495  18.575886
+ 18.207201  18.940523  18.729216  19.712046  18.677195  21.391607
+ 21.406378  20.227932  19.755886  19.16162   18.164331  19.278803
+ 18.406227  19.572134  18.950712  18.30783   20.991493  18.73566
+ 17.890959  18.081394  18.945162  26.385159  18.889187  18.276896
+ 19.789227  18.496391  19.252117  18.59903   18.455963  18.913239
+ 18.570467  19.257881  19.15894   18.88188   19.689438  18.872023
+ 17.831215  18.57636   18.229115  19.947536  18.255787  19.160263
+ 19.027273  17.347828  18.837109  16.781939  18.2857    18.478125
+ 19.127909  18.2531    17.978798  17.936504  18.299175  18.71804
+ 18.535881  18.726591  19.658743  18.464058  17.875854  18.4475
+ 18.585016  18.343372  18.418688  18.71017   18.97049   18.728245
+ 18.322168  19.124432  17.336054  19.018276  18.892313  18.779657
+ 18.74312   18.659927  18.861483  17.997585  17.519035  18.442696
+ 17.845917  18.954496  18.349253  17.734257  19.121801  18.975637
+ 18.310703  22.540804  18.7296    19.191488  17.89616   18.138372
+ 17.711758  18.41448   19.306894  17.697182  18.951544  18.970203
+ 18.363914  19.25916   18.13945   18.044521  18.472826  17.879036
+ 18.556917  18.877735  18.016808  18.317526  18.652966  19.16334
+ 18.220768  17.039185  16.346947  17.890953  18.80663   18.352465
+ 18.014074  18.237543  17.94618   18.094725  17.31008   18.122498
+ 17.513817  17.546741  18.180897  18.829708  20.999311  20.822289
+ 18.641499  17.860123  16.674412  18.300964  18.560978  18.363525
+ 18.89441   18.803885  18.55046   16.675962  18.217422  17.927004
+ 17.875874  18.02571   18.540268  18.057333  18.025011  17.872952
+ 18.48723   18.258806  17.428564  17.29079   18.561462  18.338413
+ 18.246891  18.383512  17.971548  17.812761  16.88005   16.815672
+ 18.518332  18.287394  20.434036  18.277811  18.554596  18.34469
+ 17.715284  17.84529   15.522643  17.888493  17.332558  18.091593
+ 17.850279  16.92322   17.206985  17.78744   17.035215  18.360928
+ 17.914059  18.271252  42.283257  20.755436  17.850634  18.267693
+ 17.35759   42.6617    18.858559  17.591461  16.96592   17.593864
+ 16.317911  18.900246  18.396624  17.319714  18.999025  19.366808
+ 17.63489   17.35866   18.021235  20.318579  18.181574  17.784807
+ 17.931002  17.24282   18.058388  17.241333  17.774042  17.749979
+ 16.983631  17.726154  17.69259   16.952477  17.16399   18.916958
+ 17.627768  17.538984  18.407135  17.117216  18.298002  17.711958
+ 18.158556  18.038563  17.792698  17.891462  16.093393  18.053524
+ 17.881758  16.673796  16.612013  17.409618  15.876969  17.83322
+ 17.948664  17.14629   17.976435  22.286642  17.797005  18.031494
+ 16.960356  17.581306  17.15715   18.748823  16.910435  17.225658
+ 18.18632   18.424639  17.288612  17.940641  18.917982  18.455725
+ 17.627497  17.110235  20.307009  16.363718  17.879957  20.602346
+ 17.99674   16.543152  17.625307  17.862005  36.812527  17.92413
+ 17.321571  17.952427  17.602077  16.832418  17.615347  16.370491
+ 17.15963   17.796244  17.250643  17.198658  22.310984  16.356424
+ 15.541039  17.280327  16.960241  16.73907   16.764133  17.170168
+ 17.609137  16.741829  17.455019  18.52938   17.07741   16.988264
+ 17.45859   17.44546   17.277718  16.98203   17.061317  16.666962
+ 16.925001  17.406664  16.886753  15.86626   19.028736  17.55588
+ 17.681393  23.130713  17.340893  16.82013   16.684763  17.773998
+ 17.293848  17.209072  18.25368   17.069683  17.224693  16.926199
+ 15.9302225 16.781439  20.732603  17.64613   17.184748  17.044338
+ 17.070927  17.330074  18.161385  16.917896  16.618784  17.101986
+ 16.6456    17.05625   16.115437  16.962566  17.0639    16.796581
+ 17.21822   17.60228   17.130783  17.282648  19.26833   16.380241
+ 16.105806  17.557001  18.07708   16.223291  16.948303  16.767927
+ 18.768282  16.833548  17.262003  16.597687  22.377209  15.9409895
+ 17.01827   16.850487  16.771637  16.866224  17.261219  17.04847
+ 16.785286  16.618544  16.005241  17.054794  16.7992    16.197113
+ 17.73004   18.083958  16.621098  16.086456  17.092237  17.440239
+ 24.63241   15.88445   16.486328  16.714401  16.02999   16.937344
+ 17.009886  16.840525  16.268536  16.5593    16.595673  16.488035
+ 16.179356  16.861542  16.681938  17.597029  17.201256  16.813349
+ 16.47074   16.772392  16.4535    18.587875  16.50651   19.43573  ]
+[20.338724 23.575478 22.778278 23.350716 21.91017  22.522453 21.356213
+ 22.090948 21.604162 26.879152 22.254402 21.020912 20.65814  23.07014
+ 22.249378 22.559874 27.748684 21.147268 21.567562 18.947956 22.200977
+ 22.435575 21.062517 26.562962 21.229134 20.721945 22.543625 21.418404
+ 22.024397 20.518925 21.093988 22.21977  24.716944 22.496403 21.009527
+ 23.22324  21.849915 23.227104 22.714972 21.695084 22.168488 24.622084
+ 21.575975 22.000402 21.053844 22.848543 22.544155 22.244587 22.79282
+ 21.487043 23.230135 19.329624 26.477116 24.806688 24.681747 28.137592
+ 22.225159 22.793472 22.638084 23.246304 22.432468 22.702606 22.602991
+ 22.033453 23.0953   21.687122 21.469893 22.179413 20.8877   31.950037
+ 22.317644 22.912504 22.172989 20.969685 22.557938 21.657875 21.762403
+ 20.873188 21.670082 20.93963  19.98053  20.665348 21.713736 21.35104
+ 21.038754 21.404821 20.775211 22.618883 20.80519  21.150524 21.030355
+ 20.85247  21.581308 17.855482 21.12899  21.422815 21.775484 19.64403
+ 21.372055 20.42795  21.396507 21.457893 20.978003 21.823235 21.535393
+ 21.367361 20.605349 19.674818 21.863571 22.057575 20.994444 20.57943
+ 20.238422 21.492147 21.473965 21.783335 21.951878 20.956705 22.709696
+ 21.040106 21.40735  21.53841  21.193956 20.594362 22.617994 21.022076
+ 20.255472 20.471628 20.700603 21.17879  21.30836  21.339172 20.592575
+ 25.61286  20.966595 21.265545 20.289927 21.827705 20.449715 19.482655
+ 21.587963 19.963894 21.084469 20.134403 20.377138 21.571196 20.6367
+ 21.076458 19.40426  20.738476 20.583427 21.409544 20.464594 19.698242
+ 19.47987  20.543573 20.749159 25.317957 20.117535 18.834446 19.584667
+ 22.089933 20.49297  20.011623 18.050648 19.27462  18.876991 21.128191
+ 20.709242 20.0305   20.737766 20.409946 21.007437 23.228758 20.24132
+ 19.952736 20.414587 19.15733  21.037054 19.626856 21.24982  19.410067
+ 18.92413  21.07505  19.174543 20.717752 19.587667 20.846096 21.169695
+ 19.47989  19.237112 20.756006 21.006453 21.032953 20.629692 19.384098
+ 20.647793 19.095852 20.519283 20.968838 19.380783 21.087978 21.055523
+ 19.84969  18.886528 18.846853 23.530008 20.452011 18.959972 21.75024
+ 18.397577 20.95883  20.263836 19.683449 18.482346 20.597504 21.082754
+ 19.593657 20.679773 20.228905 19.774307 18.588034 20.628792 18.827225
+ 33.729065 23.925285 20.858519 18.890804 20.556402 27.009409 19.69361
+ 20.900387 17.6712   19.62047  18.89955  21.633606 18.541222 19.684784
+ 20.438927 19.931723 19.224188 18.362139 18.520477 22.845503 19.941269
+ 20.133902 18.835674 20.486855 19.76817  20.029716 20.332506 18.606579
+ 18.177927 18.671814 17.893887 19.561382 19.54746  21.62889  19.840906
+ 18.33994  17.88146  18.265814 17.935472 19.798145 20.102938 17.775024
+ 17.5542   19.926786 16.922867 18.374426 17.746105 19.145414 17.691706
+ 18.523388 19.358763 18.114187 18.191494 18.661617 20.41593  21.814404
+ 18.307058 17.950619 19.472483 19.946304 17.492151 18.725111 18.788342
+ 19.30514  18.077766 17.79406  20.18937  19.656242 20.06629  19.03413
+ 18.56562  18.35462  20.394886 17.12762  18.489456 21.664005 19.228039
+ 18.11263  19.339943 19.429615 34.680645 19.785772 17.562325 20.670155
+ 18.582933 17.3516   18.19211  18.194408 20.55415  19.133307 17.616657
+ 17.40247  21.799644 19.060982 17.680254 19.299938 17.67806  19.301556
+ 18.788914 18.123993 19.056927 18.879404 17.385687 20.846848 17.889341
+ 19.13798  16.862162 20.66134  18.525381 17.851646 20.563786 19.345415
+ 18.593788 17.768393 18.826338 19.563053 21.01024  19.258957 19.572266
+ 21.390295 18.990677 16.607796 19.070145 18.770891 17.360935 17.51083
+ 18.820517 17.994652 17.39078  18.748589 18.466524 18.162472 21.530691
+ 18.929718 17.163202 17.376791 17.76202  19.279905 24.189373 17.731356
+ 18.845806 18.962694 18.195997 17.246733 17.363338 18.826153 18.657679
+ 18.631104 18.002321 18.728508 18.274345 19.205236 18.355844 17.918983
+ 18.443306 18.943201 18.020903 18.293165 18.368309 17.406418 19.734873
+ 17.453863 17.17762  18.163591 25.8261   18.164074 17.942942 17.966293
+ 17.678228 18.237015 19.617567 18.532621 18.019117 18.732386 18.554493
+ 17.608803 17.63103  17.469034 19.42158  17.11648  21.814873 18.392607
+ 17.92534  19.3059   27.606325 18.047564 18.000498 18.592218 16.32249
+ 17.181782 18.493105 18.087502 17.477762 17.708143 17.749397 20.293762
+ 17.912329 18.299538 17.800867 19.843002 19.714334 18.114609 19.069183
+ 18.214922 17.890497 19.416233 19.081429 22.195124]
+362
+[32.71944  32.726505 32.99936  31.037567 34.733215 37.452282 31.784224
+ 36.733517 37.504765 32.358032 34.84963  30.360289 31.439253 32.46443
+ 31.756384 31.578266 33.84596  32.46391  36.279926 31.49735  32.8918
+ 31.043303 32.175934 30.536598 32.274406 34.94334  33.825924 36.328545
+ 32.803555 31.803087 33.101147 31.018448 32.36727  31.054098 34.957787
+ 32.11937  32.6102   34.080166 32.80007  33.169704 31.842857 34.55332
+ 37.346134 30.892124 31.734718 32.100025 31.99611  35.841644 33.08497
+ 32.416817 31.984207 32.553753 32.10504  35.00796  33.051777 33.176304
+ 32.502316 33.093533 32.851036 31.691309 32.225555 32.639954 30.96714
+ 32.200428 30.805283 31.415182 31.32715  32.994373 36.42393  33.133133
+ 33.236668 31.763275 30.99129  35.1018   33.24119  30.61763  31.448645
+ 32.98123  28.79259  30.758549 31.977922 32.00081  31.680836 34.721268
+ 31.362791 32.91094  30.649858 31.151953 32.14632  32.632866 32.07016
+ 34.069157 31.987133 31.5458   31.839733 31.307467 34.712025 31.216755
+ 32.724873 34.80208  31.864511 34.896446 31.994484 32.78154  32.721992
+ 32.99168  31.416458 31.691587 33.16565  32.15418  32.54578  31.469137
+ 31.700012 32.411213 32.0918   32.36695  31.956915 31.976812 31.175709
+ 41.273785 31.039797 31.058737 31.807653 31.687159 36.747433 31.510733
+ 31.886673 32.491173 32.858105 31.230387 31.532114 30.80729  34.098404
+ 30.781708 31.300722 30.329473 32.29692  31.59861  31.912373 35.338753
+ 31.742008 37.42445  32.12761  31.806313 33.395855 32.155914 32.70698
+ 34.608124 33.04412  31.933128 30.970984 31.945343 31.373102 31.291775
+ 31.743238 33.182495 31.483929 30.8146   33.565292 33.266613 33.044724
+ 32.381138 33.461292 31.64629  34.618595 32.571243 33.91589  32.364113
+ 31.588007 31.04599  31.135738 36.109844 34.257786 31.4194   35.145107
+ 30.684164 32.260006 31.03341  31.953793 31.897411 32.50289  31.75886
+ 32.155712 30.914495 32.74769  30.474533 32.159378 31.212948 39.243885
+ 32.44071  29.865942 39.41538  30.97246  32.38302  31.45857  34.043503
+ 30.834698 34.128643 32.53163  33.885628 31.528637 31.86388  30.261162
+ 31.034203 31.262087 30.345755 32.176483 34.21     32.73369  31.933954
+ 30.164965 32.51909  29.99747  31.42847  31.687687 34.391823 32.688683
+ 31.763697 31.17394  30.091976 32.922977 32.200024 30.191193 30.96932
+ 31.793913 29.931381 30.764227 30.755438 28.997375 32.310886 30.792065
+ 32.523277 31.774055 32.119537 30.111185 32.379833 33.04383  32.47219
+ 31.341995 31.074215 31.280209 34.117546 31.74859  31.532877 35.36782
+ 32.620644 29.92138  30.487251 31.599882 32.521755 33.075752 31.869888
+ 32.315628 32.84223  29.886044 31.526684 30.538273 30.342882 30.991796
+ 30.87865  31.748335 32.04922  30.534819 30.401747 30.738583 31.645748
+ 32.253635 31.741331 30.843973 30.34679  32.042763 31.887466 30.099483
+ 34.372116 30.710316 30.560436 29.907501 31.206408 31.556253 32.077038
+ 31.646837 31.820917 30.235756 30.961971 33.660465 32.765373 31.141415
+ 31.994984 29.767778 30.791945 31.62529  30.333967 31.18065  33.893105
+ 29.41414  31.19272  30.006262 32.56788  31.606255 30.173582 29.977156
+ 29.847643 31.239859 29.423607 31.508688 30.173634 32.18545  29.229422
+ 30.991287 30.522469 34.64986  30.080719 32.004288 32.89009  32.133533
+ 32.38568  29.30688  29.99259  33.7287   30.649948 31.854864 29.996538
+ 34.08754  29.933165 29.87903  29.929857 29.711258 31.026468 32.559273
+ 32.86853  32.226612 32.68242  30.851772 30.504923 31.477102 30.210667
+ 29.832783 32.075787 30.980522 31.69016  31.984875 34.57337  31.464539
+ 30.37852  29.936481 32.254543 29.796993 30.571293 30.866617 31.456076
+ 30.740055 31.00984  31.32682  34.019867 33.728592 31.550709 30.957897
+ 33.347374 30.78672  34.743412 32.065487 29.895584]
+(362, 77)
+0.9878752254522434 1.9773026358885128 0.7660161434488854 Global errors
+[1.5629314 1.650731  1.5990328 ... 4.935697  2.8879006 2.5172515]
+20191006T215457.7_Abell2390_odi_g.8488.fits
+(27114, 22064) *************
+(469, 77)
+*************************
+6.643704414367676 6.633051872253418 0.2653130888938904 Mean, Med Std of xx
+7.882383823394775 7.906219005584717 0.4603443741798401 Mean, Med Std of yy
+36001.60938922509
+[ 6.4901037  6.8415413  6.902293   6.6182594  6.8695035 11.20021
+  6.8365164  6.566001   7.181422   6.870263   6.994875   6.979112
+  6.6562715  6.451961   6.9924035 10.040858   6.8785167  8.075983
+  6.5373693  6.9234757  6.3673215  7.744394   7.069685   6.504659
+  6.3996305  7.1302843  6.6557274  7.049527   6.6333776  6.8799787
+  6.755169   6.8727956  7.214234   6.692682   6.896118   7.0905457
+  6.6163373  7.0488424  6.9187784  7.0318685  6.814199   6.8661275
+  6.340137   6.8412957  6.7821083  7.023039   7.6609745  7.045618
+  6.9810777  6.409587   7.0143247  7.0268664  6.394396   6.8378696
+  7.1801076  7.43922    7.010846   6.7273855  6.979492   6.8983474
+  6.620788   6.7257023  6.9375772  6.8833914  6.995641   6.4611254
+  6.7800403  7.1485558  6.356715   6.475608   6.4668293  6.633052
+  6.6593614  7.723024   6.918736   6.461164   6.316582   6.897345
+  6.8415036  6.39712    6.9226737  6.8837824  6.6964283  6.803693
+  6.8142     6.35435    6.6327257  7.0356283  6.4622116  6.6854196
+  7.0386558  6.907693   6.46383    6.9038463  6.323784   6.386771
+  6.338192   6.417988   7.7741756  6.4070754  7.040328   6.401607
+  7.1491838  6.361418   6.980514   7.063883   6.8614845  6.313403
+  6.9039993  6.903949   7.0130734  6.9619684  6.474777   6.964121
+  8.455962   6.967646   6.439805   6.402826   6.459868   6.863802
+  6.4104323  6.4332     6.9300947  6.684314   6.2579036  6.8131475
+  6.346945   6.8704343  6.976357   6.267441   6.504121   6.5433617
+  6.734867   6.2718945  6.3175793  7.0601854  6.3682213  7.043155
+  7.3695674  6.6061854  6.9461303  6.721263   7.020928   6.9730053
+  6.926014   7.0276957  7.236458   6.6028943  6.284788   6.4303637
+  8.038447   7.0807405  7.0759196  6.916857   7.138151   6.9786716
+  7.009823   7.840819   7.018188   6.405241   6.532724   6.9939666
+  6.553358   6.324368   7.0447173  7.091618   6.496262   6.975024
+  7.1282163  6.6475554  7.161224   6.8709946  6.9605985  6.5187864
+  7.0516458  7.072549   6.6271505  6.952748   6.4828563  6.5066767
+  6.6760364  6.9826875  6.916215   6.650581   6.707407   6.789731
+  6.640657   6.6472363  6.6906185  7.125278   6.6570177  6.5275955
+  6.813167   6.9286246  6.719903   6.645009   7.348859   6.758874
+  7.1557717  6.4533687  6.610388   6.449246   6.3170395  6.9319043
+  6.8786435  6.99958    6.8916173  6.8787704  6.7325854  6.178467
+  6.639354   6.4581513  6.6553335  7.026805   6.421413   6.812349
+  6.790182   6.823798   6.991407   6.72653    6.671983   6.8142257
+  6.573314   6.4655128  6.6739774  6.4771633  6.7947927  6.771697
+  6.6125216  6.681685   6.7446775  6.503698   6.6948185  6.6534677
+  6.957273   6.652216   6.835096  15.14379    6.667144   6.442665
+  6.850302   6.4547844  6.727967   6.718989   6.6087384  7.206117
+  7.207997   6.5620384  6.328755   6.4859076  6.408457   7.445147
+  6.7642617  6.5295014  6.715746   6.514527   7.2277064  6.4126005
+  6.664622   6.578168   7.0371714  6.6971703  6.39829    6.3566403
+  6.2823396  6.695314   6.7654543  6.5890403  6.698072   6.699525
+  6.419581   6.454748   6.4674497 25.9759     6.9330373  6.438916
+  6.7568183  6.389709   6.7423053  6.3379073  6.880666   6.553416
+  6.416178   6.7304845  6.8053875  6.7635627  6.6749964  6.5735197
+  6.693099   6.7573166  6.4531455  6.9651327  6.494227   6.34265
+  6.3646927  6.7635674  6.8109174  6.499295   6.5308104  6.576477
+  6.5196285  6.789318   6.5571547  6.7452335  6.3892026  6.740815
+  6.4999385  6.8490834  6.5950685  6.777967   6.5409904  6.6684566
+  6.5166545  6.6371913  6.7512646  6.505365   6.4487257  6.789494
+  6.49081    8.574865   6.3611374  6.608498   6.5281196  6.5348396
+  8.865853   6.7165804  6.3300185  6.798226   6.6429353  6.666681
+  6.6070604  6.5490103  6.3492055  6.5527377  6.4283476  6.4096713
+  6.5568085  6.7985873  6.557392   6.5621157  6.542231   6.6038103
+  6.672477   6.667549   6.3765607  6.7636566  6.309575   6.552833
+  6.2300196  6.3998013  6.4329934  6.8045335  6.4821286  6.310058
+  6.421234   6.767969   6.802409   6.495124   6.528183   6.6067543
+  6.513186   6.7199965  6.6498885  6.5075607  6.3025656  6.4575152
+  6.364252   6.446619   6.581396   6.4662285  6.690707   6.4072785
+  7.080566   6.416279   6.5034695  6.5025816  6.523      6.220268
+  6.3217344  6.6685963  6.406116   6.153483   6.3753157  6.6447635
+  6.365228   6.6731887  6.5553365  6.510083   6.38693    6.5868793
+  6.635198   6.13508    5.9386024  6.4252396  6.7045007  6.6550097
+  6.3598804  6.3796024  6.2529464  6.2903037  6.2958517  6.4448695
+  6.2065554  6.482927   6.6614475  6.6226654  6.3283067  6.241381
+  6.576956   6.678227   6.7410073  6.7056336  6.379463   6.5019813
+  6.3333635  6.4243207  6.4458036  6.228928   6.4407535  6.3746943
+  6.494995   6.591089   6.4987736  6.7557583  7.256911   6.520386
+  6.7193274  6.6945124  5.8801208  6.5272226  6.407693   6.7537556
+  5.9493275  5.849173   6.412112   6.6290603  6.5665584  6.381057
+  5.8040395  6.2000957  5.9423003  6.6113467  6.5068116  6.220724
+  6.5368094  6.7050395  6.2258563  6.422703   6.5070767  6.3609877
+  6.7045293  6.181706   6.3066816  6.3954344  6.4472485  6.357777
+  6.4520473  6.2602587  6.453147   6.5404024  6.341494   6.2208447
+  6.149036   6.8153014  6.2626524  6.199436   7.1091866  6.271797
+  8.512069 ]
+[ 7.030829   7.490728   7.1171103  7.145205   7.0675964 12.111083
+  7.2651997  7.355531   7.247399   7.1068687  7.025366  12.25178
+  7.0909214  7.0771933  7.391643  10.297834   6.9657235  8.086298
+  6.8957934  7.1165223  7.0951204  7.524751   7.2566557  6.7664657
+  7.0238047  7.7093353  6.825148   7.2194376  6.8436923  6.8986
+  7.036529   7.121712   7.365524   6.7109933  7.0127726  7.3058267
+  6.8295236  7.3537617  7.2691736  7.300053   6.9265094  7.2134285
+  7.3532166  7.1835423  6.941523   7.1895056  7.41364    7.832521
+  7.2442126  7.3202963  7.3339276  7.10996    7.375696   7.4279747
+  7.621832   7.9717894  6.811333   7.2254505  7.5262537  7.0835133
+  7.7037406  7.20675    7.5312166  7.2230344  7.549971   7.215825
+  7.4142036  7.334002   7.5146637  7.5801373  7.37437    7.121812
+  7.2845078  7.990787   7.144247   7.4074645  7.3803577  7.220402
+  7.542776   7.328672   7.427239   7.737525   7.8105364  7.478933
+  7.590261   7.487479   7.280577   7.498397   7.488845   6.9002676
+  7.101305   7.818053   7.5095186  7.512266   7.4647603  7.242676
+  7.455248   7.2995667  8.952317   7.5533614  7.9287357  7.4319377
+  7.701399   7.442889   7.833963   8.013346   7.62082    7.3601565
+  7.7821426  7.618197   7.8682203  7.7597294  7.4148607  7.7804775
+  9.61642    7.7689524  7.3911386  7.526489   7.44567    7.9195323
+  7.1898804  7.3798003  7.7726855  7.5408535  7.2425413  7.5987434
+  7.8213286  7.7874413  8.176921   8.130714   7.8268433  7.77147
+  7.8326883  7.7284255  7.716995   7.944674   7.851544   8.028131
+  8.003867   7.8866115  8.116798   8.23864    8.379967   7.8410416
+  8.061401   8.3340845  8.368134   8.022348   8.207632   7.902615
+  9.4189625  7.9071035  8.319477   7.598096   8.062851   8.006879
+  9.134347   8.809982   7.7541733  7.8256354  8.361156   7.7229614
+  7.7640653  8.143981   7.782744   8.486184   8.447026   8.280421
+  8.204951   7.7796445  8.326111   8.041608   7.708409   8.1179905
+  7.872346   8.056564   7.8121996  7.7563887  8.263897   8.299215
+  8.068665   7.932875   7.988487   8.199205   7.547406   8.391147
+  7.5056496  8.4646     8.15804    7.898887   7.981423   8.034921
+  7.5809927  7.9234767  7.598992   8.215399   8.029217   7.7109084
+ 12.293697   7.53212    7.81784    8.304063   8.20614    8.215869
+  7.8537574  8.167724   8.30625    8.407189   7.777981   8.008495
+  8.418412   8.130151   7.4896693  8.172248   8.418419   8.440802
+  8.627284   9.284722   8.21422    8.522478   8.332769   8.108625
+  8.107998   7.8299055  8.038112   8.539309   8.373088   7.960582
+  8.40513    8.748648   8.779813   8.378113   7.6044946  7.967446
+  8.214648   7.7408514  7.9889684 17.840353   7.792238   8.063192
+  8.685956   7.843524   7.7197094  7.6367774  8.3817625  9.381929
+  8.010788   8.374351   7.928303   7.7925034  8.166975   8.625775
+  7.925579   8.050015   8.206887   8.099932   8.94574    7.4726653
+  7.328003   7.668185   8.100914   7.8831077  8.022519   7.9740953
+  8.125668   7.94818    7.747555   7.954977   8.324946   7.7069535
+  7.988513   8.293231   7.615409  11.50575    8.392649   7.8043303
+  7.448418   8.080093   7.9053345  7.9488935  8.182319   8.055708
+  7.715968   7.958793   7.814531   7.7915206  7.9682603  7.4808865
+  7.6144676  8.046749   8.18749    8.90866    7.8193393  8.060862
+  8.083223   7.5157104  7.477781   7.759186   7.552804   7.27312
+  7.860122   7.578317   8.102962   7.9246383  7.4552903  7.9403806
+  8.341094   7.909342   7.664369   7.804141   8.256421   7.952818
+  7.955684   8.206113   7.980668   8.025033   7.630396   8.22826
+  8.458779  10.312777   7.9840956  7.6338997  7.442116   8.118259
+ 11.008963   7.204339   7.968803   7.8974166  7.7374187  8.153423
+  8.300576   8.337416   8.564056   8.266878   8.167395   7.605717
+  8.358091   8.477659   8.388092   8.561547   8.433103   8.101452
+  7.9081893  8.297809   8.101363   8.1330185  7.6150894  8.085686
+  7.7409897  7.5821595  7.9398484  8.084621   7.994439   7.8290915
+  7.9252205  8.584986   8.15322    8.208921   8.133077   8.737301
+  8.540056   8.450528   8.069782   8.429389   7.6736054  8.238932
+  8.2372     7.88845    8.610717   8.210231   8.631081   8.63627
+  8.589838   7.878126   8.307992   7.9111233  8.591358   8.526126
+  7.3055634  8.74865    8.433283   8.676646   8.643915   8.10866
+  8.6039295  8.40473    8.299041   8.156975   8.423709   7.679362
+  8.203718   8.823619   8.589974   7.577234   8.2315445  8.218361
+  8.690468   7.919256   7.8300123  8.713629   8.401987   7.938768
+  7.4746256  8.930237   8.463807   8.321322   7.8146353  8.011229
+  8.592268   8.076031   8.256588   8.405829   8.613892   8.428652
+  8.207412   7.938209   8.573758   8.554296   7.8723683  7.974371
+  8.22799    7.916909   7.760977   8.345922   5.5279946  8.407811
+  7.902837   8.22048    8.567205   7.5737615  7.5147743  7.9142656
+  7.6869106  8.266131   7.635338   7.648992   7.7112465  7.7535048
+  7.963986   7.7243223  7.874223   7.7419806  7.751234   8.453421
+  8.093802   8.351131   7.4975934  8.019812   7.830602   7.1133633
+  8.279098   8.46065    7.92066    7.8858733  7.8410325  7.5901256
+  7.8413877  7.8609557  7.58121    8.185243   7.7899923  8.497078
+  8.356479   8.065288   7.4655104  8.371905   7.9810786  7.7324796
+ 10.377686 ]
+484
+[166.3799  165.39017 160.31583 161.1564  163.2956  184.79991 161.73576
+ 165.29317 174.30705 197.05196 166.95822 164.52965 186.42642 168.45995
+ 167.58865 164.52502 161.04398 180.38983 158.22513 162.71083 157.70569
+ 158.0754  164.07637 196.35962 169.12419 171.80992 163.79631 184.79832
+ 165.44768 163.77676 156.08054 163.99133 159.00252 163.88602 167.30983
+ 163.88972 162.73853 175.66269 163.64148 162.46559 159.6949  167.89708
+ 157.35475 163.41148 181.93504 156.19144 165.13203 161.18645 165.58699
+ 179.81781 170.88362 170.19456 172.47014 160.83574 171.44331 154.40463
+ 166.95619 169.1318  163.22234 177.04837 160.53876 160.63228 173.9592
+ 164.75726 171.8662  157.27197 160.21008 171.77711 157.59152 164.51668
+ 172.4589  165.41582 171.44208 188.30977 161.05786 171.69489 162.73416
+ 171.2168  162.70323 160.11005 159.67606 180.51146 172.35097 165.77603
+ 171.4467  201.71263 161.00189 184.9021  170.36388 163.675   167.23915
+ 168.73195 184.0856  175.15642 162.3296  164.47412 164.33998 164.79184
+ 174.71034 167.25597 168.74203 168.87753 175.47334 175.81322 170.19073
+ 163.52751 164.12129 166.99376 158.966   169.63918 165.93277 167.42934
+ 166.34702 161.75165 161.21883 171.61133 169.22157 170.90524 163.96718
+ 161.65482 163.52565 165.72334 173.59106 167.87534 176.0434  168.00717
+ 159.42142 161.55583 167.07695 166.22316 160.97658 164.23787 161.53749
+ 171.79694 175.0766  167.73087 175.88963 159.16328 168.15338 170.11572
+ 161.56917 164.76666 167.29256 160.9279  167.90337 171.62897 179.3181
+ 182.17706 166.0168  175.07895 172.91115 159.98924 176.82608 178.32767
+ 163.77226 170.08768 167.38751 163.43123 164.96204 157.31976 159.68184
+ 169.30122 158.58069 157.17323 166.25145 168.7334  160.0738  167.23915
+ 166.52345 163.8391  167.90309 166.89896 159.65366 181.84308 170.96046
+ 162.54218 162.85222 157.07953 166.22632 165.62633 160.94072 174.59576
+ 167.9257  152.81213 174.19359 163.59554 191.37262 160.38242 162.72394
+ 162.67291 154.04146 162.54572 161.78912 168.5802  168.13637 160.40504
+ 159.32634 182.58183 164.15172 156.3889  164.78024 168.35912 165.69943
+ 207.29306 155.00516 158.51825 171.18176 185.85448 161.7992  156.57993
+ 159.77461 159.26936 169.34048 153.8138  159.6569  159.07828 164.9492
+ 169.35365 160.94493 160.52925 170.33649 162.20355 198.46327 159.71555
+ 171.14685 172.7028  178.96085 165.855   148.35925 168.79318 175.03485
+ 164.92432 162.69499 160.64935 164.39206 181.33887 161.18007 163.69319
+ 184.11353 161.78897 158.19467 157.80272 167.95645 158.56612 163.36836
+ 184.8663  161.82489 167.25545 157.18655 162.38261 162.75505 160.917
+ 162.25006 163.93654 161.34966 159.90077 164.02217 165.01814 177.25491
+ 194.63474 161.9854  163.38695 163.5935  165.29288 165.87157 160.47598
+ 161.0801  172.79054 175.10461 161.73059 169.86873 171.278   175.12837
+ 166.10728 176.79614 169.86469 175.64928 181.26904 198.63007 165.61687
+ 165.95857 163.66621 165.99254 159.08286 165.41006 163.19469 160.59572
+ 178.41968 157.80875 169.82066 163.67482 169.66508 163.80704 164.0736
+ 168.00095 171.39658 168.67445 163.93727 162.68648 168.4549  164.2352
+ 167.83543 167.20927 160.39209 160.88734 168.80281 166.98265 159.9914
+ 173.80275 164.31938 163.35954 161.67163 161.86366 166.75764 163.95514
+ 159.18542 163.76204 166.4366  155.91786 164.85793 163.35602 165.50273
+ 163.78635 160.42627 190.31725 164.52238 162.64067 168.60945 159.24399
+ 167.25986 170.611   161.73497 167.81795 171.60527 164.77998 162.68344
+ 168.19798 164.88133 162.67989 161.47807 161.62872 176.76605 161.72005
+ 161.6275  161.62413 164.45398 175.35405 161.51007 167.3795  175.23958
+ 170.09451 159.74965 155.08568 157.37926 163.9593  159.0965  163.48717
+ 162.5023  173.82468 160.7656  162.84201 170.01666 173.59169 176.0267
+ 165.92625 165.77583 164.16072 165.17253 174.34016 167.87735 164.44666
+ 163.69293 165.8206  162.85452 169.45906 163.0062  168.23624 165.41554
+ 170.02974 185.36058 165.28618 161.2588  167.92632 161.99434 169.40944
+ 181.91466 171.13768 167.38016 173.33206 169.47964 186.27393 168.36375
+ 160.98222 164.2941  171.56639 181.19116 173.88222 167.1703  165.26884
+ 164.71875 168.39636 171.03084 171.94424 164.34882 160.31563 188.22493
+ 219.23778 169.6594  176.58794 189.53117 169.40315 174.95633 167.8337
+ 162.66425 173.09259 167.15448 168.18098 167.01573 160.09622 164.9848
+ 167.67303 164.46677 165.18675 158.5955  170.88368 168.91653 167.50516
+ 176.57187 164.41432 169.85109 171.27496 164.19826 182.8782  168.39238
+ 167.84053 170.32945 166.36128 167.78033 164.09274 167.17139 170.94359
+ 173.03224 165.1687  166.69792 189.59128 164.4086  163.96396 165.1768
+ 186.81918 180.60916 168.453   174.81711 166.94902 159.87831 167.84462
+ 178.35887 162.96123 166.61678 170.27957 166.94193 168.0516  167.69038
+ 174.54225 162.9567  163.15102 167.80568 170.26976 180.2061  162.85648
+ 165.37895 163.80371 163.62941 163.57736 164.74268 169.99738 170.61908
+ 170.56331 169.52348 169.75339 170.12337 164.42581 169.33296 162.62494
+ 164.48839]
+(484, 77)
+0.27698402902733316 0.4895880351445 0.3546117183899204 Global errors
+[0.79921186 0.77261245 2.9483762  ... 2.1258762  1.9476273  1.1530222 ]
+20171108T190519.9_abell_2390_odi_g.7190.fits
+(26994, 22049) *************
+(46, 77)
+*************************
+35.443111419677734 35.01435089111328 2.4087843894958496 Mean, Med Std of xx
+35.27763748168945 34.781272888183594 2.802882432937622 Mean, Med Std of yy
+14129.677678238619
+[37.065437 33.69035  32.96552  34.78022  34.9284   32.33427  33.6138
+ 31.429571 33.345463 36.776012 33.12163  39.677425 32.084717 33.431145
+ 38.79632  33.407864 34.32839  39.476166 40.515156 34.44588  35.61837
+ 34.19539  36.61737  35.100426 36.19586  38.156628 34.928215 34.89252
+ 34.657238 50.70853  38.62887  37.467175 44.562145 34.95523  31.77556
+ 37.824406 35.073467 37.38523  37.99097  29.540245 35.627396 37.730263
+ 36.039036 38.075417 37.076477 33.73159 ]
+[38.463024 33.576534 31.413181 33.680824 32.66304  30.939985 32.12306
+ 32.543213 35.36321  36.494846 38.757805 38.153793 37.413868 31.806147
+ 36.32103  34.92777  34.67382  36.363777 46.112637 34.06545  34.4958
+ 34.592815 39.96557  34.33353  33.17483  35.222443 35.264263 32.09825
+ 30.487135 36.82108  41.86384  38.087223 42.45096  38.124386 37.448364
+ 37.3657   36.657135 36.31691  39.045177 30.733313 32.78834  33.98869
+ 34.72571  34.021843 34.781273 32.894623]
+20201205T190507.1_Abell_2390_odi_g.9043.fits
+(27028, 22084) *************
+(736, 77)
+*************************
+6.77218770980835 6.768336772918701 0.2748902142047882 Mean, Med Std of xx
+96.2261962890625 96.3079833984375 1.9616535902023315 Mean, Med Std of yy
+12913.144322432669
+[ 6.753351   6.769212   6.7242365  7.117042   6.9435368  6.625797
+  6.473376   6.7497873  7.099243   6.4068065  6.360956   7.0494523
+  6.77572    6.521848   6.563808   6.49768    7.102551   6.8269186
+  6.7846456  6.370709   6.6437798  6.3980556  6.725284   7.0833197
+  6.8263993  6.8721447  6.676674   6.937424   6.3229995  6.5517316
+ 10.427026   6.8081374  6.685338   6.693925   6.8545213  6.2762747
+  6.8097067  6.857753   6.8594785  6.8143725  7.07235    6.850868
+  6.5265102  6.792072   7.077442   6.776703   6.5106497  6.828884
+  6.5353885  6.0396123  6.5061502  6.5072346  6.9233885  6.9479837
+  6.682542   6.5543513  6.6790557  6.856721   6.586546   6.804972
+  6.768653   6.9281588  6.732598   6.672789   7.0816917  6.741971
+  6.63627    6.9121256  6.9427457  6.340459   6.5592732  6.913892
+  7.4536085  6.339255   6.622788   6.716756   6.643441   6.707184
+  6.760432   6.716314   6.951864   6.7606206  6.6742377  7.439831
+  6.625306   6.5951986  6.8561125  7.038121   6.6821947  6.8180666
+  6.78534    7.9424396  6.8286858  6.645679   6.7617216  6.8824015
+  6.780121   6.543292   6.764092   6.320735   6.6834636  6.585015
+  6.6722403  6.796697   6.74251    7.138513   7.088608   6.970435
+  6.7207837  6.833001   6.8342996  6.725355   7.4252415  6.474164
+  6.6697054  6.856262   6.831604   6.7624483  7.0689673  6.6457567
+  6.798149   6.8143973  6.6285405  6.838154   6.940733   6.603305
+  6.85578    6.9444757  7.2015066  6.9388976  6.7270246  6.9351616
+  7.177677   6.777275   6.760584   6.816225   7.0111146  6.704358
+  6.7730827  7.0248947  6.609204   6.661865   6.7496586  6.816608
+  6.5410986  6.776195   6.665414   6.41969    6.936571   6.7213373
+  6.7094617  7.0875473  6.7552795  7.127985   6.815124   6.716974
+  6.93637    7.12303    6.6139116  6.747452   6.589691   6.7254915
+  6.8808627  6.768611   6.831574   4.967164   6.859472   6.5198092
+  6.574223   6.966371   6.7685966  7.0076246  6.3203506  6.398228
+  6.650371   6.842585   6.7577276  6.891718   6.542957   7.379005
+  6.8142176  6.778235   6.9777107  6.6902285  6.5936804  6.83922
+  6.9542675  6.820683   6.7596245  6.681692   6.8652964  6.608624
+  6.6734138  7.275564   7.0734143  6.7058363  6.813365   6.411836
+  6.9246163  7.2631235  7.042795   6.6906905  6.9956965  6.04114
+  6.8969684  6.68096    6.8861156  6.9398646  6.76905    6.8488417
+  6.8103333  7.228332   7.1148667  6.9358616  6.3610945  6.599866
+  6.9113936  6.9667673  6.8747673  6.6310234  7.292333   6.9948006
+  7.018147   7.383911   7.1636605  6.6760464  6.7345095  6.8229747
+  6.8997645  7.0484667  6.840588   6.674647   6.843578   6.504331
+  7.8368263  6.8687334  6.570657   6.9703035  6.489593   7.424456
+  7.095891   6.5773506  7.205141   6.937477   7.024982   6.5727468
+  6.9748864  7.465612   6.884278   6.5901976  7.04342    6.9108467
+  7.3651133  6.83292    6.932148   6.971353   7.329653  15.282933
+  7.016754   6.98383    6.6181917  7.031525   6.528199   6.696052
+  7.0092583  6.760377   6.669565   7.075719   6.6442537  6.739113
+  7.108885   7.3250027  6.964235   6.585602   8.133978   7.000804
+  6.954642   6.9122944  7.183564   7.2653894  7.018293   6.8311143
+  7.102456   6.5527325  6.710163   6.8083115  6.8585825  6.901355
+  7.0584993  6.433663   6.7612123  6.9825654  6.9877334  6.9478965
+  6.9160075  6.6054516  7.8191175  6.9549365  6.9695845  6.840968
+  6.3580594  6.7287083  6.9538784  6.935248   7.1399417  7.00929
+  6.986528   6.8444343  6.527421   6.9124174  7.0089064  6.822083
+  7.5827675  6.9883504  8.486604   6.703275  13.02271    6.6875787
+  6.561647   6.9837446  6.724558   6.8489056  7.0204716  6.751498
+  7.2553606  6.7931404  7.1332116  7.1657033  6.7118874  6.789518
+  6.9322095  7.2308536  6.918139   6.745163   7.127693   7.2314754
+  6.792885   6.823936   6.902012   7.002293   6.526447   7.1987424
+  7.3587637  7.580737   6.7785263  6.662557   6.766512   7.0065
+  6.178559   6.938031   7.409558   6.4887094  7.1350136  6.9502916
+  6.8900104  6.801853   6.8388023  6.6898966  6.753109   6.816532
+  6.3305607  7.029979   7.204506   7.0278273  7.004767   7.016486
+  6.935074   8.729215   7.5668488  6.5709205  6.7824     7.6565504
+  7.460669   6.9806423  6.6081514  6.6173506  7.2368183  6.5108852
+  6.958268   7.9230647  7.0668454  7.1669054  6.8962836  6.9563775
+  6.7671547  6.3202906  7.5322394  6.9695315  6.6713033  7.3870144
+  6.4019046  6.889901   6.7181787  7.0059776  6.9343853  7.133176
+  6.986491  11.687104   6.942447   6.63292    6.8405237  6.6378613
+  7.040158   6.7753835  7.1500216  6.7442923  6.892043   6.572082
+  6.377451   7.026443   6.8558927  6.2080503  6.988765   6.916209
+  6.6557207  6.940474   8.07652    6.6777425  6.776001   5.818012
+  7.1555805  6.720449   6.769311   6.8115625  7.4901857  8.665348
+  6.921129   6.693637  14.851314   6.9226213  6.532881   7.1239934
+  6.9141707  7.012411   6.359331   6.7491274  6.7467666  6.380606
+  6.3393574  6.703654   6.876221   6.9030967  7.052335   6.4780498
+  6.521191   6.317942   7.2556977  7.531593   6.515346   7.283979
+  6.1755266  7.1632166  7.6193476  7.0414276  6.7693553  6.842524
+  6.4989676  6.477566   6.5220857  6.606529   7.033844   6.9515686
+  6.7988386  7.0025635  6.961687   7.0105343  7.3656282  6.8526998
+  6.88156    6.5276446  7.244278   6.6487236  7.414363   6.7214904
+  6.785769   6.2077293  7.3148546  7.163858   8.678678   5.983648
+  6.4725695  6.682717   6.8749776  6.740079   6.4921136  6.816297
+  6.548785   6.324934   6.332746   6.5277767  7.080895   7.0584264
+  6.480325   6.506364   6.483481   6.8392324  6.468599   7.087621
+  6.9384766  6.8342967  6.686964   7.0752954  6.8566227  7.4392443
+  6.9055037  6.993379   7.3943276  6.568242   6.7124066  6.646765
+  7.035059   6.883672   6.983949   6.787011   6.8486886  7.387165
+  6.92931    6.564201   6.7708054  6.420434   6.9679265  6.825043
+  6.3018417  6.4396944  6.7944083  6.6697073  6.6068854  6.689502
+  6.5726457  6.556395   6.559683   6.9453278  6.336566   6.479154
+  7.1673045  6.6216245  6.1929774  6.770629   6.5097785  6.0127053
+ 12.641267   7.2421064  7.6294413  6.7054615  6.4949064  6.690555
+  6.449951   6.8470826  6.9557166  7.0331917  6.7048364  6.6557765
+  6.288276   7.1107087  7.102934   6.4417434  6.8630342  6.6822233
+  6.3453107  6.7847857  6.9460006  7.353066   6.454517   6.447187
+  6.5451164  6.602876   6.5902157  6.457808   6.479769   6.9659424
+  6.3608046  6.889042   6.768337   6.6742964  6.8966165  6.7145367
+  6.852774   6.853599   6.732042   6.7341905  5.782229   6.367396
+  6.6273227  6.406335   6.465515   6.5631943  6.45416    5.5753074
+  6.754044   5.8733435  6.4200115  6.965706   6.626229   6.86316
+  6.6172166  6.7348824  6.5843835  7.151379   6.485808   6.4948497
+  6.6097302  7.6636615  6.2044997  6.724768   6.513435   6.7435393
+  6.2035336  6.643948   6.9610934  6.3143444  5.59925    5.586151
+  7.210984   6.512787   6.7008767  6.46157    6.4097853  6.8992863
+  6.548408   6.6580176  6.612611   6.4722886  5.560764   6.86575
+  6.7930045  6.5153956  7.004258   6.04541    6.5566216  7.1637435
+  6.653661   6.698117   6.649764   6.8274436  6.6257534  6.3791904
+  6.8387146  8.752397   6.679242   6.719093   6.4833736  6.8164825
+  7.0163326  5.813673   6.5254965  6.049669   6.5728126  5.8186364
+  6.688174   6.4826026  6.6366057  6.707317   5.0790067  6.752263
+  6.85973    6.421095   6.3896027  6.3150897  6.2503204  6.7889752
+  6.7739477  6.4944954  6.9594045  5.727842   5.9387584  6.637058
+  6.67388    6.5903106  6.601787   6.677862   6.7251983  6.528622
+  6.683552   5.7551703  6.7329955  6.5793395  6.720668   6.6736164
+  5.859179   6.471712   6.5236683  5.6685796  5.7517676  6.6809936
+  6.2367954  6.195276   6.748573   5.8315682  6.9443035  6.630454
+  5.9897375  6.524089   6.9786687  6.5462246  5.2722187  6.63324
+  6.525273   6.435541   6.7891703  6.4798713  6.8223977  6.4478374
+  6.7636456  7.068251  19.274462   6.486177   7.8402147  6.599659
+  6.62621    6.6870527  6.5133276  6.4088387  6.6538014  6.375469
+  6.511746   6.5426593  6.719642   6.7493925  6.5496936  6.483364
+  6.549213   6.518703   6.677971   6.8061757  6.5631866  6.6706886
+  6.552693   6.1920557  6.7085104  6.527764   6.6354837  6.771866
+  6.4281006  5.9993796  6.0312085  7.154481 ]
+[ 96.72038   94.80061   94.850784  94.86845   95.74751   95.81391
+  90.68595   90.32259   93.82673   92.38223   90.83901   94.49813
+  95.30626   95.60825   93.48219   95.55929   98.46461   95.279785
+ 103.29474   92.30001   93.97504   93.83057   94.53049   96.453156
+  95.12323   96.144     94.96674   95.61446   91.643936  94.40369
+ 105.42602   96.19974   93.96368   95.56406   97.11332   98.30155
+  94.35726   96.90475   96.46086   96.57724   97.07842   91.35189
+  95.84344   98.13346   96.65698   95.109406  97.2983    96.3089
+  94.72333   88.73255   94.86927   95.54897   96.84443   94.088425
+  94.207436  94.564674  94.086975  94.98085   95.63088   95.86441
+  96.829605  96.91257   96.34573   94.50974   90.45319   95.57836
+  97.025665  95.20865   95.150894  97.122475  95.43943   95.80421
+  90.38812   91.044365  98.54434   95.619156  95.35609   98.07942
+  95.67089   95.31481   95.54153   94.97422   95.212074  96.735985
+  96.74067   95.81117   96.36554   96.6328    97.1752    93.73138
+  93.55124   96.57185   95.40915   94.88599   96.7602    95.718414
+  96.6937    96.95944   95.36874   95.6255    97.698944 101.03089
+  93.90456   95.31721   94.64868   97.544205  94.20556   97.10728
+  97.9124    96.97716   98.16347   94.01993  102.893814  92.72592
+  91.315155  97.79218   95.66892   95.36772   98.19497   95.69789
+  94.61891   95.05829   95.02555   95.459274  95.95349   95.235344
+  97.83162   97.580536  94.54808   96.58849   94.49762   96.92942
+  90.64505   96.70718   97.21267   95.65453   99.8997    95.11147
+  95.56063   97.83264   94.8886    94.76135   96.53432   95.40593
+  94.91565   95.292816  96.458786  95.75785   97.03678   96.2766
+  92.36368   94.07458   96.18429   98.56545   96.83054   96.27618
+  97.19456   91.51774   94.82362   92.60894   95.89073   93.955215
+  95.56137   96.305176  94.78668   91.01419   94.65813   95.451645
+  95.85872   94.71467   95.577705  96.86669   94.6243    99.74154
+  97.51475   97.28509   96.25134   96.929184  93.8522    99.14464
+  97.39393   94.73307   92.77121   96.332886  94.60245   94.60159
+  96.36      93.29151   94.02231   95.65598   93.52948   91.096535
+  94.522255  96.89446   97.90358   94.359695  92.77714   99.70146
+  94.838135  96.94221   93.515396  97.07306   96.082184  92.898994
+  97.851364  98.39571   94.84932   95.2942    93.91693   94.83417
+  95.26122   98.0503    98.94252   99.12195   96.95094   96.84695
+  96.643265  96.929634  97.57608   95.46544   96.628105  96.0326
+  98.79596   94.52642   95.55384   96.24058   90.60874   95.705505
+  95.91185   94.88664   94.42406   96.95552   95.97022   95.71541
+  91.63842   94.354744  96.28231   96.99233   94.67105   94.402985
+  94.30307   94.42805   93.97027   95.85114   96.33668   93.971985
+  94.994385  98.4695    95.7998    97.0201    97.43738   99.1851
+  95.45543   98.91417   92.250015  96.584404 100.30559   79.21615
+  97.7938    99.33032   96.076126  94.34125   99.35101   92.80094
+  98.030174  96.49777   97.85229   98.415985  96.1933    96.46025
+  94.66655   94.82235   94.37852   97.15277   95.337944  94.30905
+  94.33244   97.959335  94.0586    97.65525   97.5322    93.40017
+  93.837     94.39821   96.131516  96.146996 103.84602   96.159706
+  98.65334   95.50899   96.75946   95.93926   93.809425  94.28612
+  96.596725  96.554756  91.24616   96.88148   91.74736   96.623245
+  97.931244  97.503586  92.93466   94.53297   94.505974  94.692825
+  96.011795  96.51168   95.63898   96.09637   94.55141   95.51515
+  92.60863   95.35066   94.80659   95.76747  109.83876   98.88986
+  92.50267   95.92363   97.21214   98.362785  95.865616  96.094666
+  95.69756   96.45058   99.07364   94.81973   94.976524  96.23867
+  97.18259   96.37102   93.83734   95.41202   94.15177   94.48944
+  96.3749    97.37356   95.14883   90.018585  98.21138   93.061966
+  89.60094   94.09686   95.111565  95.00375   96.411     97.920364
+  91.25904   86.99631   96.81808   94.80528   96.31616   95.982475
+  95.35675   96.13851   94.44341   96.27996   94.99778   94.82342
+  96.181274  97.82286   97.053215  98.31997   95.92242   96.56627
+  96.38228   90.485954  95.362686  91.776054  96.648605 103.95652
+  91.02079   94.52858   96.31743  100.832375  96.538574  95.96144
+  95.98977   98.63371   97.14478   96.54871   95.19803   96.717094
+  94.74328   99.261986  94.659515  94.646454  95.49466   97.79273
+  96.624855  95.13117   96.37763   94.30915   97.003235  94.90381
+  94.748665  87.55782   94.68778   96.09062   94.08311   97.15757
+  96.429     95.92933   96.831215  94.58648   94.414246  94.46282
+  95.66939   96.09947   95.67345   92.18147   95.88835   95.042915
+  92.109695  97.199615  97.07336   94.77864   94.71459   91.42886
+  93.735405  96.591255  96.42746   96.99298   95.98353  100.747795
+  96.08292   96.02197   87.82077   91.59611   95.787224  93.0058
+  95.04349   95.40382   94.96584   97.028206  97.76225   97.37339
+  93.62488   95.7049    94.99389   95.57854   92.77692   96.30798
+  95.233215  97.29188   97.0201    94.01002   95.82371  100.6759
+  97.51239   96.43415   97.275696  99.77128   97.34881   97.802635
+  96.13044   96.35465   96.6158    96.91261   98.81124   92.54192
+  97.19246   96.04205   94.71517   97.195946 110.73164   95.39712
+  94.46235   95.61498   97.58064   94.833916  96.14419   95.31118
+  93.38406   95.30727   98.27667   98.46877   79.46667   98.15656
+  91.22643   98.26512   96.97068   97.422356  96.29949   97.03252
+  95.967026  88.86561   99.84154   96.76386   99.90871   88.89093
+  94.5156    93.06812   94.56225   97.30166  102.185     98.26255
+  97.26428   96.918915  95.30838   96.27394   96.24381   95.23898
+  87.43858   96.12869   93.60524   96.72554   98.35249   96.480034
+  95.91896   97.44774   98.07779   94.651215  91.42531   96.07142
+  94.26407   96.063965  95.83571   95.23659   99.37951   94.96453
+  95.10239   97.39738   96.584015  95.60781   96.39503   95.70795
+  97.12896   94.937744  96.91956   97.72646   95.71047   95.47003
+  97.82537   95.55407   97.74819   98.05437   96.97375  103.881165
+ 110.12638   98.56438   99.655136  97.10326   94.581535  96.83766
+  99.96996   99.68988   97.91751   98.16936   95.14195   97.338295
+  96.39438   94.24424   94.98019   95.28805   94.2399    93.24121
+  96.31335   96.981224  96.76898   97.65121   96.12729   97.01478
+  95.80151   97.571686  96.9614    96.995125  96.695335  97.15069
+  95.13178   95.53966   96.38697   97.41735   98.90477   95.77713
+  95.25883   97.72554   99.238106  98.67449   96.59046   98.33665
+  94.0904    94.81663   97.579796  98.70324   97.95217   87.444824
+  97.52975   94.15795   99.97866   97.1647    96.18866   96.26558
+  97.10723   99.20774   94.515915  97.81307   97.918594 102.7793
+ 100.863594  91.913086  97.28239   99.23267   97.08049   96.478294
+  98.98656   95.04275   99.230385  99.26141   89.24536   95.440384
+  97.89865   99.13215   97.437775  99.47028   98.205475  97.51703
+  96.55013   96.74703   97.43467   96.69277   98.73068   97.68525
+  98.67472   97.141556  95.74901   94.41172   97.32841   92.95375
+  97.61725   98.18623   96.1981    97.885735  98.06496   96.3437
+  97.9103    77.16378   97.44568   96.95087  101.29862   97.58365
+  93.22854   95.892426  98.27465  100.90059   97.75233  100.8969
+  97.99603   98.95386   96.44604  100.6201    98.774574  98.78569
+  98.59753   96.63845   98.595146  95.8223    97.4667    97.93186
+  96.82225   98.5393    97.517235  98.399864  98.82756   98.07901
+  97.08186   96.78774   98.38248   98.24492   95.2971    97.9158
+  98.46803   98.0678    97.79237   98.30241   97.27719   99.85098
+  98.86019   97.41206   98.55979   98.55636   99.11342   98.96106
+  98.56554   96.643166  98.09844   96.907074 100.14484   97.83673
+  97.5513    97.103874  99.10628   97.62002   94.62715   98.50369
+  99.5472    98.13602   98.867905  97.99279   97.5651    97.92291
+  95.71238   91.22363   83.57584   96.65779  104.65599   97.384865
+  97.07399   96.85012   99.316826  97.232765  96.88674   98.75265
+  98.11893   97.87894   99.62769   99.62921   99.00835   99.60325
+  97.7662    98.733765  99.24602   99.55463   96.69457   98.13388
+  96.55251  103.19329   98.56155   96.26978   99.50837   89.71838
+  97.3764   100.73972   96.16809   80.971344]
+560
+[163.28722 156.34232 160.51472 161.7306  160.29584 163.34738 156.73807
+ 179.7153  156.01176 161.17792 161.71286 160.09877 162.31628 156.10593
+ 162.59288 163.56918 153.93404 162.9504  163.0568  169.4943  194.97249
+ 153.57027 183.36102 167.8434  159.3851  166.2303  146.40785 180.48952
+ 163.72827 157.03044 163.55592 160.6835  163.91383 172.53795 182.02919
+ 163.48668 174.35585 169.48085 158.01439 167.05371 159.26286 159.50014
+ 165.8379  168.21739 161.82516 163.32086 159.42366 159.54633 159.30446
+ 178.5548  158.04306 167.89655 238.90552 164.7569  162.22371 156.63048
+ 169.891   156.24765 171.03853 170.72101 161.2329  159.12074 160.95123
+ 159.24995 177.85277 177.55222 166.9131  163.37218 165.16283 181.07314
+ 164.70885 175.09508 177.4163  167.55608 160.72058 163.30046 162.24474
+ 159.62209 180.70949 156.08249 160.93367 163.18271 164.38376 160.67342
+ 170.8897  167.90955 168.54344 171.98071 161.03532 170.0658  183.69266
+ 157.47649 156.03172 158.87273 157.62949 160.08215 155.55553 163.68352
+ 162.54698 159.51671 171.8035  161.43292 167.26616 174.03374 172.09195
+ 157.90826 165.7941  162.53038 162.93573 158.85638 170.79428 161.58098
+ 170.84723 166.62856 170.82048 182.8962  161.40062 189.15979 158.25612
+ 168.34529 179.8691  170.38617 162.60121 163.00278 159.94336 199.20511
+ 157.63257 158.16772 163.98077 165.52074 162.44254 171.2843  174.84616
+ 167.11    169.23555 169.55098 181.41193 163.13235 179.58063 162.15009
+ 172.15292 160.10521 187.93062 161.03613 165.1794  164.88078 166.75745
+ 162.93576 156.79662 168.96901 166.09505 168.97723 180.6193  166.51857
+ 160.50734 166.5724  161.9377  174.06963 175.67647 163.86417 164.31311
+ 169.02785 158.84857 158.12036 166.89153 208.3256  169.10191 164.89015
+ 173.9324  161.45967 170.00044 166.60895 164.47311 160.63559 170.1027
+ 169.2922  166.94212 152.98698 167.3174  156.48732 157.71448 163.9535
+ 155.79614 190.62791 167.47348 163.17204 176.65189 153.23686 160.902
+ 164.59785 155.69568 168.07333 167.06815 171.80957 164.22156 178.78618
+ 176.79234 175.21307 173.74025 152.94945 158.13554 164.03172 173.8296
+ 168.92215 167.14809 166.94792 170.06851 161.06786 161.55565 175.26581
+ 163.55779 171.18958 156.27925 159.52505 163.06514 172.60858 162.37987
+ 152.03645 165.40187 155.9774  167.40381 147.48357 156.49878 165.98154
+ 165.97722 167.7106  158.42693 168.75905 163.99991 163.62926 151.80096
+ 154.40741 211.85486 165.8842  158.83131 155.7153  175.7594  173.29893
+ 165.01912 155.08475 166.3727  175.94998 151.13506 171.18512 161.48932
+ 193.26102 167.05711 156.21143 154.97351 166.73567 176.5997  169.64023
+ 161.80838 167.51434 162.34483 158.00812 170.76488 179.82492 166.06587
+ 162.6632  184.68794 178.03645 167.03593 169.8018  181.43    155.56741
+ 166.65436 172.99355 170.08063 181.6068  174.25085 164.79984 168.84862
+ 159.14163 160.92856 183.42194 168.1164  168.84505 166.41824 182.15619
+ 176.93758 159.35791 162.12752 167.24457 163.78879 160.33626 168.97243
+ 173.12341 164.81842 167.63698 167.50237 167.00096 164.9734  170.94315
+ 163.33871 165.90813 181.10048 171.57858 173.9548  187.91228 178.97792
+ 167.80122 168.61528 162.00581 164.96138 173.51703 168.4981  167.07451
+ 171.989   164.94292 164.10983 180.08588 163.81914 164.18716 167.77579
+ 160.28693 161.35399 170.77664 165.26138 162.17725 158.68225 167.33786
+ 169.46196 169.9936  161.77408 184.05597 165.6118  195.2099  171.43634
+ 165.89944 171.07721 163.31941 160.97621 164.64017 168.14445 162.2107
+ 161.33008 174.82188 164.05302 166.06898 170.48929 168.79178 165.32649
+ 160.13751 184.31458 173.77199 174.79428 161.70036 177.07857 181.56851
+ 172.38751 164.69836 164.11421 181.40521 182.5752  159.72343 168.0527
+ 197.76361 167.2108  164.85686 168.28816 169.45784 167.76291 173.47832
+ 168.226   163.65237 170.2615  164.18787 175.53807 165.02553 172.787
+ 169.2417  166.01752 169.37727 171.25598 183.98306 165.48677 186.0678
+ 189.11635 167.336   175.51532 171.58986 160.85388 186.06625 191.19092
+ 165.41142 168.58598 162.67621 163.75719 172.76431 173.56836 166.81863
+ 181.27449 169.3976  163.1615  166.13872 166.08995 168.65353 161.19206
+ 172.3061  172.41899 169.55711 166.57185 168.95798 171.68684 177.16814
+ 166.012   163.2692  170.50894 165.96414 174.84125 163.21202 197.59933
+ 166.25467 172.59422 167.37936 166.83788 179.01468 177.35309 181.41315
+ 176.2088  168.31795 182.88203 183.61801 181.39098 170.4726  173.83951
+ 167.52194 167.82568 167.31874 164.94447 166.14589 171.67241 184.81325
+ 164.92555 176.87106 173.86333 170.01495 186.11581 162.88675 174.57701
+ 165.99689 184.97552 169.5939  164.61356 173.82373 188.20882 186.22275
+ 175.82437 171.67099 179.12704 180.10616 190.284   177.32494 186.55305
+ 176.47066 180.09209 164.15521 183.16139 162.51453 179.03671 187.9978
+ 186.3351  182.76529 171.14354 175.75232 164.12654 192.74118 190.9168
+ 189.1596  188.6338  176.41801 183.7583  185.9759  168.64369 188.03738
+ 187.76012 190.88574 212.61494 202.12517 170.1283  197.99686 176.05634
+ 187.90594 181.86476 179.63138 190.36855 169.60793 166.04094 165.87427
+ 176.30159 186.6836  176.39763 180.34291 193.10576 189.17209 183.09642
+ 184.48265 183.4611  183.05203 184.68997 168.30135 179.3911  185.05959
+ 187.71513 189.99608 174.08128 170.98419 194.13133 185.09001 187.68497
+ 182.03146 173.342   185.02063 187.4355  184.7193  180.25215 175.66826
+ 186.07405 176.93681 182.91716 177.19566 176.19547 183.34991 185.34483
+ 191.59923 190.16772 175.97853 187.97404 177.43791 182.7189  182.72258
+ 187.49796 182.68105 171.90413 184.8892  178.2219  180.20505 183.30031
+ 185.82176 182.27068 203.43419 208.07742 192.63057 178.73161 183.04774
+ 186.17386 200.31204 185.91249 178.49248 183.31694 190.02602 183.81178
+ 175.73744 179.17526 178.40974 179.25513 178.8428  183.76143 179.20149]
+(560, 77)
+nan 1.5639346646281802 0.5719920113307091 Global errors
+[]
+Traceback (most recent call last):
+  File "single_frame_detect2.py", line 628, in <module>
+    star_arr=run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df_name, outLoc, plotLoc )
+  File "single_frame_detect2.py", line 556, in run_sf_detect
+    n, bins, patches = plt.hist(x=size, bins='auto', histtype=u'step')                       
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/matplotlib/pyplot.py", line 2605, in hist
+    **({"data": data} if data is not None else {}), **kwargs)
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/matplotlib/__init__.py", line 1414, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/matplotlib/axes/_axes.py", line 6641, in hist
+    m, bins = np.histogram(x[i], bins, weights=w[i], **hist_kwargs)
+  File "<__array_function__ internals>", line 6, in histogram
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/lib/histograms.py", line 793, in histogram
+    bin_edges, uniform_bins = _get_bin_edges(a, bins, range, weights)
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/lib/histograms.py", line 396, in _get_bin_edges
+    first_edge, last_edge = _get_outer_edges(a, range)
+  File "/home/dutta26/.conda/envs/cent7/2020.11-py38/test/lib/python3.7/site-packages/numpy/lib/histograms.py", line 324, in _get_outer_edges
+    "autodetected range of [{}, {}] is not finite".format(first_edge, last_edge))
+ValueError: autodetected range of [nan, nan] is not finite

@@ -1,0 +1,9 @@
+#!/bin/sh -l 
+# FILENAME:  run_test.sub 
+#cd /home/dutta26/Downloads/phosim_release/  
+#./phosim /home/dutta26/codes/wiyn_wl_sim/testCatalog.txt -i wiyn_odi -c examples/nobackground -o /scratch/bell/dutta26/wiyn_sim/ -w /scratch/bell/dutta26/wiyn_sim/work/ -- keepcatalog
+
+module load anaconda/2020.11-py38
+source activate /home/dutta26/.conda/envs/cent7/2020.11-py38/test
+
+python runPhosim.py r

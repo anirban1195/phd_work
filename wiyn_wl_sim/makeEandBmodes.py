@@ -66,9 +66,9 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
     #i_coadd_df = np.array(pd.read_pickle('/home/dutta26/codes/coaddSc_i.pk1'))
     #z_coadd_df = np.array(pd.read_pickle('/home/dutta26/codes/coaddSc_z_.pk1'))
     
-    bkgIndices = np.where( (redShiftArr>z_min )& (redShiftArr<z_max)& (ir_coadd_data[:,3] > 20) & (ir_coadd_data[:,3] < 1e9)
+    bkgIndices = np.where( (redShiftArr>z_min )& (redShiftArr<z_max)& (ir_coadd_data[:,3] > 10) & (ir_coadd_data[:,3] < 1e10)
                           & (ir_coadd_data[:,2] == 0))[0]
-    
+    print (len(bkgIndices))
     #sys.exit()
     temp_coadd = np.zeros((40,40))
     
@@ -110,7 +110,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
     #for j in [17420]:   
         #print (j)
         
-        if(j not in bkgIndices or ir_coadd_data [j,3] == 0  or ir_coadd_data [j,13] == 1 or ir_coadd_data [j,14] == 1 or ir_coadd_data[j,59]==1):
+        if(j not in bkgIndices or ir_coadd_data [j,3] == 0  or ir_coadd_data [j,13] == 1 or ir_coadd_data [j,14] == 1 or  ir_coadd_data [j,59] == 1):
             continue
         
         sigxx_arr=[]
@@ -140,8 +140,8 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
         coadd_measurement_flag = 0.0
     
         #If super faint use coadd measurements
-        if(ir_coadd_data [j,3] < 10e10 or r_coadd_npy[j,3]<=0 or i_coadd_npy[j,3]<=0 ):
-            
+        if(ir_coadd_data [j,3] < 10 or r_coadd_npy[j,3]<=0 or i_coadd_npy[j,3]<=0 ):
+        
             sigxx_arr.append(ir_coadd_data [j,35])
             sigyy_arr.append(ir_coadd_data [j,36])
             sigxy_arr.append(ir_coadd_data [j,37])
@@ -273,14 +273,14 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
                 e2_temp = 2* sigxy_arr[len(sigxy_arr)-1]/(sigxx_arr[len(sigxx_arr)-1] + sigyy_arr[len(sigyy_arr)-1])
                 e_temp = np.sqrt(e1_temp**2 + e2_temp**2)
                 
-                turb_xx = np.sqrt(r_sf_npy[k,j,41]**2 - r_sf_npy[k,j,74]**2)
-                turb_yy = np.sqrt(r_sf_npy[k,j,42]**2 - r_sf_npy[k,j,75]**2)
+                turb_xx = np.sqrt(r_sf_npy[k,j,41]**2 )
+                turb_yy = np.sqrt(r_sf_npy[k,j,42]**2 )
                 turb_avg = 0.5*(turb_xx+turb_yy)
                 
                
                 
                 
-                error =np.sqrt(size**4/N + (4*np.pi*size**6*B)/N**2 + turb_avg**2)
+                error =np.sqrt(size**4/N + (4*np.pi*size**6*B)/N**2 +turb_avg)
                 if(error == 0 or error == None or np.isnan(error)):
                     error = 10000000000
                     wtArr.append(1/error)
@@ -380,13 +380,13 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
                 e2_temp = 2* sigxy_arr[len(sigxy_arr)-1]/(sigxx_arr[len(sigxx_arr)-1] + sigyy_arr[len(sigyy_arr)-1])
                 e_temp = np.sqrt(e1_temp**2 + e2_temp**2)
                 
-                turb_xx = np.sqrt(i_sf_npy[k,j,41]**2 - i_sf_npy[k,j,74]**2)
-                turb_yy = np.sqrt(i_sf_npy[k,j,42]**2 - i_sf_npy[k,j,75]**2)
+                turb_xx = np.sqrt(i_sf_npy[k,j,41]**2 )
+                turb_yy = np.sqrt(i_sf_npy[k,j,42]**2 )
                 turb_avg = 0.5*(turb_xx+turb_yy)
                 
                 
                 
-                error = np.sqrt(size**4/N + (4*np.pi*size**6*B)/N**2 + turb_avg**2)
+                error = np.sqrt(size**4/N + (4*np.pi*size**6*B)/N**2 +turb_avg)
                 
                 if(error == 0 or error == None or np.isnan(error)):
                     error = 10000000000
@@ -400,7 +400,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
                     
         print (j,len(wtArr), len(indexArr))
         
-        if(len(wtArr) <= 20):
+        if(len(wtArr) <= 10):
             
             sigxx_arr=[]
             sigyy_arr=[]
@@ -445,7 +445,12 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             e1_temp = (sigxx_arr[len(sigxx_arr)-1] - sigyy_arr[len(sigyy_arr)-1])/(sigxx_arr[len(sigxx_arr)-1] + sigyy_arr[len(sigyy_arr)-1])
             e2_temp = 2* sigxy_arr[len(sigxy_arr)-1]/(sigxx_arr[len(sigxx_arr)-1] + sigyy_arr[len(sigyy_arr)-1])
             e_temp = np.sqrt(e1_temp**2 + e2_temp**2)
-            error = ir_coadd_data[j,68] #np.sqrt((size**4/N + (4*np.pi*size**6 *B)/N**2)) 
+            turb_xx = np.sqrt(ir_coadd_data[j,41]**2 )
+            turb_yy = np.sqrt(ir_coadd_data[j,42]**2 )
+            turb_avg = 0.5*(turb_xx+turb_yy)
+            
+            
+            error = np.sqrt(ir_coadd_data[j,68] + turb_avg) #np.sqrt((size**4/N + (4*np.pi*size**6 *B)/N**2)) 
             if(error <= 0 or error== None or np.isnan(error)):
                 error = 100000000
                 
@@ -469,6 +474,11 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
         
         if(len(wtArr)== 1):
             cnt3+= 1
+            
+        N_corr_arr = np.array(N_corr_arr)
+        mean_N,med_N, std_N = sigma_clipped_stats(N_corr_arr, cenfunc=np.median)
+        
+             
         #Now correct for PSF and use monte carlo if needed
         corr_sigxx_arr=[]
         corr_sigyy_arr=[]
@@ -485,10 +495,23 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
         sigxx_err_arr = np.array(sigxx_err_arr)
         sigyy_err_arr = np.array(sigyy_err_arr)
         sigxy_err_arr = np.array(sigxy_err_arr)
-    
+        sigxx_arr = np.array(sigxx_arr)
+        sigyy_arr = np.array(sigyy_arr)
+        sigxy_arr = np.array(sigxy_arr)
+        sigxx_err_arr = np.array(sigxx_err_arr)
+        sigyy_err_arr = np.array(sigyy_err_arr)
+        sigxy_err_arr = np.array(sigxy_err_arr)
+        psfsigxx_arr = np.array(psfsigxx_arr)
+        psfsigyy_arr = np.array(psfsigyy_arr)
+        psfsigxy_arr = np.array(psfsigxy_arr)
         
+        mean_xx, med_xx, std_xx = sigma_clipped_stats(sigxx_arr - psfsigxx_arr, cenfunc=np.median)
+        mean_yy, med_yy, std_yy = sigma_clipped_stats(sigyy_arr - psfsigyy_arr, cenfunc=np.median)
+        mean_xy, med_xy, std_xy = sigma_clipped_stats(sigxy_arr - psfsigxy_arr, cenfunc=np.median)
         
-        validIndices = np.where(wtArr >0)[0]
+        validIndices = np.where((wtArr >0) & (N_corr_arr< (med_N+3*std_N)) & (N_corr_arr> (med_N-3*std_N)) 
+                                & (N_corr_arr> 0 ) )[0]
+        
         for k in range(len(sigxx_arr)):
             corr_xx = sigxx_arr[k] - psfsigxx_arr[k]
             corr_yy = sigyy_arr[k] - psfsigyy_arr[k]
@@ -496,7 +519,11 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             corr_sigxx_arr.append(corr_xx)
             corr_sigyy_arr.append(corr_yy)
             corr_sigxy_arr.append(corr_xy)
+            if(k not in validIndices and len(wtArr)>10):
+                wtArr[k] = 0
             
+        print (wtArr)
+        wtArr = wtArr/np.sum(wtArr)
         #corr_sigxx = np.sum(corr_sigxx_arr*1/sigxx_err_arr**4)/np.sum(1/sigxx_err_arr**4)
         #corr_sigyy = np.sum(corr_sigyy_arr*1/sigxx_err_arr**4)/np.sum(1/sigxx_err_arr**4)
         #corr_sigxy = np.sum(corr_sigxy_arr*1/sigxx_err_arr**4)/np.sum(1/sigxx_err_arr**4)
@@ -522,33 +549,35 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
         err_xx = np.sqrt(err_xx**2 )
         err_yy = np.sqrt(err_yy**2 )
         err_xy = np.sqrt(err_xy**2 )
-        if(corr_sigxx<0 or corr_sigyy<0 or temp<0):
-            #print ('wtf',corr_sigxx, ir_coadd_data [j,68], ir_coadd_data [j,41],ir_coadd_data [j,7], ir_coadd_data [j,3],corr_sigxx_arr, j)
-        #if(True):
-            #print (corr_sigxx,  corr_sigyy, corr_sigxy)
-            cnt1 += 1
-            
-            a1 ,b1, c1, success = helper.correct(corr_sigxx, corr_sigyy, corr_sigxy, 0,0,0,
-                                                                err_xx, err_yy, err_xy, 0,0,0)
-            
-            if(success < 500000):
-                #print (corr_sigxx,  err_xx, np.sqrt(ir_coadd_data[j,68]**2 + ir_coadd_data[j,41]**2))
-                #print (corr_xx, corr_yy, err_xx, err_yy)
-                failedArr.append(j)
-                corr_sigxx =corr_sigyy=0.01
-                corr_sigxy=0
-                cnt2 += 1
-                
-                x = int(ir_coadd_data [j,10])
-                y = int(ir_coadd_data [j,11])
-                #f1[0].data[y-20: y+20, x-20] = 1000*j
-                #f1[0].data[y-20: y+20, x+20] = 1000*j
-                #f1[0].data[y-20, x-20:x+20] = 1000*j
-                #f1[0].data[y+20, x-20:x+20] = 1000*j
-            else:
-                corr_sigxx = a1
-                corr_sigyy = b1
-                corr_sigxy = c1
+# =============================================================================
+#         if(corr_sigxx<0 or corr_sigyy<0 or temp<0):
+#             #print ('wtf',corr_sigxx, ir_coadd_data [j,68], ir_coadd_data [j,41],ir_coadd_data [j,7], ir_coadd_data [j,3],corr_sigxx_arr, j)
+#         #if(True):
+#             #print (corr_sigxx,  corr_sigyy, corr_sigxy)
+#             cnt1 += 1
+#             
+#             a1 ,b1, c1, success = helper.correct(corr_sigxx, corr_sigyy, corr_sigxy, 0,0,0,
+#                                                                 err_xx, err_yy, err_xy, 0,0,0)
+#             
+#             if(success < 500000):
+#                 #print (corr_sigxx,  err_xx, np.sqrt(ir_coadd_data[j,68]**2 + ir_coadd_data[j,41]**2))
+#                 #print (corr_xx, corr_yy, err_xx, err_yy)
+#                 failedArr.append(j)
+#                 corr_sigxx =corr_sigyy=0.01
+#                 corr_sigxy=0
+#                 cnt2 += 1
+#                 
+#                 x = int(ir_coadd_data [j,10])
+#                 y = int(ir_coadd_data [j,11])
+#                 #f1[0].data[y-20: y+20, x-20] = 1000*j
+#                 #f1[0].data[y-20: y+20, x+20] = 1000*j
+#                 #f1[0].data[y-20, x-20:x+20] = 1000*j
+#                 #f1[0].data[y+20, x-20:x+20] = 1000*j
+#             else:
+#                 corr_sigxx = a1
+#                 corr_sigyy = b1
+#                 corr_sigxy = c1
+# =============================================================================
                 
             
         
@@ -565,6 +594,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
         xy_coadd = ir_coadd_data [j,37]+ir_coadd_data [j,40]
         e1_coadd = (xx_coadd-yy_coadd)/(xx_coadd+yy_coadd)
         e2_coadd = 2*xy_coadd/(xx_coadd+yy_coadd)
+        
         #print (e1, e1_coadd, j)
         
         #print (corr_sigxx-ir_coadd_data [j,35]+ir_coadd_data [j,38], corr_sigyy-ir_coadd_data [j,36]+ir_coadd_data [j,39])
@@ -586,7 +616,9 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
         master_frame[j,12] = err_xy
         master_frame[j,13] = np.sqrt( err_xx**2 * 4* (corr_sigxx**2+corr_sigyy**2)/(corr_sigxx+corr_sigyy)**4)
         master_frame[j,14] = np.sqrt( (err_xx**2 * 8* (corr_sigxy**2)/(corr_sigxx+corr_sigyy)**4) + (err_xy**2 * 4/(corr_sigxx+corr_sigyy)**2))
-        master_frame[j,15] = np.sqrt((e1_coadd**2 *master_frame[j,13]**2 / (e1_coadd**2 + e2_coadd**2)) + (e2_coadd**2 *master_frame[j,14]**2 / (e1_coadd**2 + e2_coadd**2)) )
+        #master_frame[j,15] = np.sqrt((e1_coadd**2 *master_frame[j,13]**2 / (e1_coadd**2 + e2_coadd**2)) + (e2_coadd**2 *master_frame[j,14]**2 / (e1_coadd**2 + e2_coadd**2)) )
+        master_frame[j,15] = np.sqrt((e1**2 *master_frame[j,13]**2 / (e1**2 + e2**2)) + (e2**2 *master_frame[j,14]**2 / (e1**2 + e2**2)) )
+
         size = np.sqrt(corr_sigxx + corr_sigyy)
 # =============================================================================
 #         if(j==1387):
@@ -598,31 +630,31 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
         if(np.log10(ir_coadd_data [j,3])> 1 and  size<=0):
             print ('abc', ir_coadd_data [j,2], size)
             
-    np.save(outFile, master_frame)
+    #np.save(outFile, master_frame)
     #f1.flush()
     
     #sys.exit()
     arr1=np.array(arr1)
     arr2=np.array(arr2)
     arr3=np.array(arr3)
-    arr1=arr1[arr1<5]
+    arr1=arr1[arr1<2]
     arr1=arr1[arr1>-5]
-    arr2=arr2[arr2<5]
+    arr2=arr2[arr2<2]
     arr2=arr2[arr2>-5]
-    arr3=arr3[arr3<5]
+    arr3=arr3[arr3<2]
     arr3=arr3[arr3>-5]
-# =============================================================================
-#     n, bins, patches = plt.hist(x=arr1, bins='auto', histtype=u'step', color='r', label='xx') 
-#     n, bins, patches = plt.hist(x=arr2, bins='auto', histtype=u'step', color='b', label='yy')  
-#     n, bins, patches = plt.hist(x=arr3, bins='auto', histtype=u'step', color='k', label='xy')                      
-#     plt.xlabel('Deviation of sigmas from I+R coadd sigmas')
-#     plt.legend()
-#     plt.savefig('/scratch/bell/dutta26/wiyn_sim/sig_dev.png')
-#     plt.close()
-# =============================================================================
+    n, bins, patches = plt.hist(x=arr1, bins='auto', histtype=u'step', color='r', label=r'$\sigma^2_{xx}$(Single Frame) - $\sigma^2_{xx}$(Coadd)') 
+    n, bins, patches = plt.hist(x=arr2, bins='auto', histtype=u'step', color='b', label=r'$\sigma^2_{yy}$(Single Frame) - $\sigma^2_{yy}$(Coadd)')  
+    n, bins, patches = plt.hist(x=arr3, bins='auto', histtype=u'step', color='k', label=r'$\sigma^2_{xy}$(Single Frame) - $\sigma^2_{xy}$(Coadd)')                      
+    plt.xlabel('In Pixels')
+    plt.legend(loc='upper left')
+    plt.savefig('/scratch/bell/dutta26/wiyn_sim/sig_dev.png')
+    plt.close()
     print (arr1, arr2, arr3)
-    print (cnt1, cnt3)
-    
+    print (cnt1, cnt3, len(bkgIndices))
+    print (np.median(arr1), np.median(arr2), np.median(arr3))
+    print (np.mean(arr1), np.mean(arr2), np.mean(arr3))
+    print (np.std(arr1), np.std(arr2), np.std(arr3))
 # =============================================================================
 #     save_arr= np.zeros((len(arr_sf_wt), 2))
 #     save_arr[:,0] = arr_sf_wt

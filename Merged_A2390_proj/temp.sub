@@ -8,14 +8,20 @@ source activate /home/dutta26/.conda/envs/cent7/2020.11-py38/test
 #cd /home/dutta26/apps/bin/bin/
 #./swarp @/home/dutta26/file_list.ascii -c /home/dutta26/default.swarp -IMAGEOUT_NAME /scratch/bell/dutta26/abell_2390/abell_ir_coadd.fits -WEIGHTOUT_NAME /scratch/bell/dutta26/abell_2390/#abell_ir_coadd.weight.fits -RESAMPLE_DIR /scratch/bell/dutta26/abell_2390/
 
-cd /home/dutta26/apps/bin/bin/
-./swarp @/home/dutta26/file_list_temp.ascii -c /home/dutta26/default.swarp -IMAGEOUT_NAME /scratch/bell/dutta26/abell_2390/temp5_r.fits -WEIGHTOUT_NAME /scratch/bell/dutta26/abell_2390/temp5_r.weight.fits -RESAMPLE_DIR /scratch/bell/dutta26/abell_2390/
+#cd /home/dutta26/apps/bin/bin/
+#./swarp @/home/dutta26/file_list_temp.ascii -c /home/dutta26/default.swarp -IMAGEOUT_NAME /scratch/bell/dutta26/abell_2390/temp5_r.fits -WEIGHTOUT_NAME /scratch/bell/dutta26/abell_2390/temp5_r.weight.fits -#RESAMPLE_DIR /scratch/bell/dutta26/abell_2390/
+
+
+
+
+
+
 
 
 #Crop the coadded file 
-#cd /home/dutta26/codes/makeWeights/
-#python makeFinalCuts.py /scratch/bell/dutta26/abell_2390/abell_ir_coadd.fits /scratch/bell/dutta26/abell_2390/abell_ir_coadd_crop.fits 
-#python makeFinalCuts.py /scratch/bell/dutta26/abell_2390/abell_ir_coadd.weight.fits /scratch/bell/dutta26/abell_2390/abell_ir_coadd_crop.weight.fits
+cd /home/dutta26/codes/makeWeights/
+python makeFinalCuts.py /scratch/bell/dutta26/abell_2390/abell_ir_coadd.fits /scratch/bell/dutta26/abell_2390/abell_ir_coadd_crop.fits 
+python makeFinalCuts.py /scratch/bell/dutta26/abell_2390/abell_ir_coadd.weight.fits /scratch/bell/dutta26/abell_2390/abell_ir_coadd_crop.weight.fits
 
 
 

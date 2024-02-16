@@ -14,7 +14,9 @@ import os
 import sys
 from astropy import wcs 
 from astropy.nddata.utils import Cutout2D
-
+from astropy.stats import sigma_clipped_stats
+from scipy.optimize import curve_fit
+import matplotlib.pyplot as plt
 #import measure_pythonV
 
 
@@ -242,7 +244,9 @@ def getLoc (raList, decList , filename):
     raEndArr =np.zeros((31 ,8 ,8), dtype = np.float32)
     decStartArr=np.zeros((31 ,8 ,8), dtype = np.float32)
     decEndArr = np.zeros((31 ,8 ,8), dtype = np.float32)
+    bkgVarianceArr =np.zeros((31 ,8 ,8), dtype = np.float32)
     for j in range(1,31):
+         img = np.array(f[j].data)
          w = wcs.WCS(f[j].header)
          for y in range(8):
              for x in range(8):
@@ -250,10 +254,15 @@ def getLoc (raList, decList , filename):
                  xEnd = xStart + 470
                  yStart = 5+ (y*505)
                  yEnd = yStart + 484
+                 data = img[yStart:yEnd, xStart:xEnd]
                  [[raStartArr[j,y,x], decStartArr[j,y,x]]] = w.wcs_pix2world([[yStart, xStart]], 0)
                  [[raEndArr[j,y,x], decEndArr[j,y,x]]] = w.wcs_pix2world([[yEnd, xEnd]], 0)
                  
-    
+                 data = img[yStart:yEnd, xStart:xEnd]
+                 mean, median, stddev = sigma_clipped_stats(data, cenfunc=np.median)
+                 bkgVarianceArr[j,y,x] = stddev**2
+                 
+    f.close()
     segArr=[]
     chip_x =[]
     chip_y =[]
@@ -269,7 +278,7 @@ def getLoc (raList, decList , filename):
             segArr.append(loc[0][0])
             chip_x.append(loc[1][0])
             chip_y.append(loc[2][0])
-    return segArr, chip_x, chip_y    
+    return segArr, chip_x, chip_y, bkgVarianceArr    
 
 
 
@@ -353,7 +362,7 @@ def make2Dsubcuts( df_slice,  seqNo, writeLoc, sfLoc, band, j):
             
 
     
-def measure_new(img ,lut1, lut2, guessFlux = 100, guessmux = 0, guessmuy=0 , guessAlphax =3, guessAlphay =3, guessAlphaxy =0 , counter_target = 100, distort = 0):
+def measure_new(img ,lut1, lut2, guessFlux = 100, guessmux = 0, guessmuy=0 , guessAlphax =3, guessAlphay =3, guessAlphaxy =0 , counter_target = 100, distort = 0, fixBkg=0, back_calc=0):
     #Shape the image properly
     img = np.array(img)
     sizey, sizex = np.shape(img)
@@ -365,7 +374,7 @@ def measure_new(img ,lut1, lut2, guessFlux = 100, guessmux = 0, guessmuy=0 , gue
     if(sizey > 100):
         midY = int(round(sizey/2.0))
         img = img[midY-50: midY+50, :]
-    if(sizex< 30 or sizey<30):
+    if(sizex< 20 or sizey<20):
         return None, None, None,None, None, None, None, None, None, None
     
     #If guess sigmas it too small or large
@@ -408,7 +417,9 @@ def measure_new(img ,lut1, lut2, guessFlux = 100, guessmux = 0, guessmuy=0 , gue
     e1 = e2 = 0.0
     
     med = np.median(img)
-    back_calc = np.median(img)
+    if(fixBkg==0):
+        back_calc = np.median(img)
+    
     total = np.sum(img)
     counter = 0
     
@@ -417,7 +428,7 @@ def measure_new(img ,lut1, lut2, guessFlux = 100, guessmux = 0, guessmuy=0 , gue
     #Loop until convergence
     
     while( (abs(delSigxx)>0.001 or abs(delSigyy)> 0.001) and counter<counter_target):
-        #print (alphax, alphay,alphaxy)
+        #print (alphax, alphay,alphaxy, counter)
         #Correct alphxy to avoid nans
         while( (alphaxy/(alphax*alphay))**2  >= 1):
             #print (alphax, alphay, alphaxy)
@@ -429,7 +440,7 @@ def measure_new(img ,lut1, lut2, guessFlux = 100, guessmux = 0, guessmuy=0 , gue
                 counter = counter_target+999
                 break
         #If size too large exit
-        if(abs(alphaxy)> sizex/2  or abs(alphax) > sizex/2 or abs(alphay)> sizey/2):
+        if(abs(alphaxy)> sizex/2  or abs(alphax) > sizex/3 or abs(alphay)> sizey/3):
             counter = counter_target+999
             break
         
@@ -478,7 +489,7 @@ def measure_new(img ,lut1, lut2, guessFlux = 100, guessmux = 0, guessmuy=0 , gue
         e2 = 2*sigxy_calc/(sigxx_calc + sigyy_calc)
         #ellip = np.sqrt(e1*e1 + e2*e2)
         
-        if(med != 0 ):
+        if(med != 0 and fixBkg==0):
             back_calc = (total - flux_calc)/ (sizex*sizey)
             
         delSigxx = prevSigxx - sigxx_calc
@@ -500,7 +511,7 @@ def measure_new(img ,lut1, lut2, guessFlux = 100, guessmux = 0, guessmuy=0 , gue
         
         counter += 1
         
-    
+    #print (alphax, alphay, alphaxy)
     #If failed convergence, return None         
     if(counter == (counter_target+999)):
         return None, None, None,None, None, None, None, None, None, None
@@ -559,3 +570,432 @@ def measure_new(img ,lut1, lut2, guessFlux = 100, guessmux = 0, guessmuy=0 , gue
         return flux_calc, mux_calc, muy_calc, e1, e2, back_calc, np.sqrt(sigxx_calc + sigyy_calc), sigxx_calc, sigyy_calc, sigxy_calc
 
 
+def findBoundRadius(store):
+    boundArr =[]
+    for j in range(len(store)):
+        thresh =0.11
+        flux = store[j,3]
+        fact = 1
+        if(flux>1000):
+            fact = 2
+        elif(flux<200):
+            fact = 1
+        else:
+            fact = (flux-200)/800 +1
+        maxVal = max(store[j,7] , store[j,8])
+        size = np.sqrt(maxVal*2)
+        if(np.isnan(size) or np.isnan(flux) or flux<=0 or size<=0):
+            boundArr.append(0)
+            continue
+        r= fact*np.sqrt( -2* size**2 * np.log(thresh*2*np.pi*size**2/ flux))
+        if(r<13):
+            r= 13
+        boundArr.append(r)
+    
+    flagArr=[]
+    minArr=[]
+    angleArr=[]
+    for j in range(len(store)):
+        print (j)
+        flux = store[j,3]
+        size = np.sqrt(store[j,7] + store[j,8])
+        if(np.isnan(size) or np.isnan(flux) or flux<=0 or size<=0):
+            flagArr.append(0)
+            minArr.append(0)
+            angleArr.append(0)
+            continue
+        x,y = store[j,10], store[j,11]
+        dist = 999999999
+        flag = 0
+        maxLt = j+1000
+        minLt = j-1000
+        if(minLt<0):
+            minLt = 0
+        if(maxLt>len(store)):
+            maxLt = len(store)
+        minDist =99999999
+        angle = 0
+        for k in range(minLt, maxLt):
+            if(j==k):
+                continue
+            x1,y1 = store[k,10], store[k,11]
+            dist = np.sqrt((x-x1)**2 + (y-y1)**2)
+            if(dist>200):
+                continue
+            crit_dist = boundArr[j] + boundArr[k]
+            if(dist<crit_dist):
+                flag = 1
+            if(dist<minDist):
+                minDist =dist
+                angle =np.arctan2(y1-y, x1-x)
+        flagArr.append(flag)
+        minArr.append(minDist)
+        angleArr.append(angle)
+    return boundArr, flagArr, minArr, angleArr
+
+
+
+def bkgFlagCalculate(img, store, arr_min=5000, arr_max=27000):
+    flagArr=[]
+    angleArr= np.arange(0, 3.14+0.01, 3.14/4)
+    gmean, gmedian, gstd = sigma_clipped_stats(img[arr_min:arr_max, arr_min:arr_max])
+    for j in range(len(store)):
+        #print (j, 'aa')
+        flag =0
+        thresh = gstd
+        flux = store[j,3]
+        fact = 1
+# =============================================================================
+#         if(flux>1000):
+#             fact = 2
+#         elif(flux<200):
+#             fact = 1
+#         else:
+#             fact = (flux-200)/800 +1
+# =============================================================================
+        maxVal = max(store[j,7] , store[j,8])
+        size = np.sqrt(maxVal*2)
+        if(np.isnan(size) or np.isnan(flux) or flux<=0 or size<=0):
+            flagArr.append(99)
+            continue
+        test = -2* size**2 * np.log(thresh*2*np.pi*size**2/ flux)
+        if(test< 0):
+            #print (thresh*2*np.pi*size**2/ flux , flux, size)
+            r= 13
+        else:
+            r= fact*np.sqrt( -2* size**2 * np.log(thresh*2*np.pi*size**2/ flux))
+        if(r<13):
+            r= 13
+        if(np.isnan(r) or r==None):
+            flag = 99
+            flagArr.append(flag)
+            continue
+        x,y = int(round(store[j,10])), int(round(store[j,11]))
+        r1 = int(round((r/1.414)))
+        
+        med1 = np.median(img[y+r1:y+r1+4 , x+r1:x+r1+4] )
+        med2 = np.median(img[y+r1:y+r1+4 , x-r1-4:x-r1] )
+        med3 = np.median(img[y-r1-4:y-r1, x-r1-4:x-r1] )
+        med4 = np.median(img[y-r1-4:y-r1 , x+r1:x+r1+4] )
+        r = int(round(r))
+        med5 = np.median(img[y-2:y+2 , x+r:x+r+4] )
+        med6 = np.median(img[y-2:y+2 , x-r-4:x-r] )
+        med7 = np.median(img[y+r:y+r+4 , x-2:x+2] )
+        med8 = np.median(img[y-r-4:y-r , x-2:x+2] )
+        
+        lt_low = gmedian - 3*gstd
+        lt_high = gmedian + 3*gstd
+        tempArr= np.array([med1, med2, med3, med4, med5, med6, med7, med8])
+        for val in tempArr:
+            if(np.isnan(val) or val == None):
+                flag = 1
+        l1 = l2= 0
+        #l1 = len(np.where( (tempArr> (gmedian + 3*gstd) ) | (tempArr< (gmedian - 3*gstd) ) ) [0])
+        #l2 = len(np.where( (tempArr> (gmedian + 2*gstd) ) | (tempArr< (gmedian - 2*gstd) ) ) [0])
+        #l3 = len(np.where( (tempArr>gmedian + 1*gstd) | (tempArr<gmedian - 1*gstd)))
+        if(l1>=1  or l2>=2):
+            flag = 1
+        
+        #Check for self consistency
+        locMean, locMed, locStd = sigma_clipped_stats(tempArr, sigma=3)
+# =============================================================================
+#         if(locMed >  (gmedian + 3*gstd) or locMed <  (gmedian + 3*gstd)):
+#             flag = 1
+# =============================================================================
+        
+        locStd = gstd/2
+        if(locMed > (gmedian+2*gstd)):
+            locStd = locMed/3
+        lc1 = len(np.where( (tempArr> (locMed + 3*locStd) ) | (tempArr< (locMed - 3*locStd) ) ) [0])
+        if(lc1 >= 1):
+            flag = 1
+        if(j in [8336, 9046, 8148]):
+            print (gmedian, gstd, med1, med2, med3, med4, med5, med6, med7,med8, flag,j, locStd, locMed,r)
+        flagArr.append(flag)
+        
+    return flagArr
+        
+            
+        
+def getPSFErr(xxArr, yyArr, xyArr, fluxArr, wtArr, B):
+    wtArr = wtArr/np.sum(wtArr) #Normalize the weights
+    errArr=[]
+    
+    size = np.sqrt(xxArr + yyArr)
+    #print (size)
+    errArr=np.sqrt(size**4/fluxArr + 4*size**6*np.pi * B/(fluxArr**2)  ) 
+     
+    return np.sqrt(np.sum(wtArr**2*errArr**2))
+
+
+
+def gaussian(x, mu, sig, A):
+    return (A)*np.exp(-np.power(x - mu, 2.) / (2 * np.power(sig, 2.)))
+
+
+
+
+def fitGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band):
+    
+    
+    mean_psf_size = np.median(np.sqrt(xxArr+yyArr))
+    err_xx = err_yy = np.sqrt( (mean_psf_size**4/np.median(fluxArr) + (4* np.pi* mean_psf_size**6 * bkg)/(np.median(fluxArr)**2) ) )
+    err_xy = err_xx * 0.707
+
+    k_guess_xx = np.std(xxArr)
+    k_guess_yy = np.std(yyArr)
+    k_guess_xy = np.std(xyArr)
+    
+    mean_xx = np.median( xxArr)
+    mean_yy = np.median( yyArr)
+    mean_xy = np.median( xyArr)
+    
+    
+    #Do for xx
+    data = xxArr
+    counts,bin_edges = np.histogram(data, bins=40)
+    bin_centres = (bin_edges[:-1] + bin_edges[1:])/2.0
+    err = []
+    for j in range(1, len(bin_edges)):
+        bin_start = bin_edges[j-1]
+        bin_end = bin_edges[j]
+        loc1 = np.where((data>=bin_start)& (data<bin_end))[0]
+        if(len(loc1) <=5):
+            err.append(0)
+        else:
+            err.append(np.nanstd(data[loc1]))
+            
+    plt.errorbar(bin_centres, counts, xerr=None, yerr=np.sqrt(counts), fmt='o', markersize = 5)
+    xVal =[]
+    yVal =[]
+    tot = 0
+    start = mean_xx - 5*np.sqrt(k_guess_xx**2 + err_xx**2)
+    cutoff = mean_xx + 5*np.sqrt(k_guess_xx**2 + err_xx**2)
+    #center = 13.6
+    #print (mean_xx, k_guess_xx)
+    for j in range(len(bin_centres)):
+        
+        if(bin_centres[j]> cutoff or bin_centres[j]< start):
+            continue
+        xVal.append(bin_centres[j])
+        yVal.append(counts[j])
+    
+    
+    parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_xx, np.sqrt(k_guess_xx**2 + err_xx**2) , 80])    
+    res_err_xx = np.sqrt(parameters[1]**2 - err_xx**2)
+    #print (parameters[1], err_xx)
+    x_values = np.linspace(mean_xx - 10*np.sqrt(k_guess_xx**2 + err_xx**2),mean_xx + 10*np.sqrt(k_guess_xx**2 + err_xx**2), 25000)
+    plt.plot(x_values, gaussian(x_values,parameters[0], parameters[1], parameters[2]), 'r-',linewidth = 2)
+    plt.savefig(plotLoc+'xx_fit_'+band+'.png')
+    plt.xlabel('Sigma xx')
+    plt.close()
+    
+    
+    
+    #Do for yy
+    data = yyArr
+    counts,bin_edges = np.histogram(data, bins=40)
+    bin_centres = (bin_edges[:-1] + bin_edges[1:])/2.0
+    err = []
+    for j in range(1, len(bin_edges)):
+        bin_start = bin_edges[j-1]
+        bin_end = bin_edges[j]
+        loc1 = np.where((data>=bin_start)& (data<bin_end))[0]
+        if(len(loc1) <=5):
+            err.append(0)
+        else:
+            err.append(np.nanstd(data[loc1]))
+    plt.errorbar(bin_centres, counts, xerr=None, yerr=np.sqrt(counts), fmt='o', markersize = 5)       
+    xVal =[]
+    yVal =[]
+    tot = 0
+    start = mean_yy - 5*np.sqrt(k_guess_yy**2 + err_yy**2)
+    cutoff = mean_yy + 5*np.sqrt(k_guess_yy**2 + err_yy**2)
+    #center = 13.6
+    for j in range(len(bin_centres)):
+        if(bin_centres[j]> cutoff or bin_centres[j]< start):
+            continue
+        xVal.append(bin_centres[j])
+        yVal.append(counts[j])
+    
+    
+    parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_yy, np.sqrt(k_guess_yy**2 + err_yy**2) , 80])    
+    res_err_yy = np.sqrt(parameters[1]**2 - err_yy**2)
+    x_values = np.linspace(mean_yy - 10*np.sqrt(k_guess_yy**2 + err_yy**2),mean_yy + 10*np.sqrt(k_guess_yy**2 + err_yy**2), 25000)
+    plt.plot(x_values, gaussian(x_values,parameters[0], parameters[1], parameters[2]), 'r-',linewidth = 2)
+    plt.savefig(plotLoc+'yy_fit_'+band+'.png')
+    plt.xlabel('Sigma yy')
+    plt.close()
+    
+    #Do for xy
+    data = xyArr
+    counts,bin_edges = np.histogram(data, bins=40)
+    bin_centres = (bin_edges[:-1] + bin_edges[1:])/2.0
+    err = []
+    for j in range(1, len(bin_edges)):
+        bin_start = bin_edges[j-1]
+        bin_end = bin_edges[j]
+        loc1 = np.where((data>=bin_start)& (data<bin_end))[0]
+        if(len(loc1) <=5):
+            err.append(0)
+        else:
+            err.append(np.nanstd(data[loc1]))
+    plt.errorbar(bin_centres, counts, xerr=None, yerr=np.sqrt(counts), fmt='o', markersize = 5)
+
+    xVal =[]
+    yVal =[]
+    tot = 0
+    start = mean_xy - 5*np.sqrt(k_guess_xy**2 + err_xy**2)
+    cutoff = mean_xy + 5*np.sqrt(k_guess_xy**2 + err_xy**2)
+    #center = 13.6
+    for j in range(len(bin_centres)):
+        if(bin_centres[j]> cutoff or bin_centres[j]< start):
+            continue
+        xVal.append(bin_centres[j])
+        yVal.append(counts[j])
+    
+    
+    parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_xy, np.sqrt(k_guess_xy**2 + err_xy**2) , 80])    
+    res_err_xy = np.sqrt(parameters[1]**2 - err_xy**2)
+    x_values = np.linspace(mean_xy - 10*np.sqrt(k_guess_xy**2 + err_xy**2),mean_xy + 10*np.sqrt(k_guess_xy**2 + err_xy**2), 25000)
+    plt.plot(x_values, gaussian(x_values,parameters[0], parameters[1], parameters[2]), 'r-',linewidth = 2)
+    plt.savefig(plotLoc+'xy_fit_'+band+'.png')
+    plt.xlabel('Sigma xy')
+    plt.close()
+    
+    return res_err_xx, res_err_yy, res_err_xy
+    
+    
+    
+def plotStarGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band, x_width, y_width, xy_width):
+
+    mean_psf_size = np.median(np.sqrt(xxArr+yyArr))
+    err_xx = err_yy = np.sqrt( (mean_psf_size**4/np.median(fluxArr) + (4* np.pi* mean_psf_size**6 * bkg)/(np.median(fluxArr)**2) ) )
+    err_xy = err_xx * 0.707
+
+    k_guess_xx = np.std(xxArr)
+    k_guess_yy = np.std(yyArr)
+    k_guess_xy = np.std(xyArr)
+    
+    mean_xx = np.median( xxArr)
+    mean_yy = np.median( yyArr)
+    mean_xy = np.median( xyArr)
+    
+    
+    #Do for xx
+    data = xxArr
+    counts,bin_edges = np.histogram(data, bins=40)
+    bin_centres = (bin_edges[:-1] + bin_edges[1:])/2.0
+    err = []
+    for j in range(1, len(bin_edges)):
+        bin_start = bin_edges[j-1]
+        bin_end = bin_edges[j]
+        loc1 = np.where((data>=bin_start)& (data<bin_end))[0]
+        if(len(loc1) <=5):
+            err.append(0)
+        else:
+            err.append(np.nanstd(data[loc1]))
+            
+    plt.errorbar(bin_centres, counts, xerr=None, yerr=np.sqrt(counts), fmt='o', markersize = 5)
+    xVal =[]
+    yVal =[]
+    tot = 0
+    start = mean_xx - 5*np.sqrt(k_guess_xx**2 + err_xx**2)
+    cutoff = mean_xx + 5*np.sqrt(k_guess_xx**2 + err_xx**2)
+    #center = 13.6
+    #print (mean_xx, k_guess_xx)
+    for j in range(len(bin_centres)):
+        
+        if(bin_centres[j]> cutoff or bin_centres[j]< start):
+            continue
+        xVal.append(bin_centres[j])
+        yVal.append(counts[j])
+    
+    
+    parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_xx, np.sqrt(k_guess_xx**2 + err_xx**2) , 80])    
+    res_err_xx = np.sqrt(parameters[1]**2 - err_xx**2)
+    #print (parameters[1], err_xx)
+    x_values = np.linspace(mean_xx - 10*np.sqrt(k_guess_xx**2 + err_xx**2),mean_xx + 10*np.sqrt(k_guess_xx**2 + err_xx**2), 25000)
+    plt.plot(x_values, gaussian(x_values,parameters[0], x_width, parameters[2]), 'r-',linewidth = 2)
+    plt.savefig(plotLoc+'xx_fit_'+band+'.png')
+    plt.xlabel('Sigma xx')
+    plt.close()
+    
+    
+    
+    #Do for yy
+    data = yyArr
+    counts,bin_edges = np.histogram(data, bins=40)
+    bin_centres = (bin_edges[:-1] + bin_edges[1:])/2.0
+    err = []
+    for j in range(1, len(bin_edges)):
+        bin_start = bin_edges[j-1]
+        bin_end = bin_edges[j]
+        loc1 = np.where((data>=bin_start)& (data<bin_end))[0]
+        if(len(loc1) <=5):
+            err.append(0)
+        else:
+            err.append(np.nanstd(data[loc1]))
+    plt.errorbar(bin_centres, counts, xerr=None, yerr=np.sqrt(counts), fmt='o', markersize = 5)       
+    xVal =[]
+    yVal =[]
+    tot = 0
+    start = mean_yy - 5*np.sqrt(k_guess_yy**2 + err_yy**2)
+    cutoff = mean_yy + 5*np.sqrt(k_guess_yy**2 + err_yy**2)
+    #center = 13.6
+    for j in range(len(bin_centres)):
+        if(bin_centres[j]> cutoff or bin_centres[j]< start):
+            continue
+        xVal.append(bin_centres[j])
+        yVal.append(counts[j])
+    
+    
+    parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_yy, np.sqrt(k_guess_yy**2 + err_yy**2) , 80])    
+    res_err_yy = np.sqrt(parameters[1]**2 - err_yy**2)
+    x_values = np.linspace(mean_yy - 10*np.sqrt(k_guess_yy**2 + err_yy**2),mean_yy + 10*np.sqrt(k_guess_yy**2 + err_yy**2), 25000)
+    plt.plot(x_values, gaussian(x_values,parameters[0], y_width, parameters[2]), 'r-',linewidth = 2)
+    plt.savefig(plotLoc+'yy_fit_'+band+'.png')
+    plt.xlabel('Sigma yy')
+    plt.close()
+    
+    #Do for xy
+    data = xyArr
+    counts,bin_edges = np.histogram(data, bins=40)
+    bin_centres = (bin_edges[:-1] + bin_edges[1:])/2.0
+    err = []
+    for j in range(1, len(bin_edges)):
+        bin_start = bin_edges[j-1]
+        bin_end = bin_edges[j]
+        loc1 = np.where((data>=bin_start)& (data<bin_end))[0]
+        if(len(loc1) <=5):
+            err.append(0)
+        else:
+            err.append(np.nanstd(data[loc1]))
+    plt.errorbar(bin_centres, counts, xerr=None, yerr=np.sqrt(counts), fmt='o', markersize = 5)
+
+    xVal =[]
+    yVal =[]
+    tot = 0
+    start = mean_xy - 5*np.sqrt(k_guess_xy**2 + err_xy**2)
+    cutoff = mean_xy + 5*np.sqrt(k_guess_xy**2 + err_xy**2)
+    #center = 13.6
+    for j in range(len(bin_centres)):
+        if(bin_centres[j]> cutoff or bin_centres[j]< start):
+            continue
+        xVal.append(bin_centres[j])
+        yVal.append(counts[j])
+    
+    
+    parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_xy, np.sqrt(k_guess_xy**2 + err_xy**2) , 80])    
+    res_err_xy = np.sqrt(parameters[1]**2 - err_xy**2)
+    x_values = np.linspace(mean_xy - 10*np.sqrt(k_guess_xy**2 + err_xy**2),mean_xy + 10*np.sqrt(k_guess_xy**2 + err_xy**2), 25000)
+    plt.plot(x_values, gaussian(x_values,parameters[0], xy_width, parameters[2]), 'r-',linewidth = 2)
+    plt.savefig(plotLoc+'xy_fit_'+band+'.png')
+    plt.xlabel('Sigma xy')
+    plt.close()
+    
+    return 
+    
+    
+    
+    
