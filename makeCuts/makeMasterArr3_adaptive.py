@@ -730,19 +730,22 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
         for k in range(100, 520):
             count = 99999
             const_count = 2*800*800
-            alpha_max = 3000
+            alpha_max = 4000
             alpha_min = 500
             alpha_mid = 0.5*(alpha_max+alpha_min)
             alphax = alpha_mid
             n_iter = 0
-            while(count>const_count*1.05 or count< const_count*0.95):
+            err_const = 0.00044
+            tot_err = 9999999
+            #while(count>const_count*1.05 or count< const_count*0.95):
+            while(tot_err>err_const*1.05 or tot_err< err_const*0.95):
                 alpha_mid = 0.5*(alpha_max+alpha_min)
                 alphax = alpha_mid
                 x_mid = int(k*chopSize + chopSize/2)
                 y_mid = int(j*chopSize + chopSize/2)
                 width = 3*alphax
-                if(width>6000):
-                    width = 6000
+                if(width>9000):
+                    width = 9000
                 if(width<1500):
                     width = 1500
                 cond = np.where((master_frame[:,0] > x_mid-width) & (master_frame[:,0] < x_mid+width) & 
@@ -778,17 +781,20 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
                 wt_tild = wt_ellip_err[goodEllipIndices]**0.5/np.sum(wt_ellip_err[goodEllipIndices]**0.5)
                 fudge_fact = 1 /(2*(1-np.sum(tot_ellip[goodEllipIndices]**2 * wt_tild)/np.sum(wt_tild) ))
                 
-                e1sum = np.sum(epar[goodEllipIndices]*wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])
-                e2sum = np.sum(eper[goodEllipIndices]*wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])
+                e1sum = np.sum(epar[goodEllipIndices]*wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])/np.sum(wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])
+                e2sum = np.sum(eper[goodEllipIndices]*wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])/np.sum(wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])
                 count = np.sum(wt[goodEllipIndices]**2 * wt_ellip_err[goodEllipIndices])
+                eff_wt_norm = (wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])/np.sum(wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])
+                tot_err = np.sqrt (  np.sum(eff_wt_norm**2/ wt_ellip_err[goodEllipIndices]))
                 n_iter += 1
-                if(count > const_count*1.05):
+
+                if(tot_err < err_const*1.05):
                     alphax -= 20
                     alpha_max = alpha_mid
-                if(count < const_count*0.95):
+                if(tot_err > err_const*0.95):
                     alphax += 20
                     alpha_min = alpha_mid
-                if(count >const_count*0.95 and count<const_count*1.05):
+                if(tot_err >err_const*0.95 and tot_err< err_const*1.05):
                     break
                 if(alphax> alpha_max or alphax<alpha_min  or n_iter>10):
                     break
@@ -807,17 +813,17 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             count = np.sqrt(count)
             #print (count, alphax)
             if(len(epar[goodEllipIndices])>0):
-                e1sum = e1sum*fudge_fact/count
-                e2sum = e2sum*fudge_fact/count
+                e1sum = e1sum*fudge_fact
+                e2sum = e2sum*fudge_fact
             else:
                 e1sum, e2sum = 0,0
             
             
-            
+            #print (tot_err, alphax)
             imgE[j, k] = e1sum
-            imgB[j ,k] = e2sum
+            imgB[j ,k] = alphax
             count_img[j ,k] = len(epar[goodEllipIndices])
-            err_img[j ,k] = alphax
+            err_img[j ,k] = tot_err
             del temp
             
     hdu = fits.PrimaryHDU(imgE,header=header)  

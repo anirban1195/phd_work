@@ -36,8 +36,8 @@ def get_avg_obs(datafile, img_file, cent_ra, cent_dec, radius, zLens, ir_coadd_f
     distArr = np.sqrt( (cent_ra-ir_coadd_data[:,0])**2 + (cent_dec-ir_coadd_data[:,1])**2)
     #print (distArr[10000])
     size = np.sqrt(ir_coadd_data[:,7] + ir_coadd_data[:,8])
-    loc = np.where( (distArr <= radius) & (master_frame[:,4]> 1) & (ir_coadd_data[:,2]==0) & (ir_coadd_data[:,3]>10)
-                   & (ir_coadd_data[:,82]==0))[0]
+    loc = np.where( (distArr <= radius) & (master_frame[:,4]> 1) & (ir_coadd_data[:,2]==0) & (ir_coadd_data[:,3]>5)
+                   )[0]
     print (len(loc), '***************', np.median(master_frame[loc, 15]))
     med_err = np.median(master_frame[loc, 15])
     totShear =0
@@ -200,7 +200,7 @@ for radius in bins:
     
 #yerr = np.linspace(0.5, 1, 24).T
 plt.plot(bins*3600, th_avg_shear, 'k--')
-plt.errorbar(bins*3600, obs_avg_shear,  yerr= obs_shear_err, fmt='b.', label = 'Single Frame',capsize=3)
+plt.errorbar(bins*3600, obs_avg_shear,  yerr= obs_shear_err, fmt='bs', label = 'Single Frame(All)',capsize=3)
 
 print (np.mean(obs_avg_shear[-10:]))
 
@@ -227,8 +227,8 @@ for radius in bins:
     #th_avg_shear.append(-th_med)
     
 #yerr = np.linspace(0.5, 1, 24).T
-plt.plot(bins*3600, th_avg_shear, 'k--', label = r'Input $\gamma_2$')
-plt.errorbar(bins*3600, obs_avg_shear,  yerr= obs_shear_err, fmt='r.', label = 'Coadd', capsize=3)
+#plt.plot(bins*3600, th_avg_shear, 'k--', label = r'Input $\gamma_2$')
+plt.errorbar(bins*3600, obs_avg_shear,  yerr= obs_shear_err, fmt='rs', label = 'Coadd(All)', capsize=3)
 
 print (np.mean(obs_avg_shear[-10:]))
 plt.xlabel('Radius (in arcseconds)')

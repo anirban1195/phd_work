@@ -37,7 +37,7 @@ def get_avg_obs(datafile, img_file, cent_ra, cent_dec, radius, zLens, ir_coadd_f
     #print (distArr[10000])
     size = np.sqrt(ir_coadd_data[:,7] + ir_coadd_data[:,8])
     loc = np.where( (distArr <= radius) & (master_frame[:,4]> 1) & (ir_coadd_data[:,2]==0) & (ir_coadd_data[:,3]>10)
-                   & (ir_coadd_data[:,82]==0))[0]
+                   & (ir_coadd_data[:,82]==0) & (ir_coadd_data[:,79]==0))[0]
     print (len(loc), '***************', np.median(master_frame[loc, 15]))
     med_err = np.median(master_frame[loc, 15])
     totShear =0
@@ -81,7 +81,7 @@ def get_avg_obs(datafile, img_file, cent_ra, cent_dec, radius, zLens, ir_coadd_f
             
         
         epar= - (e1*cos2phi + e2*sin2phi)
-        if(abs(e1)>8 or abs(e2)>8 or tot_ellip==0 or np.isnan(size) or size<0.2 or size>10 or wt<=0 ):
+        if(abs(e1)>5 or abs(e2)>5 or tot_ellip==0 or np.isnan(size) or size<0.2 or size>10 or wt<=0 ):
             continue
         else:
             #print (master_frame[ind,6] , ir_coadd_data[ind,7], ir_coadd_data[ind,38])
@@ -194,7 +194,7 @@ for radius in bins:
     
 #yerr = np.linspace(0.5, 1, 24).T
 plt.plot(bins*3600, th_avg_shear, 'k--')
-plt.errorbar(bins*3600, obs_avg_shear,  yerr= obs_shear_err, fmt='b.', label = 'Single Frame',capsize=3)
+plt.errorbar(bins*3600, obs_avg_shear,  yerr= obs_shear_err, fmt='b.', label = 'Single Frame(Filtered)',capsize=3)
 
 print (np.mean(obs_avg_shear[-10:]))
 
@@ -221,12 +221,12 @@ for radius in bins:
     #th_avg_shear.append(-th_med)
     
 #yerr = np.linspace(0.5, 1, 24).T
-plt.plot(bins*3600, th_avg_shear, 'k--')
-plt.errorbar(bins*3600, obs_avg_shear,  yerr= obs_shear_err, fmt='r.', label = 'Coadd', capsize=3)
+plt.plot(bins*3600, th_avg_shear, 'k--', label = r'Input $\gamma_1$')
+plt.errorbar(bins*3600, obs_avg_shear,  yerr= obs_shear_err, fmt='r.', label = 'Coadd(Filtered)', capsize=3)
 
 print (np.mean(obs_avg_shear[-10:]))
 plt.xlabel('In arcesconds.')
-plt.ylabel(r'Average  $\gamma_2$')
+plt.ylabel(r'Average  $\gamma_1$')
 plt.legend()
 
 

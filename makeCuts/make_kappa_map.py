@@ -40,7 +40,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
     ir_coadd_data = np.load(ir_coadd_data_name)
     
     z_min = 0.4
-    z_max = 3
+    z_max = 2.5
     bandList =['g', 'r', 'i']
     if (zFile == None):
         redShiftArr = np.ones(len(ir_coadd_data))*9      
@@ -720,11 +720,11 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             
             x_mid = int(k*chopSize + chopSize/2)
             y_mid = int(j*chopSize + chopSize/2)
-            cond = np.where((master_frame[:,0] > x_mid-2000) & (master_frame[:,0] < x_mid+2000) & 
-                            (master_frame[:,1] > y_mid-2000) & (master_frame[:,1] < y_mid+2000) 
+            cond = np.where((master_frame[:,0] > x_mid-3000) & (master_frame[:,0] < x_mid+3000) & 
+                            (master_frame[:,1] > y_mid-3000) & (master_frame[:,1] < y_mid+3000) 
                             & (redShiftArr>z_min )& (redShiftArr<z_max) & (master_frame[:,2] !=0) &
                             (ir_coadd_data[:,2] == 0) & (master_frame[:,6] < 64) & 
-                             (master_frame[:,7] < 64) & (ir_coadd_data[:,82] == 0) ) [0]
+                             (master_frame[:,7] < 64) & (ir_coadd_data[:,82] == 0) )[0]
             
     
             temp = np.copy(master_frame[cond,:])
@@ -742,11 +742,12 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             #goodEllipIndices = np.where((np.abs(e1)<0.8) & (np.abs(e2)<0.8) & (r2<(3*alphax)**2) & (r2>100))
             goodEllipIndices = np.where( (tot_ellip > 0.0) )[0]
             #print (len(goodEllipIndices))
-            goodEllipIndices = np.where( (tot_ellip > 0.0) & (r2<(2000)**2) & (r2>(100)**2) )[0]
+            goodEllipIndices = np.where( (tot_ellip > 0.0) & (r2<(3000)**2) & (r2>400) )[0]
             #print (len(goodEllipIndices))
             #wt = (np.exp(-(r2/(2*alphax**2) )) * (1/r2)) 
-            wt = (1- (1+ r2/(2*250**2))*np.exp(-(r2/(2*250**2) )))*1/r2  #Scheitz schneider 1885 general ksb 
+            wt = (1- (1+ r2/(2*200**2))*np.exp(-(r2/(2*200**2) )))*1/r2  #Scheitz schneider 1885 general ksb 
             #wt1 = 1/r2
+            
             
             loc = np.where(temp[:,15]< median_ellip_err/3)
             temp[loc,15] = median_ellip_err/3
@@ -760,12 +761,16 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             e1sum = np.sum(epar[goodEllipIndices]*wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])
             e2sum = np.sum(eper[goodEllipIndices]*wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])
             count = np.sum(wt[goodEllipIndices] **2 * wt_ellip_err[goodEllipIndices]) 
+            
+            eff_wt_norm = (wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])/np.sum(wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])
+            tot_err = np.sqrt (  np.sum(eff_wt_norm**2/ wt_ellip_err[goodEllipIndices]))*10
+            
 # =============================================================================
 #             e1sum = np.sum(epar[goodEllipIndices]*wt[goodEllipIndices])
 #             e2sum = np.sum(eper[goodEllipIndices]*wt[goodEllipIndices])
 #             count = np.sum(wt[goodEllipIndices]**2 *(e1[goodEllipIndices]**2+e2[goodEllipIndices]**2) )
 # =============================================================================
-            n_bar = (len(goodEllipIndices))/(np.pi*2000*2000)
+            n_bar = (len(goodEllipIndices))/(np.pi*3000*3000)
             
             wt_corr = len(goodEllipIndices)/ np.sum(wt_ellip_err[goodEllipIndices])
             #print (wt_corr, fudge_fact, len(goodEllipIndices))
@@ -782,11 +787,10 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
                 e1sum, e2sum = 0,0
             #print (count, e1sum, e2sum)
             
-            
             imgE[j, k] = e1sum
             imgB[j ,k] = e2sum
             count_img[j ,k] = len(epar[goodEllipIndices])
-            err_img[j ,k] = count*fudge_fact*wt_corr/(2*3.14*n_bar)
+            err_img[j ,k] = tot_err#count*fudge_fact*wt_corr/(2*3.14*n_bar)
             del temp
             
     hdu = fits.PrimaryHDU(imgE,header=header)  

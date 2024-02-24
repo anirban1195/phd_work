@@ -912,7 +912,8 @@ def plotStarGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band, x_width, 
         yVal.append(counts[j])
     
     
-    parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_xx, np.sqrt(k_guess_xx**2 + err_xx**2) , 80])    
+    #parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_xx, np.sqrt(k_guess_xx**2 + err_xx**2) , 80])   
+    parameters, covariance = curve_fit(lambda a,b: gaussian(a,x_width,b), xVal, yVal, [mean_xx,  80])   
     res_err_xx = np.sqrt(parameters[1]**2 - err_xx**2)
     #print (parameters[1], err_xx)
     x_values = np.linspace(mean_xx - 10*np.sqrt(k_guess_xx**2 + err_xx**2),mean_xx + 10*np.sqrt(k_guess_xx**2 + err_xx**2), 25000)
@@ -950,7 +951,8 @@ def plotStarGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band, x_width, 
         yVal.append(counts[j])
     
     
-    parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_yy, np.sqrt(k_guess_yy**2 + err_yy**2) , 80])    
+    #parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_yy, np.sqrt(k_guess_yy**2 + err_yy**2) , 80]) 
+    parameters, covariance = curve_fit(lambda a,b: gaussian(a,y_width,b), xVal, yVal, [mean_yy,  80])   
     res_err_yy = np.sqrt(parameters[1]**2 - err_yy**2)
     x_values = np.linspace(mean_yy - 10*np.sqrt(k_guess_yy**2 + err_yy**2),mean_yy + 10*np.sqrt(k_guess_yy**2 + err_yy**2), 25000)
     plt.plot(x_values, gaussian(x_values,parameters[0], y_width, parameters[2]), 'r-',linewidth = 2)
@@ -986,7 +988,8 @@ def plotStarGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band, x_width, 
         yVal.append(counts[j])
     
     
-    parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_xy, np.sqrt(k_guess_xy**2 + err_xy**2) , 80])    
+    #parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_xy, np.sqrt(k_guess_xy**2 + err_xy**2) , 80])
+    parameters, covariance = curve_fit(lambda a,b: gaussian(a,xy_width,b), xVal, yVal, [mean_xy,  80])      
     res_err_xy = np.sqrt(parameters[1]**2 - err_xy**2)
     x_values = np.linspace(mean_xy - 10*np.sqrt(k_guess_xy**2 + err_xy**2),mean_xy + 10*np.sqrt(k_guess_xy**2 + err_xy**2), 25000)
     plt.plot(x_values, gaussian(x_values,parameters[0], xy_width, parameters[2]), 'r-',linewidth = 2)

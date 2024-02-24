@@ -290,6 +290,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     #return
     nStars = 10
     cnt = 0
+    
     for j in range(len(xList)):
         #print (j)
         v_flag = b_flag = force_flag= 0
