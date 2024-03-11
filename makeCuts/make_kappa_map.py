@@ -720,8 +720,8 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             
             x_mid = int(k*chopSize + chopSize/2)
             y_mid = int(j*chopSize + chopSize/2)
-            cond = np.where((master_frame[:,0] > x_mid-3000) & (master_frame[:,0] < x_mid+3000) & 
-                            (master_frame[:,1] > y_mid-3000) & (master_frame[:,1] < y_mid+3000) 
+            cond = np.where((master_frame[:,0] > x_mid-5000) & (master_frame[:,0] < x_mid+5000) & 
+                            (master_frame[:,1] > y_mid-5000) & (master_frame[:,1] < y_mid+5000) 
                             & (redShiftArr>z_min )& (redShiftArr<z_max) & (master_frame[:,2] !=0) &
                             (ir_coadd_data[:,2] == 0) & (master_frame[:,6] < 64) & 
                              (master_frame[:,7] < 64) & (ir_coadd_data[:,82] == 0) )[0]
@@ -742,7 +742,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             #goodEllipIndices = np.where((np.abs(e1)<0.8) & (np.abs(e2)<0.8) & (r2<(3*alphax)**2) & (r2>100))
             goodEllipIndices = np.where( (tot_ellip > 0.0) )[0]
             #print (len(goodEllipIndices))
-            goodEllipIndices = np.where( (tot_ellip > 0.0) & (r2<(3000)**2) & (r2>400) )[0]
+            goodEllipIndices = np.where( (tot_ellip > 0.0) & (r2<(5000)**2) & (r2>400) )[0]
             #print (len(goodEllipIndices))
             #wt = (np.exp(-(r2/(2*alphax**2) )) * (1/r2)) 
             wt = (1- (1+ r2/(2*200**2))*np.exp(-(r2/(2*200**2) )))*1/r2  #Scheitz schneider 1885 general ksb 
@@ -770,7 +770,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
 #             e2sum = np.sum(eper[goodEllipIndices]*wt[goodEllipIndices])
 #             count = np.sum(wt[goodEllipIndices]**2 *(e1[goodEllipIndices]**2+e2[goodEllipIndices]**2) )
 # =============================================================================
-            n_bar = (len(goodEllipIndices))/(np.pi*3000*3000)
+            n_bar = (len(goodEllipIndices))/(np.pi*5000*5000)
             
             wt_corr = len(goodEllipIndices)/ np.sum(wt_ellip_err[goodEllipIndices])
             #print (wt_corr, fudge_fact, len(goodEllipIndices))

@@ -12,7 +12,7 @@ from astropy.io import fits
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-path ='/scratch/bell/dutta26/wiyn_sim (copy 1)'
+path ='/scratch/bell/dutta26/small_shear_backup/'
 
 txtPath =[]
 fitsPath =[]
