@@ -15,7 +15,7 @@ sizex = sizey = 80
 sigxArr= np.array([ 2, 3, 4, 5 ])
 sigyArr= np.array([ 2, 3 ,4, 5])
 fluxArr = np.hstack((np.arange(1, 10, 1), np.arange(10, 100, 20), np.arange(100, 1000, 200), 
-                     np.arange(1000, 10000, 2000) , np.arange(10000, 110000, 20000)))
+                     np.arange(1000, 10000, 2000) , np.arange(10000, 110000, 10000)))
 bkgArr= [50, 100, 300, 500, 1000, 2000]
 # =============================================================================
 # sizex = sizey = 80
@@ -38,8 +38,8 @@ for sigx in sigxArr :
             sizex = sizey = 80
 
         print (sigy)
-        val = sigx*sigy*0.5
-        sigxyArr = np.linspace(-val, val, 4)
+        val = sigx*sigy*0.15
+        sigxyArr = np.linspace(-val, val, 5)
         for sigxy in sigxyArr:
             for flux in fluxArr:
                 
@@ -86,7 +86,7 @@ for sigx in sigxArr :
                         noise = np.random.normal(bkg, np.sqrt(bkg), (sizex,sizey))
                         tot = np.add(obj,noise)
                         
-                        flux_measure, mux_measure, muy_measure, e1_measure, e2, bkg_measure, psf_measure, sigxx_measure,sigyy_measure, sigxy_measure = measure_pythonV_dist.measure(tot, lut1, lut2, flux +np.random.normal(0, 0.00*flux), 0 ,0, guessx, guessy, guessxy, 100, 0)
+                        flux_measure, mux_measure, muy_measure, e1_measure, e2, bkg_measure, psf_measure, sigxx_measure,sigyy_measure, sigxy_measure = measure_pythonV_dist.measure(tot, lut1, lut2, flux +np.random.normal(0, 0.00*flux), 0 ,0, guessx, guessy, guessxy, 1, 1)
                         if(flux_measure == None or np.isnan(flux_measure) or psf_measure == None or np.isnan(psf_measure)):
                             count += 1
                             continue
@@ -114,9 +114,11 @@ for sigx in sigxArr :
                     finalArr.append([percent_flux_err, percent_sigx_err, percent_sigxy_err, np.std(temp_fluxArr), np.std(temp_sigxxArr),
                                      np.std(temp_sigxyArr), failRate, flux, area, e1, e2, bkg, sigx, sigy, sigxy])
                     
+                   
+                    
                     
 finalArr= np.array(finalArr)                    
-np.save('/scratch/bell/dutta26/abell_2390/paper_plotsdata_convNodist.npy', finalArr)    
+np.save('/scratch/bell/dutta26/abell_2390/one_iter.npy', finalArr)    
                     
                     
                     

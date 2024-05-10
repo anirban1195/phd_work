@@ -245,7 +245,8 @@ def getLoc (raList, decList , filename):
     decStartArr=np.zeros((31 ,8 ,8), dtype = np.float32)
     decEndArr = np.zeros((31 ,8 ,8), dtype = np.float32)
     bkgVarianceArr =np.zeros((31 ,8 ,8), dtype = np.float32)
-    for j in range(1,31):
+    maxLen = len(f) - 7 
+    for j in range(1,maxLen):
          img = np.array(f[j].data)
          w = wcs.WCS(f[j].header)
          for y in range(8):
@@ -260,7 +261,7 @@ def getLoc (raList, decList , filename):
                  
                  data = img[yStart:yEnd, xStart:xEnd]
                  mean, median, stddev = sigma_clipped_stats(data, cenfunc=np.median)
-                 bkgVarianceArr[j,y,x] = stddev**2
+                 bkgVarianceArr[j,x,y] = stddev**2
                  
     f.close()
     segArr=[]
@@ -377,6 +378,7 @@ def measure_new(img ,lut1, lut2, guessFlux = 100, guessmux = 0, guessmuy=0 , gue
     if(sizex< 20 or sizey<20):
         return None, None, None,None, None, None, None, None, None, None
     
+    img[img<=0]= np.median(img)
     #If guess sigmas it too small or large
     if(guessAlphax< 0.9):
         guessAlphax = 0.9
@@ -786,8 +788,9 @@ def fitGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band):
     #print (parameters[1], err_xx)
     x_values = np.linspace(mean_xx - 10*np.sqrt(k_guess_xx**2 + err_xx**2),mean_xx + 10*np.sqrt(k_guess_xx**2 + err_xx**2), 25000)
     plt.plot(x_values, gaussian(x_values,parameters[0], parameters[1], parameters[2]), 'r-',linewidth = 2)
+    plt.xlabel(r' $\sigma^2_{xx}$')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'xx_fit_'+band+'.png')
-    plt.xlabel('Sigma xx')
     plt.close()
     
     
@@ -823,8 +826,9 @@ def fitGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band):
     res_err_yy = np.sqrt(parameters[1]**2 - err_yy**2)
     x_values = np.linspace(mean_yy - 10*np.sqrt(k_guess_yy**2 + err_yy**2),mean_yy + 10*np.sqrt(k_guess_yy**2 + err_yy**2), 25000)
     plt.plot(x_values, gaussian(x_values,parameters[0], parameters[1], parameters[2]), 'r-',linewidth = 2)
+    plt.xlabel(r' $\sigma^2_{yy}$')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'yy_fit_'+band+'.png')
-    plt.xlabel('Sigma yy')
     plt.close()
     
     #Do for xy
@@ -859,8 +863,9 @@ def fitGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band):
     res_err_xy = np.sqrt(parameters[1]**2 - err_xy**2)
     x_values = np.linspace(mean_xy - 10*np.sqrt(k_guess_xy**2 + err_xy**2),mean_xy + 10*np.sqrt(k_guess_xy**2 + err_xy**2), 25000)
     plt.plot(x_values, gaussian(x_values,parameters[0], parameters[1], parameters[2]), 'r-',linewidth = 2)
+    plt.xlabel(r' $\sigma^2_{xy}$')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'xy_fit_'+band+'.png')
-    plt.xlabel('Sigma xy')
     plt.close()
     
     return res_err_xx, res_err_yy, res_err_xy
@@ -913,13 +918,14 @@ def plotStarGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band, x_width, 
     
     
     #parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_xx, np.sqrt(k_guess_xx**2 + err_xx**2) , 80])   
-    parameters, covariance = curve_fit(lambda a,b: gaussian(a,x_width,b), xVal, yVal, [mean_xx,  80])   
-    res_err_xx = np.sqrt(parameters[1]**2 - err_xx**2)
-    #print (parameters[1], err_xx)
+    parameters, covariance = curve_fit(lambda a,b: gaussian(a,mean_xx, x_width, b), xVal, yVal)   
+    #res_err_xx = np.sqrt(parameters[1]**2 - err_xx**2)
+    print (parameters, covariance)
     x_values = np.linspace(mean_xx - 10*np.sqrt(k_guess_xx**2 + err_xx**2),mean_xx + 10*np.sqrt(k_guess_xx**2 + err_xx**2), 25000)
-    plt.plot(x_values, gaussian(x_values,parameters[0], x_width, parameters[2]), 'r-',linewidth = 2)
+    plt.plot(x_values, gaussian(x_values,mean_xx, x_width, parameters[0]), 'r-',linewidth = 2)
+    plt.xlabel(r' $\sigma^2_{xx}$')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'xx_fit_'+band+'.png')
-    plt.xlabel('Sigma xx')
     plt.close()
     
     
@@ -952,12 +958,13 @@ def plotStarGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band, x_width, 
     
     
     #parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_yy, np.sqrt(k_guess_yy**2 + err_yy**2) , 80]) 
-    parameters, covariance = curve_fit(lambda a,b: gaussian(a,y_width,b), xVal, yVal, [mean_yy,  80])   
-    res_err_yy = np.sqrt(parameters[1]**2 - err_yy**2)
+    parameters, covariance = curve_fit(lambda a,b: gaussian(a,mean_yy, y_width,b), xVal, yVal)   
+    #res_err_yy = np.sqrt(parameters[1]**2 - err_yy**2)
     x_values = np.linspace(mean_yy - 10*np.sqrt(k_guess_yy**2 + err_yy**2),mean_yy + 10*np.sqrt(k_guess_yy**2 + err_yy**2), 25000)
-    plt.plot(x_values, gaussian(x_values,parameters[0], y_width, parameters[2]), 'r-',linewidth = 2)
+    plt.plot(x_values, gaussian(x_values,mean_yy, y_width, parameters[0]), 'r-',linewidth = 2)
+    plt.xlabel(r' $\sigma^2_{yy}$')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'yy_fit_'+band+'.png')
-    plt.xlabel('Sigma yy')
     plt.close()
     
     #Do for xy
@@ -989,12 +996,13 @@ def plotStarGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band, x_width, 
     
     
     #parameters, covariance = curve_fit(gaussian, xVal, yVal, [mean_xy, np.sqrt(k_guess_xy**2 + err_xy**2) , 80])
-    parameters, covariance = curve_fit(lambda a,b: gaussian(a,xy_width,b), xVal, yVal, [mean_xy,  80])      
-    res_err_xy = np.sqrt(parameters[1]**2 - err_xy**2)
+    parameters, covariance = curve_fit(lambda a,b: gaussian(a,mean_xy, xy_width,b), xVal, yVal)      
+    #res_err_xy = np.sqrt(parameters[1]**2 - err_xy**2)
     x_values = np.linspace(mean_xy - 10*np.sqrt(k_guess_xy**2 + err_xy**2),mean_xy + 10*np.sqrt(k_guess_xy**2 + err_xy**2), 25000)
-    plt.plot(x_values, gaussian(x_values,parameters[0], xy_width, parameters[2]), 'r-',linewidth = 2)
+    plt.plot(x_values, gaussian(x_values,mean_xy, xy_width, parameters[0]), 'r-',linewidth = 2)
+    plt.xlabel(r' $\sigma^2_{xy}$')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'xy_fit_'+band+'.png')
-    plt.xlabel('Sigma xy')
     plt.close()
     
     return 
@@ -1002,3 +1010,176 @@ def plotStarGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band, x_width, 
     
     
     
+    
+    
+
+
+
+def integrate(z):
+    arr= np.arange(0, z, 0.01)
+    #a= np.sum( 0.01/np.sqrt(0.3*(1+arr)**3 + 0.7))
+    #return a
+    return np.sum( 0.01/np.sqrt(0.3*(1+arr)**3 + 0.7))*(1/(1+z))
+
+def getF(x):
+    loc_less = np.where(x<1)[0]
+    loc_equal = np.where(x==1)[0]
+    loc_gtr = np.where(x>1)[0]
+    return_arr = np.zeros(len(x))
+    for index in loc_less:
+        b = (1/np.sqrt( 1 - x[index]**2 ))*  np.arccosh(1/x[index])
+        return_arr[index] = (1/(x[index]**2 - 1)) * (1 - b)
+    for index in loc_equal:
+        return_arr[index] = 0.333
+    for index in loc_gtr:
+        b = (1/np.sqrt( x[index]**2 - 1))* np.arccos(1/ x[index])
+        return_arr[index] = (1/( x[index]**2 - 1)) * (1 - b)
+        
+        
+    return return_arr
+        
+       
+    
+def getg(x):
+    loc_less = np.where(x<1)[0]
+    loc_equal = np.where(x==1)[0]
+    loc_gtr = np.where(x>1)[0]
+    return_arr = np.zeros(len(x))
+    for index in loc_less:
+        b = (1/np.sqrt( 1 - x[index]**2 ))* np.arccosh(1/x[index])
+        return_arr[index] = np.log(x[index]/2) + b
+    for index in loc_equal:
+        return_arr[index] = 1+np.log(1/2)
+    for index in loc_gtr:
+        b = (1/np.sqrt(x[index]**2 - 1))* np.arccos(1/x[index])
+        return_arr[index] = np.log(x[index]/2) + b
+       
+    return return_arr
+
+def getGamma(centra, centdec, zLens, ra, dec, zs, rs):
+    deldec = dec - centdec
+    delra = ra - centra 
+    dl = 4272.4* integrate(zLens) 
+    ds = 4272.4* integrate(zs) 
+    dl_comv = dl*(1+zLens)
+    ds_comv =  ds*(1+zs)
+    dls = (ds_comv - dl_comv)/ (1+zs)
+    
+    ks = 9.65e-4 * (dl*dls)/ds
+    thetas = (rs/dl)*(180/np.pi) #In degrees
+    R = np.sqrt(deldec**2 + delra**2) #In degrees
+    x = R/thetas
+    print (x, ks)
+    
+    gammaTot = 2*ks* ( 2*getg(x)/x**2 - getF(x))
+    kappaTot = 2*ks*getF(x)
+    
+    angle = np.arctan2(deldec, delra)
+    gamma1 = np.cos(2*angle)*gammaTot
+    gamma2 = np.sin(2*angle)*gammaTot
+    return (-1*gamma1, -1*gamma2, kappaTot) 
+    
+def get_gamma_kappa(centra, centdec, zLens, ra, dec, zs, rs, sigma_crit, c):
+    deldec = dec - centdec
+    delra = ra - centra 
+    dl = 4272.4* integrate(zLens) * 3.086e22
+    ds = 4272.4* integrate(zs) * 3.086e22
+    dl_comv = dl*(1+zLens)
+    ds_comv =  ds*(1+zs)
+    dls = (ds_comv - dl_comv)/ (1+zs)
+    
+    delta_c = (200/3)*c**3 /( np.log(1+c) - (c/(1+c)) )
+    H_o = 2.26e-18 #per second
+    G = 6.67e-11
+    H_z = np.sqrt(H_o**2 * (0.3*(1+zLens)**3 + 0.7))
+    rho_c = 3*H_z**2/(8*np.pi*G)
+    ks = delta_c*rho_c*rs/sigma_crit
+    
+    thetas = (rs/dl)*(180/np.pi) #In degrees
+    R = np.sqrt(deldec**2 + delra**2) #In degrees
+    x = R/thetas
+    
+    print(ks)
+    
+    gammaTot = 2*ks* ( 2*getg(x)/x**2 - getF(x))
+    kappaTot = 2*ks*getF(x)
+    
+    angle = np.arctan2(deldec, delra)
+    gamma1 = np.cos(2*angle)*gammaTot
+    gamma2 = np.sin(2*angle)*gammaTot
+    return (-1*gamma1, -1*gamma2, kappaTot) 
+
+
+def get_kappa_fit(coord, centra, centdec, rs, c):
+    
+    rs = rs * 3.086e22 #Input in Mpc. Convert it to meters
+    sigma_crit = 3.74*2.1
+    zLens = 0.23
+    dl = 4272.4* integrate(zLens) * 3.086e22
+    dl_comv = dl*(1+zLens)
+    
+    
+    delta_c = (200/3)*c**3 /( np.log(1+c) - (c/(1+c)) )
+    #print (c)
+    H_o = 2.26e-18 #per second
+    G = 6.67e-11
+    H_z = np.sqrt(H_o**2 * (0.3*(1+zLens)**3 + 0.7))
+    rho_c = 3*H_z**2/(8*np.pi*G)
+    print (rho_c)
+    ks = delta_c*rho_c*rs/sigma_crit
+    
+    thetas = (rs/dl)*(180/np.pi) #In degrees
+    R = np.sqrt(((coord[0] - centra)**2 *np.cos(0.30889)**2) + (coord[1] - centdec)**2) #In degrees
+    x = R/thetas
+    x[x<=0] = 0.001
+    #print (x)
+    #print(ks, np.where(x<=0))
+    
+    gammaTot = 2*ks* ( 2*getg(x)/x**2 - getF(x))
+    kappaTot = 2*ks*getF(x)
+    
+    angle = np.arctan2(x[1] - centdec, x[0] - centra)
+    gamma1 = np.cos(2*angle)*gammaTot
+    gamma2 = np.sin(2*angle)*gammaTot
+    return kappaTot
+    #return (-1*gamma1, -1*gamma2, kappaTot) 
+
+#print(get_gamma_kappa(0,0, 0.23, 0.0147, 0.0147, 0.5, 0.5*3.086e22, 3.74*2.1, 5))
+#print (getGamma(0,0, 0.23, 0.001, 0.001, 0.9, 1))
+
+
+
+def get_gamma_fit(coord, centra, centdec, rs, c):
+    
+    rs = rs * 3.086e22 #Input in Mpc. Convert it to meters
+    sigma_crit = 3.74*2.1
+    zLens = 0.23
+    dl = 4272.4* integrate(zLens) * 3.086e22
+    dl_comv = dl*(1+zLens)
+    
+    
+    delta_c = (200/3)*c**3 /( np.log(1+c) - (c/(1+c)) )
+    #print (c)
+    H_o = 2.26e-18 #per second
+    G = 6.67e-11
+    H_z = np.sqrt(H_o**2 * (0.3*(1+zLens)**3 + 0.7))
+    rho_c = 3*H_z**2/(8*np.pi*G)
+    ks = delta_c*rho_c*rs/sigma_crit
+    
+    thetas = (rs/dl)*(180/np.pi) #In degrees
+    R = np.sqrt(((coord[0] - centra)**2 *np.cos(0.30889)**2) + (coord[1] - centdec)**2) #In degrees
+    x = R/thetas
+    x[x<=0] = 0.001
+    #print (x)
+    #print(ks, np.where(x<=0))
+    
+    gammaTot = 2*ks* ( 2*getg(x)/x**2 - getF(x))
+    kappaTot = 2*ks*getF(x)
+    
+    angle = np.arctan2(x[1] - centdec, x[0] - centra)
+    gamma1 = np.cos(2*angle)*gammaTot
+    gamma2 = np.sin(2*angle)*gammaTot
+    return gammaTot
+
+
+

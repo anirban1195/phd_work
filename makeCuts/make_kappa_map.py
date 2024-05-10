@@ -31,16 +31,18 @@ def weighted_quantiles_interpolate(values, weights, quantiles=0.5):
 def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile, coadd_img, r_sf_name, i_sf_name):
     
     #redShiftArr = np.ones(15106)*9      
-    r_sf_npy = np.load(r_sf_name)
-    i_sf_npy = np.load(i_sf_name)
-    r_coadd_npy = np.load(r_coadd_npy_name)
-    i_coadd_npy = np.load(i_coadd_npy_name)
+# =============================================================================
+#     r_sf_npy = np.load(r_sf_name)
+#     i_sf_npy = np.load(i_sf_name)
+#     r_coadd_npy = np.load(r_coadd_npy_name)
+#     i_coadd_npy = np.load(i_coadd_npy_name)
+# =============================================================================
     #ir_coadd_data = pd.read_pickle(ir_coadd_data)
     #ir_coadd_data = np.array(ir_coadd_data)
     ir_coadd_data = np.load(ir_coadd_data_name)
     
     z_min = 0.4
-    z_max = 2.5
+    z_max = 2.1
     bandList =['g', 'r', 'i']
     if (zFile == None):
         redShiftArr = np.ones(len(ir_coadd_data))*9      
@@ -742,7 +744,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             #goodEllipIndices = np.where((np.abs(e1)<0.8) & (np.abs(e2)<0.8) & (r2<(3*alphax)**2) & (r2>100))
             goodEllipIndices = np.where( (tot_ellip > 0.0) )[0]
             #print (len(goodEllipIndices))
-            goodEllipIndices = np.where( (tot_ellip > 0.0) & (r2<(5000)**2) & (r2>400) )[0]
+            goodEllipIndices = np.where( (tot_ellip > 0.0) & (r2<(4000)**2)& (r2>(20)**2) )[0]
             #print (len(goodEllipIndices))
             #wt = (np.exp(-(r2/(2*alphax**2) )) * (1/r2)) 
             wt = (1- (1+ r2/(2*200**2))*np.exp(-(r2/(2*200**2) )))*1/r2  #Scheitz schneider 1885 general ksb 
@@ -770,7 +772,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
 #             e2sum = np.sum(eper[goodEllipIndices]*wt[goodEllipIndices])
 #             count = np.sum(wt[goodEllipIndices]**2 *(e1[goodEllipIndices]**2+e2[goodEllipIndices]**2) )
 # =============================================================================
-            n_bar = (len(goodEllipIndices))/(np.pi*5000*5000)
+            n_bar = (len(goodEllipIndices))/(np.pi*4000*4000)
             
             wt_corr = len(goodEllipIndices)/ np.sum(wt_ellip_err[goodEllipIndices])
             #print (wt_corr, fudge_fact, len(goodEllipIndices))
@@ -786,7 +788,8 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             else:
                 e1sum, e2sum = 0,0
             #print (count, e1sum, e2sum)
-            
+            if(e1sum == None or np.isnan(e1sum)):
+                sys.exit()
             imgE[j, k] = e1sum
             imgB[j ,k] = e2sum
             count_img[j ,k] = len(epar[goodEllipIndices])

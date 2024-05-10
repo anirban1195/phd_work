@@ -47,7 +47,10 @@ else:
             continue
         else:
             if('eazy' in zFile):
-                redShiftArr.append(float((content[j].split())[7]))
+                if(float((content[j].split())[8]) >= 0.7 and float((content[j].split())[15])>=4):
+                    redShiftArr.append(float((content[j].split())[7]))
+                else:
+                    redShiftArr.append(0)
             else:
                 redShiftArr.append(float((content[j].split())[1]))
 redShiftArr = np.array(redShiftArr)     
@@ -58,7 +61,7 @@ redShiftArr = np.array(redShiftArr)
 
 count = 1
 zminArr =[0.01, 0.6]
-zmaxArr =[0.6, 2]
+zmaxArr =[0.6, 2.1]
 n = len(zminArr)
 
 matrix = np.zeros((n,n))
@@ -70,7 +73,7 @@ for j in range(n):
     print (zmin, zmax)
     cond = np.where((redShiftArr>zmin )& (redShiftArr<zmax) & (master_frame[:,2] !=0) &
                     (ir_coadd_data[:,2] == 0) &(master_frame[:,6] < 49) & 
-                    (master_frame[:,7] < 49)) [0]
+                    (master_frame[:,7] < 49) & (ir_coadd_data[:,82] == 0) ) [0]
     print (len(cond))
     n_arr[j]=(len(cond))
     
@@ -88,6 +91,7 @@ inv_matrix = np.linalg.inv(matrix)
 
 imgArr = np.zeros((719, 622, n))
 for j in np.arange(n,0,-1):
+    print (j)
     f=fits.open('/scratch/bell/dutta26/abell_2390/zSlice/EMode_sf'+str(j)+'.fits')
     if(j == 2):
         imgArr[:,:,n-j] = gaussian_filter(f[0].data, 0)
@@ -113,7 +117,7 @@ for j in range(n):
     tot = np.zeros((719, 622), dtype = np.float32)
     print (mulArr)
     for k in range(n):
-        loc = np.where(imgArr[:,:,k]<35)
+        loc = np.where(imgArr[:,:,k] < 0.014)
         imgArr[loc[0],loc[1],k] = 0
         tot += imgArr[:,:,k]*mulArr[k]
         

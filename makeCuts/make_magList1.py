@@ -77,7 +77,7 @@ for band in bandList:
     
 
 
-outfile = '/home/dutta26/A2390_mag3.in'
+outfile = '/home/dutta26/A2390_mag4.in'
 f = open(outfile, mode='w+')
 
 for j in range(a):

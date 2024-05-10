@@ -650,7 +650,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
     n, bins, patches = plt.hist(x=arr1, bins=60, histtype=u'step', color='r', label='xx') 
     n, bins, patches = plt.hist(x=arr2, bins=60, histtype=u'step', color='b', label='yy')  
     n, bins, patches = plt.hist(x=arr3, bins=60, histtype=u'step', color='k', label='xy')                      
-    plt.xlabel('Deviation of sigmas from I+R coadd sigmas')
+    plt.xlabel('In Pixels')
     plt.legend()
     plt.savefig('/scratch/bell/dutta26/abell_2390/sig_dev.png')
     plt.close()

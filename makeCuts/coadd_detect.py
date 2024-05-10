@@ -288,7 +288,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     helper.plotStarGaussian(star_arr[:, 7], star_arr[:, 8], star_arr[:, 9], star_arr[:, 3]*totScale, totBkg, plotLoc, band, global_xx_err, global_yy_err, global_xy_err)
     #print (np.percentile(star_arr[:, 7], 84) - np.percentile(star_arr[:, 7], 16))
     #return
-    nStars = 10
+    nStars = 15
     cnt = 0
     
     for j in range(len(xList)):
@@ -424,6 +424,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     flux = store[:,3]
     flux = flux[flux>0]
     flux = flux[flux<25]
+    #plt.figure(figsize=(13,10))
     n, bins, patches = plt.hist(x=flux, bins='auto',histtype=u'step')
     plt.xlabel('Flux')
     plt.savefig(plotLoc+'flux_hist_'+band+'.png')
@@ -435,9 +436,11 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     print (size)
     size = size[size<10]
     print (size)
+    #plt.figure(figsize=(13,10))
     n, bins, patches = plt.hist(x=size, bins='auto',histtype=u'step')
                             
-    plt.xlabel('Corrected Size')
+    plt.xlabel('PSF Corrected Size')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'corr_size_hist_'+band+'.png')
     plt.close()
     
@@ -446,10 +449,12 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     print (size)
     size = size[size>0]
     print (size)
-    size = size[size<10]
+    size = size[size<3]
+    #plt.figure(figsize=(13,10))
     n, bins, patches = plt.hist(x=size, bins='auto', histtype=u'step')
                             
-    plt.xlabel('Star Corrected Size')
+    plt.xlabel('Star PSF Corrected Size')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'star_corr_size_hist_'+band+'.png')
     plt.close()
     
@@ -460,8 +465,10 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     size = size[size>0]
     print (size)
     size = size[size<10]
+    #plt.figure(figsize=(13,10))
     n, bins, patches = plt.hist(x=size, bins='auto',histtype=u'step')
-    plt.xlabel('Galaxy Corrected Size')
+    plt.xlabel('Galaxy PSF Corrected Size')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'galaxy_corr_size_hist_'+band+'.png')
     plt.close()
     
@@ -471,6 +478,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     e1 = (xx-yy)/(xx+yy)
     e2 = 2*xy/(xx+yy)
     ellip = np.sqrt(e1**2+e2**2)
+    #plt.figure(figsize=(13,10))
     loc = np.where((store[:,2] == 0) &(ellip>0) &(store[:,12] == 99) & (store[:,13] == 0) & (store[:,14] == 0) &(store[:,79] == 0))[0]
     n, bins, patches = plt.hist(x=e1[loc], bins='auto',histtype=u'step', color='r', label='e1')
     n, bins, patches = plt.hist(x=e2[loc], bins='auto',histtype=u'step', color='b', label='e2')
@@ -487,6 +495,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     e1 = (xx-yy)/(xx+yy)
     e2 = 2*xy/(xx+yy)
     ellip = np.sqrt(e1**2+e2**2)
+    #plt.figure(figsize=(13,10))
     loc = np.where((store[:,2] == 1)& (ellip>0) &(store[:,12] == 99) & (store[:,13] == 0) & (store[:,14] == 0) &(store[:,79] == 0) )[0]
     n, bins, patches = plt.hist(x=e1[loc], bins='auto',histtype=u'step', color='r', label='e1')
     n, bins, patches = plt.hist(x=e2[loc], bins='auto',histtype=u'step', color='b', label='e2')

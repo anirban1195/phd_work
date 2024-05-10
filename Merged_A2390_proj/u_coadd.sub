@@ -5,7 +5,7 @@ module load anaconda/2020.11-py38
 source activate /home/dutta26/.conda/envs/cent7/2020.11-py38/test
 
 cd /home/dutta26/codes/makeWeights/
-#python makeWeights.py /scratch/bell/dutta26/abell_2390/u/
+python makeWeights.py /scratch/bell/dutta26/abell_2390/u/
 python makeFileList.py /scratch/bell/dutta26/abell_2390/u/ /home/dutta26/codes/makeWeights/fileList_swarp_u.ascii
 
 

@@ -15,7 +15,7 @@ sizex = sizey = 80
 sigxArr= np.array([ 2,3,4,5])
 sigyArr= np.array([ 2,3,4,5])
 fluxArr = np.hstack((np.arange(1, 10, 1), np.arange(10, 100, 10), np.arange(100, 1000, 100), 
-                     np.arange(1000, 10000, 1000) ))
+                     np.arange(1000, 10000, 1000), np.arange(10000, 110000, 10000) ))
 bkgArr= [50, 100, 300, 500, 1000, 2000]
 # =============================================================================
 # sizex = sizey = 80
@@ -38,8 +38,8 @@ for sigx in sigxArr :
             sizex = sizey = 80
 
         print (sigy)
-        val = sigx*sigy*0.5
-        sigxyArr = np.linspace(-val, val, 4)
+        val = sigx*sigy*0.15
+        sigxyArr = np.linspace(-val, val, 5)
         for sigxy in sigxyArr:
             for flux in fluxArr:
                 
@@ -47,6 +47,7 @@ for sigx in sigxArr :
                     temp_fluxArr =[]
                     temp_sigxxArr =[]
                     temp_sigxyArr =[]
+                    temp_muxArr =[]
                     count = 0
                     area = np.pi * np.sqrt(sigx**2 * sigy**2 - sigxy**2)
                     snr = flux/np.sqrt(4*area*bkg + flux)
@@ -59,18 +60,18 @@ for sigx in sigxArr :
                     for j in range(200):
                         randx = randy = randxy = 0
                         while((randx*randy) <= randxy**2):
-                            randxy = sigxy+np.random.normal(0, abs(0*sigxy))
-                            randx = (sigx**2)+ np.random.normal(0, 0*sigx**2)
-                            randy = (sigy**2)+ np.random.normal(0, 0*sigy**2)
+                            randxy = sigxy+np.random.normal(0, abs(0.15*sigxy))
+                            randx = (sigx**2)+ np.random.normal(0, 0.15*sigx**2)
+                            randy = (sigy**2)+ np.random.normal(0, 0.15*sigy**2)
                          
                         guessx = guessy = guessxy = 0
                         while((guessx*guessy) <= abs(guessxy) ):
-                            guessx = np.sqrt((sigx**2)+ np.random.normal(0, 0*sigx**2))
-                            guessy = np.sqrt((sigy**2)+ np.random.normal(0, 0*sigy**2))
-                            guessxy = sigxy + np.random.normal(0, abs(0*sigxy))
+                            guessx = np.sqrt((sigx**2)+ np.random.normal(0.0*sigx**2, 0.15*sigx**2))
+                            guessy = np.sqrt((sigy**2)+ np.random.normal(0.0*sigy**2, 0.15*sigy**2))
+                            guessxy = sigxy + np.random.normal(0.0*sigxy, abs(0.15*sigxy))
                         
                             
-                        muArr= [sizex/2.0-0.5 , sizey/2.0-0.5]
+                        muArr= [sizex/2.0-0.5+ np.random.normal(0, 1), sizey/2.0-0.5+ np.random.normal(0, 1)]
                         cov = [[randx,randxy], [randxy, randy]]
                         const = int(round(np.random.normal(flux, np.sqrt(flux)))) 
                         if(const<1):
@@ -86,7 +87,7 @@ for sigx in sigxArr :
                         tot = np.add(obj,noise)
                         finalImg = finalImg + tot 
                         
-                        flux_measure, mux_measure, muy_measure, e1_measure, e2, bkg_measure, psf_measure, sigxx_measure,sigyy_measure, sigxy_measure = measure_pythonV_dist.measure(tot, lut1, lut2, flux+np.random.normal(0, 0*flux), 0 ,0, guessx, guessy, guessxy, 1, 1)
+                        flux_measure, mux_measure, muy_measure, e1_measure, e2, bkg_measure, psf_measure, sigxx_measure,sigyy_measure, sigxy_measure = measure_pythonV_dist.measure(tot, lut1, lut2, flux+np.random.normal(0.0*flux, 0.0*flux), 0 ,0, guessx, guessy, guessxy, 1, 1)
                         if(flux_measure == None or np.isnan(flux_measure) or psf_measure == None or np.isnan(psf_measure)):
                             count += 1
                             continue
@@ -102,6 +103,7 @@ for sigx in sigxArr :
                         temp_fluxArr.append(flux_measure)
                         temp_sigxxArr.append(sigxx_measure)
                         temp_sigxyArr.append(sigxy_measure)
+                        temp_muxArr.append(mux_measure)
                     percent_flux_err = (np.median(temp_fluxArr) - flux) / flux
                     percent_sigx_err = (np.median(temp_sigxxArr) - (sigx**2/2)) / (sigx**2/2)
                     percent_sigxy_err = (np.median(temp_sigxyArr) - (sigxy/2)) / (sigxy/2)
@@ -120,12 +122,14 @@ for sigx in sigxArr :
                     percent_sigxy_err1 = (sigxy_measure - (sigxy/2)) / (sigxy/2)
                     #percent_sigxy_err1 = 0
                     
+                    
+                    
                     finalArr.append([percent_flux_err, percent_sigx_err, percent_sigxy_err, percent_flux_err1, percent_sigx_err1,
-                                     percent_sigxy_err1, failRate, flux, area, e1, e2, bkg, sigx, sigy, sigxy])
+                                     percent_sigxy_err1, failRate, flux, area, e1, e2, bkg, sigx, sigy, sigxy, np.median(temp_muxArr), mux_measure])
                     
                     
 finalArr= np.array(finalArr)                    
-np.save('/scratch/bell/dutta26/abell_2390/one_iter.npy', finalArr)    
+np.save('/scratch/bell/dutta26/abell_2390/paper_plot_2ndlast_mux.npy', finalArr)    
                     
                     
                     

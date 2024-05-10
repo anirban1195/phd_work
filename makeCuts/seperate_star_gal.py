@@ -79,10 +79,11 @@ wted_img_file = '/scratch/bell/dutta26/abell_2390/abell_ir_coadd.fits'
 fluxMin = 10
 psfMin = 2.5
 psfMax = 3.4
-
+totScale = 34244.70
+totBkg = 75517.35
 
 f=fits.open(imgFile)
-img = np.array(f[0].data)
+img = f[0].data
 sizey, sizex = np.shape(img)
 
 #Find the max, min and mid Ra Dec
@@ -226,11 +227,12 @@ for j in range(len(df2)):
 
 #Find additional stars not in GAIA catalog and mark them as 2
 f=fits.open(wted_img_file)
-img = np.array(f[0].data)
+img = f[0].data
 f.close()
 sizey, sizex= np.shape(img)
 sizeArr =[]
 fluxArr =[]
+boolArr=[]
 xList, yList = helper.convertToXY(raList, decList, wted_img_file)
 for j in range(len(xList)):
     
@@ -248,32 +250,39 @@ for j in range(len(xList)):
     if(flux == None or sigxx== None or np.isnan(psf)):
         fluxArr.append(0)
         sizeArr.append(0)
+        boolArr.append(99)
         continue
     fluxArr.append(flux)
     sizeArr.append(psf)
     if(df_source['star_bool'][j] == 1):
+        boolArr.append(1)
         continue
     if(np.log10(flux)>np.log10(fluxMin) and psf>psfMin and psf<psfMax):
         df_source['star_bool'][j] = 2
-    if(psf>15):
+    if(psf>12):
         df_source['star_bool'][j] = 3
     if(flux> 1e4):
         df_source['star_bool'][j] = 4
-    size_err = np.sqrt( 0.5 *( (psfMin)**2/(flux*24083.18)  + 4*3.14*53293.788*(psfMin**4)/(flux*24083.18)**2 ))
+    size_err = np.sqrt( 0.5 *( (psfMin)**2/(flux*totScale)  + 4*3.14*totBkg*(psfMin**4)/(flux*totScale)**2 ))
     if(psf < psfMin-3*size_err):
         df_source['star_bool'][j] = 5
+    boolArr.append(0)
     
     
     
 df_source.to_pickle(outFile)       
 fluxArr = np.array(fluxArr) 
 sizeArr = np.array(sizeArr)
+boolArr = np.array(boolArr)
 plt.subplot()
 #plt.yscale('log')
 
 loc = np.array(df_source.index[df_source['star_bool'] != 1].tolist())
+loc = np.where((boolArr != 1)  & (fluxArr >0))[0]
+plt.figure(figsize=(13,10))
 plt.plot(sizeArr[loc], 25-2.5*np.log10(fluxArr[loc]),'b.', markersize= 2)  
 loc = np.array(df_source.index[df_source['star_bool'] == 1].tolist())
+loc = np.where((boolArr == 1)  & (fluxArr >0))[0]
 plt.plot(sizeArr[loc], 25-2.5*np.log10(fluxArr[loc]),'r.', markersize= 2)  
 plt.xlabel('Size')
 plt.ylabel('Magnitude')
@@ -283,10 +292,10 @@ plt.plot([psfMax, psfMax], [25-2.5*np.log10(1e5), 25-2.5*np.log10(fluxMin)], 'k-
 plt.plot([psfMin, psfMin], [25-2.5*np.log10(1e5), 25-2.5*np.log10(fluxMin)], 'k-',markersize= 2)
 
 flux_arange = np.arange(0.2,1000, 0.1)
-size_err = np.sqrt( 0.5 *( (psfMin)**2/(flux_arange*24083.18)  + 4*3.14*53293.788*(psfMin**4)/(flux_arange*24083.18)**2 ))
+size_err = np.sqrt( 0.5 *( (psfMin)**2/(flux_arange*totScale)  + 4*3.14*totBkg*(psfMin**4)/(flux_arange*totScale)**2 ))
 plt.plot(psfMin-3*size_err, 25-2.5*np.log10(flux_arange), 'y-')
-plt.plot([0,15], [25-2.5*np.log10(1e4), 25-2.5*np.log10(1e4)], 'y-')
-plt.plot([15,15], [25-2.5*np.log10(0.2), 25-2.5*np.log10(1e4)], 'y-')
+plt.plot([0,12], [25-2.5*np.log10(1e4), 25-2.5*np.log10(1e4)], 'y-')
+plt.plot([12,12], [25-2.5*np.log10(0.2), 25-2.5*np.log10(1e4)], 'y-')
 plt.ylim(29,11)
 plt.savefig(plotLoc+'flux_vs_size.png')
 plt.close()

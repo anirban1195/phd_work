@@ -15,7 +15,7 @@ import sys
 
 folder =str(sys.argv[1])
 #folder = '/scratch/halstead/d/dutta26/abell_2390/r/'
-segDataLoc ='/home/dutta26/codes/makeWeights/segment_stat_new.txt'
+segDataLoc ='/home/dutta26/codes/makeWeights/segment_stat_new1.txt'
 
 #Check if the weight exist. If so then delete them and create new
 for files in os.listdir(folder):
@@ -40,14 +40,16 @@ zpAvg = 25
 for files in os.listdir(folder):
     if( '.weight' not in files):
          continue
+    print (files)
     f=fits.open(folder+files, mode='update')
     back = float((f[0].header)['SKYBG'])
     seeing = float((f[0].header)['SEEING'])
     zp = float((f[0].header)['MAGZERO'])
     nStars = float( (f[0].header)['FWHMNFLT'])
     flag = 0
-        
-    for j in range(1,31):
+    
+    maxLen = len(f) - 7   
+    for j in range(1,maxLen):
          img = np.array(f[j].data)
          mean_global, median_global, stddev_global = sigma_clipped_stats(img, cenfunc=np.median)
 

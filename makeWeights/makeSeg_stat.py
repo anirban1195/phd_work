@@ -14,9 +14,9 @@ import matplotlib.pyplot as plt
 from shutil import copy
 import sys
 
-bandList = ['g', 'i']
+bandList = ['g', 'i', 'r']
 #folder =str(sys.argv[1])
-folder = '/scratch/halstead/d/dutta26/abell_2390/'
+folder = '/scratch/bell/dutta26/abell_2390/'
 
 segment_stat = []
 for j in range(1,31):
@@ -31,7 +31,7 @@ segment_stat = np.array(segment_stat)
 for band in bandList:
     loc = folder+band
     for file in os.listdir(folder+band+'/'):
-        if('.weight' in file):
+        if('.weight' in file or '2023' in file or 'temp' in file):
             continue
         f=fits.open(folder+band+'/'+file)
         for j in range(1,31):
@@ -53,7 +53,7 @@ for band in bandList:
                         segment_stat[index, 2] += 1
                         continue
                     
-                    if(stddev**2 < (mean+200) and stddev**2 > mean): #Changed here
+                    if(stddev**2 < (median+300) and stddev**2 > median*0.9): #Changed here
                         segment_stat[index, 1] += 1
                     else:
                         segment_stat[index, 2] += 1
@@ -63,7 +63,7 @@ for band in bandList:
         
         f.close()
 
-f = open ('/home/dutta26/codes/makeWeights/segment_stat_new.txt', 'w+')        
+f = open ('/home/dutta26/codes/makeWeights/segment_stat_new1.txt', 'w+')        
 for j in range(len(segment_stat)):
     line = str(segment_stat[j,0]) + ', ' + str(segment_stat[j,1]) + ', ' + str(segment_stat[j,2]) + '\n'
     f.write(line)

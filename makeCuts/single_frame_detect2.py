@@ -60,9 +60,9 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
 
     
     
-    data_width = int(len(os.listdir(bandLoc +band+'/'))/2.0) +1
-    data_width = 150
-    store = np.zeros((data_width, len(raList), 77), dtype = np.float32)
+    data_width = int(len(os.listdir(bandLoc +band+'/'))/2.0) + 5
+    #data_width = 150
+    store = np.zeros((data_width, len(raList), 80), dtype = np.float32)
     fileCount = -1
     fileList = os.listdir(bandLoc +band+'/')
     for file in fileList:
@@ -79,7 +79,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
 #             continue
 # =============================================================================
 # =============================================================================
-#         if('20211108T224039.9_Abell_2390_odi_i.9603' not in file):
+#         if('2023' not in file):
 #             continue
 # =============================================================================
         
@@ -89,10 +89,12 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         f.write('/scratch/bell/dutta26/abell_2390/'+band +'/'+file)
         f.close()
         
-        swarpLoc = '/home/dutta26/apps/bin/bin/'
-        swarpCommand = './swarp @/home/dutta26/temp.ascii -c /home/dutta26/default_1.swarp -IMAGEOUT_NAME /scratch/bell/dutta26/abell_2390/'+band+'/temp/temp_'+str(file)+' -WEIGHTOUT_NAME /scratch/bell/dutta26/abell_2390/'+band+'/temp/temp_'+str(file)[0:-5]+'.weight.fits'
-        process = subprocess.Popen(swarpCommand.split(), stdout=subprocess.PIPE, cwd=swarpLoc)
-        output, error = process.communicate()
+# =============================================================================
+#         swarpLoc = '/home/dutta26/apps/bin/bin/'
+#         swarpCommand = './swarp @/home/dutta26/temp.ascii -c /home/dutta26/default_1.swarp -IMAGEOUT_NAME /scratch/bell/dutta26/abell_2390/'+band+'/temp/temp_'+str(file)+' -WEIGHTOUT_NAME /scratch/bell/dutta26/abell_2390/'+band+'/temp/temp_'+str(file)[0:-5]+'.weight.fits'
+#         process = subprocess.Popen(swarpCommand.split(), stdout=subprocess.PIPE, cwd=swarpLoc)
+#         output, error = process.communicate()
+# =============================================================================
                 
         #Read the swarp output
         
@@ -130,12 +132,13 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         flux_scale = float((f[0].header)['FLXSCALE']) 
         f.close()
         #Store chip positions in store
-        store[fileCount,:, 47],store[fileCount,:, 48], store[fileCount,:, 49], bkgVarianceArr = helper.getLoc(raList, decList, '/scratch/bell/dutta26/abell_2390/'+band +'/'+file)
+        store[fileCount,:, 47],store[fileCount,:, 48], store[fileCount,:, 49], bkg_variance_arr = helper.getLoc(raList, decList, '/scratch/bell/dutta26/abell_2390/'+band +'/'+file)
         store[fileCount,:, 44] = float(file[10:17])
         ySize,xSize = np.shape(data)
         
+        
         #Measure bkg variance in all chips
-        bkg_variance_arr = helper.calc_chip_variance(data)
+        #bkg_variance_arr = helper.calc_chip_variance(data)
         
         
         
@@ -175,7 +178,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
                 store[fileCount,j,11] = y
                 continue
             
-            cut = data[y-25: y+25, x-25: x+25]
+            cut = data[y-40: y+40, x-40: x+40]
             #print (x,y)
             
             
@@ -183,7 +186,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
             if(star_bool[j] == 1 ):
                 v_flag = helper1.vert_stripe(cut)
             #If star then check if the image can pass measure
-            b_flag = helper1.detectBad(cut, 6.5)
+            b_flag = helper1.detectBad(cut, 8)
             
             
             
@@ -234,7 +237,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         print (star_arr[:,7])
         print (star_arr[:,8])
         #return (star_arr)
-        if(mean > 25 or std>3 or mean<1 or mean1 > 25 or std1 >3):
+        if(mean > 30 or std>3 or mean<1 or mean1 > 30 or std1 >3 or mean1<1):
             store[fileCount, :,38] = -99
             store[fileCount, :,39] = -99
             store[fileCount, :,40] = -99
@@ -297,7 +300,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
             ra = raList[j]
             dec = decList[j]
             x = int(round( xList[j]))
-            y = int(round(yList[j]))
+            y = int(round( yList[j]))
             
             temp = np.copy(star_temp)
             temp[:,5] = np.sqrt((temp[:,3]-x)**2 + (temp[:,4]-y)**2)
@@ -386,9 +389,12 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
             ra = raList[j]
             dec = decList[j]
             x = int(round( xList[j]))
-            y = int(round(yList[j]))
+            y = int(round( yList[j]))
             guessmux = xList[j] - x + 0.5  #CHECK THIS(Checked and changed -0.5 to +0.5 on Aprl 19 2023)
             guessmuy = yList[j] - y + 0.5
+            store[fileCount,j,77] = guessmux
+            store[fileCount,j,78] = guessmuy
+            
             if(ir_coadd_df[j,7] <= 0 or ir_coadd_df[j,8]<=0 or np.isnan(ir_coadd_df[j,7]) or np.isnan(ir_coadd_df[j,8])):
                 store[fileCount, j,64] = 1
                 continue
@@ -427,9 +433,8 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
                 #Measure cutout
                 
                 flux, mux, muy, e1, e2, bkg, psf, sigxx, sigyy, sigxy = helper.measure_new(cut, lut1, lut2, flux_expected, guessmux, guessmuy, np.sqrt(2*guess_xx), np.sqrt(2*guess_yy), 2*guess_xy, 1,1)
-        
                 
-                if(flux == None or e1== None or e2 == None):
+                if(flux == None or e1== None or e2 == None or np.isnan(flux) or flux == 0):
                     store[fileCount,j,12] = -99
                     store[fileCount, j,65] = 1
                     continue
@@ -439,7 +444,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
                 store[fileCount,j,12] = 1
             
             
-        
+        #sys.exit()
         #Run MC ALWAYS
         for j in range(len(xList)):
 
@@ -480,8 +485,8 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
                 size = np.sqrt(store[fileCount,j,38]+store[fileCount, j,39])
             
             cut = data[y-int(5*size): y+int(5*size), x-int(5*size): x+int(5*size)]    
-            
-            bkg_var = bkg_variance_arr[store[fileCount,j, 47],store[fileCount,j, 48], store[fileCount,j, 49]]
+            #print (j, x, y, store[fileCount,j, 47],store[fileCount,j, 48], store[fileCount,j, 49])
+            bkg_var = bkg_variance_arr[int(store[fileCount,j, 47]),int(store[fileCount,j, 48]), int(store[fileCount,j, 49])]
             
             if(np.isnan(bkg) or bkg == None or bkg<=0 ):
                 B = np.nanmedian(cut)
@@ -491,8 +496,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
                 B= bkg
                 
             if(np.isnan(bkg_var) or bkg_var == None or np.isinf(bkg_var) or bkg_var <=0 ):
-                print ('Background variance messed up')
-                sys.exit()
+               bkg_var = B**2
                 
                 
             correction_fact = 0

@@ -37,10 +37,10 @@ a_err=[]
 for j in range(3,75, 2):
     a.append(np.sum(data[360-j:360+j+1, 230-j:230+j+1])*3.74*5.59e-4)
     print (np.sum(data[360-j:360+j+1, 230-j:230+j+1]))
-    a_err.append(np.sum(data_err[360-j:360+j+1, 230-j:230+j+1]))
+    a_err.append(np.sum(data_err[360-j:360+j+1, 230-j:230+j+1])*3.74*5.59e-4)
     b.append(j*50*0.11)
 a=np.array(a)    
-plt.errorbar(b, a, yerr=a*0.2, fmt='r.', label='This work')
+plt.errorbar(b, a, yerr=a*0.1, fmt='r.', label='This work')
 
 
 f=open('/home/dutta26/2390_kaiser.txt')

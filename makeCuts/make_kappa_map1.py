@@ -1,19 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jan 26 18:13:11 2024
+Created on Tue Apr 30 20:11:10 2024
 
 @author: dutta26
 """
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jul 13 20:28:33 2023
-
-@author: dutta26
-"""
-
 
 from astropy.io import fits
 import numpy as np
@@ -22,6 +13,7 @@ import pandas as pd
 from astropy.stats import sigma_clipped_stats
 from datetime import datetime
 import helper
+#import wquantiles
 from astropy import wcs
 import matplotlib.pyplot as plt
 lut_forcedDist = np.load('/home/dutta26/codes/forced_truncated_calib.npy')
@@ -37,20 +29,19 @@ def weighted_quantiles_interpolate(values, weights, quantiles=0.5):
 
 def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile, coadd_img, r_sf_name, i_sf_name):
     
-    flag_count_arr = np.zeros(10)
-    
     #redShiftArr = np.ones(15106)*9      
-    r_sf_npy = np.load(r_sf_name)
-    i_sf_npy = np.load(i_sf_name)
-    r_coadd_npy = np.load(r_coadd_npy_name)
-    i_coadd_npy = np.load(i_coadd_npy_name)
+# =============================================================================
+#     r_sf_npy = np.load(r_sf_name)
+#     i_sf_npy = np.load(i_sf_name)
+#     r_coadd_npy = np.load(r_coadd_npy_name)
+#     i_coadd_npy = np.load(i_coadd_npy_name)
+# =============================================================================
     #ir_coadd_data = pd.read_pickle(ir_coadd_data)
     #ir_coadd_data = np.array(ir_coadd_data)
     ir_coadd_data = np.load(ir_coadd_data_name)
     
-    
-    z_min = 0.35-0.2
-    z_max = 0.75
+    z_min = 0.4
+    z_max = 2.1
     bandList =['g', 'r', 'i']
     if (zFile == None):
         redShiftArr = np.ones(len(ir_coadd_data))*9      
@@ -66,10 +57,13 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
                 continue
             else:
                 if('eazy' in zFile):
-                    redShiftArr.append(float((content[j].split())[7]))
+                    if(float((content[j].split())[8]) >= 0.8):
+                        redShiftArr.append(float((content[j].split())[7]))
+                    else:
+                        redShiftArr.append(0)
                 else:
                     redShiftArr.append(float((content[j].split())[1]))
-    redShiftArr = np.array(redShiftArr)     
+    redShiftArr = np.array(redShiftArr)        
     #g_sf_df = np.load('/scratch/bell/dutta26/abell_2390/test2_g.npy')
     #r_sf_df = np.load('/scratch/bell/dutta26/abell_2390/test2_r.npy')
     #i_sf_df = np.load('/scratch/bell/dutta26/abell_2390/test2_i.npy')
@@ -138,7 +132,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
 #         coadd_measurement_flag = 0.0
 #     
 #         #If super faint use coadd measurements
-#         if(ir_coadd_data [j,3] < 1.0 or r_coadd_npy[j,3]<=0 or i_coadd_npy[j,3]<=0 ):
+#         if(ir_coadd_data [j,3] < 10e10 or r_coadd_npy[j,3]<=0 or i_coadd_npy[j,3]<=0 ):
 #         
 #             sigxx_arr.append(ir_coadd_data [j,35])
 #             sigyy_arr.append(ir_coadd_data [j,36])
@@ -183,44 +177,35 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
 #             #First do r band 
 #             a,b,c = np.shape(r_sf_npy)
 #             for k in range(a):
-#                 if( r_coadd_npy[j,7]<=0 or r_coadd_npy[j,8]<=0):
-#                     flag_count_arr[7]+= 1
-#                     continue
+#                 
 #                 if( abs((ir_coadd_data[j,7] - r_coadd_npy[j,7])/ir_coadd_data[j,7] ) >2  ):
-#                     flag_count_arr[6]+= 1
 #                     continue
 #                 if( abs((ir_coadd_data[j,8] - r_coadd_npy[j,8])/ir_coadd_data[j,8] ) >2  ):
-#                     flag_count_arr[5]+= 1
+#                     continue
+#                 if( r_coadd_npy[j,7]<=0 or r_coadd_npy[j,8]<=0):
 #                     continue
 #                 
-#                 
-#                 if(r_sf_npy[k,j,12] <= 0  or r_sf_npy[k,j,14]> 0 or r_sf_npy[k,j,38]==-99):
-#                     flag_count_arr[3]+= 1
+#                 if(r_sf_npy[k,j,12] <= 0 or r_sf_npy[k,j,13]> 0 or r_sf_npy[k,j,14]> 0 or r_sf_npy[k,j,38]==-99):
 #                     continue
 #                 if(np.sum(r_sf_npy[k,j,61:67])>=1 or r_sf_npy[k,j,38]==-99):
-#                     flag_count_arr[4]+= 1
+#                   
 #                     continue
 #                 if(r_sf_npy[k,j,12] == 99):
 #                     if(r_sf_npy[k,j,7] < 0 or r_sf_npy[k,j,7]>70 or r_sf_npy[k,j,8] < 0 or r_sf_npy[k,j,8]>70):
-#                         flag_count_arr[0]+= 1
 #                         continue
 #                     if(r_sf_npy[k,j,7] == None or np.isnan(r_sf_npy[k,j,7]) or r_sf_npy[k,j,8] == None or np.isnan(r_sf_npy[k,j,8])):
-#                         flag_count_arr[1]+= 1
 #                         continue
 #                     if(r_sf_npy[k,j,3]<= 0 or r_sf_npy[k,j,3]== None or np.isnan(r_sf_npy[k,j,3]) ):
-#                         flag_count_arr[2]+= 1
 #                         continue
 #                         
 #                     
 #                 if(r_sf_npy[k,j,12] == 1):
 #                     if(r_sf_npy[k,j,35] < 0 or r_sf_npy[k,j,35]>70 or r_sf_npy[k,j,36] < 0 or r_sf_npy[k,j,36]>70):
-#                         flag_count_arr[0]+= 1
 #                         continue
 #                     if(r_sf_npy[k,j,35] == None or np.isnan(r_sf_npy[k,j,35]) or r_sf_npy[k,j,36] == None or np.isnan(r_sf_npy[k,j,36])):
-#                         flag_count_arr[1]+= 1
 #                         continue
 #                     if(r_sf_npy[k,j,31]<= 0 or r_sf_npy[k,j,31]== None or np.isnan(r_sf_npy[k,j,31]) ):
-#                         flag_count_arr[2]+= 1
+#                         
 #                         continue
 #                 
 #                 
@@ -300,15 +285,14 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
 #             #Now do I band
 #             a,b,c = np.shape(i_sf_npy)
 #             for k in range(a):
-#                 if( i_coadd_npy[j,7]<=0 or i_coadd_npy[j,8]<=0):
-#                     continue
 #                 
 #                 if( abs((ir_coadd_data[j,7] - i_coadd_npy[j,7])/ir_coadd_data[j,7] ) >2  ):
 #                     continue
 #                 if( abs((ir_coadd_data[j,8] - i_coadd_npy[j,8])/ir_coadd_data[j,8] ) >2  ):
 #                     continue
-#                
-#                 if(i_sf_npy[k,j,12] <= 0  or i_sf_npy[k,j,14]> 0) or i_sf_npy[k,j,38]==-99:
+#                 if( i_coadd_npy[j,7]<=0 or i_coadd_npy[j,8]<=0):
+#                     continue
+#                 if(i_sf_npy[k,j,12] <= 0 or i_sf_npy[k,j,13]> 0 or i_sf_npy[k,j,14]> 0) or i_sf_npy[k,j,38]==-99:
 #                     continue
 #                 if(np.sum(i_sf_npy[k,j,61:67])>=1 or i_sf_npy[k,j,38]==-99):
 #                     continue
@@ -408,81 +392,77 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
 #                     
 #         print (j,len(wtArr), len(indexArr))
 #         
-# # =============================================================================
-# #         if(len(wtArr) <= 0):
-# #             
-# #             sigxx_arr=[]
-# #             sigyy_arr=[]
-# #             sigxy_arr=[]
-# #             
-# #             sigxx_err_arr=[]
-# #             sigyy_err_arr=[]
-# #             sigxy_err_arr=[]
-# #             
-# #             psfsigxx_arr=[]
-# #             psfsigyy_arr=[]
-# #             psfsigxy_arr=[]
-# #             
-# #             psfsigxx_uncertain_arr=[]
-# #             psfsigyy_uncertain_arr=[]
-# #             psfsigxy_uncertain_arr=[]
-# #             
-# #             size_sf_arr =[]
-# #             
-# #             wtArr= []
-# #             area_arr=[]
-# #             B_arr=[]
-# #             N_arr=[]
-# #             N_corr_arr=[]
-# #             indexArr=[]
-# #             sigxx_arr.append(ir_coadd_data [j,35])
-# #             sigyy_arr.append(ir_coadd_data [j,36])
-# #             sigxy_arr.append(ir_coadd_data [j,37])
-# #             
-# #             psfsigxx_arr.append(ir_coadd_data [j,38])
-# #             psfsigyy_arr.append(ir_coadd_data [j,39])
-# #             psfsigxy_arr.append(ir_coadd_data [j,40])
-# #             
-# #             psfsigxx_uncertain_arr.append(ir_coadd_data [j,41])
-# #             psfsigyy_uncertain_arr.append(ir_coadd_data [j,42])
-# #             psfsigxy_uncertain_arr.append(ir_coadd_data [j,43])
-# #             
-# #             area = 2*np.pi*np.sqrt(ir_coadd_data [j,7]* ir_coadd_data [j,8] - ir_coadd_data [j,9]**2)
-# #             size = np.sqrt(ir_coadd_data [j,7]+ ir_coadd_data [j,8])
-# #             B = totBkg
-# #             N = ir_coadd_data [j,3] *totScale
-# #             e1_temp = (sigxx_arr[len(sigxx_arr)-1] - sigyy_arr[len(sigyy_arr)-1])/(sigxx_arr[len(sigxx_arr)-1] + sigyy_arr[len(sigyy_arr)-1])
-# #             e2_temp = 2* sigxy_arr[len(sigxy_arr)-1]/(sigxx_arr[len(sigxx_arr)-1] + sigyy_arr[len(sigyy_arr)-1])
-# #             e_temp = np.sqrt(e1_temp**2 + e2_temp**2)
-# #             turb_xx = np.sqrt(ir_coadd_data[j,41]**2 )
-# #             turb_yy = np.sqrt(ir_coadd_data[j,42]**2 )
-# #             turb_avg = 0.5*(turb_xx+turb_yy)
-# #             
-# #             
-# #             error = np.sqrt(ir_coadd_data[j,68] + turb_avg) #np.sqrt((size**4/N + (4*np.pi*size**6 *B)/N**2)) 
-# #             if(error <= 0 or error== None or np.isnan(error)):
-# #                 error = 100000000
-# #                 
-# #             
-# #             wtArr.append(1/error)
-# #             
-# #             area_arr.append(area)
-# #             N_arr.append(N)
-# #             B_arr.append(B)
-# #             indexArr.append(j)
-# #             coadd_measurement_flag = 1
-# #             
-# #             sigxx_err_arr.append( np.sqrt(ir_coadd_data [j,71]**2 + ir_coadd_data [j,41]**2 ))
-# #             sigyy_err_arr.append( np.sqrt(ir_coadd_data [j,72]**2 + ir_coadd_data [j,42]**2 ))
-# #             sigxy_err_arr.append( np.sqrt(ir_coadd_data [j,73]**2 + ir_coadd_data [j,43]**2 ))
-# #             
-# #             size_sf_arr.append(np.sqrt(ir_coadd_data [j,38] + ir_coadd_data [j,39]))
-# # =============================================================================
+#         if(len(wtArr) <= 10):
 #             
-# # =============================================================================
-# #         if(len(wtArr)<=50):
-# #             continue
-# # =============================================================================
+#             sigxx_arr=[]
+#             sigyy_arr=[]
+#             sigxy_arr=[]
+#             
+#             sigxx_err_arr=[]
+#             sigyy_err_arr=[]
+#             sigxy_err_arr=[]
+#             
+#             psfsigxx_arr=[]
+#             psfsigyy_arr=[]
+#             psfsigxy_arr=[]
+#             
+#             psfsigxx_uncertain_arr=[]
+#             psfsigyy_uncertain_arr=[]
+#             psfsigxy_uncertain_arr=[]
+#             
+#             size_sf_arr =[]
+#             
+#             wtArr= []
+#             area_arr=[]
+#             B_arr=[]
+#             N_arr=[]
+#             N_corr_arr=[]
+#             indexArr=[]
+#             sigxx_arr.append(ir_coadd_data [j,35])
+#             sigyy_arr.append(ir_coadd_data [j,36])
+#             sigxy_arr.append(ir_coadd_data [j,37])
+#             
+#             psfsigxx_arr.append(ir_coadd_data [j,38])
+#             psfsigyy_arr.append(ir_coadd_data [j,39])
+#             psfsigxy_arr.append(ir_coadd_data [j,40])
+#             
+#             psfsigxx_uncertain_arr.append(ir_coadd_data [j,41])
+#             psfsigyy_uncertain_arr.append(ir_coadd_data [j,42])
+#             psfsigxy_uncertain_arr.append(ir_coadd_data [j,43])
+#             
+#             area = 2*np.pi*np.sqrt(ir_coadd_data [j,7]* ir_coadd_data [j,8] - ir_coadd_data [j,9]**2)
+#             size = np.sqrt(ir_coadd_data [j,7]+ ir_coadd_data [j,8])
+#             B = totBkg
+#             N = ir_coadd_data [j,3] *totScale
+#             e1_temp = (sigxx_arr[len(sigxx_arr)-1] - sigyy_arr[len(sigyy_arr)-1])/(sigxx_arr[len(sigxx_arr)-1] + sigyy_arr[len(sigyy_arr)-1])
+#             e2_temp = 2* sigxy_arr[len(sigxy_arr)-1]/(sigxx_arr[len(sigxx_arr)-1] + sigyy_arr[len(sigyy_arr)-1])
+#             e_temp = np.sqrt(e1_temp**2 + e2_temp**2)
+#             turb_xx = np.sqrt(ir_coadd_data[j,41]**2 )
+#             turb_yy = np.sqrt(ir_coadd_data[j,42]**2 )
+#             turb_avg = 0.5*(turb_xx+turb_yy)
+#             
+#             
+#             error = np.sqrt(ir_coadd_data[j,68] + turb_avg) #np.sqrt((size**4/N + (4*np.pi*size**6 *B)/N**2)) 
+#             if(error <= 0 or error== None or np.isnan(error)):
+#                 error = 100000000
+#                 
+#             
+#             wtArr.append(1/error)
+#             
+#             area_arr.append(area)
+#             N_arr.append(N)
+#             B_arr.append(B)
+#             indexArr.append(j)
+#             coadd_measurement_flag = 1
+#             
+#             sigxx_err_arr.append( np.sqrt(ir_coadd_data [j,71]**2 + ir_coadd_data [j,41]**2 ))
+#             sigyy_err_arr.append( np.sqrt(ir_coadd_data [j,72]**2 + ir_coadd_data [j,42]**2 ))
+#             sigxy_err_arr.append( np.sqrt(ir_coadd_data [j,73]**2 + ir_coadd_data [j,43]**2 ))
+#             
+#             size_sf_arr.append(np.sqrt(ir_coadd_data [j,38] + ir_coadd_data [j,39]))
+#             
+#         if(len(wtArr)<=0):
+#             continue
 #         
 #         if(len(wtArr)== 1):
 #             cnt3+= 1
@@ -498,7 +478,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
 #         wtArr = np.array(wtArr)
 #         wtArr = wtArr/np.sum(wtArr)
 #         #print (wtArr)
-#         wtArr = wtArr**2#(Inverse variance weight)
+#         wtArr = wtArr**4#(Inverse variance weight)
 #         wtArr = wtArr/np.sum(wtArr)
 #         #print (list(wtArr))
 #         
@@ -643,32 +623,33 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
 #             print ('abc', ir_coadd_data [j,2], size)
 #             
 #     np.save(outFile, master_frame)
-#     np.save('/scratch/bell/dutta26/abell_2390/fail_stat.npy',flag_count_arr)
 #     #f1.flush()
 #     
 #     #sys.exit()
 #     arr1=np.array(arr1)
 #     arr2=np.array(arr2)
 #     arr3=np.array(arr3)
-#     arr1=arr1[arr1<3]
-#     arr1=arr1[arr1>-3]
-#     arr2=arr2[arr2<3]
-#     arr2=arr2[arr2>-3]
-#     arr3=arr3[arr3<3]
-#     arr3=arr3[arr3>-3]
-#     n, bins, patches = plt.hist(x=arr1, bins=60, histtype=u'step', color='r', label='xx') 
-#     n, bins, patches = plt.hist(x=arr2, bins=60, histtype=u'step', color='b', label='yy')  
-#     n, bins, patches = plt.hist(x=arr3, bins=60, histtype=u'step', color='k', label='xy')                      
-#     plt.xlabel('Deviation of sigmas from I+R coadd sigmas')
-#     plt.legend()
-#     plt.savefig('/scratch/bell/dutta26/abell_2390/sig_dev.png')
-#     plt.close()
+#     arr1=arr1[arr1<5]
+#     arr1=arr1[arr1>-5]
+#     arr2=arr2[arr2<5]
+#     arr2=arr2[arr2>-5]
+#     arr3=arr3[arr3<5]
+#     arr3=arr3[arr3>-5]
+# # =============================================================================
+# #     n, bins, patches = plt.hist(x=arr1, bins='auto', histtype=u'step', color='r', label='xx') 
+# #     n, bins, patches = plt.hist(x=arr2, bins='auto', histtype=u'step', color='b', label='yy')  
+# #     n, bins, patches = plt.hist(x=arr3, bins='auto', histtype=u'step', color='k', label='xy')                      
+# #     plt.xlabel('Deviation of sigmas from I+R coadd sigmas')
+# #     plt.legend()
+# #     plt.savefig('/scratch/bell/dutta26/wiyn_sim/sig_dev.png')
+# #     plt.close()
+# # =============================================================================
 #     print (arr1, arr2, arr3)
 #     print (cnt1, cnt3, len(bkgIndices))
 #     
+# 
+#     
 # =============================================================================
-
-    
     
     #return
     
@@ -683,9 +664,19 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
     
     
     
-    
-    
     master_frame = np.load(outFile)
+    
+# =============================================================================
+#     #Shuffle data
+#     loc= np.where((master_frame[:, 0]>0 ) & (master_frame[j, 1]>0))[0]
+#     x= master_frame[loc,0]
+#     y =master_frame[loc,1]
+#     np.random.shuffle(x)
+#     np.random.shuffle(y)
+#     master_frame[loc, 0] = x
+#     master_frame[loc, 1] = y
+# =============================================================================
+    
     #Make the make wrt to ir coadd 
     
     f=fits.open(coadd_img)
@@ -699,7 +690,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
     
         
     chopSize = 50
-    alphax = 400
+    alphax = 1500
     
     
     
@@ -730,11 +721,11 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             
             x_mid = int(k*chopSize + chopSize/2)
             y_mid = int(j*chopSize + chopSize/2)
-            cond = np.where((master_frame[:,0] > x_mid-2000) & (master_frame[:,0] < x_mid+2000) & 
-                            (master_frame[:,1] > y_mid-2000) & (master_frame[:,1] < y_mid+2000) 
+            cond = np.where((master_frame[:,0] > x_mid-5000) & (master_frame[:,0] < x_mid+5000) & 
+                            (master_frame[:,1] > y_mid-5000) & (master_frame[:,1] < y_mid+5000) 
                             & (redShiftArr>z_min )& (redShiftArr<z_max) & (master_frame[:,2] !=0) &
-                            (ir_coadd_data[:,2] == 0) & (master_frame[:,6] < 49) & 
-                            (master_frame[:,7] < 49)) [0]
+                            (ir_coadd_data[:,2] == 0) & (master_frame[:,6] < 64) & 
+                             (master_frame[:,7] < 64) & (ir_coadd_data[:,82] == 0) )[0]
             
     
             temp = np.copy(master_frame[cond,:])
@@ -750,10 +741,18 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             epar= - (e1*cos2phi+e2*sin2phi)
             eper= (e2*cos2phi-e1*sin2phi)
             #goodEllipIndices = np.where((np.abs(e1)<0.8) & (np.abs(e2)<0.8) & (r2<(3*alphax)**2) & (r2>100))
-            goodEllipIndices = np.where( (r2<(3*alphax)**2) & (r2>400) & (tot_ellip > 0.0) )[0]
-            wt = np.exp(-(r2/(2*alphax**2) )) * ir_coadd_data[cond, 3]
-            #wt = np.sqrt(1/r2)*(1- (1+ r2/(2*200**2))*np.exp(-(r2/(2*200**2) )))
-            #wt = (1+ r2/(2*alphax**2))*np.exp(-(r2/(2*alphax**2) ))
+            goodEllipIndices = np.where( (tot_ellip > 0.0) )[0]
+            #print (len(goodEllipIndices))
+            goodEllipIndices = np.where( (tot_ellip > 0.0) & (r2<(4000)**2)& (r2>(30)**2) )[0]
+            #print (len(goodEllipIndices))
+            #wt = (np.exp(-(r2/(2*alphax**2) )) * (1/r2)) 
+            #print (alphax)
+            wt_new =  np.exp(-(r2/(2*alphax**2) ))
+            r2 = r2 + 1000**2
+            wt = (1- (1+ r2/(2*300**2))*np.exp(-(r2/(2*300**2) )))*1/r2  #Scheitz schneider 1885 general ksb 
+            r2 = r2 - 1000**2
+            #wt1 = 1/r2
+            
             
             loc = np.where(temp[:,15]< median_ellip_err/3)
             temp[loc,15] = median_ellip_err/3
@@ -761,41 +760,50 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             
             
             wt_tild = wt_ellip_err[goodEllipIndices]**0.5/np.sum(wt_ellip_err[goodEllipIndices]**0.5)
-            fudge_fact = 1 /(2*(1-np.sum(tot_ellip[goodEllipIndices]**2 * wt_tild)/np.sum(wt_tild) ))
-            
-            e1sum = np.sum(epar[goodEllipIndices]*wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])
+            fudge_fact = 1 /((1-np.sum(tot_ellip[goodEllipIndices]**2 * wt_tild)/np.sum(wt_tild) ))
+            #wt = wt*np.sum(np.exp(-(r2[goodEllipIndices]/(2*alphax**2) )))
+            #print (np.sum(wt[goodEllipIndices]), np.sum(wt1[goodEllipIndices]))
+            e1sum = np.sum(epar[goodEllipIndices]*wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices] )
             e2sum = np.sum(eper[goodEllipIndices]*wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])
-            count = np.sum(wt[goodEllipIndices]**2 * wt_ellip_err[goodEllipIndices]**1)
-            #count = np.sum(wt[goodEllipIndices]**2 * (e1[goodEllipIndices]**2+e2[goodEllipIndices]**2))
+            count = np.sum(wt[goodEllipIndices] **2 * wt_ellip_err[goodEllipIndices]) 
+            
+            eff_wt_norm = (wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])/np.sum(wt[goodEllipIndices]* wt_ellip_err[goodEllipIndices])
+            tot_err = np.sqrt (  np.sum(eff_wt_norm**2/ wt_ellip_err[goodEllipIndices]))*10
+            
 # =============================================================================
 #             e1sum = np.sum(epar[goodEllipIndices]*wt[goodEllipIndices])
 #             e2sum = np.sum(eper[goodEllipIndices]*wt[goodEllipIndices])
 #             count = np.sum(wt[goodEllipIndices]**2 *(e1[goodEllipIndices]**2+e2[goodEllipIndices]**2) )
 # =============================================================================
+            n_bar = (len(goodEllipIndices))/(np.pi*4000*4000)
             
+            wt_corr = len(goodEllipIndices)/ np.sum(wt_ellip_err[goodEllipIndices])
+            #print (wt_corr, fudge_fact, len(goodEllipIndices))
             if(count == 0):
                 e1sum = 0
                 e2sum = 0
                 #sys.exit()
                 #continue
-            count = np.sqrt(0.5*count)
+            count = np.sqrt(count)
             if(len(epar[goodEllipIndices])>0):
-                e1sum = e1sum*fudge_fact/count
-                e2sum = e2sum*fudge_fact/count
+                e1sum = e1sum*fudge_fact*wt_corr/(2*3.14*n_bar*1000)
+                e2sum = e2sum*fudge_fact
             else:
                 e1sum, e2sum = 0,0
-            
-            
-            
-            imgE[j, k] = np.sum(wt)
+            #print (count, e1sum, e2sum)
+            if(e1sum == None or np.isnan(e1sum)):
+                sys.exit()
+            imgE[j, k] = e1sum
             imgB[j ,k] = e2sum
             count_img[j ,k] = len(epar[goodEllipIndices])
-            err_img[j ,k] = count
+            err_img[j ,k] = tot_err#count*fudge_fact*wt_corr/(2*3.14*n_bar)
             del temp
             
     hdu = fits.PrimaryHDU(imgE,header=header)  
-    hdu.writeto('/scratch/bell/dutta26/abell_2390/proj_density_lownmid.fits', overwrite=True)
-    
+    hdu.writeto('/scratch/bell/dutta26/abell_2390/kappa_sf1.fits', overwrite=True)
+    print (np.sum(imgE[360-9:360+10, 230-9:230+10]*6.5*0.7*5.59e-4) , 'In units of 10^15 solar mass')
+    hdu = fits.PrimaryHDU(err_img,header=header)  
+    hdu.writeto('/scratch/bell/dutta26/abell_2390/kappa_error_sf1.fits', overwrite=True)
     
                 
     
@@ -804,8 +812,10 @@ img = '/scratch/bell/dutta26/abell_2390/abell_ir_coadd.fits'
 ebModeFile = '/scratch/bell/dutta26/abell_2390/master_arr_sf.npy'
 #zFile = '/home/dutta26/zphot_2390.out'
 zFile = '/home/dutta26/photz_eazy.zout'
-
+    
 EandB( '/scratch/bell/dutta26/abell_2390/abell_ir_coadd.npy',  '/scratch/bell/dutta26/abell_2390/abell_r_coadd.npy', '/scratch/bell/dutta26/abell_2390/abell_i_coadd.npy', zFile, ebModeFile, img, '/scratch/bell/dutta26/abell_2390/r_sf.npy', '/scratch/bell/dutta26/abell_2390/i_sf.npy')
    
     
+    
+
     
