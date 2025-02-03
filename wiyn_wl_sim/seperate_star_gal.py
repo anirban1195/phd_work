@@ -95,11 +95,11 @@ def seperate(catalog, coadd_file, outFile, plotLoc, psfMin, psfMax, fluxMin, flu
     b=np.swapaxes(a, 0,1)
     df_source = pd.DataFrame(b,  columns = ['ra', 'dec', 'sex_xx', 'sex_yy', 'sex_xy', 'star_bool'])
     
-    df_source.to_pickle(outFile)     
+    #df_source.to_pickle(outFile)     
     plt.subplot()
     plt.yscale('log')
     plt.plot(sizeArr, fluxArr,'b.', markersize= 2)  
-    plt.xlabel('Size')
+    plt.xlabel('Size (in pixels)')
     plt.ylabel('Counts')
     plt.plot([psfMax, psfMin], [fluxMax, fluxMax], 'r-',markersize= 2)
     plt.plot([psfMax, psfMin], [fluxMin, fluxMin], 'r-',markersize= 2)

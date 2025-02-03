@@ -18,7 +18,7 @@ Created on Thu Mar 21 16:48:05 2024
 
 from astropy.io import fits
 import numpy as np
-import os
+import os,shutil
 import subprocess
 import gzip
 from astropy import units as u
@@ -36,20 +36,21 @@ phosimLoc = '/home/dutta26/Downloads/phosim_core/'
 outLoc = phosimLoc + 'output/'
 
 dataSet ='/scratch/bell/dutta26/abell_2390/'
-filt_list = ['g', 'r', 'u', 'z', 'i']
+filt_list = ['g', 'z']
 
 counter =0
 lambdaArr = [350, 500, 600, 750, 875]
-temp_arr = np.zeros((150, 10))
+temp_arr = np.zeros((1000, 11))
 j = 0
+moon_alt_arr=np.zeros((1000))
 for folder in filt_list:
-    for files in os.listdir(dataSet+folder):
+    for file_name in os.listdir(dataSet+folder):
         
-        if('weight' in files or 'temp' in files ):
+        if('weight' in file_name or 'temp' in file_name ):
             continue
         
         
-        f=fits.open(dataSet+folder+'/'+files)
+        f=fits.open(dataSet+folder+'/'+file_name)
         
         mjd = float((f[0].header)['MJD-MID'])
         airmass = float((f[0].header)['AIRMASS'])
@@ -60,12 +61,15 @@ for folder in filt_list:
         c=SkyCoord(ra_header, dec_header, unit=(u.hourangle, u.deg))
         ra,dec = c.ra.degree, c.dec.degree
         filt = (f[0].header)['FILTER']
+        moon_alt = float((f[0].header)['MOON_ALT'])
 # =============================================================================
 #         if(mjd < 59189.036 or mjd > 59189.172):
 #             continue
 # =============================================================================
-        if(mjd < 59527.055 or mjd > 59527.255):
-            continue
+# =============================================================================
+#         if(mjd < 59527.055 or mjd > 59527.255):
+#             continue
+# =============================================================================
         
         if(filt == 'odi_u'):
             filt_code =0
@@ -82,6 +86,8 @@ for folder in filt_list:
         skylevel = float((f[0].header)['SKYBG'])
         skymag = float((f[0].header)['SKYMAG'])
         f.close()
+        if(moon_alt>0):
+            continue
         
         #Make test file 
         f=open(phosimLoc+'examples/test2', 'w+')
@@ -90,11 +96,11 @@ for folder in filt_list:
         f.write('mjd  '+str(mjd) + '\n')
         f.write('filter	'+str(filt_code) +'\n')
         f.write('nsnap	1' + '\n')
-        f.write('seeing	2' + '\n')
+        f.write('seeing	1.6' + '\n')
         f.write('vistime 30' + '\n')
         f.write('object  0  '+str(ra)+'  '+str(dec)+'  ' +' 16 ../sky/sed_flat.txt 0 0 0 0 0 0 star none none' + '\n')
-        f.write('cloudcover 1' + '\n')
-        f.write('clouddepth 0.0' + '\n')
+        #f.write('cloudcover 1' + '\n')
+        #f.write('clouddepth 0.0' + '\n')
         f.close()
         
         #os.chmod(phosimLoc+'examples/test1.txt', 0o777)
@@ -116,6 +122,7 @@ for folder in filt_list:
             continue
         fileHandle = gzip.open(outLoc+files[0])
         f=fits.open(fileHandle)
+        
         data = np.array(f[0].data)
         mean, median, std = np.nanmean(data), np.nanmedian(data), np.nanstd(data)
         
@@ -136,12 +143,14 @@ for folder in filt_list:
         f.close()
         fileHandle.close()
         
-        #outLine = str(mean)+ ' , ' +str(median)+ ' , ' +str(std)+ ' , ' +str(skyBkg)+ ' , ' + str(skystd)+ ' , ' +str(filt_code) + ' , '+str(mjd)+' , '+str(flx_scale)+ ' , '+str(flux) + ' , '+str(airmass)
-        #outLine = str(phosim_zp)+ ' , ' +str(phosim_skymag)+ ' , ' +str(phosim_counts)+ ' , ' + str(mjd)+ ' , ' +str(filt_code) + ' , '+str(mjd)+' , '+str(skylevel*9.09*9.09/60)+ ' , '+str(skymag) + ' , '+str(airmass) + ' , '+str(zp)  
-        temp_arr[j,0:9] = phosim_zp, zp, phosim_skymag, skymag, phosim_counts, skylevel*9.09*9.09/60, mjd, filt_code, airmass
+        #shutil.copy(outLoc+files[0], '/scratch/bell/dutta26/phosim_055045/neutral_0504_'+str(file_name))
         
+        #outLine = str(mean)+ ' , ' +str(median)+ ' \, ' +str(std)+ ' , ' +str(skyBkg)+ ' , ' + str(skystd)+ ' , ' +str(filt_code) + ' , '+str(mjd)+' , '+str(flx_scale)+ ' , '+str(flux) + ' , '+str(airmass)
+        #outLine = str(phosim_zp)+ ' , ' +str(phosim_skymag)+ ' , ' +str(phosim_counts)+ ' , ' + str(mjd)+ ' , ' +str(filt_code) + ' , '+str(mjd)+' , '+str(skylevel*9.09*9.09/60)+ ' , '+str(skymag) + ' , '+str(airmass) + ' , '+str(zp)  
+        temp_arr[j,0:10] = phosim_zp, zp, phosim_skymag, skymag, phosim_counts, skylevel*9.09*9.09/60, mjd, filt_code, airmass, moon_alt
+        moon_alt_arr[j] = moon_alt
         j += 1
         
         
-np.save('/home/dutta26/2024/Apr/temp_5.npy', temp_arr)
-        
+np.save('/home/dutta26/2024/May/temp_neutral.npy', temp_arr)
+#np.save('/home/dutta26/2024/Apr/moon_alt_arr.npy', moon_alt_arr)        

@@ -49,8 +49,8 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
     ir_coadd_data = np.load(ir_coadd_data_name)
     
     
-    z_min = 0.35-0.2
-    z_max = 0.75
+    z_min = 0.35 - 0.25
+    z_max = 0.75 - 0.25
     bandList =['g', 'r', 'i']
     if (zFile == None):
         redShiftArr = np.ones(len(ir_coadd_data))*9      
@@ -66,7 +66,10 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
                 continue
             else:
                 if('eazy' in zFile):
-                    redShiftArr.append(float((content[j].split())[7]))
+                    if(float((content[j].split())[8]) >= 0.8 and float((content[j].split())[15])>=3):
+                        redShiftArr.append(float((content[j].split())[7]))
+                    else:
+                        redShiftArr.append(0)
                 else:
                     redShiftArr.append(float((content[j].split())[1]))
     redShiftArr = np.array(redShiftArr)     
@@ -751,7 +754,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             eper= (e2*cos2phi-e1*sin2phi)
             #goodEllipIndices = np.where((np.abs(e1)<0.8) & (np.abs(e2)<0.8) & (r2<(3*alphax)**2) & (r2>100))
             goodEllipIndices = np.where( (r2<(3*alphax)**2) & (r2>400) & (tot_ellip > 0.0) )[0]
-            wt = np.exp(-(r2/(2*alphax**2) )) * ir_coadd_data[cond, 3]
+            wt = np.exp(-(r2/(2*alphax**2) )) * ir_coadd_data[cond, 3] * 1/(2*np.pi*(alphax*0.001833)**2)
             #wt = np.sqrt(1/r2)*(1- (1+ r2/(2*200**2))*np.exp(-(r2/(2*200**2) )))
             #wt = (1+ r2/(2*alphax**2))*np.exp(-(r2/(2*alphax**2) ))
             
@@ -794,7 +797,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             del temp
             
     hdu = fits.PrimaryHDU(imgE,header=header)  
-    hdu.writeto('/scratch/bell/dutta26/abell_2390/proj_density_lownmid.fits', overwrite=True)
+    hdu.writeto('/scratch/bell/dutta26/abell_2390/proj_density_low.fits', overwrite=True)
     
     
                 

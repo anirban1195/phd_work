@@ -55,8 +55,10 @@ def getMagErr(band, sourceFile ):
                       
         mag[j] = 25 - 2.5*np.log10(coadd_data_band[j, 3]) 
         err[j] = (2.5/np.log(10)) * (error_in_flux/flux  )
-        if(err[j]< 0.01):
-            err[j]=0.01
+        if(err[j]< 0.1):
+            err[j]=0.1
+        if(band == 'u' and err[j]< 0.1):
+            err[j] = 0.1
         
     return mag,err
 
@@ -77,7 +79,7 @@ for band in bandList:
     
 
 
-outfile = '/home/dutta26/A2390_mag4.in'
+outfile = '/home/dutta26/A2390_mag7.in'
 f = open(outfile, mode='w+')
 
 for j in range(a):

@@ -58,7 +58,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
                 continue
             else:
                 if('eazy' in zFile):
-                    if(float((content[j].split())[8]) >= 0.8):
+                    if(float((content[j].split())[8]) >= 0.8 and float((content[j].split())[15])>=3):
                         redShiftArr.append(float((content[j].split())[7]))
                     else:
                         redShiftArr.append(0)

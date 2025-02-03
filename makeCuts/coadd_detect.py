@@ -418,7 +418,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
         
      
    
-    np.save(outFile, store)
+    #np.save(outFile, store)
     print (outFile, cnt )
     
     flux = store[:,3]
@@ -427,6 +427,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     #plt.figure(figsize=(13,10))
     n, bins, patches = plt.hist(x=flux, bins='auto',histtype=u'step')
     plt.xlabel('Flux')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'flux_hist_'+band+'.png')
     plt.close()
     
@@ -453,7 +454,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     #plt.figure(figsize=(13,10))
     n, bins, patches = plt.hist(x=size, bins='auto', histtype=u'step')
                             
-    plt.xlabel('Star PSF Corrected Size')
+    plt.xlabel('Star PSF Corrected Size (in pixles)')
     plt.ylabel('Frequency')
     plt.savefig(plotLoc+'star_corr_size_hist_'+band+'.png')
     plt.close()
@@ -467,7 +468,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     size = size[size<10]
     #plt.figure(figsize=(13,10))
     n, bins, patches = plt.hist(x=size, bins='auto',histtype=u'step')
-    plt.xlabel('Galaxy PSF Corrected Size')
+    plt.xlabel('Galaxy PSF Corrected Size (in pixels)')
     plt.ylabel('Frequency')
     plt.savefig(plotLoc+'galaxy_corr_size_hist_'+band+'.png')
     plt.close()
@@ -485,6 +486,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     n, bins, patches = plt.hist(x=ellip[loc], bins='auto',histtype=u'step', color='k', label='Tot Ellip')
     plt.legend()
     plt.xlabel('Galaxy e1/e2/Tot ellip')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'galaxy_ellip_hist_'+band+'.png')
     plt.close()
     
@@ -502,6 +504,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     n, bins, patches = plt.hist(x=ellip[loc], bins='auto',histtype=u'step', color='k', label='Tot Ellip')
     plt.legend()
     plt.xlabel('Star e1/e2/Tot ellip')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'star_ellip_hist_'+band+'.png')
     plt.close()
 

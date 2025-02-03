@@ -436,7 +436,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
 #     
 #     df_source.to_pickle(outFile)
 # =============================================================================
-    np.save(outFile, store)
+    #np.save(outFile, store)
     print (outFile )
     
     flux = store[:,3]
@@ -444,6 +444,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     flux = flux[flux<500]
     n, bins, patches = plt.hist(x=flux, bins='auto',histtype=u'step')
     plt.xlabel('Counts')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'flux_hist_'+band+'.png')
     plt.close()
     
@@ -456,6 +457,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     n, bins, patches = plt.hist(x=size, bins='auto',histtype=u'step')
                             
     plt.xlabel('Corrected Size')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'corr_size_hist_'+band+'.png')
     plt.close()
     
@@ -467,7 +469,8 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     size = size[size<10]
     n, bins, patches = plt.hist(x=size, bins='auto', histtype=u'step')
                             
-    plt.xlabel('Star Corrected Size')
+    plt.xlabel('Star Corrected Size(in pixels)')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'star_corr_size_hist_'+band+'.png')
     plt.close()
     
@@ -479,7 +482,8 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     print (size)
     size = size[size<10]
     n, bins, patches = plt.hist(x=size, bins='auto',histtype=u'step')
-    plt.xlabel('Galaxy Corrected Size')
+    plt.xlabel('Galaxy Corrected Size(in pixels)')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'galaxy_corr_size_hist_'+band+'.png')
     plt.close()
     
@@ -495,6 +499,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     n, bins, patches = plt.hist(x=ellip[loc], bins='auto',histtype=u'step', color='k', label='Total ellipticity')
     plt.legend()
     plt.xlabel('Galaxy e1/e2/Total ellipticity')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'galaxy_ellip_hist_'+band+'.png')
     plt.close()
     
@@ -511,6 +516,7 @@ def detect(source_df_name, coadd_file, ir_coadd_df_name, band, outFile, plotLoc,
     n, bins, patches = plt.hist(x=ellip[loc], bins='auto',histtype=u'step', color='k', label='Total ellipticity')
     plt.legend()
     plt.xlabel('Star e1/e2/Total ellipticity')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'star_ellip_hist_'+band+'.png')
     plt.close()
     #df_source.to_pickle('/home/dutta26/codes/wiyn_wl_sim/coaddSc_' + str(band)+'_perfectGauss.pk1')

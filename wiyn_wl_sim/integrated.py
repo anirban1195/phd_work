@@ -42,7 +42,9 @@ fluxMax_2 = 1e6
 # =============================================================================
 # import seperate_star_gal
 # seperate_star_gal.seperate(sextractorFile, img, starGal_out_file, plotLoc, psfMin, psfMax, fluxMin, fluxMax, psfMin_2, psfMax_2, fluxMin_2, fluxMax_2)
-# 
+# =============================================================================
+
+# =============================================================================
 # import coadd_detect
 # coadd_detect.detect(starGal_out_file, img, ir_band_data, band, coadd_detect_file, plotLoc, bandLoc)
 # =============================================================================

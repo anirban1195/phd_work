@@ -41,7 +41,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
     ir_coadd_data = np.load(ir_coadd_data_name)
     
     z_min = 0.4
-    z_max = 2.1
+    z_max = 2.0
     bandList =['g', 'r', 'i']
     if (zFile == None):
         redShiftArr = np.ones(len(ir_coadd_data))*9      
@@ -57,7 +57,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
                 continue
             else:
                 if('eazy' in zFile):
-                    if(float((content[j].split())[8]) >= 0.8):
+                    if(float((content[j].split())[8]) >= 0.8 and float((content[j].split())[15])>=3):
                         redShiftArr.append(float((content[j].split())[7]))
                     else:
                         redShiftArr.append(0)
@@ -690,7 +690,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
     
         
     chopSize = 50
-    alphax = 1500
+    alphax = 1000
     
     
     
@@ -743,14 +743,14 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             #goodEllipIndices = np.where((np.abs(e1)<0.8) & (np.abs(e2)<0.8) & (r2<(3*alphax)**2) & (r2>100))
             goodEllipIndices = np.where( (tot_ellip > 0.0) )[0]
             #print (len(goodEllipIndices))
-            goodEllipIndices = np.where( (tot_ellip > 0.0) & (r2<(4000)**2)& (r2>(30)**2) )[0]
+            goodEllipIndices = np.where( (tot_ellip > 0.0) & (r2<(4000)**2)& (r2>(30)**2) & (tot_ellip < 0.8))[0]
             #print (len(goodEllipIndices))
             #wt = (np.exp(-(r2/(2*alphax**2) )) * (1/r2)) 
             #print (alphax)
             wt_new =  np.exp(-(r2/(2*alphax**2) ))
-            r2 = r2 + 1000**2
-            wt = (1- (1+ r2/(2*300**2))*np.exp(-(r2/(2*300**2) )))*1/r2  #Scheitz schneider 1885 general ksb 
-            r2 = r2 - 1000**2
+            #r2 = r2 + 1000**2
+            wt = (1- (1+ r2/(2*200**2))*np.exp(-(r2/(2*200**2) )))*1/r2  #Scheitz schneider 1885 general ksb 
+            #r2 = r2 - 1000**2
             #wt1 = 1/r2
             
             
@@ -800,10 +800,10 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             del temp
             
     hdu = fits.PrimaryHDU(imgE,header=header)  
-    hdu.writeto('/scratch/bell/dutta26/abell_2390/kappa_sf1.fits', overwrite=True)
+    hdu.writeto('/scratch/bell/dutta26/abell_2390/kappa_sf2_test_newphotzerr.fits', overwrite=True)
     print (np.sum(imgE[360-9:360+10, 230-9:230+10]*6.5*0.7*5.59e-4) , 'In units of 10^15 solar mass')
     hdu = fits.PrimaryHDU(err_img,header=header)  
-    hdu.writeto('/scratch/bell/dutta26/abell_2390/kappa_error_sf1.fits', overwrite=True)
+    hdu.writeto('/scratch/bell/dutta26/abell_2390/kappa_error_sf2_test_newphotzerr.fits', overwrite=True)
     
                 
     

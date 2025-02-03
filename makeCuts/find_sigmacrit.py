@@ -24,8 +24,8 @@ def integrate(z):
     return np.sum( 0.01/np.sqrt(0.3*(1+arr)**3 + 0.7))*(1/(1+z))
 
 #Read Redshifts
-zMax = 2.3
-zMin = 0.3
+zMax = 2.0
+zMin = 0.4
 zFile = '/home/dutta26/photz_eazy.zout'
 if (zFile == None):
     redShiftArr = np.ones(len(ir_coadd_data))*9      
@@ -41,7 +41,7 @@ else:
             continue
         else:
             if('eazy' in zFile):
-                if(float((content[j].split())[8]) >= 0.8):
+                if(float((content[j].split())[8]) >= 0.8 and float((content[j].split())[15])>=3):
                     redShiftArr.append(float((content[j].split())[7]))
                 else:
                     redShiftArr.append(0)

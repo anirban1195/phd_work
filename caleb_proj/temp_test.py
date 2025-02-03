@@ -33,8 +33,9 @@ lut_forcedDist = np.load('/home/dutta26/codes/forced_truncated_calib.npy')
 # colorArr = ['g', 'r',  'k', 'm']
 # counter =0
 # j =0
-# temp_arr = np.zeros((100, 10))
+# #temp_arr = np.zeros((100, 10))
 # cloudArr =[]
+# temp= [[],[],[],[],[]]
 # for folder in filt_list:
 #     for files in os.listdir(dataSet+folder):
 #         #print (files)
@@ -78,29 +79,69 @@ lut_forcedDist = np.load('/home/dutta26/codes/forced_truncated_calib.npy')
 #             filt_code = 5
 #         
 #         f.close()
-#         plt.plot(mjd, float(zp), colorArr[counter]+'.')
+#         temp[filt_code].append(skymag)
+#         plt.plot(mjd, skymag, colorArr[counter]+'.')
 #         
 #     counter += 1
 #     
+# =============================================================================
+
+        
+        
+# =============================================================================
+# master_arr  = np.load('/home/dutta26/2024/Apr/temp_10.npy')
+# colorArr = ['b','g', 'r','m', 'k']
+# 
+# a=[]
+# b=[]
+# for j in range(len(master_arr)):
+#     if(master_arr[j,0] == 0):
+#         continue
+# # =============================================================================
+# #     if(int(master_arr[j,7]) != 1):
+# #         continue
+# # =============================================================================
+#     color = colorArr[int(master_arr[j,7])]
+#     plt.plot(master_arr[j,6], master_arr[j,2], color+'+')
+#     plt.plot(master_arr[j,6], master_arr[j,3], color+'.')
+#     a.append(master_arr[j,2])
+#     b.append(master_arr[j,3])
+#     plt.xlabel('MJD')
+# 
+# plt.ylabel('Mag/srcsec^2')
 # 
 # =============================================================================
+from scipy.optimize import curve_fit
+def func(x, a, b):
+    return a + b*x 
         
-        
-master_arr  = np.load('/home/dutta26/2024/Apr/temp_5.npy')
+master_arr  = np.load('/home/dutta26/2024/Apr/temp_9.npy')
 colorArr = ['b','g', 'r','m', 'k']
 
 a=[]
 b=[]
+x = []
 for j in range(len(master_arr)):
     if(master_arr[j,0] == 0):
         continue
-    if(int(master_arr[j,7]) != 0):
+    if(int(master_arr[j,7]) != 4):
+        continue
+    if(master_arr[j,6] >59527.2201 or master_arr[j,6]<59527.2028):
         continue
     color = colorArr[int(master_arr[j,7])]
     plt.plot(master_arr[j,6], master_arr[j,2], color+'+')
     plt.plot(master_arr[j,6], master_arr[j,3], color+'.')
     a.append(master_arr[j,2])
     b.append(master_arr[j,3])
+    x.append(master_arr[j,6])
     plt.xlabel('MJD')
 
-print (np.median(a), np.median(b))
+x=np.array(x)    
+x0 = np.array([0.0, 0.0])    
+popt, pcov =curve_fit(func, x, a, x0)
+print (popt)
+plt.plot(x, popt[0]+popt[1]*x, 'r-')
+
+popt, pcov =curve_fit(func, x, b, x0)
+print (popt)
+plt.plot(x, popt[0]+popt[1]*x, 'r-')

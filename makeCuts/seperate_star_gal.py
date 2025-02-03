@@ -279,12 +279,12 @@ plt.subplot()
 
 loc = np.array(df_source.index[df_source['star_bool'] != 1].tolist())
 loc = np.where((boolArr != 1)  & (fluxArr >0))[0]
-plt.figure(figsize=(13,10))
+#plt.figure(figsize=(13,10))
 plt.plot(sizeArr[loc], 25-2.5*np.log10(fluxArr[loc]),'b.', markersize= 2)  
 loc = np.array(df_source.index[df_source['star_bool'] == 1].tolist())
 loc = np.where((boolArr == 1)  & (fluxArr >0))[0]
 plt.plot(sizeArr[loc], 25-2.5*np.log10(fluxArr[loc]),'r.', markersize= 2)  
-plt.xlabel('Size')
+plt.xlabel('Size (in pixels)')
 plt.ylabel('Magnitude')
 plt.plot([psfMax, psfMin], [25-2.5*np.log10(1e5), 25-2.5*np.log10(1e5)], 'k-',markersize= 2)
 plt.plot([psfMax, psfMin], [25-2.5*np.log10(fluxMin), 25-2.5*np.log10(fluxMin)], 'k-',markersize= 2)

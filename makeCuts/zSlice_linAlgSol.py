@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 from astropy.io import fits
 from astropy import wcs
 from scipy.ndimage import gaussian_filter
+from astropy.stats import sigma_clipped_stats
+
 ir_coadd_data = np.load('/scratch/bell/dutta26/abell_2390/abell_ir_coadd.npy')
 master_frame=np.load('/scratch/bell/dutta26/abell_2390/master_arr_sf.npy')
 zFile = '/home/dutta26/photz_eazy.zout'
@@ -47,7 +49,7 @@ else:
             continue
         else:
             if('eazy' in zFile):
-                if(float((content[j].split())[8]) >= 0.7 and float((content[j].split())[15])>=4):
+                if(float((content[j].split())[8]) >= 0.8 and float((content[j].split())[15])>=3):
                     redShiftArr.append(float((content[j].split())[7]))
                 else:
                     redShiftArr.append(0)
@@ -60,8 +62,8 @@ redShiftArr = np.array(redShiftArr)
 
 
 count = 1
-zminArr =[0.01, 0.6]
-zmaxArr =[0.6, 2.1]
+zminArr =[0.01, 0.5]
+zmaxArr =[0.5, 2.0]
 n = len(zminArr)
 
 matrix = np.zeros((n,n))
@@ -91,24 +93,35 @@ inv_matrix = np.linalg.inv(matrix)
 
 imgArr = np.zeros((719, 622, n))
 for j in np.arange(n,0,-1):
-    print (j)
+    #print (j,n-j)
     f=fits.open('/scratch/bell/dutta26/abell_2390/zSlice/EMode_sf'+str(j)+'.fits')
     if(j == 2):
-        imgArr[:,:,n-j] = gaussian_filter(f[0].data, 0)
+        imgArr[:,:,n-j] = gaussian_filter(f[0].data, 2)
         f.close()
+        print (n-j, j)
+        print (sigma_clipped_stats(imgArr[112:559,100:519,n-j]))
         continue
     elif(j == 1):
-         imgArr[:,:,n-j] = gaussian_filter(f[0].data, 2)
+         imgArr[:,:,n-j] = gaussian_filter(f[0].data, 4)
          f.close() 
+         print (n-j, j)
+         print (sigma_clipped_stats(imgArr[112:559,100:519,n-j]))
          continue
      
     elif(j == 3):
           imgArr[:,:,n-j] = gaussian_filter(f[0].data, 0)
           f.close() 
+          
           continue
-    imgArr[:,:,n-j] = f[0].data
+    #imgArr[:,:,n-j] = f[0].data
     f.close()
     
+
+for j in range(n):
+    mean, median, std = sigma_clipped_stats(imgArr[112:559,100:519,j])
+    print (mean, median, std, 'aaa', j)
+    loc = np.where(imgArr[:,:,k] < (1.0*std))
+    imgArr[loc[0],loc[1],j] = 0
 
 
 for j in range(n):
@@ -117,12 +130,11 @@ for j in range(n):
     tot = np.zeros((719, 622), dtype = np.float32)
     print (mulArr)
     for k in range(n):
-        loc = np.where(imgArr[:,:,k] < 0.014)
-        imgArr[loc[0],loc[1],k] = 0
+
         tot += imgArr[:,:,k]*mulArr[k]
         
-    hdu = fits.PrimaryHDU(tot,header=header)
-    hdu.writeto('/scratch/bell/dutta26/abell_2390/zSlice/slices/Eslice_'+str(n-j)+'.fits', overwrite=True)
+    #hdu = fits.PrimaryHDU(tot,header=header)
+    #hdu.writeto('/scratch/bell/dutta26/abell_2390/zSlice/slices/Eslice_'+str(n-j)+'.fits', overwrite=True)
         
 
     

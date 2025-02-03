@@ -58,7 +58,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             else:
                 if('eazy' in zFile):
                     #if(float((content[j].split())[8]) >= 0.8):
-                    if(float((content[j].split())[8]) >= 0.7 and float((content[j].split())[15])>=4):
+                    if(float((content[j].split())[8]) >= 0.8 and float((content[j].split())[15])>=3):
                         redShiftArr.append(float((content[j].split())[7]))
                     else:
                         redShiftArr.append(0)
@@ -86,8 +86,8 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
     
     
     #Find total background 
-    totBkg = 53293.7880
-    totScale = 24083.1857
+    totScale = 34244.70
+    totBkg = 75517.35
     
     
     failedArr=[]

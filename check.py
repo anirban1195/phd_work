@@ -12,7 +12,7 @@ from astropy.io import fits
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-path ='/scratch/bell/dutta26/wiyn_sim (copy 1)/'
+path ='/scratch/bell/dutta26/abell_2261/'
 
 txtPath =[]
 fitsPath =[]
@@ -40,6 +40,7 @@ for r, d, f in os.walk(path):
 print (len(fitsPath), len(txtPath), len(npPath), len(pkPath))
 
 for files in fitsPath:
+    #print (files)
     f=fits.open(files)
     data= f[0].data
     #mean=np.nanmean(data)

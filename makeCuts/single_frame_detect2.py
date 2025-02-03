@@ -214,13 +214,12 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         path.mkdir(parents=True, exist_ok=True)
         
         #Find all good stars in the frame
-        #Now tuse k sigma clip to find usable stars. Just do for sigxx
+        #Now use k sigma clip to find usable stars. Just do for sigxx
         threshold = np.sqrt(4* np.pi*back_h* 5*5) *100
         star_arr = store[fileCount, (np.where((store[fileCount,:,2] == 1) & 
                                               (store[fileCount,:,12] == 99) & 
                                               (store[fileCount,:,13] == 0) & 
                                               (store[fileCount,:,14] == 0) &
-                                              (store[fileCount,:,14] == 0) & 
                                               (store[fileCount,:,3] >threshold) & 
                                               (ir_coadd_df[:,79] == 0) ))[0],  : ]
         
@@ -277,7 +276,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         star_temp[:,6] = (star_arr[:, 3])/band_coadd_flux[loc]
         star_temp[:,7] = (star_arr[:, 3])
         print (star_arr[:, 3]/band_coadd_flux[loc])
-        print (np.shape(star_arr))
+        print (np.shape(star_arr), 'printing shape of star arr')
         #print (threshold, median)
         nStars = 10
         #global_xx_err, global_yy_err, global_xy_err = helper.fitGaussian(star_arr[:, 7], star_arr[:, 8], star_arr[:, 9], star_arr[:, 3], back_h, plotloc+'/'+band+'/'+file+'/', band)
@@ -558,6 +557,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         flux = store[fileCount,loc,3]
         n, bins, patches = plt.hist(x=flux, bins='auto',histtype=u'step')
         plt.xlabel('Flux')
+        plt.ylabel('Frequency')
         plt.savefig(plotloc+'/'+band+'/'+file+'/flux_hist_'+band+'.png')
         plt.close()
         
@@ -572,6 +572,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         print (size)
         n, bins, patches = plt.hist(x=size, bins='auto',histtype=u'step')                       
         plt.xlabel('Corrected Size')
+        plt.ylabel('Frequency')
         plt.savefig(plotloc+'/'+band+'/'+file+'/corr_size_hist_'+band+'.png')
         plt.close()
         
@@ -582,6 +583,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         
         n, bins, patches = plt.hist(x=size, bins='auto', histtype=u'step')                       
         plt.xlabel('Star Corrected Size')
+        plt.ylabel('Frequency')
         plt.savefig(plotloc+'/'+band+'/'+file+'/star_corr_size_hist_'+band+'.png')
         plt.close()
         
@@ -595,6 +597,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         size = size[size<10]
         n, bins, patches = plt.hist(x=size, bins='auto', histtype=u'step')                    
         plt.xlabel('Galaxy Corrected Size')
+        plt.ylabel('Frequency')
         plt.savefig(plotloc+'/'+band+'/'+file+'/galaxy_corr_size_hist_'+band+'.png')
         plt.close()
         
@@ -612,6 +615,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         n, bins, patches = plt.hist(x=ellip[loc], bins='auto',histtype=u'step', color='k', label='Tot Ellip')
         plt.legend()
         plt.xlabel('Galaxy e1/e2/Tot ellip')
+        plt.ylabel('Frequency')
         plt.savefig(plotloc+'/'+band+'/'+file+'/galaxy_ellip_hist_'+band+'.png')
         plt.close()
         
@@ -630,6 +634,7 @@ def run_sf_detect(band, bandLoc, band_coadd_df_name, ir_coadd_df_name, source_df
         n, bins, patches = plt.hist(x=ellip[loc], bins='auto',histtype=u'step', color='k', label='Tot Ellip')
         plt.legend()
         plt.xlabel('Star e1/e2/Tot ellip')
+        plt.ylabel('Frequency')
         plt.savefig(plotloc+'/'+band+'/'+file+'/star_ellip_hist_'+band+'.png')
         plt.close()
         

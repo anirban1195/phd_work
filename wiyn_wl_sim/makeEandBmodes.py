@@ -14,7 +14,7 @@ import pandas as pd
 from astropy.stats import sigma_clipped_stats
 from datetime import datetime
 import helper
-import wquantiles
+#import wquantiles
 from astropy import wcs
 import matplotlib.pyplot as plt
 lut_forcedDist = np.load('/home/dutta26/codes/forced_truncated_calib.npy')
@@ -646,7 +646,8 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
     n, bins, patches = plt.hist(x=arr1, bins='auto', histtype=u'step', color='r', label=r'$\sigma^2_{xx}$(Single Frame) - $\sigma^2_{xx}$(Coadd)') 
     n, bins, patches = plt.hist(x=arr2, bins='auto', histtype=u'step', color='b', label=r'$\sigma^2_{yy}$(Single Frame) - $\sigma^2_{yy}$(Coadd)')  
     n, bins, patches = plt.hist(x=arr3, bins='auto', histtype=u'step', color='k', label=r'$\sigma^2_{xy}$(Single Frame) - $\sigma^2_{xy}$(Coadd)')                      
-    plt.xlabel('In Pixels')
+    plt.xlabel('Size difference in pixels')
+    plt.ylabel('Frequency')
     plt.legend(loc='upper left')
     plt.savefig('/scratch/bell/dutta26/wiyn_sim/sig_dev.png')
     plt.close()

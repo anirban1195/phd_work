@@ -66,7 +66,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             else:
                 if('eazy' in zFile):
                     #if(float((content[j].split())[8]) >= 0.8):
-                    if(float((content[j].split())[8]) >= 0.7 and float((content[j].split())[15])>=4):
+                    if(float((content[j].split())[8]) >= 0.8 and float((content[j].split())[15])>=3):
                         redShiftArr.append(float((content[j].split())[7]))
                     else:
                         redShiftArr.append(0)
@@ -732,7 +732,7 @@ def EandB(ir_coadd_data_name, r_coadd_npy_name, i_coadd_npy_name, zFile, outFile
             alpha_mid = 0.5*(alpha_max+alpha_min)
             alphax = alpha_mid
             n_iter = 0
-            err_const = 0.0003
+            err_const = 0.00045
             tot_err = 9999999
             #while(count>const_count*1.05 or count< const_count*0.95):
             while(tot_err>err_const*1.05 or tot_err< err_const*0.95):
@@ -836,9 +836,9 @@ ebModeFile = '/scratch/bell/dutta26/abell_2390/master_arr_sf.npy'
 zFile = '/home/dutta26/photz_eazy.zout'
 
 count = 1
-zminArr = [0.01, 0.6]
+zminArr = [0.01, 0.5]
 #zminArr = [ 0.25]
-zmax = 2.1
+zmax = 2.0
 for j in range(len(zminArr)):
     zmin =zminArr[j]
     zmax = zmax

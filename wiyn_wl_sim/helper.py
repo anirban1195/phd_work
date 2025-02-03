@@ -799,8 +799,9 @@ def fitGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band):
     #print (parameters[1], err_xx)
     x_values = np.linspace(mean_xx - 10*np.sqrt(k_guess_xx**2 + err_xx**2),mean_xx + 10*np.sqrt(k_guess_xx**2 + err_xx**2), 25000)
     plt.plot(x_values, gaussian(x_values,parameters[0], parameters[1], parameters[2]), 'r-',linewidth = 2)
+    plt.xlabel(r' $\sigma^2_{xx}$ (pixel$^2$)')
+    plt.ylabel('Frequency')
     plt.savefig(plotLoc+'xx_fit_'+band+'.png')
-    plt.xlabel('Sigma xx')
     plt.close()
     
     
@@ -836,8 +837,9 @@ def fitGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band):
     res_err_yy = np.sqrt(parameters[1]**2 - err_yy**2)
     x_values = np.linspace(mean_yy - 10*np.sqrt(k_guess_yy**2 + err_yy**2),mean_yy + 10*np.sqrt(k_guess_yy**2 + err_yy**2), 25000)
     plt.plot(x_values, gaussian(x_values,parameters[0], parameters[1], parameters[2]), 'r-',linewidth = 2)
+    plt.ylabel('Frequency')
+    plt.xlabel(r' $\sigma^2_{yy}$ (pixel$^2$)')
     plt.savefig(plotLoc+'yy_fit_'+band+'.png')
-    plt.xlabel('Sigma yy')
     plt.close()
     
     #Do for xy
@@ -872,9 +874,13 @@ def fitGaussian(xxArr, yyArr, xyArr, fluxArr, bkg, plotLoc, band):
     res_err_xy = np.sqrt(parameters[1]**2 - err_xy**2)
     x_values = np.linspace(mean_xy - 10*np.sqrt(k_guess_xy**2 + err_xy**2),mean_xy + 10*np.sqrt(k_guess_xy**2 + err_xy**2), 25000)
     plt.plot(x_values, gaussian(x_values,parameters[0], parameters[1], parameters[2]), 'r-',linewidth = 2)
+    
+    plt.ylabel('Frequency')
+    plt.xlabel(r' $\sigma^2_{xy}$ (pixel$^2$)')
     plt.savefig(plotLoc+'xy_fit_'+band+'.png')
-    plt.xlabel('Sigma xy')
     plt.close()
+    
+    print ('Saved star PSF distribution Gaussian fits')
     
     return res_err_xx, res_err_yy, res_err_xy
     
